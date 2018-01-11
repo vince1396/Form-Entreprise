@@ -1,7 +1,7 @@
 <?php
 	try
 	{
-	 	$bdd = new PDO('mysql:host=127.0.0.1;dbname=rss;charset=utf8', 'root', '6283');
+	 	$bdd = new PDO('mysql:host=127.0.0.1;dbname=fluxrss;charset=utf8', 'root', '');
 	}
 	catch(Exception $e)
 	{
