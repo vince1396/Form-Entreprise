@@ -163,7 +163,9 @@
             <div class="form-group">
                 <label for="interet">***</label>
                 <input type="checkbox" name="interet" value="3"></div><br>
-            </h3></b>
+            </h3></b><br><br>
+            
+            <button type="submit" class="btn btn-success" name="submit">Valider</button>
         </form>
     </div>
     
