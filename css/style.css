@@ -2,4 +2,10 @@
 
 .logo{
     text-align: center;
+    background: black;
+    color: white;
+}
+
+.accueil{
+    text-align: center;
 }
