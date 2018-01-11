@@ -17,7 +17,7 @@
                 <label for="rdv">RDV pris par:</label>
                 <input type="text" class="form-control" name="rdv"> </div><br><br>
             <div class="form-group">
-                <label for="date">Date de RDV:</label>
+                <label for="date_rdv">Date de RDV:</label>
                 <input type="date" class="form-control" name="date_rdv"> </div>
 <br><br><br>
            <h1>Raison Sociale</h1>
@@ -37,7 +37,7 @@
                 <label for="ville">Ville</label>
                 <input type="text" class="form-control" name="ville"> </div>
             <div class="form-group">
-                <label for="ville">Tel</label>
+                <label for="tel">Tel</label>
                 <input type="text" class="form-control" name="tel"> </div>
             <div class="form-group">
                 <label for="fax">Fax</label>
@@ -62,7 +62,7 @@
                 <label for="signataire">Signataire</label>
                 <input type="text" class="form-control" name="signataire"> </div> 
             <div class="form-group">
-                <label for="signataire">Date du projet</label>
+                <label for="date_projet">Date du projet</label>
                 <input type="date" class="form-control" name="date_projet"> </div>    
               <br><br><br>  
                   
@@ -116,7 +116,7 @@
                 <input type="text" class="form-control" name="duree"> </div> <br>
             <h2>--FIN LOCATION--</h2><br>
             <div class="form-group">
-                <label for="duree">Matériel + accessoire:</label>
+                <label for="materiel">Matériel + accessoire:</label>
                 <textarea class="form-control" name="materiel"></textarea> </div><br>
             <h3>Entretient</h3>
             <h4>Volume copie engagée:</h4>
@@ -125,7 +125,7 @@
                 <input type="text" class="form-control" name="noir" placeholder="Par Trimestre"> </div>
             <div class="form-group">
                 <label for="noir">Couleur:</label>
-                <input type="text" class="form-control" name="noir" placeholder="Par Trimestre"> </div><br><br>
+                <input type="text" class="form-control" name="couleur" placeholder="Par Trimestre"> </div><br><br>
             <div class="form-group">
                 <label for="cout_noir">Coût copie noire:</label>
                 <input type="text" class="form-control" name="cout_noir" placeholder="€ (HT)"> € HT </div><br><br>
