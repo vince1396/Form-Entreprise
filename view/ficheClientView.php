@@ -77,7 +77,7 @@
                     <option value="4">Téléphonie</option>
                 </select>
             </div>
-            
+
 
             <div class="groupe-num-1">
                 <h3>Bureautique</h3>
