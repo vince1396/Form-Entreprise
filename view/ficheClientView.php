@@ -69,6 +69,15 @@
             <hr class="custom">
             <h1>Centre d'intérêt</h1>
             <div class="form-group">
+                <select name="cInteret">
+                    <option value="bureautique">Bureautique</option>
+                    <option value="informatique">informatique</option>
+                    <option value="bureautique">Bureautique</option>
+                    <option value="bureautique">Bureautique</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
                 <label for="bureautique">Bureautique</label>
                 <input type="checkbox" class="form-control ex-enable" name="bureautique" value="1"> </div>
             <div class="form-group">
