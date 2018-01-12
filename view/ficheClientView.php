@@ -51,6 +51,7 @@
             <div class="form-group">
                 <label for="nb_site">Nb de site</label>
                 <input type="text" class="form-control" name="nb_site"> </div>
+                
             <h1>Cycle de décision</h1>
             <div class="form-group">
                 <label for="prescripteur">Préscripteur</label>
@@ -69,17 +70,17 @@
             <h1>Centre d'intérêt</h1>                
             <div class="form-group">
                 <label for="bureautique">Bureautique</label>
-                <input type="checkbox" class="form-control" name="bureautique" value="1"> </div>
+                <input type="checkbox" class="form-control" name="centre_interet" value="1"> </div>
             <div class="form-group">
                 <label for="informatique">Informatique</label>
-                <input type="checkbox" class="form-control" name="informatique" value="2"> </div>
+                <input type="checkbox" class="form-control" name="centre_interet" value="2"> </div>
             <div class="form-group">
                 <label for="solution">Solution</label>
-                <input type="checkbox" class="form-control" name="solution" value="3"> </div>
+                <input type="checkbox" class="form-control" name="centre_interet" value="3"> </div>
             <div class="form-group">
                 <label for="telephonie">Téléphonie</label>
-                <input type="checkbox" class="form-control" name="telephonie" value="4"> </div><br><br>
-                
+                <input type="checkbox" class="form-control" name="centre_interet" value="4"> </div><br><br>
+            
             <h3>Bureautique</h3>
             <div class="form-group">
                 <label for="nb_contrat">Nombre de contrat:</label>
@@ -97,7 +98,10 @@
             <h3>Pour achat:</h3> 
             <div class="form-group">
                 <label for="achat">Prix</label>
-                <input type="text" class="form-control" name="achat"> </div>  <br> 
+                <input type="text" class="form-control" name="achat"> </div>  <br> <br>
+                 <div class="form-group">
+                <label for="materiel_achat">Matériel + accessoire:</label>
+                <textarea class="form-control" name="materiel_achat"></textarea> </div><br>
             <h3>Pour location:</h3>
             <div class="form-group">
                 <label for="date_deb">Démarrage du contrat</label>
@@ -113,18 +117,19 @@
                 <input type="checkbox" class="form-control" name="prelevement" value="2"> </div> <br>
              <div class="form-group">
                 <label for="duree">Durée du contrat:</label>
-                <input type="text" class="form-control" name="duree"> </div> <br>
-            <h2>--FIN LOCATION--</h2><br>
+                <input type="text" class="form-control" name="duree"> </div> <br><bR>
+  
             <div class="form-group">
-                <label for="materiel">Matériel + accessoire:</label>
-                <textarea class="form-control" name="materiel"></textarea> </div><br>
+                <label for="materiel_location">Matériel + accessoire:</label>
+                <textarea class="form-control" name="materiel_location"></textarea> </div><br>
+                          <h2>--FIN LOCATION--</h2><br>
             <h3>Entretient</h3>
             <h4>Volume copie engagée:</h4>
             <div class="form-group">
                 <label for="noir">Noire:</label>
                 <input type="text" class="form-control" name="noir" placeholder="Par Trimestre"> </div>
             <div class="form-group">
-                <label for="noir">Couleur:</label>
+                <label for="couleur">Couleur:</label>
                 <input type="text" class="form-control" name="couleur" placeholder="Par Trimestre"> </div><br><br>
             <div class="form-group">
                 <label for="cout_noir">Coût copie noire:</label>
