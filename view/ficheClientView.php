@@ -1,6 +1,6 @@
 <div class="container">
-   
-<!---- COMMERCIAL ---->
+
+<!-- -- COMMERCIAL -- -->
     <div class="row firstblock">
         <form class="form-inline">
            <h1>Commercial</h1>
@@ -60,13 +60,13 @@
                 <input type="text" class="form-control" name="decideur"> </div>
             <div class="form-group">
                 <label for="signataire">Signataire</label>
-                <input type="text" class="form-control" name="signataire"> </div> 
+                <input type="text" class="form-control" name="signataire"> </div>
             <div class="form-group">
                 <label for="date_projet">Date du projet</label>
-                <input type="date" class="form-control" name="date_projet"> </div>    
-              <br><br><br>  
-                  
-            <h1>Centre d'intérêt</h1>                
+                <input type="date" class="form-control" name="date_projet"> </div>
+              <br><br><br>
+
+            <h1>Centre d'intérêt</h1>
             <div class="form-group">
                 <label for="bureautique">Bureautique</label>
                 <input type="checkbox" class="form-control" name="bureautique" value="1"> </div>
@@ -79,7 +79,7 @@
             <div class="form-group">
                 <label for="telephonie">Téléphonie</label>
                 <input type="checkbox" class="form-control" name="telephonie" value="4"> </div><br><br>
-                
+
             <h3>Bureautique</h3>
             <div class="form-group">
                 <label for="nb_contrat">Nombre de contrat:</label>
@@ -90,18 +90,18 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                 </div>    <br>  
+                 </div>    <br>
             <div class="form-group">
                 <label for="fournisseur">Fournisseur</label>
-                <input type="text" class="form-control" name="fournisseur"> </div>    <br>  
-            <h3>Pour achat:</h3> 
+                <input type="text" class="form-control" name="fournisseur"> </div>    <br>
+            <h3>Pour achat:</h3>
             <div class="form-group">
                 <label for="achat">Prix</label>
-                <input type="text" class="form-control" name="achat"> </div>  <br> 
+                <input type="text" class="form-control" name="achat"> </div>  <br>
             <h3>Pour location:</h3>
             <div class="form-group">
                 <label for="date_deb">Démarrage du contrat</label>
-                <input type="date" class="form-control" name="date_deb"> </div>  
+                <input type="date" class="form-control" name="date_deb"> </div>
             <div class="form-group">
                 <label for="loyer">Loyer(HT)</label>
                 <input type="text" class="form-control" name="loyer"> </div> <br>
@@ -144,15 +144,15 @@
             <div class="form-group">
                 <label for="supp_couleur">Supplément copie couleur:</label>
                 <input type="text" class="form-control" name="supp_couleur" placeholder="€ (HT)"> € HT </div><br><br>
-                
+
             <div class="form-group">
                 <label for="amelioration">Amélioration souhaitée:</label>
-                <textarea class="form-control" name="amelioration"></textarea></div><br><br>  
-                
+                <textarea class="form-control" name="amelioration"></textarea></div><br><br>
+
             <div class="form-group">
                 <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
-                <textarea class="form-control" name="orientation"></textarea></div><br><br>        
-            
+                <textarea class="form-control" name="orientation"></textarea></div><br><br>
+
             <h3>Niveau d'intérêt:</h3>
             <b><h3><div class="form-group">
                 <label for="interet">*</label>
@@ -164,11 +164,11 @@
                 <label for="interet">***</label>
                 <input type="checkbox" name="interet" value="3"></div><br>
             </h3></b><br><br>
-            
+
             <button type="submit" class="btn btn-success" name="submit">Valider</button>
         </form>
     </div>
-    
-    
-    
+
+
+
 </div>
