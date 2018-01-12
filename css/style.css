@@ -1,4 +1,10 @@
 
+hr.custom{
+   width: 30%;
+    color: red;
+    border-width: 2px;
+    border-color: orangered;
+}
 
 .logo{
     text-align: center;
@@ -32,3 +38,9 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.groupe-num-1, .groupe-num-ss1, .groupe-num-ss2{
+    display: none;
+}
+
+
