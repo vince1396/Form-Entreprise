@@ -3,7 +3,7 @@
 <!-- -- COMMERCIAL -- -->
     <div class="row firstblock">
         <form class="form-inline">
-           <h1>Commercial</h1>
+            <h1>Commercial</h1>
             <div class="form-group">
                 <label for="nom">Nom</label>
                 <input type="text" class="form-control" name="nom"> </div>
@@ -19,8 +19,9 @@
             <div class="form-group">
                 <label for="date_rdv">Date de RDV:</label>
                 <input type="date" class="form-control" name="date_rdv"> </div>
-<br><br><br>
-           <h1>Raison Sociale</h1>
+            <hr class="custom">
+            <br><br><br>
+            <h1>Raison Sociale</h1>
             <div class="form-group">
                 <label for="nom_resp">Nom du responsable</label>
                 <input type="text" class="form-control" name="nom_resp"> </div>
@@ -64,6 +65,7 @@
             <div class="form-group">
                 <label for="date_projet">Date du projet</label>
                 <input type="date" class="form-control" name="date_projet"> </div>
+<<<<<<< HEAD
               <br><br><br>
 
             <h1>Centre d'intérêt</h1>
@@ -153,6 +155,115 @@
                 <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
                 <textarea class="form-control" name="orientation"></textarea></div><br><br>
 
+=======
+            <br><br><br>
+            <hr class="custom">
+            <h1>Centre d'intérêt</h1>
+            <div class="form-group">
+                <select name="cInteret" id="cInteret">
+                    <option value="0">-Sélectionnez un centre d'intérêt-</option>
+                    <option value="1">Bureautique</option>
+                    <option value="2">Informatique</option>
+                    <option value="3">Solution</option>
+                    <option value="4">Téléphonie</option>
+                </select>
+            </div>
+
+
+            <div class="groupe-num-1">
+                <h3>Bureautique</h3>
+                <br>
+                <div class="form-group">
+                    <label for="fournisseur">Fournisseur</label>
+                    <input type="text" class="form-control" name="fournisseur"> </div> <br>
+
+                <div class="form-group">
+                <select name="sBuyRent" id="sBuyRent">
+                    <option value="0">-Choisissez-</option>
+                    <option value="1">Achat</option>
+                    <option value="2">Location</option>
+                </select>
+                </div>
+
+
+
+                <div class="form-group groupe-num-ss1">
+                    <h3>Pour achat:</h3>
+                    <label for="achat">Prix</label>
+                    <input type="text" class="form-control" name="achat">  <br>
+
+                <div class="form-group">
+                    <label for="materiel_achat">Matériel + accessoire:</label>
+                    <textarea class="form-control" name="materiel_achat"></textarea> </div><br>
+                </div>
+
+
+
+                <div class="groupe-num-ss2">
+                    <div class="form-group">
+                        <h3>Pour location:</h3>
+                        <label for="date_deb">Démarrage du contrat</label>
+                        <input type="date" class="form-control" name="date_deb"> </div>
+                    <div class="form-group">
+                        <label for="loyer">Loyer(HT)</label>
+                        <input type="text" class="form-control" name="loyer"> </div> <br>
+                    <div class="form-group">
+                        <label for="prelevement">Prélèvement: </label>
+                        <label for="mois">Mois</label>
+                        <input type="checkbox" class="form-control" name="prelevement" value="1">
+                        <label for="trimestre">Trimestrielle</label>
+                        <input type="checkbox" class="form-control" name="prelevement" value="2"> </div> <br>
+                    <div class="form-group">
+                        <label for="duree">Durée du contrat:</label>
+                        <input type="text" class="form-control" name="duree"> </div> <br>
+
+                <div class="form-group">
+                    <label for="materiel_location">Matériel + accessoire:</label>
+                    <textarea class="form-control" name="materiel_location"></textarea> </div><br>
+                    <h2>--FIN LOCATION--</h2><br>
+
+                </div>
+                <br>
+
+
+
+                <h3>Entretient</h3>
+                <h4>Volume copie engagée:</h4>
+                <div class="form-group">
+                    <label for="noir">Noire:</label>
+                    <input type="text" class="form-control" name="noir" placeholder="Par Trimestre"> </div>
+                <div class="form-group">
+                    <label for="couleur">Couleur:</label>
+                    <input type="text" class="form-control" name="couleur" placeholder="Par Trimestre"> </div><br><br>
+                <div class="form-group">
+                    <label for="cout_noir">Coût copie noire:</label>
+                    <input type="text" class="form-control" name="cout_noir" placeholder="€ (HT)"> € HT </div><br><br>
+                <div class="form-group">
+                    <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
+                    <input type="text" class="form-control" name="vol_noir" placeholder="Par Trimestre"> -- </div>
+                <div class="form-group">
+                    <label for="supp_noir">Supplément copie noire:</label>
+                    <input type="text" class="form-control" name="supp_noir" placeholder="€ (HT)"> € HT </div><br><br>
+                <div class="form-group">
+                    <label for="cout_couleur">Coût copie couleur:</label>
+                    <input type="text" class="form-control" name="cout_couleur" placeholder="€ (HT)"> € HT -- </div><br><br>
+                <div class="form-group">
+                    <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
+                    <input type="text" class="form-control" name="vol_couleur" placeholder="Par Trimestre"> -- </div>
+                <div class="form-group">
+                    <label for="supp_couleur">Supplément copie couleur:</label>
+                    <input type="text" class="form-control" name="supp_couleur" placeholder="€ (HT)"> € HT </div><br><br>
+
+                <div class="form-group">
+                    <label for="amelioration">Amélioration souhaitée:</label>
+                    <textarea class="form-control" name="amelioration"></textarea></div><br><br>
+
+                <div class="form-group">
+                    <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
+                    <textarea class="form-control" name="orientation"></textarea></div><br><br>
+            </div>
+            <hr class="custom">
+>>>>>>> 6a4546cbc91511bec3bc2298ad5c814ace8e5017
             <h3>Niveau d'intérêt:</h3>
             <b><h3><div class="form-group">
                 <label for="interet">*</label>
