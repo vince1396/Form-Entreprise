@@ -77,7 +77,7 @@
                     <option value="4">Téléphonie</option>
                 </select>
             </div>
-        
+
 
             <div class="groupe-num-1">
                 <h3>Bureautique</h3>
@@ -92,6 +92,10 @@
                     <h3>Pour achat:</h3>
                     <label for="achat">Prix</label>
                     <input type="text" class="form-control" name="achat"> </div> <br>
+                    
+                <div class="form-group">
+                    <label for="materiel_achat">Matériel + accessoire:</label>
+                    <textarea class="form-control" name="materiel_achat"></textarea> </div><br>
 
                 <label>Location</label>
                 <input type="checkbox" class="form-control ex-enable-ss2" name="location" value="2">
@@ -112,13 +116,14 @@
                     <div class="form-group">
                         <label for="duree">Durée du contrat:</label>
                         <input type="text" class="form-control" name="duree"> </div> <br>
+                        
+                <div class="form-group">
+                    <label for="materiel_location">Matériel + accessoire:</label>
+                    <textarea class="form-control" name="materiel_location"></textarea> </div><br>
                     <h2>--FIN LOCATION--</h2><br>
 
                 </div>
                 <br>
-                <div class="form-group">
-                    <label for="materiel">Matériel + accessoire:</label>
-                    <textarea class="form-control" name="materiel"></textarea> </div><br>
 
 
 
@@ -128,7 +133,7 @@
                     <label for="noir">Noire:</label>
                     <input type="text" class="form-control" name="noir" placeholder="Par Trimestre"> </div>
                 <div class="form-group">
-                    <label for="noir">Couleur:</label>
+                    <label for="couleur">Couleur:</label>
                     <input type="text" class="form-control" name="couleur" placeholder="Par Trimestre"> </div><br><br>
                 <div class="form-group">
                     <label for="cout_noir">Coût copie noire:</label>
