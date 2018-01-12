@@ -2,64 +2,63 @@ $(document).ready(function(){
 
     
     //hide and seek
-
-$(".ex-enable").click(function(){
-   if(this.checked){
-       console.log("ça marche");
-       $(".groupe-num-1").css({
-           "display" : "block"
-       });
-       $(".groupe-num-ss1").css({
-           "display" : "none"
-       });
-       $(".groupe-num-ss2").css({
-           "display" : "none"
-       });
-   }else{
-       $(".groupe-num-1").css({
-           "display" : "none"
-       });
-   } 
-});
-
-$(".ex-enable-ss1").click(function(){
-   if(this.checked){
-       console.log("ça marche");
-       $(".groupe-num-ss1").css({
-           "display" : "block"
-       });
-   }else{
-       $(".groupe-num-ss1").css({
-           "display" : "none"
-       });
-   } 
-});
-    
-$(".ex-enable-ss2").click(function(){
-   if(this.checked){
-       console.log("ça marche");
-       $(".groupe-num-ss2").css({
-           "display" : "block"
-       });
-   }else{
-       $(".groupe-num-ss2").css({
-           "display" : "none"
-       });
-   } 
-});    
-    
-$(".ex-enable2").click(function(){
-   if(this.checked){
-       console.log("ça marche");
-       $(".groupe-num-3").css({
-           "display" : "block"
-       });
-   }else{
-       $(".groupe-num-3").css({
-           "display" : "none"
-       });
-   } 
-});        
+//$(".ex-enable").click(function(){
+//   if(this.checked){
+//       console.log("ça marche");
+//       $(".groupe-num-1").css({
+//           "display" : "block"
+//       });
+//       $(".groupe-num-ss1").css({
+//           "display" : "none"
+//       });
+//       $(".groupe-num-ss2").css({
+//           "display" : "none"
+//       });
+//   }else{
+//       $(".groupe-num-1").css({
+//           "display" : "none"
+//       });
+//   } 
+//});
+//
+//$(".ex-enable-ss1").click(function(){
+//   if(this.checked){
+//       console.log("ça marche");
+//       $(".groupe-num-ss1").css({
+//           "display" : "block"
+//       });
+//   }else{
+//       $(".groupe-num-ss1").css({
+//           "display" : "none"
+//       });
+//   } 
+//});
+//    
+//$(".ex-enable-ss2").click(function(){
+//   if(this.checked){
+//       console.log("ça marche");
+//       $(".groupe-num-ss2").css({
+//           "display" : "block"
+//       });
+//   }else{
+//       $(".groupe-num-ss2").css({
+//           "display" : "none"
+//       });
+//   } 
+//});    
+//    
+//$(".ex-enable2").click(function(){
+//   if(this.checked){
+//       console.log("ça marche");
+//       $(".groupe-num-3").css({
+//           "display" : "block"
+//       });
+//   }else{
+//       $(".groupe-num-3").css({
+//           "display" : "none"
+//       });
+//   } 
+//});        
     $("#cInteret").change(function(){
             console.log("hi");
         var valForm = $("#cInteret option:selected").val();
