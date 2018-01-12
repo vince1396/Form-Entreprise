@@ -91,12 +91,13 @@
                 <div class="form-group groupe-num-ss1">
                     <h3>Pour achat:</h3>
                     <label for="achat">Prix</label>
-                    <input type="text" class="form-control" name="achat"> </div> <br>
+                    <input type="text" class="form-control" name="achat">  <br>
                     
                 <div class="form-group">
                     <label for="materiel_achat">Matériel + accessoire:</label>
                     <textarea class="form-control" name="materiel_achat"></textarea> </div><br>
-
+                </div>
+                
                 <label>Location</label>
                 <input type="checkbox" class="form-control ex-enable-ss2" name="location" value="2">
                 <div class="groupe-num-ss2">
