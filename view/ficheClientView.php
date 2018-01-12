@@ -1,9 +1,9 @@
 <div class="container">
-   
-<!---- COMMERCIAL ---->
+
+    <!---- COMMERCIAL ---->
     <div class="row firstblock">
         <form class="form-inline">
-           <h1>Commercial</h1>
+            <h1>Commercial</h1>
             <div class="form-group">
                 <label for="nom">Nom</label>
                 <input type="text" class="form-control" name="nom"> </div>
@@ -19,8 +19,9 @@
             <div class="form-group">
                 <label for="date_rdv">Date de RDV:</label>
                 <input type="date" class="form-control" name="date_rdv"> </div>
-<br><br><br>
-           <h1>Raison Sociale</h1>
+            <hr class="custom">
+            <br><br><br>
+            <h1>Raison Sociale</h1>
             <div class="form-group">
                 <label for="nom_resp">Nom du responsable</label>
                 <input type="text" class="form-control" name="nom_resp"> </div>
@@ -60,16 +61,16 @@
                 <input type="text" class="form-control" name="decideur"> </div>
             <div class="form-group">
                 <label for="signataire">Signataire</label>
-                <input type="text" class="form-control" name="signataire"> </div> 
+                <input type="text" class="form-control" name="signataire"> </div>
             <div class="form-group">
                 <label for="date_projet">Date du projet</label>
-                <input type="date" class="form-control" name="date_projet"> </div>    
-              <br><br><br>  
-                  
-            <h1>Centre d'intérêt</h1>                
+                <input type="date" class="form-control" name="date_projet"> </div>
+            <br><br><br>
+            <hr class="custom">
+            <h1>Centre d'intérêt</h1>
             <div class="form-group">
                 <label for="bureautique">Bureautique</label>
-                <input type="checkbox" class="form-control" name="bureautique" value="1"> </div>
+                <input type="checkbox" class="form-control ex-enable" name="bureautique" value="1"> </div>
             <div class="form-group">
                 <label for="informatique">Informatique</label>
                 <input type="checkbox" class="form-control" name="informatique" value="2"> </div>
@@ -79,80 +80,86 @@
             <div class="form-group">
                 <label for="telephonie">Téléphonie</label>
                 <input type="checkbox" class="form-control" name="telephonie" value="4"> </div><br><br>
-                
-            <h3>Bureautique</h3>
-            <div class="form-group">
-                <label for="nb_contrat">Nombre de contrat:</label>
-                <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                 </div>    <br>  
-            <div class="form-group">
-                <label for="fournisseur">Fournisseur</label>
-                <input type="text" class="form-control" name="fournisseur"> </div>    <br>  
-            <h3>Pour achat:</h3> 
-            <div class="form-group">
-                <label for="achat">Prix</label>
-                <input type="text" class="form-control" name="achat"> </div>  <br> 
-            <h3>Pour location:</h3>
-            <div class="form-group">
-                <label for="date_deb">Démarrage du contrat</label>
-                <input type="date" class="form-control" name="date_deb"> </div>  
-            <div class="form-group">
-                <label for="loyer">Loyer(HT)</label>
-                <input type="text" class="form-control" name="loyer"> </div> <br>
-            <div class="form-group">
-            <label for="prelevement">Prélèvement: </label>
-                <label for="mois">Mois</label>
-                <input type="checkbox" class="form-control" name="prelevement" value="1">
-                <label for="trimestre">Trimestrielle</label>
-                <input type="checkbox" class="form-control" name="prelevement" value="2"> </div> <br>
-             <div class="form-group">
-                <label for="duree">Durée du contrat:</label>
-                <input type="text" class="form-control" name="duree"> </div> <br>
-            <h2>--FIN LOCATION--</h2><br>
-            <div class="form-group">
-                <label for="materiel">Matériel + accessoire:</label>
-                <textarea class="form-control" name="materiel"></textarea> </div><br>
-            <h3>Entretient</h3>
-            <h4>Volume copie engagée:</h4>
-            <div class="form-group">
-                <label for="noir">Noire:</label>
-                <input type="text" class="form-control" name="noir" placeholder="Par Trimestre"> </div>
-            <div class="form-group">
-                <label for="noir">Couleur:</label>
-                <input type="text" class="form-control" name="couleur" placeholder="Par Trimestre"> </div><br><br>
-            <div class="form-group">
-                <label for="cout_noir">Coût copie noire:</label>
-                <input type="text" class="form-control" name="cout_noir" placeholder="€ (HT)"> € HT </div><br><br>
-            <div class="form-group">
-                <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
-                <input type="text" class="form-control" name="vol_noir" placeholder="Par Trimestre"> -- </div>
-            <div class="form-group">
-                <label for="supp_noir">Supplément copie noire:</label>
-                <input type="text" class="form-control" name="supp_noir" placeholder="€ (HT)"> € HT </div><br><br>
-            <div class="form-group">
-                <label for="cout_couleur">Coût copie couleur:</label>
-                <input type="text" class="form-control" name="cout_couleur" placeholder="€ (HT)"> € HT -- </div><br><br>
-            <div class="form-group">
-                <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
-                <input type="text" class="form-control" name="vol_couleur" placeholder="Par Trimestre"> -- </div>
-            <div class="form-group">
-                <label for="supp_couleur">Supplément copie couleur:</label>
-                <input type="text" class="form-control" name="supp_couleur" placeholder="€ (HT)"> € HT </div><br><br>
-                
-            <div class="form-group">
-                <label for="amelioration">Amélioration souhaitée:</label>
-                <textarea class="form-control" name="amelioration"></textarea></div><br><br>  
-                
-            <div class="form-group">
-                <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
-                <textarea class="form-control" name="orientation"></textarea></div><br><br>        
-            
+
+            <div class="groupe-num-1">
+                <h3>Bureautique</h3>
+                <br>
+                <div class="form-group">
+                    <label for="fournisseur">Fournisseur</label>
+                    <input type="text" class="form-control" name="fournisseur"> </div> <br>
+
+                <label>Achat</label>
+                <input type="checkbox" class="form-control ex-enable-ss1" name="achat" value="1">
+                <div class="form-group groupe-num-ss1">
+                    <h3>Pour achat:</h3>
+                    <label for="achat">Prix</label>
+                    <input type="text" class="form-control" name="achat"> </div> <br>
+
+                <label>Location</label>
+                <input type="checkbox" class="form-control ex-enable-ss2" name="location" value="2">
+                <div class="groupe-num-ss2">
+                    <div class="form-group">
+                        <h3>Pour location:</h3>
+                        <label for="date_deb">Démarrage du contrat</label>
+                        <input type="date" class="form-control" name="date_deb"> </div>
+                    <div class="form-group">
+                        <label for="loyer">Loyer(HT)</label>
+                        <input type="text" class="form-control" name="loyer"> </div> <br>
+                    <div class="form-group">
+                        <label for="prelevement">Prélèvement: </label>
+                        <label for="mois">Mois</label>
+                        <input type="checkbox" class="form-control" name="prelevement" value="1">
+                        <label for="trimestre">Trimestrielle</label>
+                        <input type="checkbox" class="form-control" name="prelevement" value="2"> </div> <br>
+                    <div class="form-group">
+                        <label for="duree">Durée du contrat:</label>
+                        <input type="text" class="form-control" name="duree"> </div> <br>
+                    <h2>--FIN LOCATION--</h2><br>
+
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="materiel">Matériel + accessoire:</label>
+                    <textarea class="form-control" name="materiel"></textarea> </div><br>
+
+
+
+                <h3>Entretient</h3>
+                <h4>Volume copie engagée:</h4>
+                <div class="form-group">
+                    <label for="noir">Noire:</label>
+                    <input type="text" class="form-control" name="noir" placeholder="Par Trimestre"> </div>
+                <div class="form-group">
+                    <label for="noir">Couleur:</label>
+                    <input type="text" class="form-control" name="couleur" placeholder="Par Trimestre"> </div><br><br>
+                <div class="form-group">
+                    <label for="cout_noir">Coût copie noire:</label>
+                    <input type="text" class="form-control" name="cout_noir" placeholder="€ (HT)"> € HT </div><br><br>
+                <div class="form-group">
+                    <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
+                    <input type="text" class="form-control" name="vol_noir" placeholder="Par Trimestre"> -- </div>
+                <div class="form-group">
+                    <label for="supp_noir">Supplément copie noire:</label>
+                    <input type="text" class="form-control" name="supp_noir" placeholder="€ (HT)"> € HT </div><br><br>
+                <div class="form-group">
+                    <label for="cout_couleur">Coût copie couleur:</label>
+                    <input type="text" class="form-control" name="cout_couleur" placeholder="€ (HT)"> € HT -- </div><br><br>
+                <div class="form-group">
+                    <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
+                    <input type="text" class="form-control" name="vol_couleur" placeholder="Par Trimestre"> -- </div>
+                <div class="form-group">
+                    <label for="supp_couleur">Supplément copie couleur:</label>
+                    <input type="text" class="form-control" name="supp_couleur" placeholder="€ (HT)"> € HT </div><br><br>
+
+                <div class="form-group">
+                    <label for="amelioration">Amélioration souhaitée:</label>
+                    <textarea class="form-control" name="amelioration"></textarea></div><br><br>
+
+                <div class="form-group">
+                    <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
+                    <textarea class="form-control" name="orientation"></textarea></div><br><br>
+            </div>
+            <hr class="custom">
             <h3>Niveau d'intérêt:</h3>
             <b><h3><div class="form-group">
                 <label for="interet">*</label>
@@ -164,11 +171,11 @@
                 <label for="interet">***</label>
                 <input type="checkbox" name="interet" value="3"></div><br>
             </h3></b><br><br>
-            
+
             <button type="submit" class="btn btn-success" name="submit">Valider</button>
         </form>
     </div>
-    
-    
-    
+
+
+
 </div>
