@@ -70,6 +70,7 @@
             <h1>Centre d'intérêt</h1>
             <div class="form-group">
                 <select name="cInteret">
+<<<<<<< HEAD
                     <option value="1">Bureautique</option>
                     <option value="2">Informatique</option>
                     <option value="3">Solution</option>
@@ -78,6 +79,27 @@
             </div>
             
           
+=======
+                    <option value="bureautique">Bureautique</option>
+                    <option value="informatique">informatique</option>
+                    <option value="bureautique">Bureautique</option>
+                    <option value="bureautique">Bureautique</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="bureautique">Bureautique</label>
+                <input type="checkbox" class="form-control ex-enable" name="bureautique" value="1"> </div>
+            <div class="form-group">
+                <label for="informatique">Informatique</label>
+                <input type="checkbox" class="form-control" name="informatique" value="2"> </div>
+            <div class="form-group">
+                <label for="solution">Solution</label>
+                <input type="checkbox" class="form-control" name="solution" value="3"> </div>
+            <div class="form-group">
+                <label for="telephonie">Téléphonie</label>
+                <input type="checkbox" class="form-control" name="telephonie" value="4"> </div><br><br>
+>>>>>>> b8c7107aa3794b5eb37cf118b334c7de6e61a254
 
             <div class="groupe-num-1">
                 <h3>Bureautique</h3>
