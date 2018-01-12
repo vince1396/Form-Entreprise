@@ -69,8 +69,8 @@
             <hr class="custom">
             <h1>Centre d'intérêt</h1>
             <div class="form-group">
-                <select name="cInteret">
-
+                <select name="cInteret" id="cInteret">
+                    <option value="0">-Sélectionnez un centre d'intérêt-</option>
                     <option value="1">Bureautique</option>
                     <option value="2">Informatique</option>
                     <option value="3">Solution</option>
@@ -85,9 +85,17 @@
                 <div class="form-group">
                     <label for="fournisseur">Fournisseur</label>
                     <input type="text" class="form-control" name="fournisseur"> </div> <br>
-
-                <label>Achat</label>
-                <input type="checkbox" class="form-control ex-enable-ss1" name="achat" value="1">
+                
+                <div class="form-group">
+                <select name="sBuyRent" id="sBuyRent">
+                    <option value="0">-Choisissez-</option>
+                    <option value="1">Achat</option>
+                    <option value="2">Location</option>
+                </select>
+                </div>
+                
+                
+                
                 <div class="form-group groupe-num-ss1">
                     <h3>Pour achat:</h3>
                     <label for="achat">Prix</label>
@@ -98,8 +106,8 @@
                     <textarea class="form-control" name="materiel_achat"></textarea> </div><br>
                 </div>
                 
-                <label>Location</label>
-                <input type="checkbox" class="form-control ex-enable-ss2" name="location" value="2">
+           
+                
                 <div class="groupe-num-ss2">
                     <div class="form-group">
                         <h3>Pour location:</h3>

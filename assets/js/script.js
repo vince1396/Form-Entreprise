@@ -60,7 +60,77 @@ $(".ex-enable2").click(function(){
        });
    } 
 });        
+    $("#cInteret").change(function(){
+            console.log("hi");
+        var valForm = $("#cInteret option:selected").val();
+        console.log(valForm);
+        if(valForm == 0){
+            $(".groupe-num-1").css({
+                "display" : "none"
+            });
+        }
+        
+        if(valForm == 1){
+            $(".groupe-num-1").css({
+                "display" : "block"
+            });
+            $(".groupe-num-ss1").css({
+           "display" : "none"
+           });
+           $(".groupe-num-ss2").css({
+               "display" : "none"
+           });
+        }
+        if(valForm == 2){
+            $(".groupe-num-1").css({
+                "display" : "none"
+            });
+        }
+        if(valForm == 3){
+            $(".groupe-num-1").css({
+                "display" : "none"
+            });
+        }
+        if(valForm == 4){
+            $(".groupe-num-1").css({
+                "display" : "none"
+            });
+        }
+    });
+    
+    $("#sBuyRent").change(function(){
+            console.log("hi2");
+        var valForm = $("#sBuyRent option:selected").val();
+        console.log(valForm);
+        if(valForm == 0){
+            $(".groupe-num-ss1").css({
+                "display" : "none"
+            });
+            $(".groupe-num-ss2").css({
+                "display" : "none"
+            });
+        }
+        
+        if(valForm == 1){
+            $(".groupe-num-ss1").css({
+           "display" : "block"
+           });
+           $(".groupe-num-ss2").css({
+               "display" : "none"
+           });
+        }
+        if(valForm == 2){
+            $(".groupe-num-ss1").css({
+                "display" : "none"
+            });
+            $(".groupe-num-ss2").css({
+                "display" : "block"
+            });
+        }
+    });
 
+
+    
     //dupliquer
     
     $('#duplicatebtn').click(function(e) {
