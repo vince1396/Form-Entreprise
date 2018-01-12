@@ -172,6 +172,88 @@
                     <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
                     <textarea class="form-control" name="orientation"></textarea></div><br><br>
             </div>
+            
+            
+            <!----------- SOLUTION ---------------->
+            
+            
+            <h3>Solution</h3>
+            
+            <h4><b>GED (Organisation, distribution, stockage des docks electroniques:</b></h4>
+            <nav>
+                <ul>
+                    <li>
+                    <label for="document_classe">
+                        Comment les dossiers (clients/fournisseurs, projets...) et leurs documents (courriers, factures...) sont-ils
+                    classés et mis à disposition dans votre organisation ?
+                    </label><br>
+                    <textarea name="document_classe" cols="150" rows="5" class="form-control" name="document_classe"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="doc_archive">
+                        Combien de temps vous faut-il pour trouver un document dans vos archives?
+                    </label><br>
+                    <textarea name="doc_archive" cols="150" rows="5" class="form-control" name="doc_archive"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="doc_archive">
+                        Combien de temps vous faut-il pour trouver un document dans votre ordinateur?
+                    </label><br>
+                    <textarea name="doc_ordi" cols="150" rows="5" class="form-control" name="doc_ordi"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="collab_absent">
+                        Comment faites vous quand vous aurez besoin d'un documentqu'un collaborateur possède mais qui est absent ?
+                    </label><br>
+                    <textarea name="collab_absent" cols="150" rows="5" class="form-control" name="collab_absent"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="proc_valide">
+                        Quels sont chez vous les procédures nécessitant des validations (autorisation de dépenses, note de frais, etc..) ?
+                    </label><br>
+                    <textarea name="proc_valide" cols="150" rows="5" class="form-control" name="proc_valide"></textarea>
+                    </li><br>
+                </ul>
+            </nav><br><br>
+            
+            <h4><b>Suivi des impressions (comptabilisations, quotas, refacturation):</b></h4>
+            
+             <nav>
+                <ul>
+                    <li>
+                    <label for="vol_impression">
+                        Connaissez-vous précisément les volumes d'impression et de copie réalisés par services ?
+                    </label><br>
+                    <textarea name="vol_impression" cols="150" rows="5" class="form-control" name="vol_impression"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="refacturer">
+                        Souhaitez-vous refacturer des impressions ou des copies ?
+                    </label><br>
+                    <textarea name="refacturer" cols="150" rows="5" class="form-control" name="refacturer"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="doc_conf">
+                        Des documents confidentiels sont-ils imprimés chez vous ?
+                    </label><br>
+                    <textarea name="doc_conf" cols="150" rows="5" class="form-control" name="doc_conf"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="doc_compta">
+                        Avez-vous comptabilisé les documents imprimés chez vous ?
+                    </label><br>
+                    <textarea name="doc_compta" cols="150" rows="5" class="form-control" name="doc_compta"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="vol_coul_imp">
+                        Souhaitez-vous maîtriser les volumes couleur imprimés ?
+                    </label><br>
+                    <textarea name="vol_coul_imp" cols="150" rows="5" class="form-control" name="vol_coul_imp"></textarea>
+                    </li><br>
+                </ul>
+            </nav>
+            
+            <!-------------------------------------->
             <hr class="custom">
             <h3>Niveau d'intérêt:</h3>
             <b><h3><div class="form-group">
