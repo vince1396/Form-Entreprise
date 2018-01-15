@@ -270,9 +270,12 @@ header .header-content .header-content-inner p {
     }
     h1#homeHeading{font-size: 27px;}
 }
-
+#ficheclient{
+    background-color: white;
+}
 #connexion {
     background-color: rgba(62, 142, 201, 0.09);
+    
 }
 
 #contactMailTel{}

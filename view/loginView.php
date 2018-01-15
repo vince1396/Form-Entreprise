@@ -38,9 +38,9 @@
                         <input id="password" type="password" class="form-control" name="password" placeholder="Password"> </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox"> Remember me</label>
+                            <input type="checkbox">Se souvenir de moi</label>
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default">Valider</button>
                 </form>
                 </div>
             </div>

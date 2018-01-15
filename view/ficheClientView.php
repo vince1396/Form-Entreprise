@@ -1,5 +1,5 @@
-<div class="container">
-
+<section id="ficheclient">
+    <div class="container">
     <!-- -- COMMERCIAL -- -->
     <div class="row firstblock">
         <form class="form-inline" method="post">
@@ -342,3 +342,4 @@
 
 
 </div>
+</section>

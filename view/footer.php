@@ -1,4 +1,7 @@
-    <footer class="bg-dark">
+<?php if (isset($_SESSION['connecte']))
+    
+    {      
+    echo '<footer class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -19,4 +22,5 @@
      <!-- STAR RATING -->
      <script src="assets/js/star-rating.js"></script>
       <!-- CUSTOM SCRIPTS  -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>';
+    }
