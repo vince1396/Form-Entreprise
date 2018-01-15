@@ -248,7 +248,38 @@
                     <label for="vol_coul_imp">
                         Souhaitez-vous maîtriser les volumes couleur imprimés ?
                     </label><br>
-                    <textarea name="vol_coul_imp" cols="150" rows="5" class="form-control" name="vol_coul_imp"></textarea>
+                    <textarea name="vol_coul_imp" cols="150" rows="5" class="form-control"></textarea>
+                    </li><br>
+                </ul>
+            </nav><br><br>
+            
+            <h4><b>Modifications de PDFs et association de plusieurs types de documents:</b></h4>
+            
+             <nav>
+                <ul>
+                    <li>
+                    <label for="doc_papier">
+                        Avez-vous besoin de retravailler des documents papier ?
+                    </label><br>
+                    <textarea name="doc_papier" cols="150" rows="5" class="form-control"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="doc_app">
+                        Créez-vous des dossiers papier provenant de plusieurs  applications différentes ?
+                    </label><br>
+                    <textarea name="doc_app" cols="150" rows="5" class="form-control"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="scanner">
+                        Que pensez-vous de votre scanner d'aujourd'hui ?
+                    </label><br>
+                    <textarea name="scanner" cols="150" rows="5" class="form-control"></textarea>
+                    </li><br>
+                    <li>
+                    <label for="fonct_scanner">
+                        Avez-vous des besoins d'autres fonctionnalités concerant le scanner ?
+                    </label><br>
+                    <textarea name="fonct_scanner" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                 </ul>
             </nav>
