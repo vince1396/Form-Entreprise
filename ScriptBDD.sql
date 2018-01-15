@@ -121,7 +121,7 @@ CREATE TABLE telephonie(
   achat_t boolean,
   prix_t float,
   adresse_t varchar(255),
-  num_ligne varchr(255),
+  num_ligne varchar(255),
   nb_poste int,
   nb_rj45 int,
   primary key(id_t),
