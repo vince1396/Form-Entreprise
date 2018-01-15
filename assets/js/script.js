@@ -124,15 +124,22 @@ $(document).ready(function(){
     
     //FIN STAR RATING
     
-    $("#cInteret").change(function(){
+        $("#cInteret").change(function(){
             console.log("hi");
         var valForm = $("#cInteret option:selected").val();
         console.log(valForm);
+
         if(valForm == 0){
             $(".groupe-num-1").css({
                 "display" : "none"
             });
             $(".groupe-num-2").css({
+                "display" : "none"
+            });
+            $(".groupe-num-3").css({
+                "display" : "none"
+            });
+            $(".groupe-num-4").css({
                 "display" : "none"
             });
         }
@@ -142,6 +149,12 @@ $(document).ready(function(){
                 "display" : "block"
             });
             $(".groupe-num-2").css({
+                "display" : "none"
+            });
+            $(".groupe-num-3").css({
+                "display" : "none"
+            });
+            $(".groupe-num-4").css({
                 "display" : "none"
             });
             $(".groupe-num-ss1").css({
@@ -156,6 +169,12 @@ $(document).ready(function(){
                 "display" : "none"
             });
             $(".groupe-num-2").css({
+                "display" : "block"
+            });
+            $(".groupe-num-3").css({
+                "display" : "none"
+            });
+            $(".groupe-num-4").css({
                 "display" : "none"
             });
         }
@@ -164,8 +183,15 @@ $(document).ready(function(){
                 "display" : "none"
             });
             $(".groupe-num-2").css({
+                "display" : "none"
+            });
+            $(".groupe-num-3").css({
                 "display" : "block"
             });
+            $(".groupe-num-4").css({
+                "display" : "none"
+            });
+            
         }
         if(valForm == 4){
             $(".groupe-num-1").css({
@@ -173,6 +199,12 @@ $(document).ready(function(){
             });
             $(".groupe-num-2").css({
                 "display" : "none"
+            });
+            $(".groupe-num-3").css({
+                "display" : "none"
+            });
+            $(".groupe-num-4").css({
+                "display" : "block"
             });
         }
     });
