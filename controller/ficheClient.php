@@ -7,20 +7,21 @@
     //Commercial
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
-        $date = $_POST['date'];
-        $rdv = $_POST['rdv'];
+        $date = $_POST['date_contact'];
+        $rdv = $_POST['prise_rdv'];
         $date_rdv = $_POST['date_rdv'];
         
     //Raison Sociale
-        $nom_resp = $_POST['nom_resp'];
+        $prospect = $_POST['prospect'];
+        $nom_resp = $_POST['nom_c'];
         $fonction = $_POST['fonction'];
         $adresse = $_POST['adresse'];
         $cp = $_POST['cp'];
         $ville = $_POST['ville'];
         $tel = $_POST['tel'];
         $fax = $_POST['fax'];
-        $email = $_POST['email'];
-        $secteur = $_POST['secteur'];
+        $email = $_POST['mail_c'];
+        $secteur = $_POST['secteur_activite'];
         $nb_site = $_POST['nb_site'];
         
     //Cycle de décision
@@ -37,14 +38,14 @@
         
             //Achat
             $achat = $_POST['achat'];
-            $materiel_achat = $_POST['materiel_achat'];
+            $materiel= $_POST['materiel'];
             
             //Location
             $date_deb = $_POST['date_deb'];
             $loyer = $_POST['loyer'];
             $prelevement = $_POST['prelevement']; // 1 = Mois, 2 = Trimestre
             $duree = $_POST['duree'];
-            $materiel_location = $_POST['materiel_location'];
+            $materiel = $_POST['materiel'];
             
             //Entretien
             $noir = $_POST['noir'];
@@ -62,10 +63,11 @@
             $interet = $_POST['interet'];    
         
         //Solution
-            $document_classe = $_POST['document_classe'];
+            $doc_classe = $_POST['doc_classe'];
             $doc_archive = $_POST['doc_archive'];
-            $doc_ordi = $_POST['collab_absent'];
-            $proc_valide = $_POST['proc_valide'];
+            $doc_ordi = $_POST['doc_ordi'];
+            $collab_absent = $_POST['collab_absent'];
+            $proc_valid = $_POST['proc_valid'];
             $vol_impression = $_POST['vol_impression'];
             $refacturer = $_POST['refacturer'];
             $doc_conf = $_POST['doc_conf'];
@@ -74,7 +76,7 @@
             $doc_papier = $_POST['doc_papier'];
             $doc_app = $_POST['doc_app'];
             $scanner = $_POST['scanner'];
-            $fonct_scanner = $_POST['scanner'];
+            $fonct_scanner = $_POST['fonct_scanner'];
     }
     
 

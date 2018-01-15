@@ -132,11 +132,17 @@ $(document).ready(function(){
             $(".groupe-num-1").css({
                 "display" : "none"
             });
+            $(".groupe-num-2").css({
+                "display" : "none"
+            });
         }
         
         if(valForm == 1){
             $(".groupe-num-1").css({
                 "display" : "block"
+            });
+            $(".groupe-num-2").css({
+                "display" : "none"
             });
             $(".groupe-num-ss1").css({
            "display" : "none"
@@ -149,14 +155,23 @@ $(document).ready(function(){
             $(".groupe-num-1").css({
                 "display" : "none"
             });
+            $(".groupe-num-2").css({
+                "display" : "none"
+            });
         }
         if(valForm == 3){
             $(".groupe-num-1").css({
                 "display" : "none"
             });
+            $(".groupe-num-2").css({
+                "display" : "block"
+            });
         }
         if(valForm == 4){
             $(".groupe-num-1").css({
+                "display" : "none"
+            });
+            $(".groupe-num-2").css({
                 "display" : "none"
             });
         }

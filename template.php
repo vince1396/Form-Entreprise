@@ -15,8 +15,7 @@
 	<link rel="stylesheet" href="assets/css/star-rating.css" type="text/css"/>
    	<link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    
+
 </head>
 
 
