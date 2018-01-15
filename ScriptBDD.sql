@@ -60,7 +60,7 @@ CREATE TABLE bureautique(
   volume_noir int,
   volume_couleur int,
   supp_noir int,
-  supp_couleur,
+  supp_couleur int,
   amelioration text,
   orientation text,
   primary key(id_b),
