@@ -119,9 +119,14 @@ CREATE TABLE telephonie(
 
 CREATE TABLE fiche(
   id_f smallint unsigned not null auto_increment,
+  date_contact date,
+  date_rdv date,
+  prise_rdv varchar(255),
   id_c smallint unsigned,
   id_p smallint unsigned,
+  id_u smallint unsigned,
   primary key(id_f),
   foreign key(id_c) references client(id_c),
-  foreign key(id_p) references projet(id_p)
+  foreign key(id_p) references projet(id_p),
+  foreign key(id_u) references user(id_u)
 );
