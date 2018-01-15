@@ -59,7 +59,22 @@
         
             $amelioration = $_POST['amelioration'];
             $orientation = $_POST['orientation'];
-            $interet = $_POST['interet'];     
+            $interet = $_POST['interet'];    
+        
+        //Solution
+            $document_classe = $_POST['document_classe'];
+            $doc_archive = $_POST['doc_archive'];
+            $doc_ordi = $_POST['collab_absent'];
+            $proc_valide = $_POST['proc_valide'];
+            $vol_impression = $_POST['vol_impression'];
+            $refacturer = $_POST['refacturer'];
+            $doc_conf = $_POST['doc_conf'];
+            $doc_compta = $_POST['doc_compta'];
+            $vol_coul_imp = $_POST['vol_coul_imp'];
+            $doc_papier = $_POST['doc_papier'];
+            $doc_app = $_POST['doc_app'];
+            $scanner = $_POST['scanner'];
+            $fonct_scanner = $_POST['scanner'];
     }
     
 
