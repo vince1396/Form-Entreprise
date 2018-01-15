@@ -287,21 +287,21 @@
             <!-------------------------------------->
             <hr class="custom">
             <h3>Niveau d'intérêt:</h3>
-            <!--
+
             <b><h3><div class="form-group">
-                <label for="interet">*</label>
-                <input type="checkbox" name="interet" value="1"></div><br>
+                <label for="interet"><i class="fa fa-star fa-2x"></i></label>
+                <input type="radio" name="interet" value="1"></div><br>
             <div class="form-group">
-                <label for="interet">**</label>
-                <input type="checkbox" name="interet" value="2"></div><br>
+                <label for="interet"><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></label>
+                <input type="radio" name="interet" value="2"></div><br>
             <div class="form-group">
-                <label for="interet">***</label>
-                <input type="checkbox" name="interet" value="3"></div><br>
+                <label for="interet"><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></label>
+                <input type="radio" name="interet" value="3"></div><br>
             </h3></b><br><br>
--->
+
             
 
-            <input required class="rb-rating" type="text" value="" title="">
+           
             <hr class="custom">
 
             <button type="submit" class="btn btn-success" name="submit">Valider</button>
