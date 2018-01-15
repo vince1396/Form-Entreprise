@@ -78,34 +78,9 @@
                     <option value="4">Téléphonie</option>
                 </select>
             </div>
-            <div class="form-group">
-                <select name="cInteret2" id="cInteret2" class="cInteret2">
-                    <option value="0">-Sélectionnez un autre centre d'intérêt-</option>
-                    <option value="1">Bureautique</option>
-                    <option value="2">Informatique</option>
-                    <option value="3">Solution</option>
-                    <option value="4">Téléphonie</option>
-                </select>
+             <input type="button" id="btnClone" value="Clone" />
+            <div id="select_place">
             </div>
-            <div class="form-group">
-                <select name="cInteret3" id="cInteret3" class="cInteret3">
-                    <option value="0">-Sélectionnez un autre centre d'intérêt-</option>
-                    <option value="1">Bureautique</option>
-                    <option value="2">Informatique</option>
-                    <option value="3">Solution</option>
-                    <option value="4">Téléphonie</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <select name="cInteret4" id="cInteret4" class="cInteret4">
-                    <option value="0">-Sélectionnez un autre centre d'intérêt-</option>
-                    <option value="1">Bureautique</option>
-                    <option value="2">Informatique</option>
-                    <option value="3">Solution</option>
-                    <option value="4">Téléphonie</option>
-                </select>
-            </div>
-            
             <!----------------- DEBUT BUREAUTIQUE --------------------->
 
             <div class="groupe-num-1">
