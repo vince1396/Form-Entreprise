@@ -12,6 +12,7 @@ body {
 }
 body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  background: url('../css/background-2846221.jpg') 0 fixed;
 }
 .hr {
   
@@ -194,7 +195,6 @@ a#mentionLink{color: #7e7e7e;}
     padding: 100px 15px 100px;
     width: 75%;
     height:100vh;
-    background: black;
     opacity: 0.6;
 }
 
@@ -263,13 +263,16 @@ header .header-content .header-content-inner p {
     transform: translateY(-50%);
     padding: 0 50px;
   }
-    
     .header-container
     { 
         position: relative; text-align: center; margin: auto;  
-        padding: 100px 15px 100px; width: 100%; height: 500px; background: black; opacity: 0.6;
+        padding: 100px 15px 100px; width: 100%; height: 500px; opacity: 0.6;
     }
     h1#homeHeading{font-size: 27px;}
+}
+
+#connexion {
+    background-color: rgba(62, 142, 201, 0.09);
 }
 
 #contactMailTel{}
@@ -354,6 +357,11 @@ header .header-content .header-content-inner p {
     }
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
+    }
+    .width-log 
+    {
+        width: 35%;
+        margin: auto;
     }
 }
 .call-to-action h2 {
@@ -602,13 +610,16 @@ footer{padding: 100px 0;}
 
 /*Ajout Différent*/
 .groupe-num-1, .groupe-num-2, .groupe-num-ss1, .groupe-num-ss2{
-    display: none;
+   display: none;
 }
-
 
 hr.custom{
    width: 30%;
-    color: red;
-    border-width: 2px;
-    border-color: orangered;
+   color: red;
+   border-width: 2px;
+   border-color: orangered;
+}
+
+.background-log{
+
 }
