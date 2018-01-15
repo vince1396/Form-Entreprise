@@ -64,15 +64,16 @@
         return $req->fetch();
     }
 
-    function addBureautiqueLoyer($fournisseur, $leaser, $date_deb, $prix_b, $prelevement, $duree_contrat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation){
+    function addBureautiqueLoyer($fournisseur, $leaser, $date_deb, $achat, $prix_b, $prelevement, $duree_contrat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation){
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO bureautique(id_b, fournisseur, leaser, date_deb, prix_b, prelevement, duree_contrat, materiel, noir, couleur, cout_noir, cout_couleur, volume_noir, volume_couleur, supp_noir, supp_couleur, amelioration, orientation ) VALUES (:fournisseur, :leaser, :date_deb, :prix_b, :prelevement, :duree_contrat, :materiel, :noir, :couleur, :cout_noir, :cout_couleur, :volume_noir, :volume_couleur, :supp_noir, :supp_couleur, :amelioration, :orientation)");
+        $req = $bdd->prepare("INSERT INTO bureautique(id_b, fournisseur, leaser, date_deb, achat, prix_b, prelevement, duree_contrat, materiel, noir, couleur, cout_noir, cout_couleur, volume_noir, volume_couleur, supp_noir, supp_couleur, amelioration, orientation ) VALUES (:fournisseur, :leaser, :date_deb, :achat, :prix_b, :prelevement, :duree_contrat, :materiel, :noir, :couleur, :cout_noir, :cout_couleur, :volume_noir, :volume_couleur, :supp_noir, :supp_couleur, :amelioration, :orientation)");
         
         $req->bindValue(":fournisseur", $fournisseur, PDO::PARAM_STR);
         $req->bindValue(":leaser", $leaser, PDO::PARAM_STR);
         $req->bindValue(":date_deb", $date_deb, PDO::PARAM_STR);
+        $req->bindValue(":achat", $achat, PDO::PARAM_INT);
         $req->bindValue(":prix_b", $prix_b, PDO::PARAM_STR);
         $req->bindValue(":prelevement", $prelevement, PDO::PARAM_INT);
         $req->bindValue(":duree_contrat", $duree_contrat, PDO::PARAM_STR);
@@ -92,14 +93,15 @@
         return $req->fetch();
     }
 
-    function addBureautiqueAchat($fournisseur, $leaser, $achat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation){
+    function addBureautiqueAchat($fournisseur, $leaser, $achat, $prix_b, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation){
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO bureautique(fournisseur, leaser, prix_b, materiel, noir, couleur, cout_noir, cout_couleur, volume_noir, volume_couleur, supp_noir, supp_couleur, amelioration, orientation ) VALUES (:fournisseur, :leaser, :prix_b, :materiel, :noir, :couleur, :cout_noir, :cout_couleur, :volume_noir, :volume_couleur, :supp_noir, :supp_couleur, :amelioration, :orientation)");
+        $req = $bdd->prepare("INSERT INTO bureautique(fournisseur, leaser, achat, prix_b, materiel, noir, couleur, cout_noir, cout_couleur, volume_noir, volume_couleur, supp_noir, supp_couleur, amelioration, orientation ) VALUES (:fournisseur, :leaser, :achat, :prix_b, :materiel, :noir, :couleur, :cout_noir, :cout_couleur, :volume_noir, :volume_couleur, :supp_noir, :supp_couleur, :amelioration, :orientation)");
         
         $req->bindValue(":fournisseur", $fournisseur, PDO::PARAM_STR);
         $req->bindValue(":leaser", $leaser, PDO::PARAM_STR);
+        $req->bindValue(":achat", $achat, PDO::PARAM_STR);
         $req->bindValue(":prix_b", $prix_b, PDO::PARAM_STR);
         $req->bindValue(":materiel", $materiel, PDO::PARAM_STR);
         $req->bindValue(":noir", $noir, PDO::PARAM_STR);
