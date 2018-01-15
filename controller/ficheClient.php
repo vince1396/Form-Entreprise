@@ -59,7 +59,10 @@
         
             $amelioration = $_POST['amelioration'];
             $orientation = $_POST['orientation'];
-            $interet = $_POST['interet'];     
+            $interet = $_POST['interet'];    
+        
+        //Solution
+            $document_classe = $_POST['document_classe'];
     }
     
 
