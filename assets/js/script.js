@@ -1,6 +1,27 @@
 $(document).ready(function(){
 
     
+    $("#btnClone").on('click', function () {
+        console.log("hi");
+ 
+            var index = $("#select_place select").length + 1;
+ 
+            //Clone the DropDownList
+            var cInteret = $("#cInteret").clone();
+ 
+            //Set the ID and Name
+            cInteret.attr("id", "cInteret_" + index);
+            cInteret.attr("name", "cInteret_" + index);
+ 
+            //[OPTIONAL] Copy the selected value
+            var selectedValue = $("#cInteret option:selected").val();
+            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+ 
+            //Append to the DIV.
+            $("#select_place").append(cInteret);
+            $("#select_place").append("<br /><br />");
+        });
+    
     //hide and seek
 //$(".ex-enable").click(function(){
 //   if(this.checked){

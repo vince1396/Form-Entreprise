@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    if()
+    
 
 $("#cInteret").change(function(){
             console.log("hi");
@@ -85,9 +85,9 @@ $("#cInteret").change(function(){
             });
         }
     });
-    $("#cInteret").change(function(){
+    $("#cInteret2").change(function(){
             console.log("hi");
-        var valForm = $("#cInteret option:selected").val();
+        var valForm = $("#cInteret2 option:selected").val();
         console.log(valForm);
 
         if(valForm == 0){
