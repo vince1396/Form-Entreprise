@@ -23,7 +23,9 @@ CREATE TABLE client(
   secteur_activite varchar(255),
   nb_site int,
   nb_salarie int,
-  primary key(id_c)
+  id_f smallint unsigned,
+  primary key(id_c),
+  foreign key(id_f) references fiche(id_f)
 );
 
 CREATE TABLE projet(
@@ -32,7 +34,9 @@ CREATE TABLE projet(
   decideur varchar(255),
   signataire varchar(255),
   date_projet date,
-  primary key(id_p)
+  id_c smallint unsigned,
+  primary key(id_p),
+  foreign key(id_c) references client(id_c)
 );
 
 CREATE TABLE bureautique(
@@ -40,6 +44,7 @@ CREATE TABLE bureautique(
   fournisseur varchar(255),
   leaser varchar(255),
   date_deb date,
+  achat varchar(255),
   loyer float,
   prelevement boolean,
   duree_contrat int,
@@ -122,11 +127,7 @@ CREATE TABLE fiche(
   date_contact date,
   date_rdv date,
   prise_rdv varchar(255),
-  id_c smallint unsigned,
-  id_p smallint unsigned,
   id_u smallint unsigned,
   primary key(id_f),
-  foreign key(id_c) references client(id_c),
-  foreign key(id_p) references projet(id_p),
   foreign key(id_u) references user(id_u)
 );
