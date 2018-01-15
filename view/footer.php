@@ -1,4 +1,7 @@
-    <footer class="bg-dark">
+<?php if (isset($_SESSION['connecte']))
+    
+    {      
+    echo '<footer class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -8,8 +11,9 @@
                 </div>
             </div>
         </div>
-    </footer>
-
+    </footer>'
+}
+?>
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-3.2.1.js"></script>
     <!-- BOOTSTRAP SCRIPTS  -->
@@ -20,4 +24,3 @@
      <script src="assets/js/star-rating.js"></script>
       <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/select.js"></script>
