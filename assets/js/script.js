@@ -124,58 +124,6 @@ $(document).ready(function(){
     
     //FIN STAR RATING
     
-    $("#cInteret").change(function(){
-            console.log("hi");
-        var valForm = $("#cInteret option:selected").val();
-        console.log(valForm);
-        if(valForm == 0){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-        }
-        
-        if(valForm == 1){
-            $(".groupe-num-1").css({
-                "display" : "block"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-ss1").css({
-           "display" : "none"
-           });
-           $(".groupe-num-ss2").css({
-               "display" : "none"
-           });
-        }
-        if(valForm == 2){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-        }
-        if(valForm == 3){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "block"
-            });
-        }
-        if(valForm == 4){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-        }
-    });
     
     $("#sBuyRent").change(function(){
             console.log("hi2");

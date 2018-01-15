@@ -2,7 +2,7 @@
 
     <!-- -- COMMERCIAL -- -->
     <div class="row firstblock">
-        <form class="form-inline">
+        <form class="form-inline" method="post">
             <h1>Commercial</h1>
             <div class="form-group">
                 <label for="nom">Nom</label>
@@ -12,10 +12,10 @@
                 <input type="text" class="form-control" name="prenom"> </div>
             <div class="form-group">
                 <label for="date">Date de contact:</label>
-                <input type="date" class="form-control" name="date"> </div>
+                <input type="date" class="form-control" name="date_contact"> </div>
             <div class="form-group">
                 <label for="rdv">RDV pris par:</label>
-                <input type="text" class="form-control" name="rdv"> </div><br><br>
+                <input type="text" class="form-control" name="prise_rdv"> </div><br><br>
             <div class="form-group">
                 <label for="date_rdv">Date de RDV:</label>
                 <input type="date" class="form-control" name="date_rdv"> </div>
@@ -70,7 +70,7 @@
             <hr class="custom">
             <h1>Centre d'intérêt</h1>
             <div class="form-group">
-                <select name="cInteret" id="cInteret">
+                <select name="cInteret" id="cInteret"  class="cInteret">
                     <option value="0">-Sélectionnez un centre d'intérêt-</option>
                     <option value="1">Bureautique</option>
                     <option value="2">Informatique</option>
@@ -78,7 +78,35 @@
                     <option value="4">Téléphonie</option>
                 </select>
             </div>
-
+            <div class="form-group">
+                <select name="cInteret2" id="cInteret2" class="cInteret2">
+                    <option value="0">-Sélectionnez un autre centre d'intérêt-</option>
+                    <option value="1">Bureautique</option>
+                    <option value="2">Informatique</option>
+                    <option value="3">Solution</option>
+                    <option value="4">Téléphonie</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="cInteret3" id="cInteret3" class="cInteret3">
+                    <option value="0">-Sélectionnez un autre centre d'intérêt-</option>
+                    <option value="1">Bureautique</option>
+                    <option value="2">Informatique</option>
+                    <option value="3">Solution</option>
+                    <option value="4">Téléphonie</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="cInteret4" id="cInteret4" class="cInteret4">
+                    <option value="0">-Sélectionnez un autre centre d'intérêt-</option>
+                    <option value="1">Bureautique</option>
+                    <option value="2">Informatique</option>
+                    <option value="3">Solution</option>
+                    <option value="4">Téléphonie</option>
+                </select>
+            </div>
+            
+            <!----------------- DEBUT BUREAUTIQUE --------------------->
 
             <div class="groupe-num-1">
                 <h3>Bureautique</h3>
@@ -172,11 +200,12 @@
                     <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
                     <textarea class="form-control" name="orientation"></textarea></div><br><br>
             </div>
-
-
+            
+            <!----------------- FIN BUREAUTIQUE --------------------->
+            
             <!----------- SOLUTION ---------------->
 
-            <div class="groupe-num-2">
+            <div class="groupe-num-3">
             <h3>Solution</h3>
 
             <h4><b>GED (Organisation, distribution, stockage des docks electroniques:</b></h4>
@@ -284,7 +313,10 @@
                 </ul>
             </nav>
             </div>
+            
             <!----------------- FIN SOLUTION --------------------->
+
+           
             <hr class="custom">
             <h3>Niveau d'intérêt:</h3>
 
