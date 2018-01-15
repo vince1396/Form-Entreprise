@@ -64,12 +64,13 @@
         return $req->fetch();
     }
 
-    function addBureautiqueLoyer($fournisseur, $leaser, $date_deb, $achat, $prix_b, $prelevement, $duree_contrat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation){
+    function addBureautiqueLocation($id_b, $fournisseur, $leaser, $date_deb, $achat, $prix_b, $prelevement, $duree_contrat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation){
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO bureautique(id_b, fournisseur, leaser, date_deb, achat, prix_b, prelevement, duree_contrat, materiel, noir, couleur, cout_noir, cout_couleur, volume_noir, volume_couleur, supp_noir, supp_couleur, amelioration, orientation ) VALUES (:fournisseur, :leaser, :date_deb, :achat, :prix_b, :prelevement, :duree_contrat, :materiel, :noir, :couleur, :cout_noir, :cout_couleur, :volume_noir, :volume_couleur, :supp_noir, :supp_couleur, :amelioration, :orientation)");
+        $req = $bdd->prepare("INSERT INTO bureautique(id_b, fournisseur, leaser, date_deb, achat, prix_b, prelevement, duree_contrat, materiel, noir, couleur, cout_noir, cout_couleur, volume_noir, volume_couleur, supp_noir, supp_couleur, amelioration, orientation ) VALUES (:id_b, :fournisseur, :leaser, :date_deb, :achat, :prix_b, :prelevement, :duree_contrat, :materiel, :noir, :couleur, :cout_noir, :cout_couleur, :volume_noir, :volume_couleur, :supp_noir, :supp_couleur, :amelioration, :orientation)");
         
+        $req->bindValue(":id_b", $id_b, PDO::PARAM_INT);
         $req->bindValue(":fournisseur", $fournisseur, PDO::PARAM_STR);
         $req->bindValue(":leaser", $leaser, PDO::PARAM_STR);
         $req->bindValue(":date_deb", $date_deb, PDO::PARAM_STR);
@@ -93,12 +94,13 @@
         return $req->fetch();
     }
 
-    function addBureautiqueAchat($fournisseur, $leaser, $achat, $prix_b, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation){
+    function addBureautiqueAchat($id_b, $fournisseur, $leaser, $achat, $prix_b, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation){
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO bureautique(fournisseur, leaser, achat, prix_b, materiel, noir, couleur, cout_noir, cout_couleur, volume_noir, volume_couleur, supp_noir, supp_couleur, amelioration, orientation ) VALUES (:fournisseur, :leaser, :achat, :prix_b, :materiel, :noir, :couleur, :cout_noir, :cout_couleur, :volume_noir, :volume_couleur, :supp_noir, :supp_couleur, :amelioration, :orientation)");
+        $req = $bdd->prepare("INSERT INTO bureautique(id_b, fournisseur, leaser, achat, prix_b, materiel, noir, couleur, cout_noir, cout_couleur, volume_noir, volume_couleur, supp_noir, supp_couleur, amelioration, orientation ) VALUES (:id_b, :fournisseur, :leaser, :achat, :prix_b, :materiel, :noir, :couleur, :cout_noir, :cout_couleur, :volume_noir, :volume_couleur, :supp_noir, :supp_couleur, :amelioration, :orientation)");
         
+        $req->bindValue(":id_b", $id_b, PDO::PARAM_INT);
         $req->bindValue(":fournisseur", $fournisseur, PDO::PARAM_STR);
         $req->bindValue(":leaser", $leaser, PDO::PARAM_STR);
         $req->bindValue(":achat", $achat, PDO::PARAM_STR);
@@ -119,12 +121,13 @@
         return $req->fetch();
     }
 
-    function addInformatique($nom_resp, $materiel_actuel, $materiel_propose, $poste_travail, $pc_portable, $serveur, $nas, $reseau, $sauvegarde, $logiciel_actuel, $logiciel_propose, $note_i, $travaux, $intervenion, $maintenance, $dispositif, $panne_serveur, $doc_vital, $cout_contrat, $echeance){
+    function addInformatique($id_i, $nom_resp, $materiel_actuel, $materiel_propose, $poste_travail, $pc_portable, $serveur, $nas, $reseau, $sauvegarde, $logiciel_actuel, $logiciel_propose, $note_i, $travaux, $intervenion, $maintenance, $dispositif, $panne_serveur, $doc_vital, $cout_contrat, $echeance){
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO informatique(nom_resp, materiel_actuel, materiel_propose, poste_travail, pc_portable, serveur, nas, reseau, sauvegarde, logiciel_actuel, logiciel_propose, note_i, travaux, intervention, maintenance, dispositif, panne_serveur, doc_vital, cout_contrat, echeance) VALUES (:nom_resp, :materiel_actuel, :materiel_propose, :poste_travail, :pc_portable, :serveur, :nas, :reseau, :sauvegarde, :logiciel_actuel, :logiciel_propose, :note_i, :travaux, :intervention, :maintenance, :dispositif, :panne_serveur, :doc_vital, :cout_contrat, :echeance)");
+        $req = $bdd->prepare("INSERT INTO informatique(id_i, nom_resp, materiel_actuel, materiel_propose, poste_travail, pc_portable, serveur, nas, reseau, sauvegarde, logiciel_actuel, logiciel_propose, note_i, travaux, intervention, maintenance, dispositif, panne_serveur, doc_vital, cout_contrat, echeance) VALUES (:id_i, :nom_resp, :materiel_actuel, :materiel_propose, :poste_travail, :pc_portable, :serveur, :nas, :reseau, :sauvegarde, :logiciel_actuel, :logiciel_propose, :note_i, :travaux, :intervention, :maintenance, :dispositif, :panne_serveur, :doc_vital, :cout_contrat, :echeance)");
         
+        $req->bindValue(":id_i", $id_i, PDO::PARAM_INT);
         $req->bindValue(":nom_resp", $nom_resp, PDO::PARAM_STR);
         $req->bindValue(":materiel_actuel", $materiel_actuel, PDO::PARAM_STR);
         $req->bindValue(":materiel_propose", $materiel_propose, PDO::PARAM_STR);
@@ -150,12 +153,13 @@
         return $req->fetch();
     }
 
-    function addSolution($doc_classe, $doc_archive, $doc_ordi, $collab_absent, $proc_valid, $vol_impression, $refacturer, $doc_conf, $doc_compta, $vol_coul_imp, $doc_papier, $doc_app, $scanner, $fonct_scanner){
+    function addSolution($id_s, $doc_classe, $doc_archive, $doc_ordi, $collab_absent, $proc_valid, $vol_impression, $refacturer, $doc_conf, $doc_compta, $vol_coul_imp, $doc_papier, $doc_app, $scanner, $fonct_scanner){
     
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO solution(doc_classe, doc_archive, doc_ordi, collab_absent, proc_valid, vol_impression, refacturer, doc_conf, doc_compta, vol_coul_imp, doc_papier, doc_app, scanner, fonct_scanner) VALUES(:doc_classe, :doc_archive, :doc_ordi, :collab_absent, :proc_valid, :vol_impression, :refacturer, :doc_conf, :doc_compta, :vol_coul_imp, :doc_papier, :doc_app, :scanner, :fonct_scanner)");
+        $req = $bdd->prepare("INSERT INTO solution(id_s, doc_classe, doc_archive, doc_ordi, collab_absent, proc_valid, vol_impression, refacturer, doc_conf, doc_compta, vol_coul_imp, doc_papier, doc_app, scanner, fonct_scanner) VALUES(:id_s, :doc_classe, :doc_archive, :doc_ordi, :collab_absent, :proc_valid, :vol_impression, :refacturer, :doc_conf, :doc_compta, :vol_coul_imp, :doc_papier, :doc_app, :scanner, :fonct_scanner)");
         
+        $req->bindValue(":id_s", $id_s, PDO::PARAM_INT);
         $req->bindValue(":doc_classe", $doc_classe, PDO::PARAM_STR);
         $req->bindValue(":doc_archive", $doc_archive, PDO::PARAM_STR);
         $req->bindValue(":doc_ordi", $doc_ordi, PDO::PARAM_STR);
@@ -175,36 +179,46 @@
         return $req->fetch();
     }
 
-    function addTelephonieLoyer($fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat, $materiel_t){
+    function addTelephonieLocation($id_t, $fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat, $materiel_t, $adresse_t, $num_ligne, $nb_poste, $nb_rj45){
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO telephonie(fournisseur_t, leaser_t, achat_t, date_deb_t, prix_t, prelevement_t, duree_contrat, materiel_t) VALUES (:fournisseur_t, :leaser_t, :achat_t, :date_deb_t, :prix_t, :prelevement_t, :duree_contrat, :materiel_t)");
+        $req = $bdd->prepare("INSERT INTO telephonie(id_t, fournisseur_t, leaser_t, date_deb_t, achat_t, prix_t, prelevement_t, duree_contrat, materiel_t, adresse_t, num_ligne, nb_poste, nb_rj45) VALUES (:id_t, :fournisseur_t, :leaser_t, :date_deb_t, :achat_t, :prix_t, :prelevement_t, :duree_contrat, :materiel_t, adresse_t, :num_ligne, :nb_poste, :nb_rj45)");
         
+        $req->bindValue(":id_t", $id_t, PDO::PARAM_INT);
         $req->bindValue(":fournisseur_t", $fournisseur_t, PDO::PARAM_STR);
         $req->bindValue(":leaser_t", $leaser_t, PDO::PARAM_STR);
-        $req->bindValue(":achat_t", $achat_t, PDO::PARAM_INT);
         $req->bindValue(":date_deb_t", $date_deb_t, PDO::PARAM_STR);
+        $req->bindValue(":achat_t", $achat_t, PDO::PARAM_INT);
         $req->bindValue(":prix_t", $prix_t, PDO::PARAM_STR);
         $req->bindValue(":prelevement_t", $prelevement_t, PDO::PARAM_STR);
         $req->bindValue(":duree_contrat", $duree_contrat, PDO::PARAM_STR);
         $req->bindValue(":materiel_t", $materiel_t, PDO::PARAM_STR);
+        $req->bindValue(":adresse_t", $adresse_t, PDO::PARAM_STR);
+        $req->bindValue(":num_ligne", $num_ligne, PDO::PARAM_STR);
+        $req->bindValue(":nb_poste", $nb_poste, PDO::PARAM_INT);
+        $req->bindValue(":nb_rj45", $nb_rj45, PDO::PARAM_INT);
         $req->execute();
         
         return $req->fetch();
     }
 
-    function addTelephonieAchat($fournisseur_t, $leaser_t, $achat_t, $prix_t, $materiel_t){
+    function addTelephonieAchat($id_t, $fournisseur_t, $leaser_t, $achat_t, $prix_t, $materiel_t, $adresse_t, $num_ligne, $nb_poste, $nb_rj45){
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO telephonie(fournisseur_t, leaser_t, achat_t, prix_t, materiel_t) VALUES (:fournisseur_t, :leaser_t, :achat_t, :prix_t, :materiel_t)");
+        $req = $bdd->prepare("INSERT INTO telephonie(id_t, fournisseur_t, leaser_t, achat_t, prix_t, materiel_t, adresse_t, num_ligne, nb_poste, nb_rj45) VALUES (:id_t, :fournisseur_t, :leaser_t, :achat_t, :prix_t, :materiel_t, :adresse_t, :num_ligne, :nb_poste, :nb_rj45)");
         
+        $req->bindValue(":id_t", $id_t, PDO::PARAM_INT);
         $req->bindValue(":fournisseur_t", $fournisseur_t, PDO::PARAM_STR);
         $req->bindValue(":leaser_t", $leaser_t, PDO::PARAM_STR);
         $req->bindValue(":achat_t", $achat_t, PDO::PARAM_INT);
         $req->bindValue(":prix_t", $prix_t, PDO::PARAM_STR);
         $req->bindValue(":materiel_t", $materiel_t, PDO::PARAM_STR);
+        $req->bindValue(":adresse_t", $adresse_t, PDO::PARAM_STR);
+        $req->bindValue(":num_ligne", $num_ligne, PDO::PARAM_STR);
+        $req->bindValue(":nb_poste", $num_ligne, PDO::PARAM_INT);
+        $req->bindValue(":nb_rj45", $nb_rj45, PDO::PARAM_INT);
         $req->execute();
         
         return $req->fetch();
