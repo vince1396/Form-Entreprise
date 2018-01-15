@@ -4,7 +4,7 @@
 
     if(isset($_POST['submit']))
     {
-        die();
+        
     //Commercial
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
@@ -12,6 +12,8 @@
         $prise_rdv = $_POST['prise_rdv'];
         $date_rdv = $_POST['date_rdv'];
         
+        print($prise_rdv);
+        die();
         addInfoComm($date_contact, $date_rdv, $prise_rdv, $_SESSION['id_u']);
         
         $id_f = $bdd->lastInsertId();
