@@ -12,10 +12,10 @@
                 <input type="text" class="form-control" name="prenom"> </div>
             <div class="form-group">
                 <label for="date">Date de contact:</label>
-                <input type="date" class="form-control" name="date"> </div>
+                <input type="date" class="form-control" name="date_contact"> </div>
             <div class="form-group">
                 <label for="rdv">RDV pris par:</label>
-                <input type="text" class="form-control" name="rdv"> </div><br><br>
+                <input type="text" class="form-control" name="prise_rdv"> </div><br><br>
             <div class="form-group">
                 <label for="date_rdv">Date de RDV:</label>
                 <input type="date" class="form-control" name="date_rdv"> </div>
@@ -88,7 +88,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <select name="cInteret3" id="cInteret" class="cInteret">
+                <select name="cInteret3" id="cInteret3" class="cInteret3">
                     <option value="0">-Sélectionnez un autre centre d'intérêt-</option>
                     <option value="1">Bureautique</option>
                     <option value="2">Informatique</option>
@@ -97,7 +97,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <select name="cInteret3" id="cInteret" class="cInteret">
+                <select name="cInteret4" id="cInteret4" class="cInteret4">
                     <option value="0">-Sélectionnez un autre centre d'intérêt-</option>
                     <option value="1">Bureautique</option>
                     <option value="2">Informatique</option>
