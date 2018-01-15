@@ -83,7 +83,7 @@ CREATE TABLE informatique(
   dispositif text,
   panne_serveur text,
   doc_vital text,
-  cout_contrat text,
+  cout_contrat float,
   echeance varchar(255),
   primary key(id_i),
   foreign key(id_i) references projet(id_p)
@@ -118,8 +118,7 @@ CREATE TABLE telephonie(
   prix_t float,
   prelevement_t boolean,
   duree_contrat int,
-  materiel_t varchar(255),
-  adresse_t varchar(255),
+  materiel_t text,
   num_ligne varchar(255),
   nb_poste int,
   nb_rj45 int,
@@ -135,4 +134,12 @@ CREATE TABLE fiche(
   id_u smallint unsigned,
   primary key(id_f),
   foreign key(id_u) references user(id_u)
+);
+
+CREATE TABLE facture(
+  id_fact smallint unsigned not null auto_increment,
+  description text,
+  id_t smallint unsigned,
+  primary key(id_fact),
+  foreign key(id_t) references telephonie(id_t)
 );
