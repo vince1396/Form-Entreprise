@@ -12,12 +12,11 @@
         $prise_rdv = $_POST['prise_rdv'];
         $date_rdv = $_POST['date_rdv'];
         
-        print($prise_rdv);
-        die();
+        
         addInfoComm($date_contact, $date_rdv, $prise_rdv, $_SESSION['id_u']);
         
         $id_f = $bdd->lastInsertId();
-        var_dump($date_contact, $prise_rdv, $date_rdv, $id_f);
+        print($id_f);
         die();
     //Raison Sociale
         $prospect = $_POST['prospect'];
