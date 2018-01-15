@@ -1,6 +1,6 @@
 <div class="container">
 
-<!-- -- COMMERCIAL -- -->
+    <!-- -- COMMERCIAL -- -->
     <div class="row firstblock">
         <form class="form-inline">
             <h1>Commercial</h1>
@@ -88,7 +88,7 @@
                     <input type="text" class="form-control" name="fournisseur"> </div> <br>
 
                 <div class="form-group">
-                <select name="sBuyRent" id="sBuyRent">
+                    <select name="sBuyRent" id="sBuyRent">
                     <option value="0">-Choisissez-</option>
                     <option value="1">Achat</option>
                     <option value="2">Location</option>
@@ -100,11 +100,11 @@
                 <div class="form-group groupe-num-ss1">
                     <h3>Pour achat:</h3>
                     <label for="achat">Prix</label>
-                    <input type="text" class="form-control" name="achat">  <br>
+                    <input type="text" class="form-control" name="achat"> <br>
 
-                <div class="form-group">
-                    <label for="materiel_achat">Matériel + accessoire:</label>
-                    <textarea class="form-control" name="materiel_achat"></textarea> </div><br>
+                    <div class="form-group">
+                        <label for="materiel_achat">Matériel + accessoire:</label>
+                        <textarea class="form-control" name="materiel_achat"></textarea> </div><br>
                 </div>
 
 
@@ -127,9 +127,9 @@
                         <label for="duree">Durée du contrat:</label>
                         <input type="text" class="form-control" name="duree"> </div> <br>
 
-                <div class="form-group">
-                    <label for="materiel_location">Matériel + accessoire:</label>
-                    <textarea class="form-control" name="materiel_location"></textarea> </div><br>
+                    <div class="form-group">
+                        <label for="materiel_location">Matériel + accessoire:</label>
+                        <textarea class="form-control" name="materiel_location"></textarea> </div><br>
                     <h2>--FIN LOCATION--</h2><br>
 
                 </div>
@@ -172,121 +172,122 @@
                     <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
                     <textarea class="form-control" name="orientation"></textarea></div><br><br>
             </div>
-            
-            
+
+
             <!----------- SOLUTION ---------------->
-            
-            
+
+
             <h3>Solution</h3>
-            
+
             <h4><b>GED (Organisation, distribution, stockage des docks electroniques:</b></h4>
             <nav>
                 <ul>
                     <li>
-                    <label for="document_classe">
+                        <label for="document_classe">
                         Comment les dossiers (clients/fournisseurs, projets...) et leurs documents (courriers, factures...) sont-ils
                     classés et mis à disposition dans votre organisation ?
                     </label><br>
-                    <textarea name="document_classe" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="document_classe" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="doc_archive">
+                        <label for="doc_archive">
                         Combien de temps vous faut-il pour trouver un document dans vos archives?
                     </label><br>
-                    <textarea name="doc_archive" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="doc_archive" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="doc_archive">
+                        <label for="doc_archive">
                         Combien de temps vous faut-il pour trouver un document dans votre ordinateur?
                     </label><br>
-                    <textarea name="doc_ordi" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="doc_ordi" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="collab_absent">
+                        <label for="collab_absent">
                         Comment faites vous quand vous aurez besoin d'un documentqu'un collaborateur possède mais qui est absent ?
                     </label><br>
-                    <textarea name="collab_absent" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="collab_absent" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="proc_valide">
+                        <label for="proc_valide">
                         Quels sont chez vous les procédures nécessitant des validations (autorisation de dépenses, note de frais, etc..) ?
                     </label><br>
-                    <textarea name="proc_valide" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="proc_valide" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                 </ul>
             </nav><br><br>
-            
+
             <h4><b>Suivi des impressions (comptabilisations, quotas, refacturation):</b></h4>
-            
-             <nav>
+
+            <nav>
                 <ul>
                     <li>
-                    <label for="vol_impression">
+                        <label for="vol_impression">
                         Connaissez-vous précisément les volumes d'impression et de copie réalisés par services ?
                     </label><br>
-                    <textarea name="vol_impression" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="vol_impression" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="refacturer">
+                        <label for="refacturer">
                         Souhaitez-vous refacturer des impressions ou des copies ?
                     </label><br>
-                    <textarea name="refacturer" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="refacturer" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="doc_conf">
+                        <label for="doc_conf">
                         Des documents confidentiels sont-ils imprimés chez vous ?
                     </label><br>
-                    <textarea name="doc_conf" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="doc_conf" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="doc_compta">
+                        <label for="doc_compta">
                         Avez-vous comptabilisé les documents imprimés chez vous ?
                     </label><br>
-                    <textarea name="doc_compta" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="doc_compta" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="vol_coul_imp">
+                        <label for="vol_coul_imp">
                         Souhaitez-vous maîtriser les volumes couleur imprimés ?
                     </label><br>
-                    <textarea name="vol_coul_imp" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="vol_coul_imp" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                 </ul>
             </nav><br><br>
-            
+
             <h4><b>Modifications de PDFs et association de plusieurs types de documents:</b></h4>
-            
-             <nav>
+
+            <nav>
                 <ul>
                     <li>
-                    <label for="doc_papier">
+                        <label for="doc_papier">
                         Avez-vous besoin de retravailler des documents papier ?
                     </label><br>
-                    <textarea name="doc_papier" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="doc_papier" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="doc_app">
+                        <label for="doc_app">
                         Créez-vous des dossiers papier provenant de plusieurs  applications différentes ?
                     </label><br>
-                    <textarea name="doc_app" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="doc_app" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="scanner">
+                        <label for="scanner">
                         Que pensez-vous de votre scanner d'aujourd'hui ?
                     </label><br>
-                    <textarea name="scanner" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="scanner" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                    <label for="fonct_scanner">
+                        <label for="fonct_scanner">
                         Avez-vous des besoins d'autres fonctionnalités concerant le scanner ?
                     </label><br>
-                    <textarea name="fonct_scanner" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="fonct_scanner" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                 </ul>
             </nav>
-            
+
             <!-------------------------------------->
             <hr class="custom">
             <h3>Niveau d'intérêt:</h3>
+            <!--
             <b><h3><div class="form-group">
                 <label for="interet">*</label>
                 <input type="checkbox" name="interet" value="1"></div><br>
@@ -297,6 +298,10 @@
                 <label for="interet">***</label>
                 <input type="checkbox" name="interet" value="3"></div><br>
             </h3></b><br><br>
+-->
+            <hr class="custom">
+            <input required class="rb-rating" type="text" value="" title="">
+            <hr class="custom">
 
             <button type="submit" class="btn btn-success" name="submit">Valider</button>
         </form>

@@ -13,5 +13,7 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/bootstrap-fileupload.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.js"></script>
+     <!-- STAR RATING -->
+     <script src="assets/js/star-rating.js"></script>
       <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/script.js"></script>
