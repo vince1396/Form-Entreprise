@@ -1,11 +1,14 @@
-<section>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-md-12 logo">
-                <h1>FOOTER</h1> </div>
+    <footer class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div>© 2018 Form-Entreprise</div>
+                    <br/>
+                    <div><a href="mentions-legales" id="mentionLink">Mentions légales</a></div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </footer>
 
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-3.2.1.js"></script>

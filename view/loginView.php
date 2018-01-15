@@ -8,7 +8,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-center">
-                <li> <a class="page-scroll" href="">Accueil</a> </li>
+                <li> <a class="page-scroll" href="">Espace de connexion</a> </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -16,25 +16,34 @@
     <!-- /.container-fluid -->
 </nav>
 <header>
-    <div class="header-container"></div>
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1 id="homeHeading">Fiche commercial</h1>
-            <hr>
-            <h2>Connexion<br/></h2>
-            <form action="/action_page.php">
-                <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email"> </div>
-                <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd"> </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Remember me</label>
+    <section id="connexion">
+        <div class="header-container"></div>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">Fiche commercial</h1>
+                <hr>
+                <div class="background-log">
+                <h2>Connexion<br/></h2>
+                <br>
+                <form action="#" method="post">
+                    <div class="input-group width-log"> 
+                       <span class="input-group-addon">
+                       <i class="glyphicon glyphicon-user"></i>
+                       </span>
+                        <input id="email" type="text" class="form-control" name="email" placeholder="Email"> </div>
+                    <br>
+                    <div class="input-group width-log"> 
+                       <span class="input-group-addon">
+                       <i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password"> </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+            </div>
         </div>
-    </div>
+    </section>
 </header>
