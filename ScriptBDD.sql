@@ -9,15 +9,6 @@ CREATE TABLE user(
   primary key(id_u)
 );
 
-CREATE TABLE fiche(
-  id_f smallint unsigned not null auto_increment,
-  id_c smallint unsigned,
-  id_p smallint unsigned,
-  primary key(id_f),
-  foreign key(id_c) references client(id_c),
-  foreign key(id_p) references projet(id_p)
-);
-
 CREATE TABLE client(
   id_c smallint unsigned not null auto_increment,
   prospect boolean,
@@ -29,7 +20,7 @@ CREATE TABLE client(
   tel varchar(15),
   fax varchar(15),
   mail_c varchar(255),
-  secteur_activite(255),
+  secteur_activite varchar(255),
   nb_site int,
   nb_salarie int,
   primary key(id_c)
@@ -60,7 +51,7 @@ CREATE TABLE bureautique(
   volume_noir int,
   volume_couleur int,
   supp_noir int,
-  supp_couleur,
+  supp_couleur int,
   amelioration text,
   orientation text,
   primary key(id_b),
@@ -124,4 +115,13 @@ CREATE TABLE telephonie(
   materiel_t varchar(255),
   primary key(id_t),
   foreign key(id_t) references projet(id_p)
+);
+
+CREATE TABLE fiche(
+  id_f smallint unsigned not null auto_increment,
+  id_c smallint unsigned,
+  id_p smallint unsigned,
+  primary key(id_f),
+  foreign key(id_c) references client(id_c),
+  foreign key(id_p) references projet(id_p)
 );
