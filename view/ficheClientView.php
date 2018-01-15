@@ -299,14 +299,14 @@
                 <input type="checkbox" name="interet" value="3"></div><br>
             </h3></b><br><br>
 -->
-            <hr class="custom">
+            
+
             <input required class="rb-rating" type="text" value="" title="">
             <hr class="custom">
 
             <button type="submit" class="btn btn-success" name="submit">Valider</button>
         </form>
     </div>
-
 
 
 </div>

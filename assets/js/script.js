@@ -115,8 +115,8 @@ $(document).ready(function(){
                 'min': '0',
                 'max': '3',
                 'step': '1',
-                'size': 'xs',
-                'starCaptions': {0: 'status:nix', 1: 'status:wackelt', 2: 'status:geht', 3: 'status:laeuft'}
+                'size': 'md',
+                'starCaptions': {0: 'status:nix', 1: 'status:Faible', 2: 'status:Moyen', 3: 'status:Fort'}
             });
             $("#input-21c").rating({
                 min: 0, max: 8, step: 0.5, size: "xl", stars: "8"
