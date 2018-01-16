@@ -4,13 +4,20 @@
 
     if(isset($_POST['submit']))
     {
+        
     //Commercial
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
-        $date = $_POST['date_contact'];
-        $rdv = $_POST['prise_rdv'];
+        $date_contact = $_POST['date_contact'];
+        $prise_rdv = $_POST['prise_rdv'];
         $date_rdv = $_POST['date_rdv'];
         
+        
+        addInfoComm($date_contact, $date_rdv, $prise_rdv, $_SESSION['id_u']);
+        
+        $id_f = $bdd->lastInsertId();
+        print($id_f);
+        die();
     //Raison Sociale
         $prospect = $_POST['prospect'];
         $nom_resp = $_POST['nom_c'];
@@ -23,6 +30,9 @@
         $email = $_POST['mail_c'];
         $secteur = $_POST['secteur_activite'];
         $nb_site = $_POST['nb_site'];
+        $nb_salarie = $_POST['nb_salarie'];
+        
+        addInfoClient($prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $id_f);
         
     //Cycle de décision
         $prescripteur = $_POST['prescripteur'];
