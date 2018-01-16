@@ -69,7 +69,7 @@
             <br><br><br>
             <hr class="custom">
             <h1>Centre d'intérêt</h1>
-            <div class="form-group">
+            <div class="form-group" id="select_place">
                 <select name="cInteret" id="cInteret"  class="cInteret">
                     <option value="0">-Sélectionnez un centre d'intérêt-</option>
                     <option value="1">Bureautique</option>
@@ -78,8 +78,7 @@
                     <option value="4">Téléphonie</option>
                 </select>
             </div>
-            <div id="select_place">
-            </div>
+            <br>
             <div class="form-group">
              <input type="button" id="btnClone" value="Ajouter un centre d'intérêt" />
              <input type="button" id="btnDel" value="Enlever un centre d'intérêt" disabled/>
