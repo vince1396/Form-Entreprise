@@ -15,16 +15,40 @@ $(document).ready(function(){
             //[OPTIONAL] Copy the selected value
 //            var selectedValue = $("#cInteret option:selected").val();
 //            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
- 
+
             //Append to the DIV.
             $("#select_place").append(cInteret);
             $("#select_place").append("<br /><br />");
-            $('#btnDel').removeAttr('disabled');	// enable the "del" button
+            $('#btnDel').removeAttr('disabled').css({
+                "display" : "inline"
+            });	// enable the "del" button
+            
+            var num = $('.cInteret').length;
+                console.log("nombre de select : "+num)
             }
             if (index == 3){
                 $('#btnClone' ).attr('disabled', 'disabled').attr('value', "Impossible d'ajouter plus");
             }
+            if (index == 0){
+                $('#btnDel').attr('disabled', 'disabled').css({
+                "display" : "none"
+            });	// disable the "del" button
+            }
         });
+    
+    $("#btnDel").on('click', function(){
+        var num = $('.cInteret').length-1;
+        console.log("nombre de class cInteret : "+num);
+        if (num > 0){
+            $('#cInteret_' + num ).remove();
+        }
+        if (num == 1){
+                $('#btnDel').attr('disabled', 'disabled').css({
+                "display" : "none"
+            });	// disable the "del" button
+        }
+            
+    });
     
     //hide and seek
 //$(".ex-enable").click(function(){
@@ -223,7 +247,7 @@ $(document).ready(function(){
         }                        
     });
 
-    $( '#btnDel' ).click( function() {
+    $( '#btnDelOrigin' ).click( function() {
         // how many "duplicatable" input fields we currently have           
         var num = $( '.clonedInput' ).length;	
         
