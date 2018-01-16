@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-    </footer>'
+    </footer>';
 }
 ?>
     <!-- CORE JQUERY  -->
