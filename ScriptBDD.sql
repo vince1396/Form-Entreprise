@@ -41,7 +41,6 @@ CREATE TABLE projet(
 
 CREATE TABLE bureautique(
   id_b smallint unsigned not null auto_increment,
-  id_p smallint unsigned,
   fournisseur varchar(255),
   leaser varchar(255),
   date_deb date,
@@ -61,12 +60,11 @@ CREATE TABLE bureautique(
   amelioration text,
   orientation text,
   primary key(id_b),
-  foreign key(id_p) references projet(id_p)
+  foreign key(id_b) references projet(id_p)
 );
 
 CREATE TABLE informatique(
   id_i smallint unsigned not null auto_increment,
-  id_p smallint unsigned,
   nom_resp varchar(255),
   materiel_actuel text,
   materiel_propose text,
@@ -88,12 +86,11 @@ CREATE TABLE informatique(
   cout_contrat float,
   echeance varchar(255),
   primary key(id_i),
-  foreign key(id_p) references projet(id_p)
+  foreign key(id_b) references projet(id_p)
 );
 
 CREATE TABLE solution(
   id_s smallint unsigned not null auto_increment,
-  id_p smallint unsigned,
   doc_classe text,
   doc_archive text,
   doc_ordi text,
@@ -109,12 +106,11 @@ CREATE TABLE solution(
   scanner text,
   fonction_scanner text,
   primary key(id_s),
-  foreign key(id_p) references projet(id_p)
+  foreign key(id_b) references projet(id_p)
 );
 
 CREATE TABLE telephonie(
   id_t smallint unsigned not null auto_increment,
-  id_p smallint unsigned,
   fournisseur_t varchar(255),
   leaser_t varchar(255),
   date_deb_t date,
@@ -127,7 +123,7 @@ CREATE TABLE telephonie(
   nb_poste int,
   nb_rj45 int,
   primary key(id_t),
-  foreign key(id_p) references projet(id_p)
+  foreign key(id_b) references projet(id_p)
 );
 
 CREATE TABLE fiche(
