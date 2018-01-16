@@ -1,5 +1,14 @@
 $(document).ready(function(){
-    
+$(document).change(function(){
+    var valTemp = $("#cInteret option:selected").val();
+    console.log("valeur du select 1 = "+valTemp);
+    var valTemp2 = $("#cInteret_1 option:selected").val();
+    console.log("valeur du select 2 = "+valTemp2);
+    var valTemp3 = $("#cInteret_2 option:selected").val();
+    console.log("valeur du select 3 = "+valTemp3);
+    var valTemp4 = $("#cInteret_3 option:selected").val();
+    console.log("valeur du select 4 = "+valTemp4);
+});
 
 $("#cInteret").change(function(){
             console.log("hi");

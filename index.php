@@ -12,7 +12,7 @@
 
   if(!isset($_GET['p']) || $_GET['p'] == "")
   {
-    $page = $_GET["p"] = 'accueil';
+    $page = $_GET["p"] = 'login';
   }
   else
   {

@@ -78,8 +78,10 @@
                     <option value="4">Téléphonie</option>
                 </select>
             </div>
-             <input type="button" id="btnClone" value="Clone" />
             <div id="select_place">
+            </div>
+            <div class="form-group">
+             <input type="button" id="btnClone" value="Ajouter un centre d'intérêt" />
             </div>
             <!----------------- DEBUT BUREAUTIQUE --------------------->
 
