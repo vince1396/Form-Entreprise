@@ -3,9 +3,8 @@ $(document).ready(function(){
     
     $("#btnClone").on('click', function () {
         console.log("hi");
- 
             var index = $("#select_place select").length + 1;
- 
+            if (index < 4 ){
             //Clone the DropDownList
             var cInteret = $("#cInteret").clone();
  
@@ -20,6 +19,7 @@ $(document).ready(function(){
             //Append to the DIV.
             $("#select_place").append(cInteret);
             $("#select_place").append("<br /><br />");
+            }
         });
     
     //hide and seek
