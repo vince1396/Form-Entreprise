@@ -13,8 +13,19 @@ $(document).ready(function(){
             cInteret.attr("name", "cInteret_" + index);
  
             //[OPTIONAL] Copy the selected value
-//            var selectedValue = $("#cInteret option:selected").val();
-//            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                if (index == 2){
+            var selectedValue = $("#cInteret option:selected").val();
+            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                }
+                
+                if (index == 3){
+                    var selectedValue = $("#cInteret_2 option:selected").val();
+            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                }
+                if (index == 4){
+                    var selectedValue = $("#cInteret_3 option:selected").val();
+            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                }
 
             //Append to the DIV.
             $("#select_place").append(cInteret);
@@ -46,6 +57,8 @@ $(document).ready(function(){
                 $('#btnDel').attr('disabled', 'disabled').css({
                 "display" : "none"
             });	// disable the "del" button
+        }
+        if (num < 5){
             $('#btnClone' ).removeAttr('disabled').attr('value', "Ajouter un centre d'intérêt"); //enable clone button
         }
             

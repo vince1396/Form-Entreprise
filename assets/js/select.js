@@ -8,6 +8,13 @@ $(document).change(function(){
     console.log("valeur du select 3 = "+valTemp3);
     var valTemp4 = $("#cInteret_4 option:selected").val();
     console.log("valeur du select 4 = "+valTemp4);
+    
+    if (valTemp !== '0' ){
+        $("#cInteret_2 option[value='"+valTemp+"']").attr('disabled','disabled');
+        $("#cInteret_3 option[value='"+valTemp+"']").attr('disabled','disabled');
+        $("#cInteret_4 option[value='"+valTemp+"']").attr('disabled','disabled');
+    }
+    
 });
 
 $("#cInteret").change(function(){
@@ -94,9 +101,9 @@ $("#cInteret").change(function(){
             });
         }
     });
-    $("#cInteret2").change(function(){
+    $("#cInteret_2").change(function(){
             console.log("hi");
-        var valForm = $("#cInteret2 option:selected").val();
+        var valForm = $("#cInteret_2 option:selected").val();
         console.log(valForm);
 
         if(valForm == 0){
