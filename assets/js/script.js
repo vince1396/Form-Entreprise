@@ -13,12 +13,16 @@ $(document).ready(function(){
             cInteret.attr("name", "cInteret_" + index);
  
             //[OPTIONAL] Copy the selected value
-            var selectedValue = $("#cInteret option:selected").val();
-            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+//            var selectedValue = $("#cInteret option:selected").val();
+//            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
  
             //Append to the DIV.
             $("#select_place").append(cInteret);
             $("#select_place").append("<br /><br />");
+            $('#btnDel').removeAttr('disabled');	// enable the "del" button
+            }
+            if (index == 3){
+                $('#btnClone' ).attr('disabled', 'disabled').attr('value', "Impossible d'ajouter plus");
             }
         });
     

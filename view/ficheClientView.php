@@ -82,6 +82,7 @@
             </div>
             <div class="form-group">
              <input type="button" id="btnClone" value="Ajouter un centre d'intérêt" />
+             <input type="button" id="btnDel" value="Enlever un centre d'intérêt" disabled/>
             </div>
             <!----------------- DEBUT BUREAUTIQUE --------------------->
 
