@@ -1,5 +1,9 @@
 $(document).ready(function(){
-    
+$(document).change(function(){
+    var valTemp = $("#cInteret option:selected").val();
+    console.log(valTemp);
+    var valTemp2 = $("#cInteret2 option:select")
+});
 
 $("#cInteret").change(function(){
             console.log("hi");
