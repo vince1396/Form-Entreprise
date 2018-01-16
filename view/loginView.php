@@ -40,7 +40,9 @@
                         <label>
                             <input type="checkbox">Se souvenir de moi</label>
                     </div>
-                    <button type="submit" class="btn btn-default">Valider</button>
+                    <div class="wrap">
+                        <button class="button">Valider</button>
+                    </div>
                 </form>
                 </div>
             </div>
