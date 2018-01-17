@@ -6,5 +6,5 @@
 
 *.xml
 *.iml
-bdd.php*
+bdd.php
 !bdd-Example.php
