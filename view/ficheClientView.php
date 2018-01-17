@@ -102,7 +102,7 @@
 
 
 
-                <div class="form-group groupe-num-ss1">
+                <div class="groupe-num-ss1">
                     <h3>Pour achat:</h3>
                     <label for="achat">Prix</label>
                     <input type="text" class="form-control" name="achat"> <br>

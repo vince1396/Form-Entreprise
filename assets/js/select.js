@@ -55,175 +55,58 @@ $(document).change(function(){
         $("#cInteret option[value='"+valTemp4+"']").attr('disabled','disabled');
     }
     
+    if ((valTemp == '0') && (valTemp == '0') && (valTemp3 == '0') && (valTemp4 == '0')){
+        $(".groupe-num-1").css({
+                "display" : "none"
+            });
+            $(".groupe-num-2").css({
+                "display" : "none"
+            });
+            $(".groupe-num-3").css({
+                "display" : "none"
+            });
+            $(".groupe-num-4").css({
+                "display" : "none"
+            });
+    }
+    if ((valTemp == '1') || (valTemp2 == '1') || (valTemp3 == '1') || (valTemp4 == '1')){
+        $(".groupe-num-1").css({
+                "display" : "block"
+            });
+    }else{
+        $(".groupe-num-1").css({
+                "display" : "none"
+            }); 
+    }
+    if ((valTemp == '2') || (valTemp2 == '2') || (valTemp3 == '2') || (valTemp4 == '2')){
+        $(".groupe-num-2").css({
+                "display" : "block"
+            });
+    }else{
+        $(".groupe-num-2").css({
+                "display" : "none"
+            });
+    }
+    if ((valTemp == '3') || (valTemp2 == '3') || (valTemp3 == '3') || (valTemp4 == '3')){
+        $(".groupe-num-3").css({
+                "display" : "block"
+            });
+    }else{
+        $(".groupe-num-3").css({
+                "display" : "none"
+            });
+    }
+    if ((valTemp == '4') || (valTemp2 == '4') || (valTemp3 == '4') || (valTemp4 == '4')){
+        $(".groupe-num-4").css({
+                "display" : "block"
+            });
+    }else{
+        $(".groupe-num-4").css({
+                "display" : "none"
+            });
+    }
+    
 });
 
-$("#cInteret").change(function(){
-            console.log("hi");
-        var valForm = $("#cInteret option:selected").val();
-        console.log(valForm);
-
-        if(valForm == 0){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-3").css({
-                "display" : "none"
-            });
-            $(".groupe-num-4").css({
-                "display" : "none"
-            });
-        }
-        
-        if(valForm == 1){
-            $(".groupe-num-1").css({
-                "display" : "block"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-3").css({
-                "display" : "none"
-            });
-            $(".groupe-num-4").css({
-                "display" : "none"
-            });
-            $(".groupe-num-ss1").css({
-           "display" : "none"
-           });
-           $(".groupe-num-ss2").css({
-               "display" : "none"
-           });
-        }
-        if(valForm == 2){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "block"
-            });
-            $(".groupe-num-3").css({
-                "display" : "none"
-            });
-            $(".groupe-num-4").css({
-                "display" : "none"
-            });
-        }
-        if(valForm == 3){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-3").css({
-                "display" : "block"
-            });
-            $(".groupe-num-4").css({
-                "display" : "none"
-            });
-            
-        }
-        if(valForm == 4){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-3").css({
-                "display" : "none"
-            });
-            $(".groupe-num-4").css({
-                "display" : "block"
-            });
-        }
-    });
-    $("#cInteret_2").change(function(){
-            console.log("hi");
-        var valForm = $("#cInteret_2 option:selected").val();
-        console.log(valForm);
-
-        if(valForm == 0){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-3").css({
-                "display" : "none"
-            });
-            $(".groupe-num-4").css({
-                "display" : "none"
-            });
-        }
-        
-        if(valForm == 1){
-            $(".groupe-num-1").css({
-                "display" : "block"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-3").css({
-                "display" : "none"
-            });
-            $(".groupe-num-4").css({
-                "display" : "none"
-            });
-            $(".groupe-num-ss1").css({
-           "display" : "none"
-           });
-           $(".groupe-num-ss2").css({
-               "display" : "none"
-           });
-        }
-        if(valForm == 2){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "block"
-            });
-            $(".groupe-num-3").css({
-                "display" : "none"
-            });
-            $(".groupe-num-4").css({
-                "display" : "none"
-            });
-        }
-        if(valForm == 3){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-3").css({
-                "display" : "block"
-            });
-            $(".groupe-num-4").css({
-                "display" : "none"
-            });
-            
-        }
-        if(valForm == 4){
-            $(".groupe-num-1").css({
-                "display" : "none"
-            });
-            $(".groupe-num-2").css({
-                "display" : "none"
-            });
-            $(".groupe-num-3").css({
-                "display" : "none"
-            });
-            $(".groupe-num-4").css({
-                "display" : "block"
-            });
-        }
-    });
     
 });

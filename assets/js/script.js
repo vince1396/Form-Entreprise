@@ -273,7 +273,8 @@ $(document).ready(function(){
             console.log("hi2");
         var valForm = $("#sBuyRent option:selected").val();
         console.log(valForm);
-        if(valForm == 0){
+        if(valForm == '0'){
+            console.log('valForm = 0');
             $(".groupe-num-ss1").css({
                 "display" : "none"
             });
@@ -282,7 +283,8 @@ $(document).ready(function(){
             });
         }
         
-        if(valForm == 1){
+        if(valForm == '1'){
+            console.log('valForm = 1');
             $(".groupe-num-ss1").css({
            "display" : "block"
            });
@@ -290,7 +292,8 @@ $(document).ready(function(){
                "display" : "none"
            });
         }
-        if(valForm == 2){
+        if(valForm == '2'){
+            console.log('valForm = 2');
             $(".groupe-num-ss1").css({
                 "display" : "none"
             });
