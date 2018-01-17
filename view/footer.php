@@ -1,6 +1,5 @@
 <?php if (isset($_SESSION['connecte']))
-    
-    {      
+    {
     echo '<footer class="bg-dark">
         <div class="container">
             <div class="row">

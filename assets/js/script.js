@@ -5,26 +5,45 @@ $(document).ready(function(){
         console.log("hi");
             var index = $("#select_place select").length + 1;
             if (index < 5 ){
+                var selectedValueOrigin = $("#cInteret option:selected").val();
+                var selectedValueOpt2 = $("#cInteret_2 option:selected").val();
+                var selectedValueOpt3 = $("#cInteret_3 option:selected").val();
+                var selectedValueOpt4 = $("#cInteret_4 option:selected").val();
             //Clone the DropDownList
             var cInteret = $("#cInteret").clone();
- 
+            
             //Set the ID and Name
             cInteret.attr("id", "cInteret_" + index);
             cInteret.attr("name", "cInteret_" + index);
  
             //[OPTIONAL] Copy the selected value
                 if (index == 2){
-            var selectedValue = $("#cInteret option:selected").val();
-            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                var selectedValue = $("#cInteret option:selected").val();
+                if (selectedValue !== '0'){
+                    cInteret.find("option[value = '" + selectedValue + "']").attr('disabled','disabled');
+                }
                 }
                 
                 if (index == 3){
                     var selectedValue = $("#cInteret_2 option:selected").val();
-            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                    if (selectedValue !== '0'){ 
+                    cInteret.find("option[value = '" + selectedValue + "']").attr('disabled','disabled');
+                    }
+                    if (selectedValueOrigin !== "0"){
+                        cInteret.find("option[value = '" + selectedValueOrigin + "']").attr('disabled','disabled');
+                    }
                 }
                 if (index == 4){
                     var selectedValue = $("#cInteret_3 option:selected").val();
-            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                    if (selectedValue !== '0'){
+                        cInteret.find("option[value = '" + selectedValue + "']").attr('disabled','disabled');
+                    }
+                    if (selectedValueOrigin !== "0"){
+                        cInteret.find("option[value = '" + selectedValueOrigin + "']").attr('disabled','disabled');
+                    }
+                    if (selectedValueOpt2 !== "0"){
+                       cInteret.find("option[value = '" + selectedValueOpt2 + "']").attr('disabled','disabled'); 
+                    }
                 }
 
             //Append to the DIV.
@@ -35,10 +54,14 @@ $(document).ready(function(){
             });	// enable the "del" button
             
             var num = $('.cInteret').length;
-                console.log("nombre de select : "+num)
+                console.log("nombre de select : "+num);
             }
             if (index == 4){
                 $('#btnClone' ).attr('disabled', 'disabled').attr('value', "Impossible d'ajouter plus");
+                var selectedValue = $("#cInteret_3 option:selected").val();
+                if (selectedValue !== '0'){
+                    cInteret.find("option[value = '" + selectedValue + "']").attr('disabled','disabled');
+                }
             }
             if (index == 0){
                 $('#btnDel').attr('disabled', 'disabled').css({
@@ -48,6 +71,10 @@ $(document).ready(function(){
         });
     
     $("#btnDel").on('click', function(){
+        var selectedValueOriginDel = $("#cInteret option:selected").val();
+        var selectedValueOpt2Del = $("#cInteret_2 option:selected").val();
+        var selectedValueOpt3Del = $("#cInteret_3 option:selected").val();
+        var selectedValueOpt4Del = $("#cInteret_4 option:selected").val();
         var num = $('.cInteret').length;
         console.log("nombre de class cInteret : "+num);
         if (num > 0){
@@ -57,11 +84,65 @@ $(document).ready(function(){
                 $('#btnDel').attr('disabled', 'disabled').css({
                 "display" : "none"
             });	// disable the "del" button
+            if (selectedValueOriginDel !== '1'){
+            $("#cInteret option[value='1']").removeAttr('disabled');
+            }
+            if (selectedValueOriginDel !== '2' ){
+            $("#cInteret option[value='2']").removeAttr('disabled');
+            }
+            if (selectedValueOriginDel !== '3'){
+            $("#cInteret option[value='3']").removeAttr('disabled');
+            }
+            if (selectedValueOriginDel !== '4'){
+            $("#cInteret option[value='4']").removeAttr('disabled');
+            }
+        }
+        if (num == 3){
+            if ((selectedValueOriginDel !== '1' ) && (selectedValueOpt2Del !== '1' )){
+            $("#cInteret option[value='1']").removeAttr('disabled');
+            $("#cInteret_2 option[value='1']").removeAttr('disabled');
+            }
+            if ((selectedValueOriginDel !== '2' ) && (selectedValueOpt2Del !== '2' )){
+            $("#cInteret option[value='2']").removeAttr('disabled');
+            $("#cInteret_2 option[value='2']").removeAttr('disabled');
+            }
+            if ((selectedValueOriginDel !== '3' ) && (selectedValueOpt2Del !== '3' )){
+            $("#cInteret option[value='3']").removeAttr('disabled');
+            $("#cInteret_2 option[value='3']").removeAttr('disabled');
+            }
+            if ((selectedValueOriginDel !== '4' ) && (selectedValueOpt2Del !== '4' )){
+            $("#cInteret option[value='4']").removeAttr('disabled');
+            $("#cInteret_2 option[value='4']").removeAttr('disabled');
+            }   
+        }
+        if (num == 4){
+            if ((selectedValueOriginDel !== '1' ) && (selectedValueOpt2Del !== '1' ) && (selectedValueOpt3Del !== '1')){
+            $("#cInteret option[value='1']").removeAttr('disabled');
+            $("#cInteret_2 option[value='1']").removeAttr('disabled');
+            $("#cInteret_3 option[value='1']").removeAttr('disabled');
+            }
+            if ((selectedValueOriginDel !== '2' ) && (selectedValueOpt2Del !== '2' ) && (selectedValueOpt3Del !== '2')){
+            $("#cInteret option[value='2']").removeAttr('disabled');
+            $("#cInteret_2 option[value='2']").removeAttr('disabled');
+            $("#cInteret_3 option[value='2']").removeAttr('disabled');
+            }
+            if ((selectedValueOriginDel !== '3' ) && (selectedValueOpt2Del !== '3' ) && (selectedValueOpt3Del !== '3')){
+            $("#cInteret option[value='3']").removeAttr('disabled');
+            $("#cInteret_2 option[value='3']").removeAttr('disabled');
+            $("#cInteret_3 option[value='3']").removeAttr('disabled');
+            }
+            if ((selectedValueOriginDel !== '4' ) && (selectedValueOpt2Del !== '4' ) && (selectedValueOpt3Del !== '4')){
+            $("#cInteret option[value='4']").removeAttr('disabled');
+            $("#cInteret_2 option[value='4']").removeAttr('disabled');
+            $("#cInteret_3 option[value='4']").removeAttr('disabled');
+            }
         }
         if (num < 5){
             $('#btnClone' ).removeAttr('disabled').attr('value', "Ajouter un centre d'intérêt"); //enable clone button
         }
-            
+        console.log("nombre de class cInteret après remove : "+num);
+        
+        
     });
     
     //hide and seek
@@ -192,7 +273,8 @@ $(document).ready(function(){
             console.log("hi2");
         var valForm = $("#sBuyRent option:selected").val();
         console.log(valForm);
-        if(valForm == 0){
+        if(valForm == '0'){
+            console.log('valForm = 0');
             $(".groupe-num-ss1").css({
                 "display" : "none"
             });
@@ -201,7 +283,8 @@ $(document).ready(function(){
             });
         }
         
-        if(valForm == 1){
+        if(valForm == '1'){
+            console.log('valForm = 1');
             $(".groupe-num-ss1").css({
            "display" : "block"
            });
@@ -209,7 +292,8 @@ $(document).ready(function(){
                "display" : "none"
            });
         }
-        if(valForm == 2){
+        if(valForm == '2'){
+            console.log('valForm = 2');
             $(".groupe-num-ss1").css({
                 "display" : "none"
             });
