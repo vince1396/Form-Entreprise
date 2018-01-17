@@ -4,7 +4,7 @@ $(document).ready(function(){
     $("#btnClone").on('click', function () {
         console.log("hi");
             var index = $("#select_place select").length + 1;
-            if (index < 4 ){
+            if (index < 5 ){
             //Clone the DropDownList
             var cInteret = $("#cInteret").clone();
  
@@ -13,18 +13,56 @@ $(document).ready(function(){
             cInteret.attr("name", "cInteret_" + index);
  
             //[OPTIONAL] Copy the selected value
-//            var selectedValue = $("#cInteret option:selected").val();
-//            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
- 
+                if (index == 2){
+            var selectedValue = $("#cInteret option:selected").val();
+            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                }
+                
+                if (index == 3){
+                    var selectedValue = $("#cInteret_2 option:selected").val();
+            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                }
+                if (index == 4){
+                    var selectedValue = $("#cInteret_3 option:selected").val();
+            cInteret.find("option[value = '" + selectedValue + "']").attr("selected", "selected");
+                }
+
             //Append to the DIV.
             $("#select_place").append(cInteret);
-            $("#select_place").append("<br /><br />");
-            $('#btnDel').removeAttr('disabled');	// enable the "del" button
+//            $("#select_place").append("<br /><br />");
+            $('#btnDel').removeAttr('disabled').css({
+                "display" : "inline"
+            });	// enable the "del" button
+            
+            var num = $('.cInteret').length;
+                console.log("nombre de select : "+num)
             }
-            if (index == 3){
+            if (index == 4){
                 $('#btnClone' ).attr('disabled', 'disabled').attr('value', "Impossible d'ajouter plus");
             }
+            if (index == 0){
+                $('#btnDel').attr('disabled', 'disabled').css({
+                "display" : "none"
+            });	// disable the "del" button
+            }
         });
+    
+    $("#btnDel").on('click', function(){
+        var num = $('.cInteret').length;
+        console.log("nombre de class cInteret : "+num);
+        if (num > 0){
+            $('#cInteret_' + num ).remove();
+        }
+        if (num == 2){
+                $('#btnDel').attr('disabled', 'disabled').css({
+                "display" : "none"
+            });	// disable the "del" button
+        }
+        if (num < 5){
+            $('#btnClone' ).removeAttr('disabled').attr('value', "Ajouter un centre d'intérêt"); //enable clone button
+        }
+            
+    });
     
     //hide and seek
 //$(".ex-enable").click(function(){
@@ -223,7 +261,7 @@ $(document).ready(function(){
         }                        
     });
 
-    $( '#btnDel' ).click( function() {
+    $( '#btnDelOrigin' ).click( function() {
         // how many "duplicatable" input fields we currently have           
         var num = $( '.clonedInput' ).length;	
         
