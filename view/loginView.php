@@ -16,7 +16,7 @@
     <!-- /.container-fluid -->
 </nav>
 <header>
-    <section id="connexion">
+    <section id="connexion" class="no-padding">
         <div class="header-container"></div>
         <div class="header-content">
             <div class="header-content-inner">
