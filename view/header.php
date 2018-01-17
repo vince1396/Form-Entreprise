@@ -1,4 +1,4 @@
-    <?php if (isset($_SESSION['connecte']))
+<?php if (isset($_SESSION['connecte']))
         {    
        echo '<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -19,7 +19,7 @@
                         <a class="page-scroll" href="">...</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="">...</a>
+                        <a class="page-scroll" href="">Déconnexion</a>
                     </li>
                 </ul>
             </div>
@@ -27,4 +27,5 @@
         </div>
         <!-- /.container-fluid -->
     </nav>' ;
-    }
+        }
+?>
