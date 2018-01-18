@@ -395,6 +395,54 @@
             </div>
             
             <!----------------- FIN SOLUTION --------------------->
+            
+            <!----------------- TÉLÉPHONIE --------------------->
+            <div class="groupe-num-4">
+                <h3>Téléphonie</h3>
+                <div class="form-group">
+                    <label for="fournisseur_t">Fournisseur:</label>
+                    <input type="text" class="form-control" name="fournisseur_t">
+                </div>
+                <div class="form-group">
+                    <label for="leaser_t">Leaser:</label>
+                    <input type="text" class="form-control" name="leaser_t">
+                </div>
+                <div class="form-group">
+                    <label for="date_deb_t">Date de début:</label>
+                    <input type="date" class="form-control" name="date_deb_t">
+                </div>
+                <div class="form-group">
+                    <label for="achat_t">Achat/Location:</label>
+                    <label>Achat</label><input type="radio" class="form-control" name="achat_t" value="1">
+                    <label>Location</label><input type="radio" class="form-control" name="achat_t" value="2">
+                </div>
+                <div class="form-group">
+                    <label for="prelevement_t">Prélèvement:</label>
+                    <label>Mensuel</label><input type="radio" class="form-control" name="prelevement_t" value="1">
+                    <label>Trimestriel</label><input type="radio" class="form-control" name="prelevement_t" value="2">
+                </div>
+                <div class="form-group">
+                    <label for="duree_contrat">Durée du contrat:</label>
+                    <input type="number" class="form-control" name="duree_contrat">
+                </div>
+                <div class="form-group">
+                    <label for="materiel_t">Matériel:</label>
+                    <textarea name="materiel_t" cols="150" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="num_ligne">Numéro de la ligne:</label>
+                    <input type="text" class="form-control" name="num_ligne">
+                </div>
+                <div class="form-group">
+                    <label for="nb_poste">Nombre de postes:</label>
+                    <input type="number" class="form-control" name="nb_poste">
+                </div>
+                <div class="form-group">
+                    <label for="nb_rj45">Nombre de RJ45:</label>
+                    <input type="number" class="form-control" name="nb_rj45">
+                </div>
+            </div>
+            <!----------------- FIN TÉLÉPHONIE --------------------->
 
            
             <hr class="custom">
