@@ -180,6 +180,109 @@
             
             <!----------------- FIN BUREAUTIQUE --------------------->
             
+            <!----------------- INFORMATIQUE --------------------->
+            <div class="groupe-num-2">
+                <h3>Informatique</h3>
+                <div class="form-group">
+                    <label for="nom_resp">Nom du responsable:</label>
+                    <input type="text" class="form-control" name="nom_resp">
+                </div>
+                <div class="form-group">
+                    <label for="matetiel_actuel">Matériel actuel:</label>
+                    <textarea class="form-control" name="matetiel_actuel" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="matetiel_propose">Matériel proposé:</label>
+                    <textarea class="form-control" name="matetiel_propose" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="poste_travail">Poste de travail:</label>
+                    <textarea class="form-control" name="poste_travail" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pc_portable">Pc Portable:</label>
+                    <textarea class="form-control" name="pc_portable" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="serveur">Serveur:</label>
+                    <textarea class="form-control" name="serveur" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="nas">NAS:</label>
+                    <textarea class="form-control" name="nas" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="reseau">Réseau:</label>
+                    <textarea class="form-control" name="reseau" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="sauvegarde">Sauvegarde:</label>
+                    <textarea class="form-control" name="sauvegarde" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="logiciel_actuel">Logiciel actuel:</label>
+                    <textarea class="form-control" name="logiciel_actuel" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="logiciel_propose">Logiciel proposé:</label>
+                    <textarea class="form-control" name="logiciel_propose" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="note_i">Note:</label>
+                    <textarea class="form-control" name="note_i" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="travaux">Travaux:</label>
+                    <textarea class="form-control" name="travaux" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="intervention">Intervention:</label>
+                    <textarea class="form-control" name="intervention" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="maintenance">Maintenance:</label>
+                    <textarea class="form-control" name="maintenance" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dispositif">Dispositif:</label>
+                    <textarea class="form-control" name="dispositif" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="panne_serveur">Panne serveur:</label>
+                    <textarea class="form-control" name="panne_serveur" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="doc_vital">Doc Vital:</label>
+                    <textarea class="form-control" name="doc_vital" cols="150" rows="5" >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cout_contrat">Cout contrat:</label>
+                    <input type="text" class="form-control" name="cout_contrat" placeholder="€">
+                </div>
+                <div class="form-group">
+                    <label for="echeance">Échéance:</label>
+                    <input type="text" class="form-control" name="echeance">
+                </div>
+            </div>
+            <!----------------- FIN INFORMATIQUE ----------------->
+            
             <!----------- SOLUTION ---------------->
 
             <div class="groupe-num-3">
@@ -209,7 +312,7 @@
                     </li><br>
                     <li>
                         <label for="collab_absent">
-                        Comment faites vous quand vous aurez besoin d'un documentqu'un collaborateur possède mais qui est absent ?
+                        Comment faites vous quand vous aurez besoin d'un document qu'un collaborateur possède mais qui est absent ?
                     </label><br>
                         <textarea name="collab_absent" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
