@@ -27,6 +27,7 @@ CREATE TABLE client(
   decideur varchar(255),
   signataire varchar(255),
   id_f smallint unsigned,
+  interet int,
   primary key(id_c),
   foreign key(id_f) references fiche(id_f)
 );
