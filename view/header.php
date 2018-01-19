@@ -13,7 +13,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="">Accueil</a>
+                        <a class="page-scroll" href="accueil">Accueil</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="gestionAdmin">Gestion Admin</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="">...</a>

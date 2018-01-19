@@ -654,3 +654,9 @@ hr.custom{
   background-color: #9dd6dd;
   color: #fff;
 }
+
+.white_body{
+    background: white;
+    height: 100%;
+    padding-top: 150px;
+}

@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row no-gutter popup-gallery">
                     <div class="col-lg-6 col-md-6 col-xs-12">
-                        <a href="" class="portfolio-box" title="" data-capt=""> <img src="./img/note1.jpg" class="img-responsive" alt="">
+                        <a href="ficheClient" class="portfolio-box" title="" data-capt=""> <img src="./img/note1.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-center"> <i class="fa fa-plus-square fa-4x" aria-hidden="true"></i> </div>

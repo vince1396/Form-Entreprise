@@ -35,13 +35,13 @@
                     <div class="input-group width-log"> 
                        <span class="input-group-addon">
                        <i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Password"> </div>
+                        <input id="password" type="password" class="form-control" name="mdp" placeholder="Password"> </div>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox">Se souvenir de moi</label>
                     </div>
                     <div class="wrap">
-                        <button class="button">Valider</button>
+                        <button class="button" type="submit" name="submit">Valider</button>
                     </div>
                 </form>
                 </div>

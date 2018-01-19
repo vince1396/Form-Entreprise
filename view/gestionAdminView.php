@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container white_body">
     <div class="row">
         <div class="col-xs-12 col-md-12 center">
             <h1>Ajouter un commercial</h1>  
