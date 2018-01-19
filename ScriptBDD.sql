@@ -86,7 +86,7 @@ CREATE TABLE informatique(
   cout_contrat float,
   echeance varchar(255),
   primary key(id_i),
-  foreign key(id_b) references projet(id_p)
+  foreign key(id_i) references projet(id_p)
 );
 
 CREATE TABLE solution(
@@ -106,7 +106,7 @@ CREATE TABLE solution(
   scanner text,
   fonction_scanner text,
   primary key(id_s),
-  foreign key(id_b) references projet(id_p)
+  foreign key(id_s) references projet(id_p)
 );
 
 CREATE TABLE telephonie(
@@ -123,7 +123,7 @@ CREATE TABLE telephonie(
   nb_poste int,
   nb_rj45 int,
   primary key(id_t),
-  foreign key(id_b) references projet(id_p)
+  foreign key(id_t) references projet(id_p)
 );
 
 CREATE TABLE fiche(
