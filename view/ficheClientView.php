@@ -99,7 +99,8 @@
                     <br>
                     <div class="form-group">
                         <label for="fournisseur">Fournisseur</label>
-                        <input type="text" class="form-control" name="fournisseur"> </div> <br>
+                        <input type="text" class="form-control" name="fournisseur"><label for="leaser"> Leaser</label>
+                        <input type="text" class="form-control" name="leaser"> </div> <br>
                         
                     <div class="form-group">
                         <div id="sBuyRent">

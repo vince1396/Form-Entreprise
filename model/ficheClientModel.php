@@ -120,7 +120,7 @@
         return $req->fetch();
     }
 
-    function addInformatique($id_i, $nom_resp, $materiel_actuel, $materiel_propose, $poste_travail, $pc_portable, $serveur, $nas, $reseau, $sauvegarde, $logiciel_actuel, $logiciel_propose, $note_i, $travaux, $intervenion, $maintenance, $dispositif, $panne_serveur, $doc_vital, $cout_contrat, $echeance){
+    function addInformatique($id_i, $nom_resp, $materiel_actuel, $materiel_propose, $poste_travail, $pc_portable, $serveur, $nas, $reseau, $sauvegarde, $logiciel_actuel, $logiciel_propose, $note_i, $travaux, $intervention, $maintenance, $dispositif, $panne_serveur, $doc_vital, $cout_contrat, $echeance){
         
         global $bdd;
         
@@ -201,7 +201,7 @@
         return $req->fetch();
     }
 
-    function addTelephonieAchat($id_t, $fournisseur_t, $leaser_t, $achat_t, $prix_t, $materiel_t, $adresse_t, $num_ligne, $nb_poste, $nb_rj45){
+    function addTelephonieAchat($id_t, $fournisseur_t, $leaser_t, $achat_t, $prix_t, $materiel_t, $num_ligne, $nb_poste, $nb_rj45){
         
         global $bdd;
         
