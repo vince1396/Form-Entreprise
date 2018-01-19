@@ -100,6 +100,9 @@
                 <div class="form-group">
                     <label for="fournisseur">Fournisseur</label>
                     <input type="text" class="form-control" name="fournisseur"> </div> <br>
+                 <div class="form-group">
+                    <label for="leaser">Leaser</label>
+                    <input type="text" class="form-control" name="leaser"> </div> <br>
 
                 <div class="form-group">
                     <select name="achat" id="sBuyRent">
@@ -130,7 +133,7 @@
                         <input type="date" class="form-control" name="date_deb"> </div>
                     <div class="form-group">
                         <label for="loyer_b">Loyer(HT)</label>
-                        <input type="text" class="form-control" name="loyer"> </div> <br>
+                        <input type="text" class="form-control" name="loyer_b"> </div> <br>
                     <div class="form-group">
                         <label for="prelevement">Prélèvement: </label>
                         <label for="mois">Mois</label>
