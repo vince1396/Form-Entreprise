@@ -280,18 +280,8 @@ $(document).ready(function () {
 
     $("#sBuyRent").change(function () {
         console.log("hi2");
-        var valForm = $("#sBuyRent option:selected").val();
+        var valForm = $("input[name=achat]:checked").val();
         console.log(valForm);
-        if (valForm == '0') {
-            console.log('valForm = 0');
-            $(".groupe-num-ss1").css({
-                "display": "none"
-            });
-            $(".groupe-num-ss2").css({
-                "display": "none"
-            });
-        }
-
         if (valForm == '1') {
             console.log('valForm = 1');
             $(".groupe-num-ss1").css({
@@ -307,6 +297,31 @@ $(document).ready(function () {
                 "display": "none"
             });
             $(".groupe-num-ss2").css({
+                "display": "block"
+            });
+        }
+    });
+    
+    $("#tBuyRent").change(function () {
+        console.log("hi3");
+        var valFormtBuyRent = $('input[name=achat_t]:checked').val();
+        console.log(valFormtBuyRent);
+        if (valFormtBuyRent == '1') {
+            console.log('valFormtBuyRent = 1');
+            $(".groupe-num-ss3").css({
+                "display": "block"
+            });
+            $(".groupe-num-ss4").css({
+                "display": "none"
+            });
+        }
+
+        if (valFormtBuyRent == '2') {
+            console.log('valFormtBuyRent = 2');
+            $(".groupe-num-ss3").css({
+                "display": "none"
+            });
+            $(".groupe-num-ss4").css({
                 "display": "block"
             });
         }

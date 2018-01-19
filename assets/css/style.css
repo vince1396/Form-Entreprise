@@ -615,7 +615,7 @@ footer{padding: 100px 0;}
 .titleML{ font-size: 20px;}
 
 /*Ajout Différent*/
-.groupe-num-1, .groupe-num-2, .groupe-num-3, .groupe-num-4, .groupe-num-ss1, .groupe-num-ss2, #btnDel{
+.groupe-num-1, .groupe-num-2, .groupe-num-3, .groupe-num-4, .groupe-num-ss2, .groupe-num-ss4, #btnDel{
    display: none;
 }
 hr.custom{
