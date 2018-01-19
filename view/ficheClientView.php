@@ -23,8 +23,14 @@
             <br><br><br>
             <h1>Raison Sociale</h1>
             <div class="form-group">
-                <label for="nom_resp">Nom du responsable</label>
-                <input type="text" class="form-control" name="nom_resp"> </div>
+                <label for="prospect">Prospect</label>
+                <input type="radio" name="prospect" value="1" checked="checked">
+                <label for="prospect">Client</label>
+                <input type="radio" name="prospect" value="2">
+            </div><br>
+            <div class="form-group">
+                <label for="nom_c">Nom du responsable</label>
+                <input type="text" class="form-control" name="nom_c"> </div>
             <div class="form-group">
                 <label for="fonction">Fonction</label>
                 <input type="text" class="form-control" name="fonction"> </div>
@@ -44,14 +50,17 @@
                 <label for="fax">Fax</label>
                 <input type="text" class="form-control" name="fax"> </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" name="email"> </div><br><br>
+                <label for="mail_c">Email</label>
+                <input type="email" class="form-control" name="mail_c"> </div><br><br>
             <div class="form-group">
-                <label for="secteur">Secteur d'activité</label>
-                <input type="text" class="form-control" name="secteur"> </div>
+                <label for="secteur_activite">Secteur d'activité</label>
+                <input type="text" class="form-control" name="secteur_activite"> </div>
             <div class="form-group">
                 <label for="nb_site">Nb de site</label>
                 <input type="text" class="form-control" name="nb_site"> </div>
+                <div class="form-group">
+                <label for="nb_salarie">Nb de salarie</label>
+                <input type="text" class="form-control" name="nb_salarie"> </div>
             <h1>Cycle de décision</h1>
             <div class="form-group">
                 <label for="prescripteur">Préscripteur</label>
@@ -93,7 +102,7 @@
                     <input type="text" class="form-control" name="fournisseur"> </div> <br>
 
                 <div class="form-group">
-                    <select name="sBuyRent" id="sBuyRent">
+                    <select name="achat" id="sBuyRent">
                     <option value="0">-Choisissez-</option>
                     <option value="1">Achat</option>
                     <option value="2">Location</option>
@@ -104,8 +113,8 @@
 
                 <div class="groupe-num-ss1">
                     <h3>Pour achat:</h3>
-                    <label for="achat">Prix</label>
-                    <input type="text" class="form-control" name="achat"> <br>
+                    <label for="achat_b">Prix</label>
+                    <input type="text" class="form-control" name="achat_b"> <br>
 
                     <div class="form-group">
                         <label for="materiel_achat">Matériel + accessoire:</label>
@@ -120,14 +129,14 @@
                         <label for="date_deb">Démarrage du contrat</label>
                         <input type="date" class="form-control" name="date_deb"> </div>
                     <div class="form-group">
-                        <label for="loyer">Loyer(HT)</label>
+                        <label for="loyer_b">Loyer(HT)</label>
                         <input type="text" class="form-control" name="loyer"> </div> <br>
                     <div class="form-group">
                         <label for="prelevement">Prélèvement: </label>
                         <label for="mois">Mois</label>
-                        <input type="checkbox" class="form-control" name="prelevement" value="1">
+                        <input type="radio" class="form-control" name="prelevement" value="1" checked="checked">
                         <label for="trimestre">Trimestrielle</label>
-                        <input type="checkbox" class="form-control" name="prelevement" value="2"> </div> <br>
+                        <input type="radio" class="form-control" name="prelevement" value="2"> </div> <br>
                     <div class="form-group">
                         <label for="duree">Durée du contrat:</label>
                         <input type="text" class="form-control" name="duree"> </div> <br>
@@ -188,13 +197,13 @@
                     <input type="text" class="form-control" name="nom_resp">
                 </div>
                 <div class="form-group">
-                    <label for="matetiel_actuel">Matériel actuel:</label>
-                    <textarea class="form-control" name="matetiel_actuel" cols="150" rows="5" >
+                    <label for="materiel_actuel">Matériel actuel:</label>
+                    <textarea class="form-control" name="materiel_actuel" cols="150" rows="5" >
                     </textarea>
                 </div>
                 <div class="form-group">
-                    <label for="matetiel_propose">Matériel proposé:</label>
-                    <textarea class="form-control" name="matetiel_propose" cols="150" rows="5" >
+                    <label for="materiel_propose">Matériel proposé:</label>
+                    <textarea class="form-control" name="materiel_propose" cols="150" rows="5" >
                     </textarea>
                 </div>
                 <div class="form-group">
@@ -292,11 +301,11 @@
             <nav>
                 <ul>
                     <li>
-                        <label for="document_classe">
+                        <label for="doc_classe">
                         Comment les dossiers (clients/fournisseurs, projets...) et leurs documents (courriers, factures...) sont-ils
                     classés et mis à disposition dans votre organisation ?
                     </label><br>
-                        <textarea name="document_classe" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="doc_classe" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
                         <label for="doc_archive">
@@ -317,10 +326,10 @@
                         <textarea name="collab_absent" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                     <li>
-                        <label for="proc_valide">
+                        <label for="proc_valid">
                         Quels sont chez vous les procédures nécessitant des validations (autorisation de dépenses, note de frais, etc..) ?
                     </label><br>
-                        <textarea name="proc_valide" cols="150" rows="5" class="form-control"></textarea>
+                        <textarea name="proc_valid" cols="150" rows="5" class="form-control"></textarea>
                     </li><br>
                 </ul>
             </nav><br><br>
@@ -408,22 +417,33 @@
                     <input type="text" class="form-control" name="leaser_t">
                 </div>
                 <div class="form-group">
+                    <label for="achat_t">Achat/Location:</label>
+                    <label>Achat</label><input type="radio" class="form-control" name="achat_t" value="1" checked="checked">
+                    <label>Location</label><input type="radio" class="form-control" name="achat_t" value="2">
+                </div><br>
+                <div class="form-group">
+                    <label for="prixachat_t">Prix</label>
+                    <input type="text" class="form-control" name="prixachat_t"> <br>
+
+                </div>
+                <div class="form-group">
                     <label for="date_deb_t">Date de début:</label>
                     <input type="date" class="form-control" name="date_deb_t">
-                </div>
-                <div class="form-group">
-                    <label for="achat_t">Achat/Location:</label>
-                    <label>Achat</label><input type="radio" class="form-control" name="achat_t" value="1">
-                    <label>Location</label><input type="radio" class="form-control" name="achat_t" value="2">
-                </div>
+                </div><br>
+                
                 <div class="form-group">
                     <label for="prelevement_t">Prélèvement:</label>
-                    <label>Mensuel</label><input type="radio" class="form-control" name="prelevement_t" value="1">
+                    <label>Mensuel</label><input type="radio" class="form-control" name="prelevement_t" value="1" checked="checked">
                     <label>Trimestriel</label><input type="radio" class="form-control" name="prelevement_t" value="2">
                 </div>
                 <div class="form-group">
                     <label for="duree_contrat">Durée du contrat:</label>
                     <input type="number" class="form-control" name="duree_contrat">
+                </div>
+                <div class="form-group">
+                    <label for="loyer_t">Loyer</label>
+                    <input type="text" class="form-control" name="loyer_t"> <br>
+
                 </div>
                 <div class="form-group">
                     <label for="materiel_t">Matériel:</label>
@@ -441,6 +461,11 @@
                     <label for="nb_rj45">Nombre de RJ45:</label>
                     <input type="number" class="form-control" name="nb_rj45">
                 </div>
+                <h4>Facture:</h4>
+                <div class="form-group">
+                    <label for="nb_rj45">Description:</label>
+                    <textarea class="form-control" name="description"></textarea>
+                </div>
             </div>
             <!----------------- FIN TÉLÉPHONIE --------------------->
 
@@ -450,7 +475,7 @@
 
             <b><h3><div class="form-group">
                 <label for="interet"><i class="fa fa-star fa-lg"></i></label>
-                <input type="radio" name="interet" value="1"></div><br>
+                <input type="radio" name="interet" value="1" checked="checked"></div><br>
             <div class="form-group">
                 <label for="interet"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i></label>
                 <input type="radio" name="interet" value="2"></div><br>
