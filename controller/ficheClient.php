@@ -96,7 +96,7 @@
                 $materiel = htmlentities($_POST['materiel_location']);
                 
                 addBureautiqueLocation($id_b, $fournisseur, $leaser, $date_deb, $achat, $prix_b, $prelevement, $duree_contrat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation);
-                
+
             }
         }
         else if($centre_interet == 2){

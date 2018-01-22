@@ -130,7 +130,7 @@
                             <input type="date" class="form-control" name="date_deb"> </div>
                         <div class="form-group">
                             <label for="loyer_b">Loyer(HT)</label>
-                            <input type="text" class="form-control" name="loyer"> </div> <br>
+                            <input type="text" class="form-control" name="loyer_b"> </div> <br>
                         <div class="form-group">
                             <label for="prelevement">Prélèvement: </label>
                             <label for="mois">Mois</label>

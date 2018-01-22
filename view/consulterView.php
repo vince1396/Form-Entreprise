@@ -34,9 +34,44 @@
         echo '<b>Leaser: </b>'.$v['leaser'].'<br><br>';
         
         if($v['achat'] == 1){
+            echo "<h4>Contrat d'achat:</h4>";
             echo '<b>Matériel et accessoires: </b>'.$v['materiel'].'<br><br>';
             echo '<b>Prix: </b>'.$v['prix_b'].' €<br><br>';
+            echo '<b>Volume Copies Noires: </b>'.$v['noir'].' €<br><br>';
+            echo '<b>Volume Copies couleurs: </b>'.$v['couleur'].' € <br><br>';
+            echo '<b>Coût Copies noires: </b>'.$v['cout_noir'].' € (HT)<br><br>';
+            echo '<b>Coût Copies couleurs: </b>'.$v['cout_couleur'].' € (HT)<br><br>';
+            echo '<b>Volume moyen copies noires: </b>'.$v['volume_noir'].' €<br><br>';
+            echo '<b>Supplément Copies noires: </b>'.$v['supp_couleur'].' € (HT)<br><br>';
+            echo '<b>Volume moyen copies couleurs: </b>'.$v['volume_couleur'].' €<br><br>';
+            echo '<b>Supplément copies couleurs: </b>'.$v['supp_couleur'].' € (HT)<br><br>';
+            echo '<b>Amélioration souhaîtée: </b>'.$v['amelioration'].'<br><br>';
+            echo '<b>Orientation / Proposition: </b>'.$v['orientation'].'<br><br>'; 
+        }
+        else if($v['achat'] == 2){
+            echo "<h4>Contrat de location:</h4>";
+            echo '<b>Matériel et accessoires: </b>'.$v['materiel'].'<br><br>';
+            echo '<b>Loyer: </b>'.$v['prix_b'].' € (HT)<br><br>';
             
+            if($v['prelevement'] == 1){
+                
+                echo '<b>Prélèvement: </b>Mensuel';
+            }
+            else if($v['prelevement'] == 2){
+                
+                echo '<b>Prélèvement: </b>Trimestrielle';
+            }
+            echo '<b>Durée du contrat: </b>'.$v['duree_contrat'].' €<br><br>';
+            echo '<b>Volume Copies Noires: </b>'.$v['noir'].' €<br><br>';
+            echo '<b>Volume Copies couleurs: </b>'.$v['couleur'].' € <br><br>';
+            echo '<b>Coût Copies noires: </b>'.$v['cout_noir'].' € (HT)<br><br>';
+            echo '<b>Coût Copies couleurs: </b>'.$v['cout_couleur'].' € (HT)<br><br>';
+            echo '<b>Volume moyen copies noires: </b>'.$v['volume_noir'].' €<br><br>';
+            echo '<b>Supplément Copies noires: </b>'.$v['supp_couleur'].' € (HT)<br><br>';
+            echo '<b>Volume moyen copies couleurs: </b>'.$v['volume_couleur'].' €<br><br>';
+            echo '<b>Supplément copies couleurs: </b>'.$v['supp_couleur'].' € (HT)<br><br>';
+            echo '<b>Amélioration souhaîtée: </b>'.$v['amelioration'].'<br><br>';
+            echo '<b>Orientation / Proposition: </b>'.$v['orientation'].'<br><br>'; 
         }
         
     }
@@ -55,5 +90,4 @@
 
 ?>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim tempora dolorem dolore, culpa totam officiis explicabo repellat! Eaque rerum aut pariatur vitae numquam dolore dolor quia, doloremque facilis deleniti.
 </div>
