@@ -1,5 +1,9 @@
 <?php
     require "model/loginModel.php";
+    
+    if(isset($_SESSION['connecte'])){
+        header("location:".BASE_URL."/accueil");
+    }
 
     if(isset($_POST['submit']))
     {
@@ -18,8 +22,9 @@
             $_SESSION['lvl'] = $reponse['lvl'];
             if(isset($_POST['remember']))
             {
-                $key = $reponse['id_u']."-----".sha1($reponse['email'].$reponse['mdp'].$_SERVER['REMOTE_ADDR']);
-              
+//                $key = $reponse['id_u']."-----".sha1($reponse['email'].$reponse['mdp'].$_SERVER['REMOTE_ADDR']);
+              setcookie('auth',$reponse['id_u']."-----".sha1($reponse['email'].$reponse['mdp'].$_SERVER['REMOTE_ADDR']),time()+(3600*24*3),'/','localhost',false,true);
+                      //le dernier argument evite que le cookie soit editable en javascript
                 
                 
             }
@@ -33,25 +38,25 @@
         }
         
     }
-    if(isset($_COOKIE['Auth']))
+    if(isset($_COOKIE['auth']))
     {
-        $auth = $_COOKIE['Auth'];
+        $auth = $_COOKIE['auth'];
         $auth = explode('-----',$auth);
         $reponse = rememberMe($auth[0]);
         $key = sha1($reponse['email'].$reponse['mdp'].$_SERVER['REMOTE_ADDR']);
-        
+
         
         if($key == $auth[1])
         {
             $_SESSION['connecte'] = true;
             $_SESSION['id'] = $auth[0];
             
-            setcookie('Auth', $requete['id_u']."-----".sha1($requete['email'].$requete['mdp'].$_SERVER['REMOTE_ADDR']),time()+(3600*24*3),'/','localhost',false,true);
-            header("location:".BASE_URL."/article");
+            setcookie('auth', $reponse['id_u']."-----".sha1($reponse['email'].$reponse['mdp'].$_SERVER['REMOTE_ADDR']),time()+(3600*24*3),'/','localhost',false,true);
+            header("location:".BASE_URL."/accueil");
         }
         else
         {
-        setcookie('Auth','',time()-3600,'/','localhost',false,true);
+        setcookie('auth','',time()-3600,'/','localhost',false,true);
             
         }
     }
