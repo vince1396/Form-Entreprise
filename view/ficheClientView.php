@@ -197,6 +197,14 @@
                         <input type="text" class="form-control" name="nom_resp">
                     </div>
                     <div class="form-group">
+                        <label for="cout_contrat">Cout contrat:</label>
+                        <input type="text" class="form-control" name="cout_contrat" placeholder="€">
+                    </div>
+                    <div class="form-group">
+                        <label for="echeance">Échéance:</label>
+                        <input type="text" class="form-control" name="echeance">
+                    </div>
+                    <div class="form-group">
                         <label for="materiel_actuel">Matériel actuel:</label>
                         <textarea class="form-control" name="materiel_actuel" cols="150" rows="5">
                     </textarea>
@@ -267,28 +275,21 @@
                     </textarea>
                     </div>
                     <div class="form-group">
-                        <label for="dispositif">Dispositif:</label>
+                        <label for="dispositif">Avez vous un dispositif de sauvegarde ?</label>
                         <textarea class="form-control" name="dispositif" cols="150" rows="5">
                     </textarea>
                     </div>
                     <div class="form-group">
-                        <label for="panne_serveur">Panne serveur:</label>
+                        <label for="panne_serveur">Que se passe-t-il si votre serveur tombe en panne ?</label>
                         <textarea class="form-control" name="panne_serveur" cols="150" rows="5">
                     </textarea>
                     </div>
                     <div class="form-group">
-                        <label for="doc_vital">Doc Vital:</label>
+                        <label for="doc_vital">Y a-t-il des documents vitaux à l'entreprise ?</label>
                         <textarea class="form-control" name="doc_vital" cols="150" rows="5">
                     </textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="cout_contrat">Cout contrat:</label>
-                        <input type="text" class="form-control" name="cout_contrat" placeholder="€">
-                    </div>
-                    <div class="form-group">
-                        <label for="echeance">Échéance:</label>
-                        <input type="text" class="form-control" name="echeance">
-                    </div>
+                    
                 </div>
                 <!----------------- FIN INFORMATIQUE ----------------->
 
@@ -302,8 +303,7 @@
                         <ul>
                             <li>
                                 <label for="doc_classe">
-                        Comment les dossiers (clients/fournisseurs, projets...) et leurs documents (courriers, factures...) sont-ils
-                    classés et mis à disposition dans votre organisation ?
+                        Comment les dossiers (clients/fournisseurs, projets...) et leurs documents (courriers, factures...) sont-ils classés et mis à disposition dans votre organisation ?
                     </label><br>
                                 <textarea name="doc_classe" cols="150" rows="5" class="form-control"></textarea>
                             </li><br>
@@ -395,7 +395,7 @@
                             </li><br>
                             <li>
                                 <label for="fonct_scanner">
-                        Avez-vous des besoins d'autres fonctionnalités concerant le scanner ?
+                        Avez-vous des besoins d'autres fonctionnalités concernant le scanner ?
                     </label><br>
                                 <textarea name="fonct_scanner" cols="150" rows="5" class="form-control"></textarea>
                             </li><br>

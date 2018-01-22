@@ -125,6 +125,8 @@
             $echeance = htmlentities($_POST['echeance']);
         
             addInformatique($id_i, $nom_resp, $materiel_actuel, $materiel_propose, $poste_travail, $pc_portable, $serveur, $nas, $reseau, $sauvegarde, $logiciel_actuel, $logiciel_propose, $note_i, $travaux, $intervention, $maintenance, $dispositif, $panne_serveur, $doc_vital, $cout_contrat, $echeance);
+            
+            
         }
         else if($centre_interet == 3){
             
@@ -146,6 +148,7 @@
             $fonct_scanner = htmlentities($_POST['fonct_scanner']);
         
             addSolution($id_s, $doc_classe, $doc_archive, $doc_ordi, $collab_absent, $proc_valid, $vol_impression, $refacturer, $doc_conf, $doc_compta, $vol_coul_imp, $doc_papier, $doc_app, $scanner, $fonct_scanner);
+          
         }
         else if($centre_interet == 4){
             
