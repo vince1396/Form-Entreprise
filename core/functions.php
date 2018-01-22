@@ -30,9 +30,7 @@
         }
         else
         {
-          insertUser($nom, $prenom, $email, $mdp, $confirm, $role, $chef);
-          $message = "L'insertion a bien été effectué";
-          return $message;
+          insertUser($nom, $prenom, $email, $mdp, $role, $chef);
         }
       }
     }
