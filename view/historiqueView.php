@@ -22,7 +22,7 @@
                                         <?= $number; ?>
                                     </td>
                                     <td><span><?= $v["nom_c"]; ?></span></td>
-                                    <td><span><a href="index.php?p=consulter&id=<?=$v["id_f"]; ?>">Voir le dossier</a></span></td>
+                                    <td><span><a href="consulter/<?=$v["id_f"]; ?>">Voir le dossier</a></span></td>
                                 </tr>
                                 <?php $number++; } ?>
                         </tbody>

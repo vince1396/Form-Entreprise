@@ -1,7 +1,7 @@
 <?php
 
     require "model/consulterModel.php";
-    $id = int($_GET['id']);
+    $id = (int)$_GET['id'];
     $r = displayInfoDossier($id);
     
 
