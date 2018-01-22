@@ -12,4 +12,13 @@
       return $req;
       
   }
+function rememberMe($id_u)
+    {
+        global $bdd;
+        $requete = $bdd->prepare("SELECT * FROM user WHERE id_u =".$id_u);
+        $requete->bindValue(":id_u", $id_u, PDO::PARAM_INT);
+        $requete->execute();
+        
+        return $requete->fetch();
+    }
 ?>

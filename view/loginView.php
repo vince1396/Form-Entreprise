@@ -38,7 +38,7 @@
                         <input id="password" type="password" class="form-control" name="mdp" placeholder="Password"> </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox">Se souvenir de moi</label>
+                            <input type="checkbox" name="remember" value="remember-me">Se souvenir de moi</label>
                     </div>
                     <div class="wrap">
                         <button class="button" type="submit" name="submit">Valider</button>
