@@ -132,7 +132,7 @@
                 $materiel = htmlentities($_POST['materiel_location']);
                 
                 addBureautiqueLocation($id_b, $fournisseur, $leaser, $date_deb, $achat, $prix_b, $prelevement, $duree_contrat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation);
-                
+
             }
         }
         if($centre_interet == '2'){
@@ -161,8 +161,12 @@
             $echeance = htmlentities($_POST['echeance']);
         
             addInformatique($id_i, $nom_resp, $materiel_actuel, $materiel_propose, $poste_travail, $pc_portable, $serveur, $nas, $reseau, $sauvegarde, $logiciel_actuel, $logiciel_propose, $note_i, $travaux, $intervention, $maintenance, $dispositif, $panne_serveur, $doc_vital, $cout_contrat, $echeance);
-        }   
-        if($centre_interet == '3'){
+
+            
+            
+        }
+        else if($centre_interet == 3){
+
             
             //Solution
             $id_s = $id_p;
@@ -182,6 +186,7 @@
             $fonct_scanner = htmlentities($_POST['fonct_scanner']);
         
             addSolution($id_s, $doc_classe, $doc_archive, $doc_ordi, $collab_absent, $proc_valid, $vol_impression, $refacturer, $doc_conf, $doc_compta, $vol_coul_imp, $doc_papier, $doc_app, $scanner, $fonct_scanner);
+          
         }
         if($centre_interet == '4'){
             
