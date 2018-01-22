@@ -23,7 +23,17 @@
       }
       else
       {
-        //if()
+        if(checkemail())
+        {
+          $erreur = "L'adresse email est déja utilisée";
+          return $erreur;
+        }
+        else
+        {
+          insertUser($nom, $prenom, $email, $mdp, $confirm, $role, $chef);
+          $message = "L'insertion a bien été effectué";
+          return $message;
+        }
       }
     }
   }
