@@ -38,7 +38,10 @@
         $decideur = htmlentities($_POST['decideur']);
         $signataire = htmlentities($_POST['signataire']);
         
-        addInfoClient($prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $prescripteur, $decideur, $signataire, $id_f);
+        //Niveau d'intérêt
+            $interet = htmlentities($_POST['interet']);
+        
+        addInfoClient($prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $prescripteur, $decideur, $signataire, $id_f, $interet);
         
         $id_c = $bdd->lastInsertId();
         
@@ -178,8 +181,9 @@
             }
         }
         
-        //Niveau d'intérêt
-            $interet = htmlentities($_POST['interet']);
+        
+        
+        header("location:index.php?p=consulter&id=".$id_f);
     }
     
 

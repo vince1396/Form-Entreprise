@@ -39,7 +39,7 @@
         $auth = explode('-----',$auth);
         $reponse = rememberMe($auth[0]);
         $key = sha1($reponse['email'].$reponse['mdp'].$_SERVER['REMOTE_ADDR']);
-       
+        
         
         if($key == $auth[1])
         {

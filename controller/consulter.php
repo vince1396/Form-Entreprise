@@ -2,7 +2,12 @@
 
     require "model/consulterModel.php";
     $id = (int)$_GET['id'];
-    $r = displayInfoDossier($id);
+
+    $req1 = displayInfoDossier($id);
+    $req2 = displayBureautique();
+    $req3 = displayInformatique();
+    $req4 = displaySolution();
+    $req5 = displayTelephonie();
     
 
 
