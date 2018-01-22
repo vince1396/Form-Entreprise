@@ -1,7 +1,7 @@
 <?php
     require "model/loginModel.php";
     
-    if(isset($_SESSION['connecte']) AND isset($_SESSION'id')){
+    if(isset($_SESSION['connecte'])){
         header("location:".BASE_URL."/accueil");
     }
 
