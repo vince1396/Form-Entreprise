@@ -7,28 +7,33 @@
         header('Location:login');
     }
 ?>
+                 
 
-<section id="nos-forces">
+<section id="accueilview" class="paddingAccuei">
     <div class="container">
         <div class="row">
+          <div class="col-md-12 col-xs-12 col-lg-12 text-center">
+              <img src="./assets/css/ravelry-logo.png" class="logo-accueil">
+          </div>
             <div class="container-fluid">
-                <div class="row no-gutter popup-gallery">
-                    <div class="col-lg-6 col-md-6 col-xs-12">
-                        <a href="ficheClient" class="portfolio-box" title="" data-capt=""> <img src="./img/note1.jpg" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-center"> <i class="fa fa-plus-square fa-4x" aria-hidden="true"></i> </div>
-                                    <div class="project-name"> CREER UNE FICHE </div>
+                <div class="row popup-gallery">
+                   <h1 class="titreAccueil">Gestionnaire de Fiches </h1>
+                    <div class="col-lg-5 col-md-5 col-xs-12">
+                        <a href="ficheClient" class="portfolio-box" title="" data-capt=""> <img src="./img/note1.jpg" class="img-responsive bordure" alt="">
+                            <div class="portfolio-box-caption bordure">
+                                <div class="portfolio-box-caption-content bordure">
+                                    <div class="project-category text-center bordure"> <i class="fa fa-plus-square fa-4x" aria-hidden="true"></i> </div>
+                                    <div class="project-name bordure"> CREER UNE FICHE </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-xs-12">
-                        <a href="./img/note2.jpg" class="portfolio-box" title="PME-PMI" data-capt="Melissa Finance travaille en partenariat avec les partenaires adaptés pour proposer les services répondant aux besoins de votre structure."> <img src="./img/note2.jpg" class="img-responsive" alt="" title="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-center"><i class="fa fa-plus-square fa-4x" aria-hidden="true"></i> </div>
-                                    <div class="project-name"> CONSULTER UNE FICHE </div>
+                    <div class="col-lg-5 col-md-5 col-xs-12 col-lg-offset-2 col-md-offset-2">
+                        <a href="./img/note2.jpg" class="portfolio-box bordure" title="PME-PMI" data-capt=""> <img src="./img/note2.jpg" class="img-responsive bordure" alt="" title="">
+                            <div class="portfolio-box-caption bordure">
+                                <div class="portfolio-box-caption-content bordure">
+                                    <div class="project-category text-center bordure"><i class="fa fa-search fa-4x" aria-hidden="true"></i> </div>
+                                    <div class="project-name bordure"> CONSULTER UNE FICHE </div>
                                 </div>
                             </div>
                         </a>
