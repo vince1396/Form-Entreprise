@@ -221,7 +221,11 @@
             $dispositif = htmlentities($_POST['dispositif']);
             $panne_serveur = htmlentities($_POST['panne_serveur']);
             $doc_vital = htmlentities($_POST['doc_vital']);
+            if(empty($_POST['cout_contrat'])){
+        
+            }else{
             $cout_contrat = htmlentities($_POST['cout_contrat']);
+            }
             $echeance = htmlentities($_POST['echeance']);
         
             addInformatique($id_i, $nom_resp, $materiel_actuel, $materiel_propose, $poste_travail, $pc_portable, $serveur, $nas, $reseau, $sauvegarde, $logiciel_actuel, $logiciel_propose, $note_i, $travaux, $intervention, $maintenance, $dispositif, $panne_serveur, $doc_vital, $cout_contrat, $echeance);
@@ -229,7 +233,7 @@
             
             
         }
-        else if($centre_interet == 3){
+        if($centre_interet == '3'){
 
             
             //Solution
@@ -248,6 +252,7 @@
             $doc_app = htmlentities($_POST['doc_app']);
             $scanner = htmlentities($_POST['scanner']);
             $fonct_scanner = htmlentities($_POST['fonct_scanner']);
+            
         
             addSolution($id_s, $doc_classe, $doc_archive, $doc_ordi, $collab_absent, $proc_valid, $vol_impression, $refacturer, $doc_conf, $doc_compta, $vol_coul_imp, $doc_papier, $doc_app, $scanner, $fonct_scanner);
         }
@@ -258,65 +263,67 @@
             $fournisseur_t = htmlentities($_POST['fournisseur_t']);
             $leaser_t = htmlentities($_POST['leaser_t']);
             $achat_t = htmlentities($_POST['achat_t']);
-            $num_ligne = htmlentities($_POST['num_ligne']);
-            $nb_poste = htmlentities($_POST['nb_poste']);
-            $nb_rj45 = htmlentities($_POST['nb_rj45']);
+            if(empty($_POST['num_ligne'])){
+        
+            }else{
+                $num_ligne = htmlentities($_POST['num_ligne']);
+            }
+            if(empty($_POST['nb_poste'])){
+        
+            }else{
+                $nb_poste = htmlentities($_POST['nb_poste']);
+            }
+            if(empty($_POST['nb_rj45'])){
+        
+            }else{
+                $nb_rj45 = htmlentities($_POST['nb_rj45']);
+            }
             
-            if($achat_t == 1){
-                
-                $prix_t = htmlentities($_POST['prixachat_t']);
+            if($achat_t == '1'){
+                if(empty($_POST['prixachat_t'])){
+        
+                }else{
+                    $prix_t = htmlentities($_POST['prixachat_t']);
+                }
+                if(empty($_POST['materiel_t_achat'])){
+        
+                }else{
                 $materiel_t = htmlentities($_POST['materiel_t_achat']);
+                }
+                
                 
                 addTelephonieAchat($id_t, $fournisseur_t, $leaser_t, $achat_t, $prix_t, $materiel_t, $num_ligne, $nb_poste, $nb_rj45);
                 
                 $description = htmlentities($_POST['description']);
                 addFacture($description, $id_t);
-                
-                print($fournisseur_t);
-                print($leaser_t);
-                print($achat_t);
-                print($prix_t);
-                print($materiel_t);
-                print($num_ligne);
-                print($nb_poste);
-                print($nb_rj45);
-                print($description);
+  
                 
             }
-            else if($achat_t == 2){
-                
-                $prix_t = htmlentities($_POST['loyer_t']);
-                $date_deb_t = htmlentities($_POST['date_deb_t']);
-                $prelevement_t = htmlentities($_POST['prelevement_t']);
-                $duree_contrat = htmlentities($_POST['duree_contrat']);
+            if($achat_t == '2'){
+                if(empty($_POST['loyer_t'])){
+        
+                }else{
+                    $prix_t = htmlentities($_POST['loyer_t']);
+                }
+                if(empty($_POST['date_deb_t'])){
+        
+                }else{
+                    $date_deb_t = htmlentities($_POST['date_deb_t']);
+                }
+                if(empty($_POST['prelevement_t'])){
+        
+                }else{
+                    $prelevement_t = htmlentities($_POST['prelevement_t']);
+                }
+                if(empty($_POST['duree_contrat'])){
+        
+                }else{
+                    $duree_contrat = htmlentities($_POST['duree_contrat']);
+                }
                 $materiel_t = htmlentities($_POST['materiel_t_location']);
-                
+        
                 addTelephonieLocation($id_t, $fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat, $materiel_t, $num_ligne, $nb_poste, $nb_rj45);
                 
-        
-                echo 'fournisseur:';
-                print($fournisseur_t);
-                echo '<br>leaser:';
-                print($leaser_t);
-                echo '<br>achat:';
-                print($achat_t);
-                echo '<br>date debut:';
-                print($date_deb_t);
-                echo '<br>prix:';
-                print($prix_t);
-                echo '<br>prelevement:';
-                print($prelevement_t);
-                echo '<br>duree contrat:';
-                print($duree_contrat);
-                echo '<br>materiel:';
-                print($materiel_t);
-                echo '<br>num ligne:';
-                print($num_ligne);
-                echo '<br>nb poste:';
-                print($nb_poste);
-                echo '<br>nb rj45:';
-                print($nb_rj45);
-                die();
                 
                 //Facture
                 $description = htmlentities($_POST['description']);
