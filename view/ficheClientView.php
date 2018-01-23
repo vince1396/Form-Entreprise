@@ -472,7 +472,7 @@
                     </div>
                     <h4>Facture:</h4>
                     <div class="form-group">
-                        <label for="nb_rj45">Description:</label>
+                        <label for="description">Description:</label>
                         <textarea class="form-control" name="description"></textarea>
                     </div>
                 </div>

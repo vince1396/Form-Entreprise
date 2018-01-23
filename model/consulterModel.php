@@ -50,7 +50,7 @@ function displayTelephonie(){
     
     global $bdd;
     
-    $req = $bdd->prepare("SELECT * FROM projet p, telephonie t WHERE t.id_t = p.id_p");
+    $req = $bdd->prepare("SELECT * FROM projet p, telephonie t, facture f WHERE t.id_t = p.id_p AND f.id_t = t.id_t");
     $req->execute();
     
     return $req->fetchAll();
