@@ -20,7 +20,7 @@ function displayBureautique(){
     
     global $bdd;
     
-    $req = $bdd->prepare("SELECT * FROM projet p, bureautique b WHERE b.id_b = p.id_p");
+    $req = $bdd->prepare("SELECT * FROM projet p, bureautique b, client c WHERE b.id_b = p.id_p AND p.id_c = c.id_c");
     $req->execute();
     
     return $req->fetchAll();
@@ -30,7 +30,7 @@ function displayInformatique(){
     
     global $bdd;
     
-    $req = $bdd->prepare("SELECT * FROM projet p, informatique i WHERE i.id_i = p.id_p");
+    $req = $bdd->prepare("SELECT * FROM projet p, informatique i, client c WHERE i.id_i = p.id_p  AND c.id_c = p.id_c");
     $req->execute();
     
     return $req->fetchAll();
@@ -40,7 +40,7 @@ function displaySolution(){
     
     global $bdd;
     
-    $req = $bdd->prepare("SELECT * FROM projet p, solution s WHERE s.id_s = p.id_p");
+    $req = $bdd->prepare("SELECT * FROM projet p, solution s, client c WHERE s.id_s = p.id_p  AND c.id_c = p.id_c");
     $req->execute();
     
     return $req->fetchAll();
@@ -50,7 +50,7 @@ function displayTelephonie(){
     
     global $bdd;
     
-    $req = $bdd->prepare("SELECT * FROM projet p, telephonie t, facture f WHERE t.id_t = p.id_p AND f.id_t = t.id_t");
+    $req = $bdd->prepare("SELECT * FROM projet p, telephonie t, facture f, client c WHERE t.id_t = p.id_p AND f.id_t = t.id_t AND c.id_c = p.id_c");
     $req->execute();
     
     return $req->fetchAll();

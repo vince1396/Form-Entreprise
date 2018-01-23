@@ -24,7 +24,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-xs-12">
-                        <a href="./img/note2.jpg" class="portfolio-box" title="PME-PMI" data-capt="Melissa Finance travaille en partenariat avec les partenaires adaptés pour proposer les services répondant aux besoins de votre structure."> <img src="./img/note2.jpg" class="img-responsive" alt="" title="">
+                        <a href="historique" class="portfolio-box" title="PME-PMI" data-capt="Melissa Finance travaille en partenariat avec les partenaires adaptés pour proposer les services répondant aux besoins de votre structure."> <img src="./img/note2.jpg" class="img-responsive" alt="" title="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-center"><i class="fa fa-plus-square fa-4x" aria-hidden="true"></i> </div>
