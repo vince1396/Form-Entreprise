@@ -59,7 +59,7 @@
             }
             else if($v['prelevement'] == 2){
                 
-                echo '<b>Prélèvement: </b>Trimestrielle';
+                echo '<b>Prélèvement: </b>Trimestriel';
             }
             echo '<b>Durée du contrat: </b>'.$v['duree_contrat'].' €<br><br>';
             echo '<b>Volume Copies Noires: </b>'.$v['noir'].' €<br><br>';
@@ -105,7 +105,7 @@
         
         echo '<h2>Solution:</h2><br>';
         
-        echo '<h3>GED (Organisation, distribution, stockage des docks electroniques:</h3><br>';
+        echo '<h3>GED (Organisation, distribution, stockage des docks electroniques):</h3><br>';
         
         echo '<b>Comment les dossiers (clients/fournisseurs, projets...) et leurs documents (courriers, factures...) sont-ils classés et mis à disposition dans votre organisation ? </b><br>'.$v['doc_classe'].'<br><br>';
         echo '<b>Combien de temps vous faut-il pour trouver un document dans vos archives? </b><br>'.$v['doc_archive'].'<br><br>';
@@ -131,7 +131,41 @@
     }
     
     foreach($req5 as $k => $v){
+        var_dump('hello');
+        die();
+        echo '<h2>Téléphonie:</h2><br>';
+        echo '<b>Fournisseur: </b>'.$v['fournisseur_t'].'<br><br>';
+        echo '<b>Leaser: </b>'.$v['leaser_t'].'<br><br>';
         
+        if($v['achat_t'] == 1){
+            echo "<h4>Contrat d'achat:</h4>";
+            echo '<b>Matériel et accessoires: </b>'.$v['materiel_t'].'<br><br>';
+            echo '<b>Prix: </b>'.$v['prix_t'].' €<br><br>';
+            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' €<br><br>';
+            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' €<br><br>';
+            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' €<br><br>';
+            echo "<h5>Facture: </h5>";
+            echo '<b>Description: </b>'.$v['description'].' €<br><br>';
+        }
+        else if($v['achat_t'] == 2){
+            echo "<h4>Contrat de location:</h4>";
+            echo '<b>Loyer: </b>'.$v['prix_t'].' €<br><br>';
+            echo '<b>Date de début: </b>'.$v['date_deb_t'].' €<br><br>';
+            echo '<b>Durée du contrat: </b>'.$v['duree_contrat'].' €<br><br>';
+            if($v['prelevement_t'] == 1){
+                echo '<b>Prélèvement: </b>Mensuel';
+            }
+            else if($v['prelevement_t'] == 2){
+                 echo '<b>Prélèvement: </b>Trimestriel';
+            }
+            echo '<b>Matériel et accessoires: </b>'.$v['materiel_t'].'<br><br>';
+            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' €<br><br>';
+            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' €<br><br>';
+            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' €<br><br>';
+            echo "<h5>Facture: </h5>";
+            echo '<b>Description: </b>'.$v['description'].' €<br><br>';
+            
+        }
     }
 
 ?>

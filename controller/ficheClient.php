@@ -186,7 +186,6 @@
             $fonct_scanner = htmlentities($_POST['fonct_scanner']);
         
             addSolution($id_s, $doc_classe, $doc_archive, $doc_ordi, $collab_absent, $proc_valid, $vol_impression, $refacturer, $doc_conf, $doc_compta, $vol_coul_imp, $doc_papier, $doc_app, $scanner, $fonct_scanner);
-          
         }
         if($centre_interet == '4'){
             
@@ -205,6 +204,20 @@
                 $materiel_t = htmlentities($_POST['materiel_t_achat']);
                 
                 addTelephonieAchat($id_t, $fournisseur_t, $leaser_t, $achat_t, $prix_t, $materiel_t, $num_ligne, $nb_poste, $nb_rj45);
+                
+                $description = htmlentities($_POST['description']);
+                addFacture($description, $id_t);
+                
+                print($fournisseur_t);
+                print($leaser_t);
+                print($achat_t);
+                print($prix_t);
+                print($materiel_t);
+                print($num_ligne);
+                print($nb_poste);
+                print($nb_rj45);
+                print($description);
+                
             }
             else if($achat_t == 2){
                 
@@ -216,9 +229,38 @@
                 
                 addTelephonieLocation($id_t, $fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat, $materiel_t, $num_ligne, $nb_poste, $nb_rj45);
                 
+        
+                echo 'fournisseur:';
+                print($fournisseur_t);
+                echo '<br>leaser:';
+                print($leaser_t);
+                echo '<br>achat:';
+                print($achat_t);
+                echo '<br>date debut:';
+                print($date_deb_t);
+                echo '<br>prix:';
+                print($prix_t);
+                echo '<br>prelevement:';
+                print($prelevement_t);
+                echo '<br>duree contrat:';
+                print($duree_contrat);
+                echo '<br>materiel:';
+                print($materiel_t);
+                echo '<br>num ligne:';
+                print($num_ligne);
+                echo '<br>nb poste:';
+                print($nb_poste);
+                echo '<br>nb rj45:';
+                print($nb_rj45);
+                die();
+                
                 //Facture
                 $description = htmlentities($_POST['description']);
                 addFacture($description, $id_t);
+                
+//                echo'<br>description:';
+//                print($description);
+//                die();
             }
         }
         
