@@ -17,9 +17,11 @@
         }else{
             $date_contact = htmlentities($_POST['date_contact']);   
         }
-      
+        if(empty($_POST['prise_rdv'])){
+            $prise_rdv = 'N/A';
+        }else{
             $prise_rdv = htmlentities($_POST['prise_rdv']);  
-        
+        }
         if(empty($_POST['date_rdv'])){
             
         }else{
@@ -32,15 +34,31 @@
         $id_f = $bdd->lastInsertId();
     //Raison Sociale
         $prospect = htmlentities($_POST['prospect']);
-        $nom_c = htmlentities($_POST['nom_c']);
-        $fonction = htmlentities($_POST['fonction']);
-        $adresse = htmlentities($_POST['adresse']);
+        if(empty($_POST['nom_c'])){
+            $nom_c = 'N/A';
+        }else{
+            $nom_c = htmlentities($_POST['nom_c']);
+        }
+        if(empty($_POST['fonction'])){
+            $fonction = 'N/A';
+        }else{
+            $fonction = htmlentities($_POST['fonction']);
+        }
+        if(empty($_POST['fonction'])){
+            $adresse = 'N/A';
+        }else{
+            $adresse = htmlentities($_POST['adresse']);
+        }
         if(empty($_POST['cp'])){
-            
+        
         }else{
             $cp = htmlentities($_POST['cp']);
         }
-        $ville = htmlentities($_POST['ville']);
+        if(empty($_POST['ville'])){
+            $ville  = 'N/A';
+        }else{
+            $ville = htmlentities($_POST['ville']);
+        }
         if(empty($_POST['tel'])){
             
         }else{
@@ -49,7 +67,7 @@
         if(empty($_POST['fax'])){
             
         }else{
-        $fax = htmlentities($_POST['fax']);
+             $fax = htmlentities($_POST['fax']);
         }
         $mail_c = htmlentities($_POST['mail_c']);
         $secteur_activite = htmlentities($_POST['secteur_activite']);
@@ -100,16 +118,47 @@
             $achat = htmlentities($_POST['achat']);
         
              //Entretien
+            if(empty($_POST['noir'])){
+            
+            }else{
             $noir = htmlentities($_POST['noir']);
+            }
+            if(empty($_POST['cout_noir'])){
+            
+            }else{
             $cout_noir = htmlentities($_POST['cout_noir']);
+            }
+            if(empty($_POST['vol_noir'])){
+            
+            }else{
             $volume_noir = htmlentities($_POST['vol_noir']);
+            }
+            if(empty($_POST['supp_noir'])){
+            
+            }else{
             $supp_noir = htmlentities($_POST['supp_noir']);
-        
+            }
+            if(empty($_POST['couleur'])){
+            
+            }else{
             $couleur = htmlentities($_POST['couleur']);
+            }
+            if(empty($_POST['cout_couleur'])){
+            
+            }else{
             $cout_couleur = htmlentities($_POST['cout_couleur']);
+            }
+            if(empty($_POST['vol_couleur'])){
+            
+            }else{
             $volume_couleur = htmlentities($_POST['vol_couleur']);
+            }
+            if(empty($_POST['supp_couleur'])){
+            
+            }else{
             $supp_couleur = htmlentities($_POST['supp_couleur']);
-        
+            }
+            
             $amelioration = htmlentities($_POST['amelioration']);
             $orientation = htmlentities($_POST['orientation']);
         
@@ -117,18 +166,33 @@
             if($achat == 1)
             {
                 $materiel = htmlentities($_POST['materiel_achat']);
+                if(empty($_POST['achat_b'])){
+            
+                }else{
                 $prix_b = htmlentities($_POST['achat_b']);
-                
+                }
                 addBureautiqueAchat($id_b, $fournisseur, $leaser, $achat, $prix_b, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation);
                 
             }
             else if($achat == 2) //LOCATION BUREAUTIQUE
             {
                 //Location
+                if(empty($_POST['date_deb'])){
+            
+                }else{
                 $date_deb = htmlentities($_POST['date_deb']);
+                }
+                if(empty($_POST['loyer_b'])){
+            
+                }else{
                 $prix_b = htmlentities($_POST['loyer_b']);
+                }
                 $prelevement = htmlentities($_POST['prelevement']); // 1 = Mois, 2 = Trimestre
+                if(empty($_POST['duree'])){
+            
+                }else{
                 $duree_contrat = htmlentities($_POST['duree']);
+                }
                 $materiel = htmlentities($_POST['materiel_location']);
                 
                 addBureautiqueLocation($id_b, $fournisseur, $leaser, $date_deb, $achat, $prix_b, $prelevement, $duree_contrat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation);
@@ -226,6 +290,7 @@
         
         header("location:index.php?p=consulter&id=".$id_f);
     }
-    
+
 
     require "view/ficheClientView.php";
+    
