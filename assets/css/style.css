@@ -270,6 +270,22 @@ header .header-content .header-content-inner p {
     }
     h1#homeHeading{font-size: 27px;}
 }
+
+#accueilview{
+    background-color: rgba(255, 255, 255, 0.78);
+}
+.titreAccueil{
+    text-align: center;
+    margin-top: 53px;
+    margin-bottom: 50px;
+    
+}
+.paddingAccueil{
+    height: 100px;
+}
+.bordure{
+    border-radius: 65px;
+}
 #ficheclient{
     background-color: white;
 }
@@ -317,6 +333,7 @@ header .header-content .header-content-inner p {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
+  border-radius: 65px;
 }
 
 #carousel-insurance .carousel-control{background: none; width: 3%;}
@@ -627,6 +644,10 @@ hr.custom{
 
 .background-log{
 
+}
+.logo-accueil{
+    width: 10%;
+    
 }
 .wrap {
   height: 100%;

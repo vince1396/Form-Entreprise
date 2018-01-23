@@ -183,7 +183,7 @@
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO telephonie(id_t, fournisseur_t, leaser_t, date_deb_t, achat_t, prix_t, prelevement_t, duree_contrat, materiel_t, num_ligne, nb_poste, nb_rj45) VALUES (:id_t, :fournisseur_t, :leaser_t, :date_deb_t, :achat_t, :prix_t, :prelevement_t, :duree_contrat, :materiel_t, :num_ligne, :nb_poste, :nb_rj45)");
+        $req = $bdd->prepare("INSERT INTO telephonie(id_t, fournisseur_t, leaser_t, date_deb_t, achat_t, prix_t, prelevement_t, duree_contrat, materiel_t, num_ligne, nb_poste, nb_rj45) VALUES(:id_t, :fournisseur_t, :leaser_t, :date_deb_t, :achat_t, :prix_t, :prelevement_t, :duree_contrat, :materiel_t, :num_ligne, :nb_poste, :nb_rj45)");
         
         $req->bindValue(":id_t", $id_t, PDO::PARAM_INT);
         $req->bindValue(":fournisseur_t", $fournisseur_t, PDO::PARAM_STR);
@@ -206,7 +206,7 @@
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO telephonie VALUES (:id_t, :fournisseur_t, :leaser_t, :achat_t, :prix_t, :materiel_t, :num_ligne, :nb_poste, :nb_rj45)");
+        $req = $bdd->prepare("INSERT INTO telephonie(id_t, fournisseur_t, leaser_t, achat_t, prix_t, materiel_t, num_ligne, nb_poste, nb_rj45) VALUES(:id_t, :fournisseur_t, :leaser_t, :achat_t, :prix_t, :materiel_t, :num_ligne, :nb_poste, :nb_rj45)");
         
         $req->bindValue(":id_t", $id_t, PDO::PARAM_INT);
         $req->bindValue(":fournisseur_t", $fournisseur_t, PDO::PARAM_STR);

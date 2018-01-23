@@ -446,7 +446,7 @@
                         </div>
                         <div class="form-group">
                             <label for="duree_contrat">Durée du contrat:</label>
-                            <input type="number" class="form-control" name="duree_contrat">
+                            <input type="text" class="form-control" name="duree_contrat">
                         </div>
                         <div class="form-group">
                             <label for="loyer_t">Loyer</label>
@@ -464,11 +464,11 @@
                     </div>
                     <div class="form-group">
                         <label for="nb_poste">Nombre de postes:</label>
-                        <input type="number" class="form-control" name="nb_poste">
+                        <input type="text" class="form-control" name="nb_poste">
                     </div>
                     <div class="form-group">
                         <label for="nb_rj45">Nombre de RJ45:</label>
-                        <input type="number" class="form-control" name="nb_rj45">
+                        <input type="text" class="form-control" name="nb_rj45">
                     </div>
                     <h4>Facture:</h4>
                     <div class="form-group">
