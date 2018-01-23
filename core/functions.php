@@ -1,13 +1,13 @@
 <?php
   function createUser($nom, $prenom, $email, $mdp, $confirm, $role, $chef)
   {
-    $nom = htmlentities($nom);
-    $prenom = htmlentities($prenom);
-    $email = htmlentities($email);
-    $mdp = htmlentities($mdp);
+    $nom     = htmlentities($nom);
+    $prenom  = htmlentities($prenom);
+    $email   = htmlentities($email);
+    $mdp     = htmlentities($mdp);
     $confirm = htmlentities($confirm);
-    $role = htmlentities($role);
-    $chef = htmlentities($chef);
+    $role    = htmlentities($role);
+    $chef    = htmlentities($chef);
 
     if(empty($nom) OR empty($prenom) OR empty($email) OR empty($mdp) OR empty($confirm) OR empty($role) OR empty($chef))
     {
