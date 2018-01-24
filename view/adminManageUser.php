@@ -5,13 +5,13 @@
 </form>
 
 <?php
-   while(getUsers())
+   foreach (getUsers() as $k => $v)
    { ?>
      <ul>
-      <li><?php echo $rep['id_u']; ?></li>
-      <li><?php echo $rep['nom']; ?></li>
-      <li><?php echo $rep['prenom']; ?></li>
-      <li><?php echo $rep['email']; ?></li>
+      <li><?php echo $v['id_u']; ?></li>
+      <li><?php echo $v['nom']; ?></li>
+      <li><?php echo $v['prenom']; ?></li>
+      <li><?php echo $v['email']; ?></li>
     </ul>
     <br>
     <br>
