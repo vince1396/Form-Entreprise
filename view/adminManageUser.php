@@ -1,4 +1,5 @@
-<form class="" action="#" method="post">
+<div class="container white_body">
+ <form class="" action="#" method="post">
   <input type="text" name="search">
   <input type="submit" name="submit" name="search">
 </form>
@@ -16,3 +17,4 @@
     <br>
 <?php }
 ?>
+</div>
