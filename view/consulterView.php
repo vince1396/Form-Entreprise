@@ -75,8 +75,9 @@
         }
         
     }
-    
+
     foreach($req3 as $k => $v){
+
         echo '<h2>Informatique:</h2>';
         echo '<b>Nom du responsable: </b>'.$v['nom_resp'].'<br><br>';
         echo '<b>Coût du contrat: </b>'.$v['cout_contrat'].'<br><br>';
@@ -139,11 +140,11 @@
             echo "<h4>Contrat d'achat:</h4>";
             echo '<b>Matériel et accessoires: </b>'.$v['materiel_t'].'<br><br>';
             echo '<b>Prix: </b>'.$v['prix_t'].' €<br><br>';
-            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' €<br><br>';
-            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' €<br><br>';
-            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' €<br><br>';
+            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' <br><br>';
+            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' <br><br>';
+            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' <br><br>';
             echo "<h5>Facture: </h5>";
-            echo '<b>Description: </b>'.$v['description'].' €<br><br>';
+            echo '<b>Description: </b>'.$v['description'].' <br><br>';
         }
         else if($v['achat_t'] == 2){
             echo "<h4>Contrat de location:</h4>";
@@ -157,11 +158,11 @@
                  echo '<b>Prélèvement: </b>Trimestriel';
             }
             echo '<b>Matériel et accessoires: </b>'.$v['materiel_t'].'<br><br>';
-            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' €<br><br>';
-            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' €<br><br>';
-            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' €<br><br>';
+            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' <br><br>';
+            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' <br><br>';
+            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' <br><br>';
             echo "<h5>Facture: </h5>";
-            echo '<b>Description: </b>'.$v['description'].' €<br><br>';
+            echo '<b>Description: </b>'.$v['description'].' <br><br>';
             
         }
     }
