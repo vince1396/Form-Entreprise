@@ -131,8 +131,6 @@
     }
     
     foreach($req5 as $k => $v){
-        var_dump('hello');
-        die();
         echo '<h2>Téléphonie:</h2><br>';
         echo '<b>Fournisseur: </b>'.$v['fournisseur_t'].'<br><br>';
         echo '<b>Leaser: </b>'.$v['leaser_t'].'<br><br>';
