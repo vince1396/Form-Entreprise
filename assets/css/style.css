@@ -691,3 +691,7 @@ hr.custom{
 th{
     background: #337ab7;
 }
+
+.margin_bottom{
+    margin-bottom: 300px;
+}

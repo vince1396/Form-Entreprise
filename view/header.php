@@ -16,7 +16,7 @@
                         <a class="page-scroll" href="accueil">Accueil</a>
                     </li>
                      <li>
-                        <a class="page-scroll" href="gestionAdmin">Gestion Admin</a>
+                        <a class="page-scroll" href="adminMain">Gestion Admin</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="gestionChef">Espace Chef de vente</a>
