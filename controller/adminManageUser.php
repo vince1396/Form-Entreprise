@@ -1,3 +1,7 @@
 <?php
-  //admin controller
+  require "model/adminManageUser.php";
+
+
+
+  require "view/adminManageUser.php";
 ?>
