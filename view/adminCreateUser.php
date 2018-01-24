@@ -15,14 +15,20 @@
   <label for="confirm">Confirmer le mot de passe: </label> 
   <input type="text" name="confirm" value="">
   <br>
-  <input type="radio" name="role" value="1">
+  <div id="choixRoleAddUser">
+  <label>Chef de vente</label>
+  <input type="radio" name="role" value="1" class="form-control" checked="checked">
   <br>
-  <input type="radio" name="role" value="2">
+  <label>Commercial</label>
+  <input type="radio" name="role" value="2" class="form-control">
+  </div>
   <br>
+  <div class="ChiefChoiceDisplay">
   <select class="" name="chef">
     <option value=""></option>
   </select>
-  <br>
+    <br>
+    </div>
   <input type="submit" name="submit">
 </form>
 </div>

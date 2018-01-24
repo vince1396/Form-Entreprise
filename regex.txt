@@ -1,0 +1,2 @@
+regex pour Nom : [A-z][a-z]*([ \-][A-z]?[a-z])*
+    

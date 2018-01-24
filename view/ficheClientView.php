@@ -6,7 +6,7 @@
                 <h1>Commercial</h1>
                 <div class="form-group">
                     <label for="nom">Nom</label>
-                    <input type="text" class="form-control" name="nom"> </div>
+                    <input type="text" class="form-control" name="nom" pattern="[A-Za-z][a-z]*"> </div>
                 <div class="form-group">
                     <label for="prenom">Prénom</label>
                     <input type="text" class="form-control" name="prenom"> </div>
