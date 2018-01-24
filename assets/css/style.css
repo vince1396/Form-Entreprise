@@ -695,3 +695,8 @@ th{
 .margin_bottom{
     margin-bottom: 300px;
 }
+
+select{
+    background:#337ab7;
+    color: white;
+}

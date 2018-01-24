@@ -28,12 +28,12 @@
                 
                 <?php
                 if(isset($_POST['submit'])){
-                    
                     echo $message;
-//                    foreach($req2 as $k=>$v){
-//                        
-//                        echo $v['nom_c']."<br>";
-//                    }
+                    foreach($req as $k=>$v){
+                        
+                        echo $v['nom_c']."<br>";
+                        
+                    }
 //                    foreach($req3 as $k=>$v){
 //                        
 //                        echo $v['nom_c']."<br>";

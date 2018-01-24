@@ -9,7 +9,15 @@ function displayListClient(){
 function search($rechercher){
     global $bdd;
     
-    $req = $bdd->prepare("SELECT DISTINCT * FROM client c, user u, fiche f WHERE c.nom_c LIKE '%".$rechercher."%' OR c.mail_c LIKE '%".$rechercher."%' OR c.prescripteur LIKE '%".$rechercher."%' OR c.decideur LIKE '%".$rechercher."%' OR c.signataire LIKE '%".$rechercher."%' AND f.id_u = u.id_u AND c.id_f = f.id_f AND u.id_u =".$_SESSION['id']);
+    $req = $bdd->prepare("SELECT * FROM client c, user u, fiche f WHERE c.nom_c LIKE '%".$rechercher."%' OR c.ville LIKE '%".$rechercher."%' AND f.id_u = u.id_u AND c.id_f = f.id_f AND u.id_u =".$_SESSION['id']);
+    $req->execute();
+    return $req->fetch();
+}
+
+function searchTest($rechercher){
+    global $bdd;
+    
+    $req = $bdd->prepare("SELECT DISTINCT nom_c,mail_c,prescripteur,decideur,signataire FROM client c, user u, fiche f WHERE f.id_u = u.id_u AND c.id_f = f.id_f AND u.id_u = ".$_SESSION['id']." AND (c.nom_c LIKE '%".$rechercher."%') OR (c.mail_c LIKE '%".$rechercher."%') OR (c.prescripteur LIKE '%".$rechercher."%') OR (c.decideur LIKE '%".$rechercher."%') OR (c.signataire LIKE '%".$rechercher."%') OR (c.ville LIKE '%".$rechercher."%') OR (c.cp LIKE '%".$rechercher."%') OR (c.tel LIKE '%".$rechercher."%') OR (c.fax LIKE '%".$rechercher."%')");
     $req->execute();
     return $req->fetchAll();
 }

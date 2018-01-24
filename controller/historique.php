@@ -6,6 +6,9 @@
     if(isset($_POST['submit'])){
         
         $rechercher = $_POST['rechercher'];
+        $req = searchTest($rechercher);
+//        var_dump($req);
+//        die();
         
         if(empty($_POST['interet'])){
             
@@ -47,7 +50,7 @@
             }
         }
         
-        $req = search($rechercher);
+        
         
     }
 
