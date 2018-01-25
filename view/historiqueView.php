@@ -28,25 +28,24 @@
                 
                 <?php
                 if(isset($_POST['submit'])){
-                    echo $message;
+                    $temoin = true;
                     foreach($req as $k=>$v){
-                        
-                        echo $v['nom_c']."<br>";
+                        echo $v['nom_c'];
+                        $temoin = false;
                         
                     }
-//                    foreach($req3 as $k=>$v){
-//                        
-//                        echo $v['nom_c']."<br>";
+                    if($temoin){
+                        echo "Aucun résultat.";
+                    }
+                    
+//                    else{
+//                        echo "Aucun résultats";
+//                        var_dump($v);
+//                        die();
 //                    }
-//                    foreach($req4 as $k=>$v){
-//                        
-//                        echo $v['nom_c']."<br>";
-//                    }
-//                    foreach($req as $k=>$v){
-//                        
-//                        echo $v['nom_c']."<br>";
-//                    }
-                }
+                    }
+
+                
                 ?>
                 <div class="table-responsive">
                     <table class="table table-striped table-bordered table-hover">
