@@ -51,7 +51,7 @@
                     <input type="text" class="form-control" name="fax"> </div>
                 <div class="form-group">
                     <label for="mail_c">Email</label>
-                    <input type="email" class="form-control" name="mail_c"> </div><br><br>
+                    <input type="email" class="form-control" name="mail_c" pattern="[A-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"> </div><br><br>
                 <div class="form-group">
                     <label for="secteur_activite">Secteur d'activité</label>
                     <input type="text" class="form-control" name="secteur_activite"> </div>
