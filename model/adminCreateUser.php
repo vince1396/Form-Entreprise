@@ -3,7 +3,7 @@
   {
       global $bdd;
 
-      $req = $bdd->prepare("INSERT INTO user VALUES :nom, :prenom, :email, :mdp, :role, :chef");
+      $req = $bdd->prepare("INSERT INTO user VALUES (NULL, :nom, :prenom, :email, :mdp, :role, :chef)");
       $req->bindValue(":nom", $nom, PDO::PARAM_STR);
       $req->bindValue(":prenom", $prenom, PDO::PARAM_STR);
       $req->bindValue(":email", $email, PDO::PARAM_STR);
@@ -24,7 +24,7 @@
       return $req->fetch();
   }
 
-  function getChef()
+  function getChefVente()
   {
       global $bdd;
 

@@ -1,31 +1,36 @@
 <div class="container white_body">
  <form class="" action="#" method="post">
   <label for="nom">Nom: </label>
-  <input type="text" name="nom" value="">
+  <input type="text" name="nom" value="" title="nom">
   <br>
   <label for="prenom">Prénom: </label>
-  <input type="text" name="prenom" value="">
+  <input type="text" name="prenom" value="" title="prenom">
   <br>
   <label for="email">Email: </label>
-  <input type="text" name="email" value="">
+  <input type="text" name="email" value="" title="email">
   <br>
   <label for="mdp">Mot de passe: </label>
-  <input type="text" name="mdp" value="">
+  <input type="text" name="mdp" value="" title="mdp">
   <br>
   <label for="confirm">Confirmer le mot de passe: </label> 
-  <input type="text" name="confirm" value="">
+  <input type="text" name="confirm" value="" title="confirm">
   <br>
   <div id="choixRoleAddUser">
   <label>Chef de vente</label>
-  <input type="radio" name="role" value="1" class="form-control" checked="checked">
+  <input type="radio" name="role" value="1" class="form-control" checked="checked" title="role">
   <br>
   <label>Commercial</label>
-  <input type="radio" name="role" value="2" class="form-control">
+  <input type="radio" name="role" value="2" class="form-control" title="role">
   </div>
   <br>
   <div class="ChiefChoiceDisplay">
-  <select class="" name="chef">
-    <option value=""></option>
+      <select class="" name="chef" title="chef">
+          <?php
+            foreach (getChefVente() as $k => $v)
+            { ?>
+                <option value="<?php echo $v['id_u'] ?>"><?php echo $v['prenom']." ".$v['nom']; ?></option><?php
+            }
+          ?>
   </select>
     <br>
     </div>

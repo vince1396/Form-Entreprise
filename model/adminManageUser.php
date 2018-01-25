@@ -1,5 +1,8 @@
 <?php
-  function getUsers()
+/**
+ * @return array
+ */
+function getUsers()
   {
     global $bdd;
 
