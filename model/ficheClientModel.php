@@ -1,9 +1,9 @@
 <?php
 
-    function displayCommercial($id_u){
+    function displayCommercial(){
         global $bdd;
         
-        $req = $bdd->prepare("SELECT nom, prenom FROM user WHERE id_u =".$id_u);
+        $req = $bdd->prepare("SELECT nom, prenom FROM user WHERE id_u =".$_SESSION['id']);
         $req->execute();
         
         return $req->fetch();
