@@ -4,10 +4,11 @@
     $r = displayListClient();
     $message = '';
 
-     $sql = "SELECT DISTINCT c.nom_c FROM user u, fiche f, client c, projet p, bureautique b, informatique i, solution s, telephonie t WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f ";
+     $sql = "SELECT DISTINCT c.nom_c, c.id_f, f.date_rdv, c.interet FROM user u, fiche f, client c, projet p, bureautique b, informatique i, solution s, telephonie t WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f ";
     
     if(isset($_POST['submit'])){
-        
+//        var_dump($_POST);
+//        die();
         $i = 0;
         if(isset($_POST['interet'])){
             $interet = $_POST['interet'];
@@ -73,10 +74,17 @@
         }
         if(!empty($_POST['rechercher']) && isset($_POST['rechercher'])){
             $rechercher = $_POST['rechercher'];
-            $sql .= "AND (c.nom_c LIKE '%".$rechercher."%') OR (c.mail_c LIKE '%".$rechercher."%') OR (c.prescripteur LIKE '%".$rechercher."%') OR (c.decideur LIKE '%".$rechercher."%') OR (c.signataire LIKE '%".$rechercher."%') OR (c.ville LIKE '%".$rechercher."%') OR (c.cp LIKE '%".$rechercher."%') OR (c.tel LIKE '%".$rechercher."%') OR (c.fax LIKE '%".$rechercher."%')";
+            $sql .= "AND (c.nom_c LIKE '%".$rechercher."%') OR (c.mail_c LIKE '%".$rechercher."%') OR (c.ville LIKE '%".$rechercher."%') OR (c.cp LIKE '%".$rechercher."%') OR (c.tel LIKE '%".$rechercher."%') OR (c.fax LIKE '%".$rechercher."%')";
             $i++;
         }
-        
+        if(isset($_POST['date_min']) && ($_POST['date_max'])){
+            $date_min = $_POST['date_min'];
+            $date_max = $_POST['date_max'];
+            $sql .= " AND f.date_rdv >= '".$date_min."' AND f.date_rdv <= '".$date_max."'";
+
+        }
+//            var_dump($sql);
+//        die();
             $req = $bdd->query($sql);     
             
     }

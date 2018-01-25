@@ -2,7 +2,7 @@
 
     require "model/gestionChefModel.php";
     
-    if($_SESSION['lvl'] == 2){
+    if($_SESSION['lvl'] == 3){
         
         $req = displayCommerciaux();
     }
