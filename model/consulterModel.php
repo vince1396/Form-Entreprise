@@ -11,7 +11,7 @@ function displayInfoDossier($id){
     
     global $bdd;
     
-    $requete = $bdd->prepare("SELECT * FROM user u, fiche f, client c, projet p WHERE f.id_u=".$_SESSION['id']." AND c.id_f = f.id_f AND f.id_f=".$id." AND p.id_c = c.id_c");
+    $requete = $bdd->prepare("SELECT * FROM user u, fiche f, client c, projet p WHERE u.id_u = ".$_SESSION['id']." AND f.id_u=".$_SESSION['id']." AND c.id_f = f.id_f AND f.id_f=".$id." AND p.id_c = c.id_c");
     $requete->execute();
     return $requete->fetchAll();
 }

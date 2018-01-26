@@ -50,6 +50,7 @@
         {
             $_SESSION['connecte'] = true;
             $_SESSION['id'] = $auth[0];
+            $_SESSION['lvl'] = $reponse['lvl'];
             
             setcookie('auth', $reponse['id_u']."-----".sha1($reponse['email'].$reponse['mdp'].$_SERVER['REMOTE_ADDR']),time()+(3600*24*3),'/','localhost',false,true);
             header("location:".BASE_URL."/accueil");
