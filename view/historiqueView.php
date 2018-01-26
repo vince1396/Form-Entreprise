@@ -29,46 +29,41 @@
                     <input type="submit" name="submit">
                     </form>
                 </div>
-                
+
                 <?php
-                if(isset($_POST['submit'])){
+                if(isset($_POST['submit'])) {
                     $temoin = true;
-                    $number = 1 ;
-                    foreach($req as $k=>$v){ ?>
-                       <table class="table table-striped table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Nom du client</th>
-                                <th>Date de rendez-vous</th>
-                                <th>Option</th>
-                                <th>Niveau d'intérêt</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    $number = 1;
+                    if ($message != "") {
+                        echo $message;
+                    } else {
+
+                        foreach ($req as $k => $v) { ?>
+
                                 <tr>
                                     <td>
                                         <?= $number; ?>
                                     </td>
                                     <td><span><?= $v["nom_c"]; ?></span></td>
-                                    <td><?= $v['date_rdv'];?></td>
-                                    <td><span><a href="index.php?p=consulter&id=<?=$v["id_f"];?>">Voir le dossier</a></span></td>
-                                    <td><?= $v['interet'];?></td>
+                                    <td><?= $v['date_rdv']; ?></td>
+                                    <td><span><a href="index.php?p=consulter&id=<?= $v["id_f"]; ?>">Voir le dossier</a></span>
+                                    </td>
+                                    <td><?= $v['interet']; ?></td>
                                 </tr>
-                                <?php $number++;?>
-                        </tbody>
-                    </table>
-                        <?php $temoin = false;?>
-                        
-                    <?php }
-                    if($temoin){
-                        echo "Aucun résultat.";
+                                <?php $number++; ?>
+                                </tbody>
+                            </table>
+                            <?php $temoin = false; ?>
+
+                        <?php }
+                        if ($temoin) {
+                            echo "Aucun résultat.";
+                        }
                     }
                 }
 
-                    
 
-                
+
                 ?>
                 <div class="table-responsive">
                    <h3 class="center">Liste des clients</h3>

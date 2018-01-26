@@ -1,6 +1,14 @@
 <div class="container white_body">
 <?php
-    
+
+    foreach($req0 as $k => $v){
+        echo '<h2>Infos du commercial:</h2>';
+        echo '<b>Nom: </b>'.$v['nom'].' '.$v['prenom'].'<br><br>';
+        echo '<b>Date de contact: </b>'.$v['date_contact'].'<br><br>';
+        echo '<b>Preneur de rendez-vous: </b>'.$v['prise_rdv'].'<br><br>';
+        echo '<b>Date de rendez-vous: </b>'.$v['date_rdv'].'<br><br>';
+    }
+
     foreach($req1 as $k => $v){
         echo '<h2>Infos du client:</h2>';
         echo '<b>Nom client: </b>'.$v['nom_c'].'<br><br>';

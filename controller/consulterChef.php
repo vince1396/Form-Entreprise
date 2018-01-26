@@ -1,6 +1,6 @@
 <?php
     require "model/consulterChefModel.php";
-    if($_SESSION['lvl'] == 3){
+    if($_SESSION['lvl'] == 2){
         $id = (int)$_GET['id'];
         $req = displayListClient($id);
         $req2 = displayName($id);

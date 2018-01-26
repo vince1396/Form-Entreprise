@@ -40,6 +40,13 @@
                         <label>
                             <input type="checkbox" name="remember" value="remember-me">Se souvenir de moi</label>
                     </div>
+                    <?php
+                        if(isset($_POST['submit'])){
+                            if($message != "") ?>
+                                <div class="error"><?=$message;?></div>
+                            <?php
+                        }
+                    ?>
                     <div class="wrap">
                         <button class="button" type="submit" name="submit">Valider</button>
                     </div>
