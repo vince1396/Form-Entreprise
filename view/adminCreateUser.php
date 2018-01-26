@@ -10,17 +10,17 @@
   <input type="text" name="email" value="" title="email">
   <br>
   <label for="mdp">Mot de passe: </label>
-  <input type="text" name="mdp" value="" title="mdp">
+  <input type="password" name="mdp" value="" title="mdp">
   <br>
   <label for="confirm">Confirmer le mot de passe: </label> 
-  <input type="text" name="confirm" value="" title="confirm">
+  <input type="password" name="confirm" value="" title="confirm">
   <br>
   <div id="choixRoleAddUser">
   <label>Chef de vente</label>
-  <input type="radio" name="role" value="1" class="form-control" checked="checked" title="role">
+  <input type="radio" name="role" value="2" class="form-control" checked="checked" title="role">
   <br>
   <label>Commercial</label>
-  <input type="radio" name="role" value="2" class="form-control" title="role">
+  <input type="radio" name="role" value="1" class="form-control" title="role">
   </div>
   <br>
   <div class="ChiefChoiceDisplay">
