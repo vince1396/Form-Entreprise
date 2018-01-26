@@ -110,14 +110,80 @@
         }else{
         $date_projet = htmlentities($_POST['date_projet']);
         }
-        addProjet($date_projet, $id_c);
         
-        $id_p = $bdd->lastInsertId();
-    
+        $centre_interet = htmlentities($_POST['cInteret']);
+        $centre_interet_2 = htmlentities($_POST['cInteret_2']);
+        $centre_interet_3 = htmlentities($_POST['cInteret_3']);
+        $centre_interet_4 = htmlentities($_POST['cInteret_4']);
+        var_dump($centre_interet,$centre_interet_2,$centre_interet_3,$centre_interet_4);
+        if($centre_interet !== '0'){
+            echo "test réussi";
+            $id_increment = 1;
+            echo $id_increment;
+            if($centre_interet_2 !== '0' && !empty($_POST['cInteret_2'])){
+                echo"test 2 réussi";
+                $id_increment += 1;
+                echo $id_increment;
+                if($centre_interet_3 !== '0' && !empty($_POST['cInteret_3'])){
+                    echo"test 3 réussi";
+                    $id_increment += 1;
+                    echo $id_increment;
+                    if($centre_interet_4 !== '0' && !empty($_POST['cInteret_4'])){
+                        echo"test 4 réussi";
+                        $id_increment += 1;
+                        echo $id_increment;
+                    }else{
+                        echo "test 4 échoué";
+                    }
+                }else{
+                    echo "test 3 échoué";
+                }
+            }else{
+            echo "test 2 échoué";
+            }
+        }
+            $case_array = '0';
+        while($id_increment > 0 ){
+            addProjet($date_projet, $id_c);
+            $id_p = $bdd->lastInsertId();
+            $array = array($case_array => $id_p);
+            $case_array++;
+            $id_increment
+        }
     //Centre d'intérêt
         $centre_interet = htmlentities($_POST['cInteret']);
-        
-        if($centre_interet == '1'){
+        $centre_interet_2 = htmlentities($_POST['cInteret_2']);
+        $centre_interet_3 = htmlentities($_POST['cInteret_3']);
+        $centre_interet_4 = htmlentities($_POST['cInteret_4']);
+        var_dump($centre_interet,$centre_interet_2,$centre_interet_3,$centre_interet_4);
+        if($centre_interet !== '0'){
+            echo "test réussi";
+            $id_test = $id_p;
+            echo $id_test;
+        }
+        if($centre_interet_2 !== '0' && !empty($_POST['cInteret_2'])){
+            echo"test 2 réussi";
+            $id_test = $id_p + 1;
+            echo $id_test;
+        }else{
+            echo "test 2 échoué";
+        }
+        if($centre_interet_3 !== '0' && !empty($_POST['cInteret_3'])){
+            echo"test 3 réussi";
+            $id_test = $id_p + 2;
+            echo $id_test;
+        }else{
+            echo "test 3 échoué";
+        }
+        if($centre_interet_4 !== '0' && !empty($_POST['cInteret_4'])){
+            echo"test 4 réussi";
+            $id_test = $id_p + 3;
+            echo $id_test;
+        }else{
+            echo "test 4 échoué";
+        }
+        die();
+        if($centre_interet == '1' || $centre_interet_2 == '1' || $centre_interet_3 =='1' || $centre_interet_4 == '1'){
             
             //Bureautique
             if(empty($_POST['fournisseur'])){
@@ -229,10 +295,15 @@
 
             }
         }
-        if($centre_interet == '2'){
+        if($centre_interet == '2' || $centre_interet_2 == '2' || $centre_interet_3 =='2' || $centre_interet_4 == '2'){
             
             //Informatique
-            $id_i = $id_p;
+            if($centre_interet !== '0' && $centre_interet_2 !== '0' && $centre_interet_3 !=='0' && $centre_interet_4 !== '0'){
+            $id_i = $id_p++;
+            }else
+            {
+                $id_i = $id_p;
+            }
             if(empty($_POST['nom_resp'])){
                 $nom_resp = "N/A";
             }else{
@@ -335,11 +406,16 @@
             
             
         }
-        if($centre_interet == '3'){
-
+        if($centre_interet == '3' || $centre_interet_2 == '3' || $centre_interet_3 =='3' || $centre_interet_4 == '3'){
+            if($centre_interet !== '0' && $centre_interet_2 !== '0' && $centre_interet_3 !=='0' && $centre_interet_4 !== '0'){
+                $id_s = $id_p+2;
+            }else
+            {
+                $id_s = $id_p;
+            }
             
             //Solution
-            $id_s = $id_p;
+            
             if(empty($_POST['doc_classe'])){
                 $doc_classe = "N/A";
             }else{
@@ -412,10 +488,15 @@
             }
             addSolution($id_s, $doc_classe, $doc_archive, $doc_ordi, $collab_absent, $proc_valid, $vol_impression, $refacturer, $doc_conf, $doc_compta, $vol_coul_imp, $doc_papier, $doc_app, $scanner, $fonct_scanner);
         }
-        if($centre_interet == '4'){
-            
+        if($centre_interet == '4' || $centre_interet_2 == '4' || $centre_interet_3 =='4' || $centre_interet_4 == '4'){
+            if($centre_interet !== '0' && $centre_interet_2 !== '0' && $centre_interet_3 !=='0' && $centre_interet_4 !== '0'){
+                $id_t = $id_p+3;
+            }else
+            {
+                $id_t = $id_p;
+            }
             //Téléphonie
-            $id_t = $id_p;
+            
             if(empty($_POST['fournisseur_t'])){
                 $fournisseur_t = "N/A";
             }else{
@@ -480,16 +561,16 @@
                     $prelevement_t = htmlentities($_POST['prelevement_t']);
                 }
                 if(empty($_POST['duree_contrat'])){
-                    $duree_contrat = "0";
+                    $duree_contrat_t = "0";
                 }else{
-                    $duree_contrat = htmlentities($_POST['duree_contrat']);
+                    $duree_contrat_t = htmlentities($_POST['duree_contrat']);
                 }
                 if(empty($_POST['materiel_t_location'])){
                     $materiel_t = "N/A";
                 }else{
                     $materiel_t = htmlentities($_POST['materiel_t_location']);
                 }
-                addTelephonieLocation($id_t, $fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat, $materiel_t, $num_ligne, $nb_poste, $nb_rj45);
+                addTelephonieLocation($id_t, $fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat_t, $materiel_t, $num_ligne, $nb_poste, $nb_rj45);
                 
                 
                 //Facture
