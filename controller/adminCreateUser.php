@@ -4,13 +4,13 @@ require "model/adminCreateUser.php";
  {
      $nom     = htmlentities($_POST['nom']);
      $prenom  = htmlentities($_POST['prenom']);
-     $email   = htmlentities($email);
-     $mdp     = htmlentities($mdp);
-     $confirm = htmlentities($confirm);
-     $role    = htmlentities($role);
-     $chef    = htmlentities($chef);
+     $email   = htmlentities($_POST['email']);
+     $mdp     = htmlentities($_POST['mdp']);
+     $confirm = htmlentities($_POST['confirm']);
+     $role    = htmlentities($_POST['role']);
+     $chef    = htmlentities($_POST['chef']);
 
-     createUser();
+     createUser($nom, $prenom, $email, $mdp, $confirm, $role, $chef);
      $message = "L'insertion a bien été effectuée";
  }
 
