@@ -707,4 +707,12 @@ select{
     background:#337ab7;
     color: white;
 }
-
+.error{
+  background: red;
+  font-size: 20px;
+  border: 2px solid darkred;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

@@ -29,28 +29,15 @@
                     <input type="submit" name="submit">
                     </form>
                 </div>
-                
+
                 <?php
-                if(isset($_POST['submit'])){
+                if(isset($_POST['submit'])) {
                     $temoin = true;
-                    $number = 1 ;
-                    if($message != "")
+                    $number = 1;
+                    if ($message != "") {
                         echo $message;
-                    else { ?>
-                        <br>
-                        <h4>Résultats de la recherche: </h4>
-                        <table class="table table-striped table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nom du client</th>
-                            <th>Date de rendez-vous</th>
-                            <th>Option</th>
-                            <th>Niveau d'intérêt</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
+                    } else {
+
                         foreach ($req as $k => $v) { ?>
 
                                 <tr>
@@ -64,22 +51,19 @@
                                     <td><?= $v['interet']; ?></td>
                                 </tr>
                                 <?php $number++; ?>
-
+                                </tbody>
+                            </table>
                             <?php $temoin = false; ?>
 
-                        <?php } ?>
-                        </tbody>
-                            </table>
-                        <?php
+                        <?php }
                         if ($temoin) {
                             echo "Aucun résultat.";
                         }
                     }
                 }
 
-                    
 
-                
+
                 ?>
                 <div class="table-responsive">
                    <h3 class="center">Liste des clients</h3>
