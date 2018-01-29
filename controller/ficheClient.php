@@ -114,7 +114,7 @@
         $centre_interet_2 = htmlentities($_POST['cInteret_2']);
         $centre_interet_3 = htmlentities($_POST['cInteret_3']);
         $centre_interet_4 = htmlentities($_POST['cInteret_4']);
-        var_dump($centre_interet,$centre_interet_2,$centre_interet_3,$centre_interet_4);
+
         if($centre_interet !== '0'){
             echo "test réussi";
             $id_increment = 1;
