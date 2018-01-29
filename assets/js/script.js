@@ -388,12 +388,12 @@ $(document).ready(function () {
     
     $("#choixRoleAddUser").change(function () {
         var valRadioChoice = $('input[name=role]:checked').val();
-        if (valRadioChoice == '1') {
+        if (valRadioChoice == '2') {
             $(".ChiefChoiceDisplay").css({
                 "display": "none"
             });
         }
-        if (valRadioChoice == '2') {
+        if (valRadioChoice == '1') {
             $(".ChiefChoiceDisplay").css({
                 "display": "block"
             });

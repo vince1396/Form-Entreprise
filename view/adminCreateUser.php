@@ -17,10 +17,10 @@
   <br>
   <div id="choixRoleAddUser">
   <label>Chef de vente</label>
-  <input type="radio" name="role" value="2" class="form-control"  title="role">
+  <input type="radio" name="role" value="2" class="form-control" checked="checked" title="role">
   <br>
   <label>Commercial</label>
-  <input type="radio" name="role" value="1" class="form-control" checked="checked" title="role">
+  <input type="radio" name="role" value="1" class="form-control"  title="role">
   </div>
   <br>
   <div class="ChiefChoiceDisplay">
