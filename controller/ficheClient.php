@@ -100,8 +100,7 @@
         
         //Niveau d'intérêt
         $interet = htmlentities($_POST['interet']);
-//        var_dump($prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $prescripteur, $decideur, $signataire, $id_f, $interet);
-//         die();
+
         addInfoClient($prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $prescripteur, $decideur, $signataire, $id_f, $interet);
         
         $id_c = $bdd->lastInsertId();
@@ -142,21 +141,17 @@
             echo "test 2 échoué";
             }
         }
-            $case_array = '0';
+            $case_array = 0;
         while($id_increment > 0 ){
             addProjet($date_projet, $id_c);
             $id_p = $bdd->lastInsertId();
             $array = array($case_array => $id_p);
             $case_array++;
-            $id_increment
+            $id_increment--;
         }
     //Centre d'intérêt
-        $centre_interet = htmlentities($_POST['cInteret']);
-        $centre_interet_2 = htmlentities($_POST['cInteret_2']);
-        $centre_interet_3 = htmlentities($_POST['cInteret_3']);
-        $centre_interet_4 = htmlentities($_POST['cInteret_4']);
         var_dump($centre_interet,$centre_interet_2,$centre_interet_3,$centre_interet_4);
-        if($centre_interet !== '0'){
+        if(($centre_interet == '1')){
             echo "test réussi";
             $id_test = $id_p;
             echo $id_test;
@@ -580,10 +575,6 @@
                     $description = htmlentities($_POST['description']);
                 }
                 addFacture($description, $id_t);
-                
-//                echo'<br>description:';
-//                print($description);
-//                die();
             }
         }
         
