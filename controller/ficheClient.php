@@ -141,19 +141,13 @@
             echo "test 2 échoué";
             }
         }
-        while($id_increment > 0 ){
+        $stack = array();
+        for ($i = 0; $i < $id_increment; $i++){
             addProjet($date_projet, $id_c);
             $id_p = $bdd->lastInsertId();
-            $stack = array();
-            array_push($stack, $id_p);
-            $id_increment--;
+            $stack[] = $id_p;
         }
-        $array_2 = array("un", "deux", "trois");
-        print_r($stack);
-        $stack_2 = array("numéro 1", "numéro 2");
-        array_push($stack_2 , "numéro 3", "numéro 4")    ;
-        var_dump($array_2);
-        die();
+
     //Centre d'intérêt
 //        var_dump($centre_interet,$centre_interet_2,$centre_interet_3,$centre_interet_4);
 //        if(($centre_interet == '1')){
@@ -183,8 +177,11 @@
 //            echo "test 4 échoué";
 //        }
 //        die();
+        
+        $parcourir_stack = -1;
         if($centre_interet == '1' || $centre_interet_2 == '1' || $centre_interet_3 =='1' || $centre_interet_4 == '1'){
-            
+            $parcourir_stack++;
+            $id_p = $stack[$parcourir_stack];
             //Bureautique
             if(empty($_POST['fournisseur'])){
                 $fournisseur = "N/A";
@@ -296,14 +293,12 @@
             }
         }
         if($centre_interet == '2' || $centre_interet_2 == '2' || $centre_interet_3 =='2' || $centre_interet_4 == '2'){
-            
+            $parcourir_stack++;
+            $id_p = $stack[$parcourir_stack];
             //Informatique
-            if($centre_interet !== '0' && $centre_interet_2 !== '0' && $centre_interet_3 !=='0' && $centre_interet_4 !== '0'){
-            $id_i = $id_p++;
-            }else
-            {
-                $id_i = $id_p;
-            }
+            
+            $id_i = $id_p;
+            
             if(empty($_POST['nom_resp'])){
                 $nom_resp = "N/A";
             }else{
@@ -407,12 +402,11 @@
             
         }
         if($centre_interet == '3' || $centre_interet_2 == '3' || $centre_interet_3 =='3' || $centre_interet_4 == '3'){
-            if($centre_interet !== '0' && $centre_interet_2 !== '0' && $centre_interet_3 !=='0' && $centre_interet_4 !== '0'){
-                $id_s = $id_p+2;
-            }else
-            {
+            
+            $parcourir_stack++;
+            $id_p = $stack[$parcourir_stack];
                 $id_s = $id_p;
-            }
+            
             
             //Solution
             
@@ -489,12 +483,11 @@
             addSolution($id_s, $doc_classe, $doc_archive, $doc_ordi, $collab_absent, $proc_valid, $vol_impression, $refacturer, $doc_conf, $doc_compta, $vol_coul_imp, $doc_papier, $doc_app, $scanner, $fonct_scanner);
         }
         if($centre_interet == '4' || $centre_interet_2 == '4' || $centre_interet_3 =='4' || $centre_interet_4 == '4'){
-            if($centre_interet !== '0' && $centre_interet_2 !== '0' && $centre_interet_3 !=='0' && $centre_interet_4 !== '0'){
-                $id_t = $id_p+3;
-            }else
-            {
+            
+            $parcourir_stack++;
+            $id_p = $stack[$parcourir_stack];
                 $id_t = $id_p;
-            }
+            
             //Téléphonie
             
             if(empty($_POST['fournisseur_t'])){
