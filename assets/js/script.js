@@ -78,6 +78,27 @@ $(document).ready(function () {
         var num = $('.cInteret').length;
         console.log("nombre de class cInteret : " + num);
         if (num > 0) {
+           var tempDelete = $('#cInteret_'+num+' option:selected').val();
+            if(tempDelete == '1'){
+                $(".groupe-num-1").css({
+                "display" : "none"
+            }); 
+            }
+            if(tempDelete == '2'){
+                $(".groupe-num-2").css({
+                "display" : "none"
+            }); 
+            }
+            if(tempDelete == '3'){
+                $(".groupe-num-3").css({
+                "display" : "none"
+            }); 
+            }
+            if(tempDelete == '4'){
+                $(".groupe-num-4").css({
+                "display" : "none"
+            }); 
+            }
             $('#cInteret_' + num).remove();
         }
         if (num == 2) {

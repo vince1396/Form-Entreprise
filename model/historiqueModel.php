@@ -6,3 +6,5 @@ function displayListClient(){
     return $requete->fetchAll();
 }
 
+
+
