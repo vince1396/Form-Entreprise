@@ -2,83 +2,83 @@
     <div class="container">
         <!-- -- COMMERCIAL -- -->
         <div class="row firstblock">
-            <form class="form-inline" method="post">
-                <h1>Commercial</h1>
-                <div class="form-group">
+            <form class="form-group" method="post">
+                <h1 class="text-center">Commercial</h1>
+                <div class="form-group width-log">
                     <label for="nom">Nom</label>
                     <input type="text" class="form-control" name="nom" value="<?= $displayCommercial['nom']; ?>" readonly> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="prenom">Prénom</label>
                     <input type="text" class="form-control" name="prenom" value="<?= $displayCommercial['prenom']; ?>" readonly> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="date">Date de contact:</label>
                     <input type="date" class="form-control" name="date_contact"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="rdv">RDV pris par:</label>
                     <input type="text" class="form-control" name="prise_rdv" pattern="[A-z][a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div><br><br>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="date_rdv">Date de RDV:</label>
                     <input type="date" class="form-control" name="date_rdv"> </div>
                 <hr class="custom">
                 <br><br><br>
-                <h1>Raison Sociale</h1>
-                <div class="form-group">
+                <h1 class="text-center">Raison Sociale</h1>
+                <div class="form-group text-center width-log">
                     <label for="prospect">Prospect</label>
                     <input type="radio" name="prospect" value="1" checked="checked">
                     <label for="prospect">Client</label>
                     <input type="radio" name="prospect" value="2">
                 </div><br>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="nom_c">Nom du responsable</label>
                     <input type="text" class="form-control" name="nom_c" pattern="[A-z][a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="fonction">Fonction</label>
                     <input type="text" class="form-control" name="fonction"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="adresse">Adresse</label>
                     <input type="text" class="form-control" name="adresse"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="cp">CP</label>
                     <input type="text" class="form-control" name="cp" pattern="0[1-9][0-9]{3}|[1-9][0-9]{0,4}|2A|2B" title="Code postal non conforme"> </div><br><br>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="ville">Ville</label>
                     <input type="text" class="form-control" name="ville"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="tel">Tel</label>
                     <input type="text" class="form-control" name="tel"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="fax">Fax</label>
                     <input type="text" class="form-control" name="fax"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="mail_c">Email</label>
                     <input type="email" class="form-control" name="mail_c" pattern="[A-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"> </div><br><br>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="secteur_activite">Secteur d'activité</label>
                     <input type="text" class="form-control" name="secteur_activite"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="nb_site">Nb de site</label>
                     <input type="number" class="form-control" name="nb_site"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="nb_salarie">Nb de salarie</label>
                     <input type="number" class="form-control" name="nb_salarie"> </div>
-                <h1>Cycle de décision</h1>
-                <div class="form-group">
+                <h1 class="text-center">Cycle de décision</h1>
+                <div class="form-group width-log">
                     <label for="prescripteur">Préscripteur</label>
                     <input type="text" class="form-control" name="prescripteur"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="decideur">Décideur</label>
                     <input type="text" class="form-control" name="decideur"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="signataire">Signataire</label>
                     <input type="text" class="form-control" name="signataire"> </div>
-                <div class="form-group">
+                <div class="form-group width-log">
                     <label for="date_projet">Date du projet</label>
                     <input type="date" class="form-control" name="date_projet"> </div>
 
                 <br><br><br>
                 <hr class="custom">
-                <h1>Centre d'intérêt</h1>
-                <div class="form-group" id="select_place">
+                <h1 class="text-center">Centre d'intérêt</h1>
+                <div class="form-group width-log text-center" id="select_place">
                     <select name="cInteret" id="cInteret" class="cInteret">
                     <option value="0">-Sélectionnez un centre d'intérêt-</option>
                     <option value="1">Bureautique</option>
@@ -88,7 +88,7 @@
                 </select>
                 </div>
                 <br>
-                <div class="form-group">
+                <div class="form-group width-log text-center">
                     <input type="button" id="btnClone" value="Ajouter un centre d'intérêt" />
                     <input type="button" id="btnDel" value="Enlever un centre d'intérêt" disabled/>
                 </div>
@@ -480,17 +480,19 @@
 
 
                 <hr class="custom">
-                <h3>Niveau d'intérêt:</h3>
+                <h3 class="text-center">Niveau d'intérêt:</h3>
 
-                <b><h3><div class="form-group">
+                <b><h3><div class="form-group text-center">
                 <label for="interet"><i class="fa fa-star fa-lg"></i></label>
                 <input type="radio" name="interet" value="1" checked="checked"></div><br>
-            <div class="form-group">
+            <div class="form-group text-center">
                 <label for="interet"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i></label>
                 <input type="radio" name="interet" value="2"></div><br>
-            <div class="form-group">
+            <div class="form-group text-center">
                 <label for="interet"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i></label>
-                <input type="radio" name="interet" value="3"></div><br>
+                <input type="radio" name="interet" value="3"><br><br>
+                
+                <button type="submit" class="btn btn-success" name="submit">Valider</button></div>
             </h3></b><br><br>
 
 
@@ -498,7 +500,6 @@
 
                 <hr class="custom">
 
-                <button type="submit" class="btn btn-success" name="submit">Valider</button>
             </form>
         </div>
 

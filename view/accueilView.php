@@ -1,7 +1,7 @@
 <?php if (isset($_SESSION['connecte']))
-        {   
-    echo ' ';
-        }
+    {   
+        echo ' ';
+    }
     else    
     {
         header('Location:login');
