@@ -1,6 +1,14 @@
 <div class="container white_body">
 <?php
-    
+
+    foreach($req0 as $k => $v){
+        echo '<h2>Infos du commercial:</h2>';
+        echo '<b>Nom: </b>'.$v['nom'].' '.$v['prenom'].'<br><br>';
+        echo '<b>Date de contact: </b>'.$v['date_contact'].'<br><br>';
+        echo '<b>Preneur de rendez-vous: </b>'.$v['prise_rdv'].'<br><br>';
+        echo '<b>Date de rendez-vous: </b>'.$v['date_rdv'].'<br><br>';
+    }
+
     foreach($req1 as $k => $v){
         echo '<h2>Infos du client:</h2>';
         echo '<b>Nom client: </b>'.$v['nom_c'].'<br><br>';
@@ -75,8 +83,9 @@
         }
         
     }
-    
+
     foreach($req3 as $k => $v){
+
         echo '<h2>Informatique:</h2>';
         echo '<b>Nom du responsable: </b>'.$v['nom_resp'].'<br><br>';
         echo '<b>Coût du contrat: </b>'.$v['cout_contrat'].'<br><br>';
@@ -131,8 +140,6 @@
     }
     
     foreach($req5 as $k => $v){
-        var_dump('hello');
-        die();
         echo '<h2>Téléphonie:</h2><br>';
         echo '<b>Fournisseur: </b>'.$v['fournisseur_t'].'<br><br>';
         echo '<b>Leaser: </b>'.$v['leaser_t'].'<br><br>';
@@ -141,11 +148,11 @@
             echo "<h4>Contrat d'achat:</h4>";
             echo '<b>Matériel et accessoires: </b>'.$v['materiel_t'].'<br><br>';
             echo '<b>Prix: </b>'.$v['prix_t'].' €<br><br>';
-            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' €<br><br>';
-            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' €<br><br>';
-            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' €<br><br>';
+            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' <br><br>';
+            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' <br><br>';
+            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' <br><br>';
             echo "<h5>Facture: </h5>";
-            echo '<b>Description: </b>'.$v['description'].' €<br><br>';
+            echo '<b>Description: </b>'.$v['description'].' <br><br>';
         }
         else if($v['achat_t'] == 2){
             echo "<h4>Contrat de location:</h4>";
@@ -159,11 +166,11 @@
                  echo '<b>Prélèvement: </b>Trimestriel';
             }
             echo '<b>Matériel et accessoires: </b>'.$v['materiel_t'].'<br><br>';
-            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' €<br><br>';
-            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' €<br><br>';
-            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' €<br><br>';
+            echo '<b>Numéro de la ligne: </b>'.$v['num_ligne'].' <br><br>';
+            echo '<b>Nombre de postes: </b>'.$v['nb_poste'].' <br><br>';
+            echo '<b>Nombre de RJ45: </b>'.$v['nb_rj45'].' <br><br>';
             echo "<h5>Facture: </h5>";
-            echo '<b>Description: </b>'.$v['description'].' €<br><br>';
+            echo '<b>Description: </b>'.$v['description'].' <br><br>';
             
         }
     }

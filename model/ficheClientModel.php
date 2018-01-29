@@ -1,9 +1,9 @@
 <?php
 
-    function displayCommercial($id_u){
+    function displayCommercial(){
         global $bdd;
         
-        $req = $bdd->prepare("SELECT nom, prenom FROM user WHERE id_u =".$id_u);
+        $req = $bdd->prepare("SELECT nom, prenom FROM user WHERE id_u =".$_SESSION['id']);
         $req->execute();
         
         return $req->fetch();
@@ -179,11 +179,11 @@
         return $req->fetch();
     }
 
-    function addTelephonieLocation($id_t, $fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat, $materiel_t, $num_ligne, $nb_poste, $nb_rj45){
+    function addTelephonieLocation($id_t, $fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat_t, $materiel_t, $num_ligne, $nb_poste, $nb_rj45){
         
         global $bdd;
         
-        $req = $bdd->prepare("INSERT INTO telephonie(id_t, fournisseur_t, leaser_t, date_deb_t, achat_t, prix_t, prelevement_t, duree_contrat, materiel_t, num_ligne, nb_poste, nb_rj45) VALUES(:id_t, :fournisseur_t, :leaser_t, :date_deb_t, :achat_t, :prix_t, :prelevement_t, :duree_contrat, :materiel_t, :num_ligne, :nb_poste, :nb_rj45)");
+        $req = $bdd->prepare("INSERT INTO telephonie(id_t, fournisseur_t, leaser_t, date_deb_t, achat_t, prix_t, prelevement_t, duree_contrat_t, materiel_t, num_ligne, nb_poste, nb_rj45) VALUES(:id_t, :fournisseur_t, :leaser_t, :date_deb_t, :achat_t, :prix_t, :prelevement_t, :duree_contrat_t, :materiel_t, :num_ligne, :nb_poste, :nb_rj45)");
         
         $req->bindValue(":id_t", $id_t, PDO::PARAM_INT);
         $req->bindValue(":fournisseur_t", $fournisseur_t, PDO::PARAM_STR);
@@ -192,7 +192,7 @@
         $req->bindValue(":achat_t", $achat_t, PDO::PARAM_INT);
         $req->bindValue(":prix_t", $prix_t, PDO::PARAM_STR);
         $req->bindValue(":prelevement_t", $prelevement_t, PDO::PARAM_STR);
-        $req->bindValue(":duree_contrat", $duree_contrat, PDO::PARAM_STR);
+        $req->bindValue(":duree_contrat_t", $duree_contrat_t, PDO::PARAM_STR);
         $req->bindValue(":materiel_t", $materiel_t, PDO::PARAM_STR);
         $req->bindValue(":num_ligne", $num_ligne, PDO::PARAM_STR);
         $req->bindValue(":nb_poste", $nb_poste, PDO::PARAM_INT);

@@ -9,6 +9,16 @@ CREATE TABLE user(
   primary key(id_u)
 );
 
+CREATE TABLE fiche(
+  id_f smallint unsigned not null auto_increment,
+  date_contact date,
+  date_rdv date,
+  prise_rdv varchar(255),
+  id_u smallint unsigned,
+  primary key(id_f),
+  foreign key(id_u) references user(id_u)
+);
+
 CREATE TABLE client(
   id_c smallint unsigned not null auto_increment,
   prospect boolean,
@@ -48,7 +58,7 @@ CREATE TABLE bureautique(
   achat boolean,
   prix_b float,
   prelevement boolean,
-  duree_contrat int,
+  duree_contrat text,
   materiel text,
   noir int,
   couleur int,
@@ -118,23 +128,13 @@ CREATE TABLE telephonie(
   achat_t boolean,
   prix_t float,
   prelevement_t boolean,
-  duree_contrat int,
+  duree_contrat_t text,
   materiel_t text,
   num_ligne varchar(255),
   nb_poste int,
   nb_rj45 int,
   primary key(id_t),
   foreign key(id_t) references projet(id_p)
-);
-
-CREATE TABLE fiche(
-  id_f smallint unsigned not null auto_increment,
-  date_contact date,
-  date_rdv date,
-  prise_rdv varchar(255),
-  id_u smallint unsigned,
-  primary key(id_f),
-  foreign key(id_u) references user(id_u)
 );
 
 CREATE TABLE facture(

@@ -30,7 +30,7 @@
                        <span class="input-group-addon">
                        <i class="glyphicon glyphicon-user"></i>
                        </span>
-                        <input id="email" type="text" class="form-control" name="email" placeholder="Email"> </div>
+                        <input id="email" type="text" class="form-control" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="exemple1@email.fr"> </div>
                     <br>
                     <div class="input-group width-log"> 
                        <span class="input-group-addon">
@@ -40,6 +40,13 @@
                         <label>
                             <input type="checkbox" name="remember" value="remember-me">Se souvenir de moi</label>
                     </div>
+                    <?php
+                        if(isset($_POST['submit'])){
+                            if($message != "") ?>
+                                <div class="error"><?=$message;?></div>
+                            <?php
+                        }
+                    ?>
                     <div class="wrap">
                         <button class="button" type="submit" name="submit">Valider</button>
                     </div>

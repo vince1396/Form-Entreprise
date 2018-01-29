@@ -1,21 +1,39 @@
-<form class="" action="#" method="post">
-  <input type="text" name="nom" value="">
+<div class="container white_body">
+ <form class="" action="#" method="post">
+  <label for="nom">Nom: </label>
+  <input type="text" name="nom" value="" title="nom">
   <br>
-  <input type="text" name="prenom" value="">
+  <label for="prenom">Prénom: </label>
+  <input type="text" name="prenom" value="" title="prenom">
   <br>
-  <input type="text" name="email" value="">
+  <label for="email">Email: </label>
+  <input type="text" name="email" value="" title="email">
   <br>
-  <input type="text" name="mdp" value="">
+  <label for="mdp">Mot de passe: </label>
+  <input type="password" name="mdp" value="" title="mdp">
   <br>
-  <input type="text" name="confirm" value="">
+  <label for="confirm">Confirmer le mot de passe: </label> 
+  <input type="password" name="confirm" value="" title="confirm">
   <br>
-  <input type="radio" name="role" value="1">
+  <div id="choixRoleAddUser">
+  <label>Chef de vente</label>
+  <input type="radio" name="role" value="2" class="form-control"  title="role">
   <br>
-  <input type="radio" name="role" value="2">
+  <label>Commercial</label>
+  <input type="radio" name="role" value="1" class="form-control" checked="checked" title="role">
+  </div>
   <br>
-  <select class="" name="chef">
-    <option value=""></option>
+  <div class="ChiefChoiceDisplay">
+      <select class="" name="chef" title="chef">
+          <?php
+            foreach (getChefVente() as $k => $v)
+            { ?>
+                <option value="<?php echo $v['id_u'] ?>"><?php echo $v['prenom']." ".$v['nom']; ?></option><?php
+            }
+          ?>
   </select>
-  <br>
-  <input type="submit" name="submit" value="">
+    <br>
+    </div>
+  <input type="submit" name="submit">
 </form>
+</div>

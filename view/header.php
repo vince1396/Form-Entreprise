@@ -1,6 +1,6 @@
 <?php if (isset($_SESSION['connecte']))
-        {    
-       echo '<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        {    ?>
+      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -15,9 +15,22 @@
                     <li>
                         <a class="page-scroll" href="accueil">Accueil</a>
                     </li>
+                    <?php
+                        if($_SESSION['lvl'] == 3){
+                    ?>
                      <li>
-                        <a class="page-scroll" href="gestionAdmin">Gestion Admin</a>
+                        <a class="page-scroll" href="adminMain">Gestion Admin</a>
                     </li>
+                    <?php
+                        }
+                        if($_SESSION['lvl']==2){
+                    ?>
+                    <li>
+                        <a class="page-scroll" href="gestionChef">Espace Chef de vente</a>
+                    </li>
+                    <?php
+                        }
+                    ?>
                     <li>
                         <a class="page-scroll" href="">...</a>
                     </li>
@@ -29,6 +42,5 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-    </nav>' ;
-        }
-?>
+    </nav>
+       <?php } ?>

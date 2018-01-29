@@ -5,3 +5,4 @@ function displayListClient(){
     $requete->execute();
     return $requete->fetchAll();
 }
+

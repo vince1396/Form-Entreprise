@@ -6,16 +6,16 @@
                 <h1>Commercial</h1>
                 <div class="form-group">
                     <label for="nom">Nom</label>
-                    <input type="text" class="form-control" name="nom"> </div>
+                    <input type="text" class="form-control" name="nom" value="<?= $displayCommercial['nom']; ?>" readonly> </div>
                 <div class="form-group">
                     <label for="prenom">Prénom</label>
-                    <input type="text" class="form-control" name="prenom"> </div>
+                    <input type="text" class="form-control" name="prenom" value="<?= $displayCommercial['prenom']; ?>" readonly> </div>
                 <div class="form-group">
                     <label for="date">Date de contact:</label>
                     <input type="date" class="form-control" name="date_contact"> </div>
                 <div class="form-group">
                     <label for="rdv">RDV pris par:</label>
-                    <input type="text" class="form-control" name="prise_rdv"> </div><br><br>
+                    <input type="text" class="form-control" name="prise_rdv" pattern="[A-z][a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div><br><br>
                 <div class="form-group">
                     <label for="date_rdv">Date de RDV:</label>
                     <input type="date" class="form-control" name="date_rdv"> </div>
@@ -30,7 +30,7 @@
                 </div><br>
                 <div class="form-group">
                     <label for="nom_c">Nom du responsable</label>
-                    <input type="text" class="form-control" name="nom_c"> </div>
+                    <input type="text" class="form-control" name="nom_c" pattern="[A-z][a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div>
                 <div class="form-group">
                     <label for="fonction">Fonction</label>
                     <input type="text" class="form-control" name="fonction"> </div>
@@ -39,7 +39,7 @@
                     <input type="text" class="form-control" name="adresse"> </div>
                 <div class="form-group">
                     <label for="cp">CP</label>
-                    <input type="text" class="form-control" name="cp"> </div><br><br>
+                    <input type="text" class="form-control" name="cp" pattern="0[1-9][0-9]{3}|[1-9][0-9]{0,4}|2A|2B" title="Code postal non conforme"> </div><br><br>
                 <div class="form-group">
                     <label for="ville">Ville</label>
                     <input type="text" class="form-control" name="ville"> </div>
@@ -51,16 +51,16 @@
                     <input type="text" class="form-control" name="fax"> </div>
                 <div class="form-group">
                     <label for="mail_c">Email</label>
-                    <input type="email" class="form-control" name="mail_c"> </div><br><br>
+                    <input type="email" class="form-control" name="mail_c" pattern="[A-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"> </div><br><br>
                 <div class="form-group">
                     <label for="secteur_activite">Secteur d'activité</label>
                     <input type="text" class="form-control" name="secteur_activite"> </div>
                 <div class="form-group">
                     <label for="nb_site">Nb de site</label>
-                    <input type="text" class="form-control" name="nb_site"> </div>
+                    <input type="number" class="form-control" name="nb_site"> </div>
                 <div class="form-group">
                     <label for="nb_salarie">Nb de salarie</label>
-                    <input type="text" class="form-control" name="nb_salarie"> </div>
+                    <input type="number" class="form-control" name="nb_salarie"> </div>
                 <h1>Cycle de décision</h1>
                 <div class="form-group">
                     <label for="prescripteur">Préscripteur</label>
@@ -464,11 +464,11 @@
                     </div>
                     <div class="form-group">
                         <label for="nb_poste">Nombre de postes:</label>
-                        <input type="text" class="form-control" name="nb_poste">
+                        <input type="number" class="form-control" name="nb_poste">
                     </div>
                     <div class="form-group">
                         <label for="nb_rj45">Nombre de RJ45:</label>
-                        <input type="text" class="form-control" name="nb_rj45">
+                        <input type="number" class="form-control" name="nb_rj45">
                     </div>
                     <h4>Facture:</h4>
                     <div class="form-group">
