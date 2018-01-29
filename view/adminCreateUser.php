@@ -36,4 +36,10 @@
     </div>
   <input type="submit" name="submit">
 </form>
+    <?php
+    if(isset($message))
+    {
+        echo $message;
+    }
+    ?>
 </div>

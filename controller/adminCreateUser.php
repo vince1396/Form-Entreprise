@@ -3,7 +3,6 @@ require "model/adminCreateUser.php";
 
  if(isset($_POST['submit']))
  {
-     print_r($_POST);
      $nom     = htmlentities($_POST['nom']);
      $prenom  = htmlentities($_POST['prenom']);
      $email   = htmlentities($_POST['email']);
