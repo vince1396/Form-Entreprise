@@ -1,5 +1,5 @@
-<section id="ficheclient">
-    <div class="container">
+<section >
+    <div class="container" id="ficheclient">
         <!-- -- COMMERCIAL -- -->
         <div class="row firstblock">
             <form class="form-group" method="post">
