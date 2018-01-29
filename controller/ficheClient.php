@@ -141,43 +141,48 @@
             echo "test 2 échoué";
             }
         }
-            $case_array = 0;
         while($id_increment > 0 ){
             addProjet($date_projet, $id_c);
             $id_p = $bdd->lastInsertId();
-            $array = array($case_array => $id_p);
-            $case_array++;
+            $stack = array();
+            array_push($stack, $id_p);
             $id_increment--;
         }
-    //Centre d'intérêt
-        var_dump($centre_interet,$centre_interet_2,$centre_interet_3,$centre_interet_4);
-        if(($centre_interet == '1')){
-            echo "test réussi";
-            $id_test = $id_p;
-            echo $id_test;
-        }
-        if($centre_interet_2 !== '0' && !empty($_POST['cInteret_2'])){
-            echo"test 2 réussi";
-            $id_test = $id_p + 1;
-            echo $id_test;
-        }else{
-            echo "test 2 échoué";
-        }
-        if($centre_interet_3 !== '0' && !empty($_POST['cInteret_3'])){
-            echo"test 3 réussi";
-            $id_test = $id_p + 2;
-            echo $id_test;
-        }else{
-            echo "test 3 échoué";
-        }
-        if($centre_interet_4 !== '0' && !empty($_POST['cInteret_4'])){
-            echo"test 4 réussi";
-            $id_test = $id_p + 3;
-            echo $id_test;
-        }else{
-            echo "test 4 échoué";
-        }
+        $array_2 = array("un", "deux", "trois");
+        print_r($stack);
+        $stack_2 = array("numéro 1", "numéro 2");
+        array_push($stack_2 , "numéro 3", "numéro 4")    ;
+        var_dump($array_2);
         die();
+    //Centre d'intérêt
+//        var_dump($centre_interet,$centre_interet_2,$centre_interet_3,$centre_interet_4);
+//        if(($centre_interet == '1')){
+//            echo "test réussi";
+//            $id_test = $id_p;
+//            echo $id_test;
+//        }
+//        if($centre_interet_2 !== '0' && !empty($_POST['cInteret_2'])){
+//            echo"test 2 réussi";
+//            $id_test = $id_p + 1;
+//            echo $id_test;
+//        }else{
+//            echo "test 2 échoué";
+//        }
+//        if($centre_interet_3 !== '0' && !empty($_POST['cInteret_3'])){
+//            echo"test 3 réussi";
+//            $id_test = $id_p + 2;
+//            echo $id_test;
+//        }else{
+//            echo "test 3 échoué";
+//        }
+//        if($centre_interet_4 !== '0' && !empty($_POST['cInteret_4'])){
+//            echo"test 4 réussi";
+//            $id_test = $id_p + 3;
+//            echo $id_test;
+//        }else{
+//            echo "test 4 échoué";
+//        }
+//        die();
         if($centre_interet == '1' || $centre_interet_2 == '1' || $centre_interet_3 =='1' || $centre_interet_4 == '1'){
             
             //Bureautique
