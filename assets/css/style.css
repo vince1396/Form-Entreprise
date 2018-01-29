@@ -324,7 +324,7 @@ header .header-content .header-content-inner p {
   color: white;
   opacity: 1;
   display: block;
-  background:linear-gradient(90deg, rgba(27, 114, 201, 0.85) 0%, rgba(78, 78, 78, 0.85) 100%);
+  background:linear-gradient(90deg, #9edfffe0 0%, #777 100%);
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -682,7 +682,10 @@ hr.custom{
 
 .white_body{
     background: white;
-    padding-top: 100px;
+    padding-top: 50px;
+}
+.margin-bottom{
+    margin-bottom: 15px;
 }
 
 .center{

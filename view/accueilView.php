@@ -18,7 +18,7 @@
             <div class="container-fluid">
                 <div class="row popup-gallery">
                    <h1 class="titreAccueil">Gestionnaire de Fiches </h1>
-                    <div class="col-lg-5 col-md-5 col-xs-12">
+                    <div class="col-lg-5 col-md-5 col-xs-12 margin-bottom">
                         <a href="ficheClient" class="portfolio-box" title="" data-capt=""> <img src="./img/note1.jpg" class="img-responsive bordure" alt="">
                             <div class="portfolio-box-caption bordure">
                                 <div class="portfolio-box-caption-content bordure">
