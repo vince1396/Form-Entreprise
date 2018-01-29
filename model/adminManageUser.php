@@ -42,4 +42,13 @@ function getUsers()
 
     return $req->fetchAll();
   }
+
+  function searchUser($rechercher){
+    global $bdd;
+
+    $req = $bdd->prepare("SELECT DISTINCT c.nom_c, u.nom, u.prenom, c.id_f  FROM client c, fiche f, user u WHERE f.id_u = u.id_u AND f.id_f = c.id_f AND (c.nom_c LIKE '%".$rechercher."%') OR (u.nom LIKE '%".$rechercher."%') OR (u.prenom LIKE '%".$rechercher."%')");
+    $req->execute();
+
+    return $req->fetchAll();
+  }
 ?>
