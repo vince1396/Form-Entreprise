@@ -16,56 +16,30 @@
             if (isset($_POST['interet'])) {     //Niveau d'intérêt
                 $interet = $_POST['interet'];
                 if ($interet == 1) {
-                    $sql .= "AND (c.interet = 1";
-                    $i++;
+                    $sql .= "AND (c.interet = 1)";
                 }
                 if ($interet == 2) {
-                    if ($i > 0) {
-                        $sql .= "OR c.interet = 2 ";
-                    } else
-                        $sql .= "AND (c.interet = 2";
-                    $i++;
+                    $sql .= "AND (c.interet = 2)";
                 }
                 if ($interet == 3) {
-                    if ($i > 0) {
-                        $sql .= "OR c.interet = 3 ";
-                    } else
-                        $sql .= "AND (c.interet = 3";
+                        $sql .= "AND (c.interet = 3)";
                     $i++;
                 }
-                if ($i > 0)
-                    $sql .= ") ";
             }
 //Critères de recherche selon le type de contrat (1= Bureautique, 2=Info, 3=Solution & 4=Téléphonie)s
             if (isset($_POST['cInteret'])) {
-                $j = 0;
                 if ($_POST['cInteret'] == 1) {
-                    $sql .= "AND (b.id_b = p.id_p AND p.id_c = c.id_c";
-                    $j++;
+                    $sql .= "AND (b.id_b = p.id_p AND p.id_c = c.id_c)";
                 }
                 if ($_POST['cInteret'] == 2) {
-                    if ($j > 0)
-                        $sql .= "OR i.id_i = p.id_p AND p.id_c = c.id_c";
-                    else
-                        $sql .= "AND (i.id_i = p.id_p AND p.id_c = c.id_c";
-                    $j++;
+                        $sql .= "AND (i.id_i = p.id_p AND p.id_c = c.id_c)";
                 }
                 if ($_POST['cInteret'] == 3) {
-                    if ($j > 0)
-                        $sql .= "OR s.id_s = p.id_p AND p.id_c = c.id_c";
-                    else
-                        $sql .= "AND (s.id_s = p.id_p AND p.id_c = c.id_c";
-                    $j++;
+                        $sql .= "AND (s.id_s = p.id_p AND p.id_c = c.id_c)";
                 }
                 if ($_POST['cInteret'] == 4) {
-                    if ($j > 0)
-                        $sql .= "OR t.id_t = p.id_p AND p.id_c = c.id_c";
-                    else
-                        $sql .= "AND (t.id_t = p.id_p AND p.id_c = c.id_c";
-                    $j++;
+                        $sql .= "AND (t.id_t = p.id_p AND p.id_c = c.id_c)";
                 }
-                if ($j > 0)
-                    $sql .= ") ";
             }
             if (isset($_POST['prospect'])) {    //Critère de recherche si c'est un prospect ou un client
                 if ($_POST['prospect'] == 1) {

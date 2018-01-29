@@ -29,6 +29,9 @@
                     <input type="radio" name="prospect" value="2">
                 </div><br>
                 <div class="form-group width-log">
+                    <label for="raison">Raison Sociale</label>
+                    <input type="text" class="form-control" name="raison"> </div>
+                <div class="form-group width-log">
                     <label for="nom_c">Nom du responsable</label>
                     <input type="text" class="form-control" name="nom_c" pattern="[A-z][a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div>
                 <div class="form-group width-log">
@@ -113,7 +116,7 @@
 
                     <div class="groupe-num-ss1">
                         <h3>Pour achat:</h3>
-                        <label for="achat_b">Prix</label>
+                        <label for="achat_b">Prix €(HT)</label>
                         <input type="text" class="form-control" name="achat_b"> <br>
 
                         <div class="form-group">
@@ -127,9 +130,9 @@
                         <div class="form-group">
                             <h3>Pour location:</h3>
                             <label for="date_deb">Démarrage du contrat</label>
-                            <input type="date" class="form-control" name="date_deb"> </div>
+                            <input type="date" class="form-control" name="date_deb"> </div><br>
                         <div class="form-group">
-                            <label for="loyer_b">Loyer(HT)</label>
+                            <label for="loyer_b">Loyer €(HT)</label>
                             <input type="text" class="form-control" name="loyer_b"> </div> <br>
                         <div class="form-group">
                             <label for="prelevement">Prélèvement: </label>
@@ -139,7 +142,7 @@
                             <input type="radio" class="form-control" name="prelevement" value="2"> </div> <br>
                         <div class="form-group">
                             <label for="duree">Durée du contrat:</label>
-                            <input type="text" class="form-control" name="duree"> </div> <br>
+                            <input type="text" class="form-control" name="duree" placeholder="Trimestrielle / Mensuelle"> </div> <br>
 
                         <div class="form-group">
                             <label for="materiel_location">Matériel + accessoire:</label>
@@ -166,7 +169,7 @@
                         <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
                         <input type="text" class="form-control" name="vol_noir" placeholder="Par Trimestre"> -- </div>
                     <div class="form-group">
-                        <label for="supp_noir">Supplément copie noire:</label>
+                        <label for="supp_noir">Coûts copies noires supplémentaires:</label>
                         <input type="text" class="form-control" name="supp_noir" placeholder="€ (HT)"> € HT </div><br><br>
                     <div class="form-group">
                         <label for="cout_couleur">Coût copie couleur:</label>
@@ -175,7 +178,7 @@
                         <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
                         <input type="text" class="form-control" name="vol_couleur" placeholder="Par Trimestre"> -- </div>
                     <div class="form-group">
-                        <label for="supp_couleur">Supplément copie couleur:</label>
+                        <label for="supp_couleur">Coûts copies couleurs supplémentaires:</label>
                         <input type="text" class="form-control" name="supp_couleur" placeholder="€ (HT)"> € HT </div><br><br>
 
                     <div class="form-group">
@@ -425,7 +428,7 @@
                     </div><br>
                     <div class="groupe-num-ss3">
                         <div class="form-group">
-                            <label for="prixachat_t">Prix</label>
+                            <label for="prixachat_t">Prix €(HT)</label>
                             <input type="text" class="form-control" name="prixachat_t"> <br>
                         </div>
                         <div class="form-group">
@@ -446,10 +449,10 @@
                         </div>
                         <div class="form-group">
                             <label for="duree_contrat">Durée du contrat:</label>
-                            <input type="text" class="form-control" name="duree_contrat">
+                            <input type="text" class="form-control" name="duree_contrat" placeholder="Trimestrielle ou mensuelle">
                         </div>
                         <div class="form-group">
-                            <label for="loyer_t">Loyer</label>
+                            <label for="loyer_t">Loyer €(HT)</label>
                             <input type="text" class="form-control" name="loyer_t"> <br>
 
                         </div>

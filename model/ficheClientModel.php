@@ -24,11 +24,12 @@
         return $req->fetch();
     }
 
-    function addInfoClient($prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $prescripteur, $decideur, $signataire, $id_f, $interet){
+    function addInfoClient($raison, $prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $prescripteur, $decideur, $signataire, $id_f, $interet){
         
         global $bdd;
-        $req = $bdd->prepare("INSERT INTO client(prospect, nom_c, fonction, adresse, cp, ville, tel, fax, mail_c, secteur_activite, nb_site, nb_salarie,prescripteur, decideur, signataire, id_f, interet) VALUES (:prospect, :nom_c, :fonction, :adresse, :cp, :ville, :tel, :fax, :mail_c, :secteur_activite, :nb_site, :nb_salarie,:prescripteur, :decideur, :signataire, :id_f, :interet)");
+        $req = $bdd->prepare("INSERT INTO client(raison, prospect, nom_c, fonction, adresse, cp, ville, tel, fax, mail_c, secteur_activite, nb_site, nb_salarie,prescripteur, decideur, signataire, id_f, interet) VALUES (:raison, :prospect, :nom_c, :fonction, :adresse, :cp, :ville, :tel, :fax, :mail_c, :secteur_activite, :nb_site, :nb_salarie,:prescripteur, :decideur, :signataire, :id_f, :interet)");
             
+        $req->bindValue(":raison", $raison, PDO::PARAM_STR);
         $req->bindValue(":prospect", $prospect, PDO::PARAM_INT);
         $req->bindValue(":nom_c", $nom_c, PDO::PARAM_STR);
         $req->bindValue(":fonction", $fonction, PDO::PARAM_STR);

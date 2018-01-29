@@ -27,6 +27,11 @@
         
         $id_f = $bdd->lastInsertId();
     //Raison Sociale
+        if(empty($_POST['raison'])){
+            $message_raison = "Veuillez entrer la raison sociale";
+        }else{
+            $raison = htmlentities($_POST['raison']);
+        }
         $prospect = htmlentities($_POST['prospect']);
         if(empty($_POST['nom_c'])){
             $nom_c = 'N/A';
@@ -101,7 +106,7 @@
         //Niveau d'intérêt
         $interet = htmlentities($_POST['interet']);
 
-        addInfoClient($prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $prescripteur, $decideur, $signataire, $id_f, $interet);
+        addInfoClient($raison, $prospect, $nom_c, $fonction, $adresse, $cp, $ville, $tel, $fax, $mail_c, $secteur_activite, $nb_site, $nb_salarie, $prescripteur, $decideur, $signataire, $id_f, $interet);
         
         $id_c = $bdd->lastInsertId();
         if(empty($_POST['date_projet'])){

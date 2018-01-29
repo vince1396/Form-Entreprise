@@ -713,3 +713,76 @@ select{
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
+.label_date{
+  background: #209eff;
+  height: 50px;
+  border-radius: 5px;
+
+  padding-top: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+  /*color: cyan;*/
+}
+
+.label_search{
+  background: #209eff;
+  height: 50px;
+  padding-top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+.select_interet{
+  background: #209eff;
+  height: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+  border-radius: 5px;
+  border-bottom: 2px solid darkred;
+  /*border-left: 2px solid darkred;*/
+}
+.select_cinteret{
+  background: #209eff;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+  border-bottom: 2px solid lawngreen;
+}
+.select_prospect{
+  background: #209eff;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+  border-bottom: 2px solid blue;
+}
+
+.submit_search{
+  margin-left: -3px;
+  background: #11c07f;
+  border:1px solid #11c07f;
+  height: 25px;
+  padding-top: -25px;
+}
+
+.search{
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.search_form{
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+  background: #337ab7d9;
+  margin-left: -5px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-right: 4px;
+  border-radius: 5px;
+}
+

@@ -21,6 +21,7 @@ CREATE TABLE fiche(
 
 CREATE TABLE client(
   id_c smallint unsigned not null auto_increment,
+  raison text,
   prospect boolean,
   nom_c varchar(255),
   fonction varchar(255),

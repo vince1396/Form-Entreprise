@@ -1,32 +1,37 @@
 <section id="consulter">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="">
+            <div class="col-md-12">
+                <div class="search_form">
                    <form action="#" method="post">
-                    <label for="rechercher">Rechercher:</label>
-                    <input type="text" name="rechercher"><br>
-                    <label for="interet">Niveau d'intérêt:</label>
-                    *<input type="checkbox" name="interet" value="1">
-                    **<input type="checkbox" name="interet" value="2">
-                    ***<input type="checkbox" name="interet" value="3"><br>
-                    <label for="prospect">Prospect</label>
-                    <input type="checkbox" name="prospect" value="1">
-                    <label for="client">Client</label>
-                    <input type="checkbox" name="prospect" value="2"><br>
-                    <label for="bureautique">Bureautique</label>
-                    <input type="checkbox" name="cInteret" value="1">
-                    <label for="informatique">Informatique</label>
-                    <input type="checkbox" name="cInteret" value="2">
-                    <label for="solution">Solution</label>
-                    <input type="checkbox" name="cInteret" value="3">
-                    <label for="telephonie">Téléphonie</label>
-                    <input type="checkbox" name="cInteret" value="4"><br>
-                    <label for="date_min">Entre le:</label>
-                    <input type="date" name="date_min">
-                    <label for="date_max">Et le:</label>
-                    <input type="date" name="date_max">
-                    <input type="submit" name="submit">
+                       <select name="interet" class="select_interet">
+                           <option value="0">Niveau d'intérêt</option>
+                           <option value="1">*</option>
+                           <option value="2">**</option>
+                           <option value="3">***</option>
+                       </select>
+                       <select name="prospect" class="select_prospect">
+                           <option value="0">Séléctionner un type</option>
+                           <option value="1">Prospect</option>
+                           <option value="2">Client</option>
+                       </select>
+                       <select name="cInteret" class="select_cinteret">
+                           <option value="0">Type de contrat</option>
+                           <option value="1">Bureautique</option>
+                           <option value="2">Informatique</option>
+                           <option value="3">Solution</option>
+                           <option value="4">Téléphonie</option>
+                       </select>
+
+                       <!-------------------------------------------->
+
+                    <label for="date_min" class="label_date">Entre le:
+                    <input type="date" name="date_min"></label>
+                    <label for="date_max" class="label_date">Et le:
+                    <input type="date" name="date_max"></label>
+                    <label for="rechercher" class="label_search">
+                    <input type="text" name="rechercher" placeholder="Rechercher un client"  class="search">
+                    <input type="submit"name="submit" class="submit_search"></label>
                     </form>
                 </div>
 

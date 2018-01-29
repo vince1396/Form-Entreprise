@@ -59,7 +59,7 @@ function displayTelephonie($id){
 function lastDisplay(){
     
     global $bdd;
-    $req = $bdd->prepare("SELECT * FROM user u, fiche f, client c, projet p WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f AND c.id_c = p.id_c ORDER BY f.id_f DESC LIMIT 1");
+    $req = $bdd->prepare("SELECT * FROM user u, fiche f, client c, projet p WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f AND c.id_c = p.id_c   ORDER BY f.id_f DESC LIMIT 1");
     $req->execute();
     
     return $req->fetchAll();
