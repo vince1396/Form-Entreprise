@@ -28,7 +28,8 @@
         $id_f = $bdd->lastInsertId();
     //Raison Sociale
         if(empty($_POST['raison'])){
-            $message_raison = "Veuillez entrer la raison sociale";
+//            $message_raison = "Veuillez entrer la raison sociale";
+            $raison = 'N/A';
         }else{
             $raison = htmlentities($_POST['raison']);
         }

@@ -14,9 +14,6 @@
         echo '<b>Raison sociale: </b>'.$v['raison'].'<br><br>';
         echo '<b>Nom client: </b>'.$v['nom_c'].'<br><br>';
         echo '<b>Niveau intérêt: </b>'.$v['interet'].'<br><br>';
-        echo '<b>Date contact: </b>'.$v['date_contact'].'<br><br>';
-        echo '<b>Preneur de rdv: </b>'.$v['prise_rdv'].'<br><br>';
-        echo '<b>Date de rdv: </b>'.$v['date_rdv'].'<br><br>';
         echo '<b>Fonction: </b>'.$v['fonction'].'<br><br>';
         echo '<b>Adresse: </b>'.$v['adresse'].'<br><br>';
         echo '<b>CP: </b>'.$v['cp'].'<br><br>';
