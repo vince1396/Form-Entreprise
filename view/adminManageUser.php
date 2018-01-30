@@ -17,7 +17,9 @@
         <tbody>
         <?php
         $id_editValues = 0;
-        foreach(getUsers() as $k=>$v){ $id_editValues++; ?>
+        foreach(getUsers() as $k=>$v)
+        {
+            $id_editValues++; ?>
             <tr>
                 <form method="post">
                 <td></td> <?= $number;     ?>   </td>
@@ -27,14 +29,14 @@
                 <td><span>Crypté : uniquement modifiable</span></td>
                 <td><input class="editValues" id="<?= $id_editValues ?>" type="button" value="Edit">
                     <input type="submit" name="submit" class="displayNone">
-
                     <span><a href="index.php?p=adminManageUser&update=<?= $v['id_u'] ?>">Modifier</a></span> /
                     <span><a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Supprimer</a></span></td>
                 </form>
             </tr>
 
         <?php
-            $number++;}?>
+            $number++;
+        }?>
         </tbody>
     </table>
 </div>
