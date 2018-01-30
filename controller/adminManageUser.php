@@ -7,21 +7,9 @@
         $req = searchUser($rechercher);
     }
 
+    if(isset($_GET['supp']))
+    {
+        ban($GET['id_u']);
+    }
+
   require "view/adminManageUser.php";
-?>
-
-
-<form method="post" action="#">
-    <label for="nom">Nom : </label>
-    <input type="text" name="nom"/>
-    <br \>
-    <label for=""></label>
-    <input type="" name=""/>
-    <br \>
-    <label for=""></label>
-    <input type="" name=""/>
-    <br \>
-    <label for=""></label>
-    <input type="" name=""/>
-    <br \>
-</form>

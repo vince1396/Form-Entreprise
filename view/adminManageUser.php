@@ -26,8 +26,6 @@
                 <td><span>Consulter</span></td>
             </tr>
 
-
-
         <?php
             $number++;}?>
             </tbody>
@@ -41,6 +39,7 @@
       <li><?=$v['nom']; ?></li>
       <li><?=$v['prenom']; ?></li>
       <li><?=$v['email']; ?></li>
+      <li><a href="index.php?supp=<?php echo $v['id_u'] ?>">Supprimer</a></li>
     </ul>
     <br>
     <br>

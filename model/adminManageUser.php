@@ -39,8 +39,6 @@ function getUsers()
     $req = $bdd->prepare("UPDATE user SET lvl = 0 WHERE id_u = :id_u");
     $req->bindValue(":id_u", $id_u, PDO::PARAM_INT);
     $req->execute();
-
-    return $req->fetchAll();
   }
 
   function searchUser($rechercher){
@@ -51,4 +49,3 @@ function getUsers()
 
     return $req->fetchAll();
   }
-?>

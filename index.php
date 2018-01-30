@@ -10,6 +10,11 @@
   define('DS', DIRECTORY_SEPARATOR);
   define('CORE',ROOT.DS.'core');
 
+  if (isset($_SESSION) AND $_SESSION['lvl'] == 0) {
+
+        $page = "ban";
+    }
+
   if(!isset($_GET['p']) || $_GET['p'] == "")
   {
     $page = $_GET["p"] = 'login';
