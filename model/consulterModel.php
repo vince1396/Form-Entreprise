@@ -11,7 +11,7 @@ function displayInfoDossier($id){
     
     global $bdd;
     
-    $requete = $bdd->prepare("SELECT * FROM user u, fiche f, client c, projet p WHERE u.id_u = ".$_SESSION['id']." AND f.id_u=".$_SESSION['id']." AND c.id_f = f.id_f AND f.id_f=".$id." AND p.id_c = c.id_c");
+    $requete = $bdd->prepare("SELECT * FROM user u, fiche f, client c WHERE u.id_u = ".$_SESSION['id']." AND f.id_u=".$_SESSION['id']." AND c.id_f = f.id_f AND f.id_f=".$id);
     $requete->execute();
     return $requete->fetchAll();
 }
@@ -19,7 +19,7 @@ function displayInfoDossier($id){
 function displayBureautique($id){
     
     global $bdd;
-    
+
     $req = $bdd->prepare("SELECT * FROM projet p, bureautique b, client c, fiche f WHERE b.id_b = p.id_p AND p.id_c = c.id_c AND c.id_f = f.id_f AND f.id_f =".$id);
     $req->execute();
     
@@ -56,10 +56,10 @@ function displayTelephonie($id){
     return $req->fetchAll();
 }
 
-function lastDisplay(){
+function lastDisplay($id){
     
     global $bdd;
-    $req = $bdd->prepare("SELECT * FROM user u, fiche f, client c, projet p WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f AND c.id_c = p.id_c  ORDER BY f.id_f DESC LIMIT 1");
+    $req = $bdd->prepare("SELECT * FROM user u, fiche f, client c, projet p WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f AND c.id_c = p.id_c  AND f.id_f =".$id);
     $req->execute();
     
     return $req->fetchAll();
