@@ -52,7 +52,7 @@
             }
             if (!empty($_POST['rechercher']) && isset($_POST['rechercher'])) {  //Barre de recherche -> A optimiser car trop lent
                 $rechercher = $_POST['rechercher'];
-                $sql .= "AND (c.nom_c LIKE '%" . $rechercher . "%') OR (c.mail_c LIKE '%" . $rechercher . "%') OR (c.ville LIKE '%" . $rechercher . "%') OR (c.cp LIKE '%" . $rechercher . "%') OR (c.tel LIKE '%" . $rechercher . "%') OR (c.fax LIKE '%" . $rechercher . "%')";
+                $sql .= "AND ((c.nom_c LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.mail_c LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.ville LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.cp LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.tel LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.fax LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id']."))";
                 $i++;
             }
             if (isset($_POST['date_min']) && ($_POST['date_max'])) {    //Recherche par intervalle de date
@@ -61,8 +61,7 @@
                 $sql .= " AND f.date_rdv >= '" . $date_min . "' AND f.date_rdv <= '" . $date_max . "'";
 
             }
-//                var_dump($sql);
-//            die();
+
             $req = $bdd->query($sql);
 
         }
