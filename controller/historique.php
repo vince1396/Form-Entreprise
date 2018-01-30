@@ -59,7 +59,6 @@
                 $date_max = $_POST['date_max'];
                 $sql .= " AND f.date_rdv >= '" . $date_min . "' AND f.date_rdv <= '" . $date_max . "'";
             }
-
             $req = $bdd->query($sql);
 
         }

@@ -53,7 +53,7 @@
                                     <td><?= $v['date_rdv']; ?></td>
                                     <td><span><a href="index.php?p=consulter&id=<?= $v["id_f"]; ?>">Voir le dossier</a></span>
                                     </td>
-                                    <td><?= $v['interet']; ?></td>
+                                    <td><?= $v['interet']; ?></td><br>
                                 </tr>
                                 <?php $number++; ?>
                                 </tbody>
