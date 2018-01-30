@@ -4,7 +4,7 @@
     $r = displayListClient();
     $message = '';
 
-     $sql = "SELECT DISTINCT c.nom_c, c.id_f, f.date_rdv, c.interet FROM user u, fiche f, client c, projet p, bureautique b, informatique i, solution s, telephonie t WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f ";
+     $sql = "SELECT DISTINCT c.nom_c, c.id_f, f.date_rdv, c.interet FROM user u, fiche f, client c, projet p WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f AND p.id_c = c.id_c ";
     
     if(isset($_POST['submit'])) {
 
@@ -29,16 +29,17 @@
 //Critères de recherche selon le type de contrat (1= Bureautique, 2=Info, 3=Solution & 4=Téléphonie)s
             if (isset($_POST['cInteret'])) {
                 if ($_POST['cInteret'] == 1) {
-                    $sql .= "AND (b.id_b = p.id_p AND p.id_c = c.id_c)";
+                    $sql .= "AND p.id_p IN (SELECT b.id_b FROM bureautique b, projet p, client c WHERE b.id_b = p.id_p AND p.id_c = c.id_c)";
+
                 }
                 if ($_POST['cInteret'] == 2) {
-                        $sql .= "AND (i.id_i = p.id_p AND p.id_c = c.id_c)";
+                        $sql .= "AND  p.id_p IN (SELECT i.id_i FROM informatique i, projet p, client c WHERE i.id_i = p.id_p AND p.id_c = c.id_c)";
                 }
                 if ($_POST['cInteret'] == 3) {
-                        $sql .= "AND (s.id_s = p.id_p AND p.id_c = c.id_c)";
+                        $sql .= "AND p.id_p IN (SELECT s.id_s FROM solution s, projet p, client c WHERE s.id_s = p.id_p AND p.id_c = c.id_c)";
                 }
                 if ($_POST['cInteret'] == 4) {
-                        $sql .= "AND (t.id_t = p.id_p AND p.id_c = c.id_c)";
+                        $sql .= "AND p.id_p IN (SELECT t.id_t FROM telephonie t, projet p, client c WHERE t.id_t = p.id_p AND p.id_c = c.id_c)";
                 }
             }
             if (isset($_POST['prospect'])) {    //Critère de recherche si c'est un prospect ou un client
@@ -58,7 +59,9 @@
                 $date_min = $_POST['date_min'];
                 $date_max = $_POST['date_max'];
                 $sql .= " AND f.date_rdv >= '" . $date_min . "' AND f.date_rdv <= '" . $date_max . "'";
+
             }
+
             $req = $bdd->query($sql);
 
         }
