@@ -12,7 +12,6 @@
                 </ul>
             </div>
             <form class="form-group" method="post">
-<<<<<<< HEAD
                 <div class="tab-content">
                     <div id="commercial" class="tab-pane fade in active">
                         <h1 class="text-center">Commercial</h1>
