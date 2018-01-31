@@ -48,6 +48,7 @@
                         <thead>
                             <tr>
                                 <th class="th_search">#</th>
+                                <th class="th_search">Raison sociale</th>
                                 <th class="th_search">Nom du client</th>
                                 <th class="th_search">Date de rendez-vous</th>
                                 <th class="th_search">Option</th>
@@ -61,6 +62,7 @@
                                     <td>
                                         <?= $number; ?>
                                     </td>
+                                    <td><span><?= $v["raison"]; ?></span></td>
                                     <td><span><?= $v["nom_c"]; ?></span></td>
                                     <td><?= $v['date_rdv']; ?></td>
                                     <td><span><a href="index.php?p=consulter&id=<?= $v["id_f"]; ?>">Voir le dossier</a></span>
@@ -96,6 +98,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Raison sociale</th>
                                 <th>Nom du client</th>
                                 <th>Date de rendez-vous</th>
                                 <th>Option</th>
@@ -111,6 +114,7 @@
                                     <td>
                                         <?= $number; ?>
                                     </td>
+                                    <td><span><?= $v["raison"]; ?></span></td>
                                     <td><span><?= $v["nom_c"]; ?></span></td>
                                     <td><?= $v['date_rdv'];?></td>
                                     <td><span><a href="index.php?p=consulter&id=<?=$v["id_f"];?>">Voir le dossier</a></span></td>

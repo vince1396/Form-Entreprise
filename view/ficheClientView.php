@@ -10,10 +10,13 @@
                     <li><a data-toggle="tab" href="#centre">Centre d'intérêt</a></li>
                     <li><a data-toggle="tab" href="#niveau">Niveau d'intérêt</a></li>
                 </ul>
+
             </div>
             <form class="form-group" method="post">
                 <div class="tab-content">
                     <div id="commercial" class="tab-pane fade in active">
+                        <br>
+                        <br>
                         <h1 class="text-center">Commercial</h1>
                         <div class="form-group width-log">
                             <label for="nom">Nom</label>
@@ -22,20 +25,24 @@
                             <label for="prenom">Prénom</label>
                             <input type="text" class="form-control" name="prenom" value="<?= $displayCommercial['prenom']; ?>" readonly> </div>
                         <div class="form-group width-log">
-                            <label for="date">Date de contact:</label>
+                            <label for="date">* Date de contact:</label>
                             <input type="date" class="form-control" name="date_contact"> </div>
                         <div class="form-group width-log">
-                            <label for="rdv">RDV pris par:</label>
+                            <label for="rdv">* RDV pris par:</label>
                             <input type="text" class="form-control" name="prise_rdv" pattern="[A-z]*[a-z]*([ \-]?[A-z]*[a-z]*)*" title="Nom non conforme"> </div>
                         <br>
-                        <br>
                         <div class="form-group width-log">
-                            <label for="date_rdv">Date de RDV:</label>
+                            <label for="date_rdv">* Date de RDV:</label>
                             <input type="date" class="form-control" name="date_rdv"> </div>
+                        <br>
+                        <br>
+                        <p class="center">*: Champs obligatoires</p>
                     </div>
                     <br>
+
                     <br>
                     <br>
+
                     
                     <div id="raison-sociale" class="tab-pane fade">
                         <h1 class="text-center">Raison Sociale</h1>
@@ -46,38 +53,38 @@
                             <input type="radio" name="prospect" value="2"> </div>
                         <br>
                         <div class="form-group width-log">
-                            <label for="raison">Raison Sociale</label>
+                            <label for="raison">* Raison Sociale</label>
                             <input type="text" class="form-control" name="raison"> </div>
                         <div class="form-group width-log">
-                            <label for="nom_c">Nom du responsable</label>
+                            <label for="nom_c">* Nom du responsable</label>
                             <input type="text" class="form-control" name="nom_c" pattern="[A-z]*[a-z]*([ \-]?[A-z]*[a-z]*)*" title="Nom non conforme"> </div>
                         <div class="form-group width-log">
-                            <label for="fonction">Fonction</label>
+                            <label for="fonction">* Fonction</label>
                             <input type="text" class="form-control" name="fonction"> </div>
                         <div class="form-group width-log">
-                            <label for="adresse">Adresse</label>
+                            <label for="adresse">* Adresse</label>
                             <input type="text" class="form-control" name="adresse"> </div>
                         <div class="form-group width-log">
-                            <label for="cp">CP</label>
+                            <label for="cp">* CP</label>
                             <input type="text" class="form-control" name="cp" pattern="0[1-9][0-9]{3}|[1-9][0-9]{0,4}|2A|2B" title="Code postal non conforme"> </div>
                         <br>
                         <br>
                         <div class="form-group width-log">
-                            <label for="ville">Ville</label>
+                            <label for="ville">* Ville</label>
                             <input type="text" class="form-control" name="ville"> </div>
                         <div class="form-group width-log">
-                            <label for="tel">Tel</label>
+                            <label for="tel">* Tel</label>
                             <input type="text" class="form-control" name="tel"> </div>
                         <div class="form-group width-log">
                             <label for="fax">Fax</label>
                             <input type="text" class="form-control" name="fax"> </div>
                         <div class="form-group width-log">
-                            <label for="mail_c">Email</label>
+                            <label for="mail_c">* Email</label>
                             <input type="email" class="form-control" name="mail_c" pattern="[A-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"> </div>
                         <br>
                         <br>
                         <div class="form-group width-log">
-                            <label for="secteur_activite">Secteur d'activité</label>
+                            <label for="secteur_activite">* Secteur d'activité</label>
                             <input type="text" class="form-control" name="secteur_activite"> </div>
                         <div class="form-group width-log">
                             <label for="nb_site">Nb de site</label>
@@ -94,16 +101,16 @@
                     <div id="cycle-de-décision" class="tab-pane fade">
                         <h1 class="text-center">Cycle de décision</h1>
                         <div class="form-group width-log">
-                            <label for="prescripteur">Préscripteur</label>
+                            <label for="prescripteur">* Préscripteur</label>
                             <input type="text" class="form-control" name="prescripteur"> </div>
                         <div class="form-group width-log">
-                            <label for="decideur">Décideur</label>
+                            <label for="decideur">* Décideur</label>
                             <input type="text" class="form-control" name="decideur"> </div>
                         <div class="form-group width-log">
-                            <label for="signataire">Signataire</label>
+                            <label for="signataire">* Signataire</label>
                             <input type="text" class="form-control" name="signataire"> </div>
                         <div class="form-group width-log">
-                            <label for="date_projet">Date du projet</label>
+                            <label for="date_projet">* Date du projet</label>
                             <input type="date" class="form-control" name="date_projet"> </div>
                     </div>
                     
