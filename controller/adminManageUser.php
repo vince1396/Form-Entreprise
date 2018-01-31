@@ -11,12 +11,18 @@
 // =============================================================================
     if(isset($_GET['supp']))
     {
-        ban($GET['id_u']);
+        ban($_GET['id_u']);
     }
 // =============================================================================
-    if(isset($_GET['update']))
+    if(isset($_POST['update']))
     {
-        updateUser($_GET['id_u'], $nom, $prenom, $email, $mdp);
+        $id_u = $_POST['id_u'];
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
+        $email = $_POST['email'];
+        $mdp = $_POST['mdp'];
+
+        updateUser($id_u, $nom, $prenom, $email, $mdp);
     }
 // =============================================================================
 
