@@ -12,6 +12,7 @@
                 </ul>
             </div>
             <form class="form-group" method="post">
+<<<<<<< HEAD
                 <div class="tab-content">
                     <div id="commercial" class="tab-pane fade in active">
                         <h1 class="text-center">Commercial</h1>
@@ -26,7 +27,7 @@
                             <input type="date" class="form-control" name="date_contact"> </div>
                         <div class="form-group width-log">
                             <label for="rdv">RDV pris par:</label>
-                            <input type="text" class="form-control" name="prise_rdv" pattern="[A-z][a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div>
+                            <input type="text" class="form-control" name="prise_rdv" pattern="[A-z]*[a-z]*([ \-]?[A-z]*[a-z]*)*" title="Nom non conforme"> </div>
                         <br>
                         <br>
                         <div class="form-group width-log">
@@ -50,7 +51,7 @@
                             <input type="text" class="form-control" name="raison"> </div>
                         <div class="form-group width-log">
                             <label for="nom_c">Nom du responsable</label>
-                            <input type="text" class="form-control" name="nom_c" pattern="[A-z][a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div>
+                            <input type="text" class="form-control" name="nom_c" pattern="[A-z]*[a-z]*([ \-]?[A-z]*[a-z]*)*" title="Nom non conforme"> </div>
                         <div class="form-group width-log">
                             <label for="fonction">Fonction</label>
                             <input type="text" class="form-control" name="fonction"> </div>
@@ -130,7 +131,6 @@
                             <input type="button" id="btnClone" value="Ajouter un centre d'intérêt" />
                             <input type="button" id="btnDel" value="Enlever un centre d'intérêt" disabled/> </div>
                    
-                
                 <!----------------- DEBUT BUREAUTIQUE --------------------->
                 <div class="groupe-num-1">
                     <h3>Bureautique</h3>

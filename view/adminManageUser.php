@@ -1,49 +1,42 @@
 <div class="container white_body">
  <form class="" action="#" method="post">
   <input type="text" name="search" placeholder="Rechercher un client">
-  <input type="submit" name="submit">
+  <input type="submit" name="search">
 </form>
-    <?php
-    if(isset($_POST['submit'])){ ?>
-        <table class="table">
-            <thead>
+    <table class="table">
+        <thead>
             <tr>
                 <th>#</th>
-                <th>Nom du commercial / chef</th>
-                <th>Nom du client</th>
-                <th>Option</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Mot de passe</th>
+                <th>Options</th>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
         <?php
-        foreach($req as $k=>$v){?>
+        $id_editValues = 0;
+        foreach(getUsers() as $k=>$v)
+        {
+            $id_editValues++; ?>
             <tr>
-                <td>
-                    <?= $number; ?>
-                </td>
-                <td><span><?= $v["nom"]." ".$v['prenom'];?></span></td>
-                <td><span><?= $v["nom_c"];?></span></td>
-                <td><span>Consulter</span></td>
+                <form method="post">
+                <td></td> <?= $number;     ?>   </td>
+                <td><span><?= $v["nom"];   ?>   </span></td>
+                <td><span><?= $v["prenom"];?>   </span></td>
+                <td><span><?= $v["email"]; ?>   </span></td>
+                <td><span>Crypté : uniquement modifiable</span></td>
+                <td><input class="editValues" id="<?= $id_editValues ?>" type="button" value="Edit">
+                    <input type="submit" name="submit" class="displayNone">
+                    <span><a href="index.php?p=adminManageUser&update=<?= $v['id_u'] ?>">Modifier</a></span> /
+                    <span><a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Supprimer</a></span></td>
+                </form>
             </tr>
 
-
-
         <?php
-            $number++;}?>
-            </tbody>
-        </table>
-<?php } ?>
-<?php
-   foreach (getUsers() as $k => $v)
-   { ?>
-     <ul>
-      <li><?=$v['id_u']; ?></li>
-      <li><?=$v['nom']; ?></li>
-      <li><?=$v['prenom']; ?></li>
-      <li><?=$v['email']; ?></li>
-    </ul>
-    <br>
-    <br>
-<?php }
-?>
+            $number++;
+        }?>
+        </tbody>
+    </table>
 </div>

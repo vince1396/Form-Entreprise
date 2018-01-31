@@ -9,34 +9,32 @@
         echo '<b>Date de rendez-vous: </b>'.$v['date_rdv'].'<br><br>';
     }
 
-    foreach($req1 as $k => $v){
-        echo '<h2>Infos du client:</h2>';
-        echo '<b>Raison sociale: </b>'.$v['raison'].'<br><br>';
-        echo '<b>Nom client: </b>'.$v['nom_c'].'<br><br>';
-        echo '<b>Niveau intérêt: </b>'.$v['interet'].'<br><br>';
-        echo '<b>Date contact: </b>'.$v['date_contact'].'<br><br>';
-        echo '<b>Preneur de rdv: </b>'.$v['prise_rdv'].'<br><br>';
-        echo '<b>Date de rdv: </b>'.$v['date_rdv'].'<br><br>';
-        echo '<b>Fonction: </b>'.$v['fonction'].'<br><br>';
-        echo '<b>Adresse: </b>'.$v['adresse'].'<br><br>';
-        echo '<b>CP: </b>'.$v['cp'].'<br><br>';
-        echo '<b>Ville: </b>'.$v['ville'].'<br><br>';
-        echo '<b>Tel: </b>'.$v['tel'].'<br><br>';
-        echo '<b>Fax: </b>'.$v['fax'].'<br><br>';
-        echo '<b>Email: </b>'.$v['mail_c'].'<br><br>';
-        echo '<b>Secteur activité: </b>'.$v['secteur_activite'].'<br><br>';
-        echo '<b>Nb Site: </b>'.$v['nb_site'].'<br><br>';
-        echo '<b>Nb salarié: </b>'.$v['nb_salarie'].'<br><br>';
-        
-        echo '<br>';
-        
-        echo '<h2>Cycle de décision</h2>';
-        echo '<b>Prescripteur: </b>'.$v['prescripteur'].'<br><br>';
-        echo '<b>Decideur: </b>'.$v['decideur'].'<br><br>';
-        echo '<b>Signataire: </b>'.$v['signataire'].'<br><br>';
-        echo '<b>Date du projet: </b>'.$v['date_projet'].'<br><br>';
-    }
-    
+    foreach ($req1 as $k => $v) {
+
+            echo '<h2>Infos du client:</h2>';
+            echo '<b>Raison sociale: </b>' . $v['raison'] . '<br><br>';
+            echo '<b>Nom client: </b>' . $v['nom_c'] . '<br><br>';
+            echo '<b>Niveau intérêt: </b>' . $v['interet'] . '<br><br>';
+            echo '<b>Fonction: </b>' . $v['fonction'] . '<br><br>';
+            echo '<b>Adresse: </b>' . $v['adresse'] . '<br><br>';
+            echo '<b>CP: </b>' . $v['cp'] . '<br><br>';
+            echo '<b>Ville: </b>' . $v['ville'] . '<br><br>';
+            echo '<b>Tel: </b>' . $v['tel'] . '<br><br>';
+            echo '<b>Fax: </b>' . $v['fax'] . '<br><br>';
+            echo '<b>Email: </b>' . $v['mail_c'] . '<br><br>';
+            echo '<b>Secteur activité: </b>' . $v['secteur_activite'] . '<br><br>';
+            echo '<b>Nb Site: </b>' . $v['nb_site'] . '<br><br>';
+            echo '<b>Nb salarié: </b>' . $v['nb_salarie'] . '<br><br>';
+
+            echo '<br>';
+
+            echo '<h2>Cycle de décision</h2>';
+            echo '<b>Prescripteur: </b>' . $v['prescripteur'] . '<br><br>';
+            echo '<b>Decideur: </b>' . $v['decideur'] . '<br><br>';
+            echo '<b>Signataire: </b>' . $v['signataire'] . '<br><br>';
+            echo '<b>Date du projet: </b>' . $v['date_projet'] . '<br><br>';
+        }
+
     foreach($req2 as $k => $v){
         echo '<h2>Bureautique:</h2>';
         echo '<b>Fournisseur: </b>'.$v['fournisseur'].'<br><br>';

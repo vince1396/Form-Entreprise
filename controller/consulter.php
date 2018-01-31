@@ -4,8 +4,7 @@
     $id = (int)$_GET['id'];
 //    $centre_interet = (int)$_GET['cInteret'];
     $req0 = displayInfoDossier($id);
-    $req1 = lastDisplay();
-
+    $req1 = lastDisplay($id);
     $req2 = displayBureautique($id);
 
     $req3 = displayInformatique($id);

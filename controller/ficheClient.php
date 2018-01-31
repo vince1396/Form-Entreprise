@@ -28,7 +28,8 @@
         $id_f = $bdd->lastInsertId();
     //Raison Sociale
         if(empty($_POST['raison'])){
-            $message_raison = "Veuillez entrer la raison sociale";
+//            $message_raison = "Veuillez entrer la raison sociale";
+            $raison = 'N/A';
         }else{
             $raison = htmlentities($_POST['raison']);
         }
@@ -119,10 +120,10 @@
         $centre_interet_2 = htmlentities($_POST['cInteret_2']);
         $centre_interet_3 = htmlentities($_POST['cInteret_3']);
         $centre_interet_4 = htmlentities($_POST['cInteret_4']);
-
+        $id_increment = 0;
         if($centre_interet !== '0'){
             echo "test réussi";
-            $id_increment = 1;
+            $id_increment += 1;
             echo $id_increment;
             if($centre_interet_2 !== '0' && !empty($_POST['cInteret_2'])){
                 echo"test 2 réussi";
@@ -146,6 +147,10 @@
             echo "test 2 échoué";
             }
         }
+        if ($id_increment == '0'){
+            addProjet($date_projet, $id_c);
+            $id_p = $bdd->lastInsertId();
+        }
         $stack = array();
         for ($i = 0; $i < $id_increment; $i++){
             addProjet($date_projet, $id_c);
@@ -154,34 +159,6 @@
         }
 
     //Centre d'intérêt
-//        var_dump($centre_interet,$centre_interet_2,$centre_interet_3,$centre_interet_4);
-//        if(($centre_interet == '1')){
-//            echo "test réussi";
-//            $id_test = $id_p;
-//            echo $id_test;
-//        }
-//        if($centre_interet_2 !== '0' && !empty($_POST['cInteret_2'])){
-//            echo"test 2 réussi";
-//            $id_test = $id_p + 1;
-//            echo $id_test;
-//        }else{
-//            echo "test 2 échoué";
-//        }
-//        if($centre_interet_3 !== '0' && !empty($_POST['cInteret_3'])){
-//            echo"test 3 réussi";
-//            $id_test = $id_p + 2;
-//            echo $id_test;
-//        }else{
-//            echo "test 3 échoué";
-//        }
-//        if($centre_interet_4 !== '0' && !empty($_POST['cInteret_4'])){
-//            echo"test 4 réussi";
-//            $id_test = $id_p + 3;
-//            echo $id_test;
-//        }else{
-//            echo "test 4 échoué";
-//        }
-//        die();
         
         $parcourir_stack = -1;
         if($centre_interet == '1' || $centre_interet_2 == '1' || $centre_interet_3 =='1' || $centre_interet_4 == '1'){
