@@ -125,7 +125,7 @@
                         <h1 class="text-center">Centre d'intérêt</h1>
                         <div class="form-group width-log text-center" id="select_place">
                             <select name="cInteret" id="cInteret" class="cInteret">
-                                <option value="0">-Sélectionnez un centre d'intérêt-</option>
+                                <option value="0">Sélectionnez un centre d'intérêt</option>
                                 <option value="1">Bureautique</option>
                                 <option value="2">Informatique</option>
                                 <option value="3">Solution</option>
