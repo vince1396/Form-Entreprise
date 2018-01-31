@@ -1,5 +1,45 @@
 $(document).ready(function () {
-
+    $('.editValues').click(function () {
+        var getValue = $(this).attr('id');
+        console.log(getValue);
+        var input = $('<input class="editableColumnsStyle" type="text" name="id_u"/>');
+        var input2 = $('<input class="editableColumnsStyle" type="text" name="nom"/>');
+        var input3 = $('<input class="editableColumnsStyle" type="text" name="prenom"/>');
+        var input4 = $('<input class="editableColumnsStyle" type="email" name="email"/>');
+        var input5 = $('<input class="editableColumnsStyle" type="password" name="mdp"/>');
+        $(this).parents('tr').find('td.editableColumns:first-child').each(function() {
+            var html = $(this).html();
+            input.val(html);
+            $(this).html(input);
+        });
+        $(this).parents('tr').find('td.editableColumns:nth-child(3)').each(function() {
+            var html = $(this).html();
+            input2.val(html);
+            $(this).html(input2);
+        });
+        $(this).parents('tr').find('td.editableColumns:nth-child(4)').each(function() {
+            var html = $(this).html();
+            input3.val(html);
+            $(this).html(input3);
+        });
+        $(this).parents('tr').find('td.editableColumns:nth-child(5)').each(function() {
+            var html = $(this).html();
+            input4.val(html);
+            $(this).html(input4);
+        });
+        $(this).parents('tr').find('td.editableColumns:nth-child(6)').each(function() {
+            var html = $(this).html();
+            input5.val(html);
+            $(this).html(input5);
+        });
+        $('#'+getValue).removeClass('editValues').css({
+            'display' : "none"
+        });
+        $(this).next('input').removeClass('displayNone');
+        $('input').siblings('.editValues').css({
+            'display' : 'none'
+        });
+    });
 
     $("#btnClone").on('click', function () {
         console.log("hi");
