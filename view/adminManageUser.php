@@ -3,7 +3,7 @@
   <input type="text" name="search" placeholder="Rechercher un client">
   <input type="submit" name="search">
 </form>
-    <table class="table">
+    <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <th>#</th>
@@ -22,7 +22,7 @@
             $id_editValues++; ?>
             <tr>
                 <form method="post">
-                <td></td> <?= $number;     ?>   </td>
+                <td><?= $number;     ?>   </td>
                 <td><span><?= $v["nom"];   ?>   </span></td>
                 <td><span><?= $v["prenom"];?>   </span></td>
                 <td><span><?= $v["email"]; ?>   </span></td>

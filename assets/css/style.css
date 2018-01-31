@@ -696,6 +696,10 @@ th{
     background: #337ab7;
 }
 
+.th_search{
+  background: #a3a8ad;
+}
+
 .margin_bottom{
     margin-bottom: 300px;
 }
@@ -784,5 +788,8 @@ select{
   padding-top: 5px;
   padding-right: 4px;
   border-radius: 5px;
+}
+
+.table_historique{
 }
 
