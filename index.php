@@ -10,7 +10,7 @@ define('ROOT', dirname(WEBROOT));
 define('DS', DIRECTORY_SEPARATOR);
 define('CORE',ROOT.DS.'core');
 
-if (isset($_SESSION))
+if (isset($_SESSION['lvl']))
 {
     if($_SESSION['lvl'] == 0)
     {
