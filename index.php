@@ -17,8 +17,7 @@ if (isset($_SESSION['lvl']))
         $page = "ban";
     }
 }
-else
-{
+
     if(!isset($_GET['p']) || $_GET['p'] == "")
     {
         $page = $_GET["p"] = 'login';
@@ -34,7 +33,7 @@ else
             $page = $_GET['p'];
         }
     }
-}
+
 
 
 ob_start();//permet de ne plus renvoyer de contenu au navigateur

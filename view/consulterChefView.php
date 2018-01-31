@@ -5,8 +5,11 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Raison sociale</th>
                                 <th>Nom du client</th>
+                                <th>Date de rendez-vous</th>
                                 <th>Option</th>
+                                <th>Niveau d'intérêt</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -18,8 +21,11 @@
                                     <td>
                                         <?= $number; ?>
                                     </td>
+                                    <td><span><?= $v["raison"]; ?></span></td>
                                     <td><span><?= $v["nom_c"]; ?></span></td>
-                                    <td><span><a href="index.php?p=consulter&id=<?=$v["id_f"]; ?>">Voir le dossier</a></span></td>
+                                    <td><span><?= $v["date_rdv"]; ?></span></td>
+                                    <td><span><a href="index.php?p=detailDossier&id1=<?=$v["id_f"];?>&id2=<?=$v["id_u"];?>">Voir le dossier</a></span></td>
+                                    <td><span><?= $v["interet"]; ?></span></td>
                                 </tr>
                                 <?php $number++; } ?>
                         </tbody>

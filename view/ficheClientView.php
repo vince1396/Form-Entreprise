@@ -255,7 +255,7 @@
                         <input type="text" class="form-control" name="cout_contrat" placeholder="€"> </div>
                     <div class="form-group">
                         <label for="echeance">Échéance:</label>
-                        <input type="text" class="form-control" name="echeance"> </div>
+                        <input type="date" class="form-control" name="echeance"> </div>
                     <div class="form-group">
                         <label for="materiel_actuel">Matériel actuel:</label>
                         <textarea class="form-control" name="materiel_actuel" cols="150" rows="5"> </textarea>
