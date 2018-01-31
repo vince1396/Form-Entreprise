@@ -633,7 +633,7 @@ footer{padding: 100px 0;}
 
 /*Ajout Différent*/
 
-.groupe-num-1, .groupe-num-2, .groupe-num-3, .groupe-num-4, .groupe-num-ss2, .groupe-num-ss4, .ChiefChoiceDisplay, #btnDel{
+.groupe-num-1, .groupe-num-2, .groupe-num-3, .groupe-num-4, .groupe-num-ss2, .groupe-num-ss4, .ChiefChoiceDisplay, .displayNone, #btnDel{
    display: none;
 }
 hr.custom{
@@ -642,7 +642,9 @@ hr.custom{
    border-width: 2px;
    border-color: #58aaf0;
 }
-
+.editableColumns:first-child{
+  display: none;
+}
 .background-log{
 
 }

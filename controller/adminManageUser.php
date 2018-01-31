@@ -16,11 +16,14 @@
 // =============================================================================
     if(isset($_POST['update']))
     {
+
         $id_u = $_POST['id_u'];
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
         $email = $_POST['email'];
-        $mdp = $_POST['mdp'];
+        $mdp = sha1($_POST['mdp']);
+        var_dump($_POST['id_u'],$_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['mdp']);
+        die();
 
         updateUser($id_u, $nom, $prenom, $email, $mdp);
     }
