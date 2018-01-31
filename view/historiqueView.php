@@ -47,11 +47,11 @@
                     <table class="table table-striped table-bordered table-hover table_historique">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Nom du client</th>
-                                <th>Date de rendez-vous</th>
-                                <th>Option</th>
-                                <th>Niveau d'intérêt</th>
+                                <th class="th_search">#</th>
+                                <th class="th_search">Nom du client</th>
+                                <th class="th_search">Date de rendez-vous</th>
+                                <th class="th_search">Option</th>
+                                <th class="th_search">Niveau d'intérêt</th>
                             </tr>
                         </thead>
                         <tbody>

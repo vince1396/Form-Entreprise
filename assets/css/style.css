@@ -696,6 +696,10 @@ th{
     background: #337ab7;
 }
 
+.th_search{
+  background: #a3a8ad;
+}
+
 .margin_bottom{
     margin-bottom: 300px;
 }
