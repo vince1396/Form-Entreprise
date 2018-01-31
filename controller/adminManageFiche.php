@@ -4,4 +4,4 @@
     
 
   require "view/adminManageFiche.php";
-?>
+
