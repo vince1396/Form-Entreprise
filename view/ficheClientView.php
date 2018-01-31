@@ -15,7 +15,7 @@
                     <input type="date" class="form-control" name="date_contact"> </div>
                 <div class="form-group width-log">
                     <label for="rdv">RDV pris par:</label>
-                    <input type="text" class="form-control" name="prise_rdv" pattern="[A-z]*[a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div><br><br>
+                    <input type="text" class="form-control" name="prise_rdv" pattern="[A-z]*[a-z]*([ \-]?[A-z]*[a-z]*)*" title="Nom non conforme"> </div><br><br>
                 <div class="form-group width-log">
                     <label for="date_rdv">Date de RDV:</label>
                     <input type="date" class="form-control" name="date_rdv"> </div>
@@ -33,7 +33,7 @@
                     <input type="text" class="form-control" name="raison"> </div>
                 <div class="form-group width-log">
                     <label for="nom_c">Nom du responsable</label>
-                    <input type="text" class="form-control" name="nom_c" pattern="[A-z]*[a-z]*([ \-]?[A-z]?[a-z])*" title="Nom non conforme"> </div>
+                    <input type="text" class="form-control" name="nom_c" pattern="[A-z]*[a-z]*([ \-]?[A-z]*[a-z]*)*" title="Nom non conforme"> </div>
                 <div class="form-group width-log">
                     <label for="fonction">Fonction</label>
                     <input type="text" class="form-control" name="fonction"> </div>
