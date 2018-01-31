@@ -1,7 +1,7 @@
 <section id="consulter">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <tbody class="col-md-12">
                 <div class="search_form">
                    <form action="#" method="post">
                        <select name="interet" class="select_interet">
@@ -41,10 +41,22 @@
                     $number = 1;
                     if ($message != "") {
                         echo $message;
-                    } else {
-
+                    } else { ?>
+                        <br>
+                        <h3>Résultats de la recherche:</h3>
+                    <table class="table table-striped table-bordered table-hover table_historique">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nom du client</th>
+                                <th>Date de rendez-vous</th>
+                                <th>Option</th>
+                                <th>Niveau d'intérêt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    <?php
                         foreach ($req as $k => $v) { ?>
-
                                 <tr>
                                     <td>
                                         <?= $number; ?>
@@ -53,18 +65,26 @@
                                     <td><?= $v['date_rdv']; ?></td>
                                     <td><span><a href="index.php?p=consulter&id=<?= $v["id_f"]; ?>">Voir le dossier</a></span>
                                     </td>
-                                    <td><?= $v['interet']; ?></td><br>
+                                    <td><?= $v['interet']; ?></td>
                                 </tr>
                                 <?php $number++; ?>
-                                </tbody>
-                            </table>
+
                             <?php $temoin = false; ?>
 
                         <?php }
-                        if ($temoin) {
-                            echo "Aucun résultat.";
-                        }
-                    }
+                        if ($temoin) { ?>
+                            <tr>
+                                <td>Aucun résultat</td>
+                                <td>Aucun résultat</td>
+                                <td>Aucun résultat</td>
+                                <td>Aucun résultat</td>
+                                <td>Aucun résultat</td>
+                            </tr>
+                        <?php
+                        }?>
+                        </tbody>
+                        </table>
+                   <?php }
                 }
 
 

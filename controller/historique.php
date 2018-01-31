@@ -58,7 +58,7 @@
             if (isset($_POST['date_min']) && ($_POST['date_max'])) {    //Recherche par intervalle de date
                 $date_min = $_POST['date_min'];
                 $date_max = $_POST['date_max'];
-                $sql .= " AND f.date_rdv >= '" . $date_min . "' AND f.date_rdv <= '" . $date_max . "'";
+                $sql .= " AND f.date_rdv >= '" . $date_min . "' AND f.date_rdv <= '" . $date_max . "' ORDER BY f.date_rdv";
 
             }
 
