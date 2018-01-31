@@ -638,9 +638,9 @@ footer{padding: 100px 0;}
 }
 hr.custom{
    width: 30%;
-   color: red;
+   color: #255bed;
    border-width: 2px;
-   border-color: orangered;
+   border-color: #58aaf0;
 }
 
 .background-log{

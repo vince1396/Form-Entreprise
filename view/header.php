@@ -32,9 +32,6 @@
                         }
                     ?>
                     <li>
-                        <a class="page-scroll" href="">...</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="deconnexion">Déconnexion</a>
                     </li>
                 </ul>
