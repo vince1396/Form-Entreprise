@@ -1,20 +1,27 @@
-<table>
-    <tr>
-        <th>#</th>
-        <th>Commercial / CDV</th>
-        <th>Client</th>
-        <th>Intérêt</th>
-    </tr>
-    <?php
-        foreach(getTabFiches() as $k => $v)
-        { ?>
+<div class="container white_body">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
             <tr>
-                <td>1</td>
-                <td><?= $v['nom']." ".$v['prenom']; ?></td>
-                <td><?= $v['raison']; ?></td>
-                <td><?= $v['interet']; ?></td>
+                <th>#</th>
+                <th>Commercial / CDV</th>
+                <th>Client</th>
+                <th>Intérêt</th>
             </tr>
-            <?php
-        }
-    ?>
-</table>
+        </thead>
+        <tbody>
+        <?php
+            foreach(getTabFiches() as $k => $v)
+            { ?>
+
+                <tr>
+                    <td>1</td>
+                    <td><?= $v['nom']." ".$v['prenom']; ?></td>
+                    <td><?= $v['raison']; ?></td>
+                    <td><?= $v['interet']; ?></td>
+                </tr>
+                <?php
+            }
+        ?>
+        </tbody>
+    </table>
+</div>
