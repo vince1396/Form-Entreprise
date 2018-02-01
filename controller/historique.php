@@ -52,7 +52,7 @@
             }
             if (!empty($_POST['rechercher']) && isset($_POST['rechercher'])) {  //Barre de recherche -> A optimiser car trop lent
                 $rechercher = $_POST['rechercher'];
-                $sql .= "AND ((c.nom_c LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.mail_c LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.ville LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.cp LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.tel LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.fax LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id']."))";
+                $sql .= "AND ((c.nom_c LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.mail_c LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.ville LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.cp LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.tel LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.fax LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id'].") OR (c.raison LIKE '%" . $rechercher . "%' AND u.id_u = ".$_SESSION['id']."))";
                 $i++;
             }
             if (isset($_POST['date_min']) && ($_POST['date_max'])) {    //Recherche par intervalle de date

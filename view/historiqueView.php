@@ -30,8 +30,8 @@
                     <label for="date_max" class="label_date">Et le:
                     <input type="date" name="date_max"></label>
                     <label for="rechercher" class="label_search">
-                    <input type="text" name="rechercher" placeholder="Rechercher un client"  class="search">
-                    <input type="submit"name="submit" class="submit_search"></label>
+                    <input type="text" name="rechercher" placeholder="Rechercher..."  class="search">
+                    <input type="submit" name="submit" class="submit_search"></label>
                     </form>
                 </div>
 
@@ -40,7 +40,7 @@
                     $temoin = true;
                     $number = 1;
                     if ($message != "") {
-                        echo $message;
+                        echo "<b>".$message."</b>";
                     } else { ?>
                         <br>
                         <h3>Résultats de la recherche:</h3>

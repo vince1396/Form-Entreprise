@@ -36,7 +36,7 @@
                             <input type="date" class="form-control" name="date_rdv"> </div>
                         <br>
                         <br>
-                        <p class="center">*: Champs obligatoires</p>
+                        <p class="center"><b>*: Champs obligatoires</b></p>
                     </div>
                     <br>
 
@@ -134,20 +134,20 @@
                         </div>
                         <br>
                         <div class="form-group width-log text-center">
-                            <input type="button" id="btnClone" value="Ajouter un centre d'intérêt" />
-                            <input type="button" id="btnDel" value="Enlever un centre d'intérêt" disabled/> </div>
+                            <input type="button" id="btnClone" value="Ajouter un centre d'intérêt" class="btn btn-info"/>
+                            <input type="button" id="btnDel" class="btn btn-warning" value="Enlever un centre d'intérêt" disabled/> </div>
                    
                 <!----------------- DEBUT BUREAUTIQUE --------------------->
                 <div class="groupe-num-1">
                     <h3>Bureautique</h3>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="fournisseur">Fournisseur</label>
                         <input type="text" class="form-control" name="fournisseur">
                         <label for="leaser"> Leaser</label>
                         <input type="text" class="form-control" name="leaser"> </div>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <div id="sBuyRent">
                             <label for="achat">Achat/Location:</label>
                             <label>Achat</label>
@@ -156,88 +156,86 @@
                             <input type="radio" class="form-control" name="achat" value="2"> </div>
                     </div>
                     <br>
-                    <div class="groupe-num-ss1">
-                        <h3>Pour achat:</h3>
+                    <div class="groupe-num-ss1 width-log">
                         <label for="achat_b">Prix €(HT)</label>
                         <input type="text" class="form-control" name="achat_b">
+                    </div>
                         <br>
-                        <div class="form-group">
+                        <div class="form-group width-log">
                             <label for="materiel_achat">Matériel + accessoire:</label>
                             <textarea class="form-control" name="materiel_achat"></textarea>
                         </div>
-                        <br> </div>
+                        <br>
                     <div class="groupe-num-ss2">
-                        <div class="form-group">
-                            <h3>Pour location:</h3>
+                        <div class="form-group width-log">
                             <label for="date_deb">Démarrage du contrat</label>
                             <input type="date" class="form-control" name="date_deb"> </div>
                         <br>
-                        <div class="form-group">
+                        <div class="form-group width-log">
                             <label for="loyer_b">Loyer €(HT)</label>
                             <input type="text" class="form-control" name="loyer_b"> </div>
                         <br>
-                        <div class="form-group">
+                        <div class="form-group width-log">
                             <label for="prelevement">Prélèvement: </label>
                             <label for="mois">Mois</label>
                             <input type="radio" class="form-control" name="prelevement" value="1" checked="checked">
                             <label for="trimestre">Trimestrielle</label>
                             <input type="radio" class="form-control" name="prelevement" value="2"> </div>
                         <br>
-                        <div class="form-group">
+                        <div class="form-group width-log">
                             <label for="duree">Durée du contrat:</label>
                             <input type="text" class="form-control" name="duree" placeholder="Trimestrielle / Mensuelle"> </div>
                         <br>
-                        <div class="form-group">
+                        <div class="form-group width-log">
                             <label for="materiel_location">Matériel + accessoire:</label>
                             <textarea class="form-control" name="materiel_location"></textarea>
                         </div>
-                        <br>
-                        <h2>--FIN LOCATION--</h2>
+
                         <br> </div>
                     <br>
                     <h3>Entretient</h3>
                     <h4>Volume copie engagée:</h4>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="noir">Noire:</label>
                         <input type="text" class="form-control" name="noir" placeholder="Par Trimestre"> </div>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="couleur">Couleur:</label>
                         <input type="text" class="form-control" name="couleur" placeholder="Par Trimestre"> </div>
                     <br>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="cout_noir">Coût copie noire:</label>
-                        <input type="text" class="form-control" name="cout_noir" placeholder="€ (HT)"> € HT </div>
+                        <input type="text" class="form-control" name="cout_noir" placeholder="€ (HT)"> </div>
                     <br>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
-                        <input type="text" class="form-control" name="vol_noir" placeholder="Par Trimestre"> -- </div>
-                    <div class="form-group">
+                        <input type="text" class="form-control" name="vol_noir" placeholder="Par Trimestre"></div>
+                    <div class="form-group width-log">
                         <label for="supp_noir">Coûts copies noires supplémentaires:</label>
-                        <input type="text" class="form-control" name="supp_noir" placeholder="€ (HT)"> € HT </div>
+                        <input type="text" class="form-control" name="supp_noir" placeholder="€ (HT)"> </div>
                     <br>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="cout_couleur">Coût copie couleur:</label>
-                        <input type="text" class="form-control" name="cout_couleur" placeholder="€ (HT)"> € HT -- </div>
+                        <input type="text" class="form-control" name="cout_couleur" placeholder="€ (HT)"> </div>
                     <br>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
-                        <input type="text" class="form-control" name="vol_couleur" placeholder="Par Trimestre"> -- </div>
-                    <div class="form-group">
+                        <input type="text" class="form-control" name="vol_couleur" placeholder="Par Trimestre"></div>
+                    <div class="form-group width-log">
                         <label for="supp_couleur">Coûts copies couleurs supplémentaires:</label>
-                        <input type="text" class="form-control" name="supp_couleur" placeholder="€ (HT)"> € HT </div>
+                        <input type="text" class="form-control" name="supp_couleur" placeholder="€ (HT)"></div>
                     <br>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="amelioration">Amélioration souhaitée:</label>
                         <textarea class="form-control" name="amelioration"></textarea>
                     </div>
                     <br>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group width-log">
                         <label for="orientation">Orientation / Proposition (qu'est-ce qui ferait que le client travaille pour nous):</label>
                         <textarea class="form-control" name="orientation"></textarea>
                     </div>
@@ -247,87 +245,87 @@
                 <!----------------- INFORMATIQUE --------------------->
                 <div class="groupe-num-2">
                     <h3>Informatique</h3>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="nom_resp">Nom du responsable:</label>
                         <input type="text" class="form-control" name="nom_resp"> </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="cout_contrat">Cout contrat:</label>
                         <input type="text" class="form-control" name="cout_contrat" placeholder="€"> </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="echeance">Échéance:</label>
                         <input type="date" class="form-control" name="echeance"> </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="materiel_actuel">Matériel actuel:</label>
                         <textarea class="form-control" name="materiel_actuel" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="materiel_propose">Matériel proposé:</label>
                         <textarea class="form-control" name="materiel_propose" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="poste_travail">Poste de travail:</label>
                         <textarea class="form-control" name="poste_travail" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="pc_portable">Pc Portable:</label>
                         <textarea class="form-control" name="pc_portable" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="serveur">Serveur:</label>
                         <textarea class="form-control" name="serveur" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="nas">NAS:</label>
                         <textarea class="form-control" name="nas" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="reseau">Réseau:</label>
                         <textarea class="form-control" name="reseau" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="sauvegarde">Sauvegarde:</label>
                         <textarea class="form-control" name="sauvegarde" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="logiciel_actuel">Logiciel actuel:</label>
                         <textarea class="form-control" name="logiciel_actuel" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="logiciel_propose">Logiciel proposé:</label>
                         <textarea class="form-control" name="logiciel_propose" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="note_i">Note:</label>
                         <textarea class="form-control" name="note_i" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="travaux">Travaux:</label>
                         <textarea class="form-control" name="travaux" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="intervention">Intervention:</label>
                         <textarea class="form-control" name="intervention" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="maintenance">Maintenance:</label>
                         <textarea class="form-control" name="maintenance" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="dispositif">Avez vous un dispositif de sauvegarde ?</label>
                         <textarea class="form-control" name="dispositif" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="panne_serveur">Que se passe-t-il si votre serveur tombe en panne ?</label>
                         <textarea class="form-control" name="panne_serveur" cols="150" rows="5"> </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group width-log2">
                         <label for="doc_vital">Y a-t-il des documents vitaux à l'entreprise ?</label>
                         <textarea class="form-control" name="doc_vital" cols="150" rows="5"> </textarea>
                     </div>
                 </div>
                 <!----------------- FIN INFORMATIQUE ----------------->
                 <!----------- SOLUTION ---------------->
-                <div class="groupe-num-3">
+                <div class="groupe-num-3 width-log2">
                     <h3>Solution</h3>
                     <h4><b>GED (Organisation, distribution, stockage des docks electroniques:</b></h4>
                     <nav>
@@ -432,7 +430,7 @@
                 </div>
                 <!----------------- FIN SOLUTION --------------------->
                 <!----------------- TÉLÉPHONIE --------------------->
-                <div class="groupe-num-4">
+                <div class="groupe-num-4 width-log">
                     <h3>Téléphonie</h3>
                     <div class="form-group">
                         <label for="fournisseur_t">Fournisseur:</label>
