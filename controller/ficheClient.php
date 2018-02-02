@@ -206,73 +206,87 @@
 
         
              //Entretien
-            if(empty($_POST['noir'])){
-                $noir = "0";
-            }else{
-                $noir = htmlentities($_POST['noir']);
+            $noir = htmlentities($_POST['noir']);
+            foreach ($noir as $k => $v) {
+                if($noir[$k]==""){
+                    $noir[$k] = '0';
+                }
             }
-            if(empty($_POST['cout_noir'])){
-                $cout_noir = "0";
-            }else{
-                $cout_noir = htmlentities($_POST['cout_noir']);
+            $cout_noir = htmlentities($_POST['cout_noir']);
+            foreach ($cout_noir as $k => $v) {
+                if($cout_noir[$k]==""){
+                    $cout_noir[$k] = '0';
+                }
             }
-            if(empty($_POST['vol_noir'])){
-                $volume_noir = "0";
-            }else{
-                $volume_noir = htmlentities($_POST['vol_noir']);
+            $volume_noir = htmlentities($_POST['vol_noir']);
+            foreach ($volume_noir as $k => $v) {
+                if($volume_noir[$k]==""){
+                    $volume_noir[$k] = '0';
+                }
             }
-            if(empty($_POST['supp_noir'])){
-                $supp_noir = "0";
-            }else{
-                $supp_noir = htmlentities($_POST['supp_noir']);
+            $supp_noir = htmlentities($_POST['supp_noir']);
+            foreach ($supp_noir as $k => $v) {
+                if($supp_noir[$k]==""){
+                    $supp_noir[$k] = '0';
+                }
             }
-            if(empty($_POST['couleur'])){
-                $couleur = "0";
-            }else{
-                $couleur = htmlentities($_POST['couleur']);
+            $couleur = htmlentities($_POST['couleur']);
+            foreach ($couleur as $k => $v) {
+                if($couleur[$k]==""){
+                    $couleur[$k] = '0';
+                }
             }
-            if(empty($_POST['cout_couleur'])){
-                $cout_couleur = "0";
-            }else{
-                $cout_couleur = htmlentities($_POST['cout_couleur']);
+            $cout_couleur = htmlentities($_POST['cout_couleur']);
+            foreach ($cout_couleur as $k => $v) {
+                if($cout_couleur[$k]==""){
+                    $cout_couleur[$k] = '0';
+                }
             }
-            if(empty($_POST['vol_couleur'])){
-                $volume_couleur = "0";
-            }else{
-                $volume_couleur = htmlentities($_POST['vol_couleur']);
+            $volume_couleur = htmlentities($_POST['vol_couleur']);
+            foreach ($volume_couleur as $k => $v) {
+                if($volume_couleur[$k]==""){
+                    $volume_couleur[$k] = '0';
+                }
             }
-            if(empty($_POST['supp_couleur'])){
-                $supp_couleur = "0";
-            }else{
-                $supp_couleur = htmlentities($_POST['supp_couleur']);
+            $supp_couleur = htmlentities($_POST['supp_couleur']);
+            foreach ($supp_couleur as $k => $v) {
+                if($supp_couleur[$k]==""){
+                    $supp_couleur[$k] = '0';
+                }
             }
-            if(empty($_POST['amelioration'])){
-                $amelioration = "N/A";
-            }else{
-                $amelioration = htmlentities($_POST['amelioration']);
+            $amelioration = htmlentities($_POST['amelioration']);
+            foreach ($amelioration as $k => $v) {
+                if($amelioration[$k]==""){
+                    $amelioration[$k] = 'N/A';
+                }
             }
-            if(empty($_POST['orientation'])){
-                $orientation = "N/A";
-            }else{
-                $orientation = htmlentities($_POST['orientation']);
+            $orientation = htmlentities($_POST['orientation']);
+            foreach ($orientation as $k => $v) {
+                if($orientation[$k]==""){
+                    $orientation[$k] = '0';
+                }
             }
 
 
             $achat = htmlentities($_POST['achat']);
             foreach ($achat as $k => $v) {
                 //ACHAT BUREAUTIQUE
-                if($achat[$k]=="1"){ 
-                    if(empty($_POST['materiel_achat'])){
-                        $materiel = "N/A";
-                    }else{
-                        $materiel = htmlentities($_POST['materiel_achat']);
+
+                if($achat[$k]=="1"){
+                    $materiel = htmlentities($_POST['materiel_achat']);
+                    foreach ($materiel as $m => $w) {
+                        if($materiel[$m]==""){
+                            $materiel[$m] = 'N/A';
+                        }
                     }
-                    if(empty($_POST['achat_b'])){
-                        $prix_b = "0";
-                    }else{
-                        $prix_b = htmlentities($_POST['achat_b']);
+                    $prix_b = htmlentities($_POST['achat_b']);
+                    foreach ($prix_b as $m => $w) {
+                        if($prix_b[$m]==""){
+                            $prix_b[$m] = '0';
+                        }
                     }
-                    addBureautiqueAchat($id_b, $fournisseur, $leaser, $achat, $prix_b, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation);
+
+                    addBureautiqueAchat($id_b, $fournisseur[$k], $leaser[$k], $achat[$k], $prix_b[$m], $materiel[$m], $noir[$k], $couleur[$k], $cout_noir[$k], $cout_couleur[$k], $volume_noir[$k], $volume_couleur[$k], $supp_noir[$k], $supp_couleur[$k], $amelioration[$k], $orientation[$k]);
 
                 }
                 else if($achat[$k]=="2"){

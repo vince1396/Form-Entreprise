@@ -31,6 +31,7 @@ $(document).ready(function() {
         newElem.find('input[name^="prelevement"]:odd').attr('value','2');
         newElem.find('div[class^="groupe-num-ss"]:even').removeAttr('class style').attr('class','groupe-num-ss'+incrementGroupeNumSS+'');
         newElem.find('div[class^="groupe-num-ss"]:odd').removeAttr('class style').attr('class','groupe-num-ss'+incrementGroupeNumSS2+'');
+        newElem.find('div[name^="countForAddProjet"]').removeAttr('value').attr('value',num);
         console.log(newNum);
         console.log(incrementGroupeNumSS);
         console.log(incrementGroupeNumSS2);
