@@ -4,9 +4,10 @@
     $number = 1;
 // =============================================================================
     if(isset($_POST['search'])) {
-        $rechercher = $_POST['search'];
+        $rechercher = $_POST['rechercher'];
         $number = 1;
         $req = searchUser($rechercher);
+
     }
 // =============================================================================
     if(isset($_GET['supp']) && !empty($_GET['supp']))

@@ -44,6 +44,7 @@
                     } else { ?>
                         <br>
                         <h3>Résultats de la recherche:</h3>
+                    <div class="table-responsive">
                     <table class="table table-striped table-bordered table-hover table_historique">
                         <thead>
                             <tr>
@@ -87,6 +88,7 @@
                         }?>
                         </tbody>
                         </table>
+                    </div>
                    <?php }
                 }
 

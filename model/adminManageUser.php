@@ -6,7 +6,7 @@ function getUsers()
   {
     global $bdd;
 
-    $req = $bdd->prepare("SELECT * FROM user");
+    $req = $bdd->prepare("SELECT * FROM user WHERE lvl < 3");
     $req->execute();
 
     return $req->fetchAll();
