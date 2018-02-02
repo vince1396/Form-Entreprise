@@ -73,6 +73,7 @@ p.info{margin: 5% 0 2% 0;}
 .bg-dark {
   background-color: #222222;
   color: white;
+
 }
 .text-faded {
   text-align: justify;
@@ -272,8 +273,13 @@ header .header-content .header-content-inner p {
 }
 
 #accueilview{
-    background-color: rgba(255, 255, 255, 0.78);
+   background-color: rgba(255, 255, 255, 0.78);
+ }
+
+#adminview{
+  background-color: rgba(255, 255, 255, 0.67);
 }
+
 .titreAccueil{
     text-align: center;
     margin-top: 53px;
@@ -344,6 +350,7 @@ header .header-content .header-content-inner p {
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
   width: 100%;
+  transition: 2s;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -361,9 +368,10 @@ header .header-content .header-content-inner p {
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   font-size: 18px;
+
 }
 .portfolio-box:hover .portfolio-box-caption {
-  opacity: 0;
+  background:linear-gradient(90deg, rgba(45, 99, 255, 0.88) 0%, #22acd8 100%);
 }
 .portfolio-box:focus {
   outline: none;
@@ -699,6 +707,7 @@ hr.custom{
 .white_body{
     background: white;
     padding-top: 50px;
+  height: 100%;
 }
 .margin-bottom{
     margin-bottom: 15px;
@@ -822,6 +831,8 @@ select{
     border-left: 2px solid rgba(0, 0, 0, 0.48);
     border-right: 2px solid rgba(0, 0, 0, 0.48);
     padding-bottom: 5px;
+  padding-top: 50px;
+  background: white;
 }
 
 .row1{
@@ -992,41 +1003,205 @@ select{
     border-radius: 10px;
     padding-left: 20px;
     padding-top: 0.5px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-right: 20px;
     background: #565656;
 }
 
 .bureautique_container{
-    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    box-shadow: 1px 1px 12px #1b519a;
+    padding-top: 10px;
+  border: 1px solid #1b519a;
     margin-top: 25px;
     background: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
 }
 
 .title_bureautique{
-    text-align: center;
-    font-size: 30px;
+
     background: #1b519a;
     color: white;
-    border-radius: 5px;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -25px;
+  border-radius: 5px;
     border-bottom: 2px solid dodgerblue;
 }
 
+.bureautique_under_title{
+  padding-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: -5px;
+  text-decoration: underline;
+}
+
 .solution_container{
-    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    margin-top: 25px;
+    box-shadow: 1px 1px 12px rgba(203, 113, 0, 0.81);
+  border-right: 1px solid #cb7100;
+  border-left: 1px solid #cb7100;
+  border-bottom: 1px solid #cb7100;
+    /*margin-top: 25px;*/
+    margin-top: 10px;
     background: white;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .title_solution{
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
     font-size: 30px;
     background: #cb7100;
     color: white;
+    width: 100%;
+    margin-top: 10px;
+  margin-bottom: -10px;
     border-radius: 5px;
     border-bottom: 2px solid #b44800;
 }
 
+.solution_under_title{
+  padding-top: 10px;
+  font-size: 20px;
+  margin-bottom: -5px;
+  text-decoration: underline;
+}
 
+@media screen and (max-width: 640px) {
+  .solution_under_title{
+    font-size: 18px;
+  }
+
+  .bureautique_under_title{
+    font-size: 18px;
+  }
+
+  .phone_under_title{
+    font-size: 18px;
+  }
+}
+
+.informatique_container{
+  box-shadow: 1px 1px 12px rgba(24, 154, 87, 0.82);
+  padding-top: 10px;
+  border-left: 1px solid #189a57;
+  border-right: 1px solid #189a57;
+  border-bottom: 1px solid #189a57;
+  margin-top: 25px;
+  background: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title_informatique{
+
+  background: #189a57;
+  color: white;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -25px;
+  border-radius: 5px;
+  border-bottom: 2px solid #05ff0c;
+}
+
+.phone_container{
+  box-shadow: 1px 1px 12px rgba(154, 25, 19, 0.75);
+  border-right: 1px solid #9a1913;
+  border-left: 1px solid #9a1913;
+  border-bottom: 1px solid #9a1913;
+  /*margin-top: 25px;*/
+  margin-top: 10px;
+  background: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title_phone{
+
+  background: #9a1913;
+  color: white;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  border-radius: 5px;
+  border-bottom:2px solid #ff2f00;
+}
+
+.phone_under_title{
+  padding-top: 10px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.cInteret1{
+  background: #1b519a;
+  color: white;
+}
+.cInteret2{
+  background: #189a57;
+  color: white;
+}
+.cInteret3{
+  background: #cb7100;
+  color: white;
+}
+.cInteret4{
+  background: #9a1913;
+  color: white;
+}
+
+.admin_create{
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background: white;
+}
+
+.form_create{
+  /*border-top: 1px solid black;*/
+  padding-top: 20px;
+  padding-bottom: 0px;
+  box-shadow: 0px -10px 12px -10px #666 ;
+}
+
+.title_admin_create{
+  text-align: center;
+  font-size: 30px;
+}
+
+.submit_create{
+  width: 30%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.select_admin{
+  background: #1b519a;
+  color: white;
+  margin-top: 40px;
+}
+
+.background-admin{
+  background: url('../css/background-admin.jpg') no-repeat 60% 30% fixed;
+}
+
+.next_fiche{
+  margin-top: 20px;
+}

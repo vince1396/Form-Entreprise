@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="col-lg-5 col-md-5 col-xs-12 col-lg-offset-2 col-md-offset-2">
-                        <a href="historique" class="portfolio-box bordure" title="PME-PMI" data-capt=""> <img src="./img/note2.jpg" class="img-responsive bordure" alt="" title="">
+                        <a href="historique" class="portfolio-box bordure" data-capt=""> <img src="./img/note2.jpg" class="img-responsive bordure" alt="" title="">
                             <div class="portfolio-box-caption bordure">
                                 <div class="portfolio-box-caption-content bordure">
                                     <div class="project-category text-center bordure"><i class="fa fa-search fa-4x" aria-hidden="true"></i> </div>
