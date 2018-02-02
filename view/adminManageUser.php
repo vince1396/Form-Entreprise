@@ -33,7 +33,7 @@
                     <td>
                         <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
                         <input type="submit" name="update" class="displayNone"> /
-                        <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Supprimer</a></td>
+                        <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a></td>
 
                 </tr>
 
