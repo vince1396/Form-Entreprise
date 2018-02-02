@@ -24,3 +24,4 @@
       <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/select.js"></script>
+    <script src="assets/js/clone-bureautique.js"></script>

@@ -265,103 +265,31 @@ $(document).ready(function () {
     //   } 
     //});      
 
-    //DEBUT STAR RATING
-    $("#input-21f").rating({
-        starCaptions: function (val) {
-            if (val < 3) {
-                return val;
-            } else {
-                return 'high';
-            }
-        },
-        starCaptionClasses: function (val) {
-            if (val < 3) {
-                return 'label label-danger';
-            } else {
-                return 'label label-success';
-            }
-        },
-        hoverOnClear: false
-    });
-    var $inp = $('#rating-input');
-
-    $inp.rating({
-        min: 0,
-        max: 5,
-        step: 1,
-        size: 'lg',
-        showClear: false
-    });
-
-    $('#btn-rating-input').on('click', function () {
-        $inp.rating('refresh', {
-            showClear: true,
-            disabled: !$inp.attr('disabled')
-        });
-    });
 
 
-    $('.btn-danger').on('click', function () {
-        $("#kartik").rating('destroy');
-    });
-
-    $('.btn-success').on('click', function () {
-        $("#kartik").rating('create');
-    });
-
-    $inp.on('rating.change', function () {
-        alert($('#rating-input').val());
-    });
-
-
-    $('.rb-rating').rating({
-        'showCaption': true,
-        'stars': '3',
-        'min': '0',
-        'max': '3',
-        'step': '1',
-        'size': 'md',
-        'starCaptions': {
-            0: 'status:nix',
-            1: 'status:Faible',
-            2: 'status:Moyen',
-            3: 'status:Fort'
-        }
-    });
-    $("#input-21c").rating({
-        min: 0,
-        max: 8,
-        step: 0.5,
-        size: "xl",
-        stars: "8"
-    });
-
-    //FIN STAR RATING
-
-
-    $("#sBuyRent").change(function () {
-        console.log("hi2");
-        var valForm = $("input[name=achat]:checked").val();
-        console.log(valForm);
-        if (valForm == '1') {
-            console.log('valForm = 1');
-            $(".groupe-num-ss1").css({
-                "display": "block"
-            });
-            $(".groupe-num-ss2").css({
-                "display": "none"
-            });
-        }
-        if (valForm == '2') {
-            console.log('valForm = 2');
-            $(".groupe-num-ss1").css({
-                "display": "none"
-            });
-            $(".groupe-num-ss2").css({
-                "display": "block"
-            });
-        }
-    });
+    // $("#sBuyRent").change(function () {
+    //     console.log("hi2");
+    //     var valForm = $("input[name=achat]:checked").val();
+    //     console.log(valForm);
+    //     if (valForm == '1') {
+    //         console.log('valForm = 1');
+    //         $(".groupe-num-ss1").css({
+    //             "display": "block"
+    //         });
+    //         $(".groupe-num-ss2").css({
+    //             "display": "none"
+    //         });
+    //     }
+    //     if (valForm == '2') {
+    //         console.log('valForm = 2');
+    //         $(".groupe-num-ss1").css({
+    //             "display": "none"
+    //         });
+    //         $(".groupe-num-ss2").css({
+    //             "display": "block"
+    //         });
+    //     }
+    // });
     
     $("#tBuyRent").change(function () {
         console.log("hi3");
@@ -392,14 +320,14 @@ $(document).ready(function () {
 
     //dupliquer
 
-    $('#duplicatebtn').click(function (e) {
-        console.log("hi");
-        e.preventDefault();
-        var clone = $('#duplicate').clone().attr('id', '').removeClass('hidden');
-        $('#duplicate').before(clone);
-        $(".removebtn").attr('id', 'removebutton');
-
-    });
+    // $('#duplicatebtn').click(function (e) {
+    //     console.log("hi");
+    //     e.preventDefault();
+    //     var clone = $('#duplicate').clone().attr('id', '').removeClass('hidden');
+    //     $('#duplicate').before(clone);
+    //     $(".removebtn").attr('id', 'removebutton');
+    //
+    // });
     //supprimer
     $('#removebutton').click(function (e) {
         console.log("hi enlevage");
@@ -408,27 +336,27 @@ $(document).ready(function () {
     });
 
 
-    $('#btnAdd').click(function () {
-
-        $('#btnDel').removeAttr('disabled').button('enable'); // enable the "del" button
-
-        // how many "duplicatable" input fields we currently have
-        var num = $('.clonedInput').length;
-
-        // the numeric ID of the new input field being added	
-        var newNum = new Number(num + 1);
-        var newElem = $('#input' + num).clone().attr('id', 'input' + newNum);
-
-        newElem.children(':first').attr('id', 'name' + newNum).attr('name', 'name_label[]');
-        $('#input' + num).after(newElem);
-
-
-        // business rule: limit the number of fields to 5
-        if (newNum == 5) {
-            $('#btnAdd').attr('disabled', 'disabled').button('disable');
-            $('#btnAdd').parent().find('.ui-btn-text').text('maximum fields reached');
-        }
-    });
+    // $('#btnAdd').click(function () {
+    //
+    //     $('#btnDel').removeAttr('disabled').button('enable'); // enable the "del" button
+    //
+    //     // how many "duplicatable" input fields we currently have
+    //     var num = $('.clonedInput').length;
+    //
+    //     // the numeric ID of the new input field being added
+    //     var newNum = new Number(num + 1);
+    //     var newElem = $('#input' + num).clone().attr('id', 'input' + newNum);
+    //
+    //     newElem.children(':first').attr('id', 'name' + newNum).attr('name', 'name_label[]');
+    //     $('#input' + num).after(newElem);
+    //
+    //
+    //     // business rule: limit the number of fields to 5
+    //     if (newNum == 5) {
+    //         $('#btnAdd').attr('disabled', 'disabled').button('disable');
+    //         $('#btnAdd').parent().find('.ui-btn-text').text('maximum fields reached');
+    //     }
+    // });
 
     $('#btnDelOrigin').click(function () {
         // how many "duplicatable" input fields we currently have           
