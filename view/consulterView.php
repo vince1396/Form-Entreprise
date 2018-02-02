@@ -108,11 +108,11 @@
             <b>Supplément copies couleurs: </b><?=$v['supp_couleur'];?> € (HT)<br><br>
             <b>Amélioration souhaîtée: </b><?=$v['amelioration'];?><br><br>
             <b>Orientation / Proposition: </b><?=$v['orientation'];?><br>
-        </div><br>
+        <br>
 
-     <?php   }
-        
-    }
+     <?php   } ?>
+        </div>
+    <?php }
 
     foreach($req3 as $k => $v){ ?>
 

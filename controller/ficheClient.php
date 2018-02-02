@@ -6,6 +6,11 @@
     {
     //Commercial
 
+//        $countForAddProjet = htmlentities($_POST['countForAddProjet']);
+//        $countForAddProjet++;
+//    var_dump($countForAddProjet);
+//        die();
+
 //        var_dump('fournisseur : ',$fournisseur);
 //        var_dump('leaser : ',$_POST['leaser']);
 //        var_dump('achat',$_POST['achat']);
@@ -144,9 +149,12 @@
         $centre_interet_3 = htmlentities($_POST['cInteret_3']);
         $centre_interet_4 = htmlentities($_POST['cInteret_4']);
         $id_increment = 0;
+
+        $countForAddProjet = htmlentities($_POST['countForAddProjet']);
+        $countForAddProjet++;
+        $id_increment = $id_increment + $countForAddProjet;
         if($centre_interet !== '0'){
             echo "test réussi";
-            $id_increment += 1;
             echo $id_increment;
             if($centre_interet_2 !== '0' && !empty($_POST['cInteret_2'])){
                 echo"test 2 réussi";
@@ -170,10 +178,11 @@
             echo "test 2 échoué";
             }
         }
-        if ($id_increment == '0'){
-            addProjet($date_projet, $id_c);
-            $id_p = $bdd->lastInsertId();
-        }
+//        if ($id_increment == '1'){
+//            addProjet($date_projet, $id_c);
+//            $id_p = $bdd->lastInsertId();
+//        }
+
         $stack = array();
         for ($i = 0; $i < $id_increment; $i++){
             addProjet($date_projet, $id_c);
@@ -185,137 +194,187 @@
         
         $parcourir_stack = -1;
         if($centre_interet == '1' || $centre_interet_2 == '1' || $centre_interet_3 =='1' || $centre_interet_4 == '1'){
-            $parcourir_stack++;
-            $id_p = $stack[$parcourir_stack];
-            //Bureautique
-
-            $fournisseur = htmlentities($_POST['fournisseur']);
-            foreach ($fournisseur as $k => $v) {
-                if($fournisseur[$k]==""){
-                    $fournisseur[$k] = 'N/A';
-                }
+            for($j = 0; $j < $countForAddProjet; $j++) {
+                $parcourir_stack++;
             }
-            $leaser = htmlentities($_POST['leaser']);
-            foreach ($leaser as $k => $v) {
-                if($leaser[$k]==""){
-                    $leaser[$k] = 'N/A';
-                }
-            }
-
-            $id_b = $id_p;
-
-        
-             //Entretien
-            $noir = htmlentities($_POST['noir']);
-            foreach ($noir as $k => $v) {
-                if($noir[$k]==""){
-                    $noir[$k] = '0';
-                }
-            }
-            $cout_noir = htmlentities($_POST['cout_noir']);
-            foreach ($cout_noir as $k => $v) {
-                if($cout_noir[$k]==""){
-                    $cout_noir[$k] = '0';
-                }
-            }
-            $volume_noir = htmlentities($_POST['vol_noir']);
-            foreach ($volume_noir as $k => $v) {
-                if($volume_noir[$k]==""){
-                    $volume_noir[$k] = '0';
-                }
-            }
-            $supp_noir = htmlentities($_POST['supp_noir']);
-            foreach ($supp_noir as $k => $v) {
-                if($supp_noir[$k]==""){
-                    $supp_noir[$k] = '0';
-                }
-            }
-            $couleur = htmlentities($_POST['couleur']);
-            foreach ($couleur as $k => $v) {
-                if($couleur[$k]==""){
-                    $couleur[$k] = '0';
-                }
-            }
-            $cout_couleur = htmlentities($_POST['cout_couleur']);
-            foreach ($cout_couleur as $k => $v) {
-                if($cout_couleur[$k]==""){
-                    $cout_couleur[$k] = '0';
-                }
-            }
-            $volume_couleur = htmlentities($_POST['vol_couleur']);
-            foreach ($volume_couleur as $k => $v) {
-                if($volume_couleur[$k]==""){
-                    $volume_couleur[$k] = '0';
-                }
-            }
-            $supp_couleur = htmlentities($_POST['supp_couleur']);
-            foreach ($supp_couleur as $k => $v) {
-                if($supp_couleur[$k]==""){
-                    $supp_couleur[$k] = '0';
-                }
-            }
-            $amelioration = htmlentities($_POST['amelioration']);
-            foreach ($amelioration as $k => $v) {
-                if($amelioration[$k]==""){
-                    $amelioration[$k] = 'N/A';
-                }
-            }
-            $orientation = htmlentities($_POST['orientation']);
-            foreach ($orientation as $k => $v) {
-                if($orientation[$k]==""){
-                    $orientation[$k] = '0';
-                }
-            }
+                //Bureautique
 
 
-            $achat = htmlentities($_POST['achat']);
-            foreach ($achat as $k => $v) {
-                //ACHAT BUREAUTIQUE
 
-                if($achat[$k]=="1"){
-                    $materiel = htmlentities($_POST['materiel_achat']);
-                    foreach ($materiel as $m => $w) {
-                        if($materiel[$m]==""){
-                            $materiel[$m] = 'N/A';
+                foreach ($fournisseur = $_POST['fournisseur'] as $k => $v) {
+                    if($fournisseur[$k] == ""){
+                        $fournisseur[$k] = 'N/A';
+                    }else{
+                        $fournisseur[$k] = htmlentities($_POST['fournisseur'][$k]);
+                    }
+//                    if(($leaser[$k] = $_POST['leaser'][$k]) == ''){
+//                        $leaser[$k] = 'N/A';
+//                    }else{
+//                        $leaser[$k] = htmlentities($_POST['leaser'][$k]);
+//                    }
+                }
+
+
+                foreach ($leaser = $_POST['leaser'] as $k => $v) {
+                    if($leaser[$k]==""){
+                        $leaser[$k] = 'N/A';
+                    }else{
+                        $leaser[$k] = htmlentities($_POST['leaser'][$k]);
+                    }
+                }
+
+
+
+
+                //Entretien
+
+                foreach ($noir = $_POST['noir'] as $k => $v) {
+                    if($noir[$k]==""){
+                        $noir[$k] = '0';
+                    }else{
+                        $noir[$k] = htmlentities($_POST['noir'][$k]);
+                    }
+                }
+
+                foreach ($cout_noir = $_POST['cout_noir'] as $k => $v) {
+                    if($cout_noir[$k]==""){
+                        $cout_noir[$k] = '0';
+                    }else{
+                        $cout_noir[$k] = htmlentities($_POST['cout_noir'][$k]);
+                    }
+                }
+
+                foreach ($volume_noir = $_POST['vol_noir'] as $k => $v) {
+                    if($volume_noir[$k]==""){
+                        $volume_noir[$k] = '0';
+                    }else{
+                        $volume_noir[$k] = htmlentities($_POST['vol_noir'][$k]);
+                    }
+                }
+
+                foreach ($supp_noir = $_POST['supp_noir'] as $k => $v) {
+                    if($supp_noir[$k]==""){
+                        $supp_noir[$k] = '0';
+                    }else{
+                        $supp_noir[$k] = htmlentities($_POST['supp_noir'][$k]);
+                    }
+                }
+
+                foreach ($couleur = $_POST['couleur'] as $k => $v) {
+                    if($couleur[$k]==""){
+                        $couleur[$k] = '0';
+                    }else{
+                        $couleur[$k] = htmlentities($_POST['couleur'][$k]);
+                    }
+                }
+
+                foreach ($cout_couleur = $_POST['cout_couleur'] as $k => $v) {
+                    if($cout_couleur[$k]==""){
+                        $cout_couleur[$k] = '0';
+                    }else{
+                        $cout_couleur[$k] = htmlentities($_POST['cout_couleur'][$k]);
+                    }
+                }
+
+                foreach ($volume_couleur = $_POST['vol_couleur'] as $k => $v) {
+                    if($volume_couleur[$k]==""){
+                        $volume_couleur[$k] = '0';
+                    }else{
+                        $volume_couleur[$k] = htmlentities($_POST['vol_couleur'][$k]);
+                    }
+                }
+
+                foreach ($supp_couleur = $_POST['supp_couleur'] as $k => $v) {
+                    if($supp_couleur[$k]==""){
+                        $supp_couleur[$k] = '0';
+                    }else{
+                        $supp_couleur[$k] = htmlentities($_POST['supp_couleur'][$k]);
+                    }
+                }
+
+                foreach ($amelioration = $_POST['amelioration'] as $k => $v) {
+                    if($amelioration[$k]==""){
+                        $amelioration[$k] = 'N/A';
+                    }else{
+                        $amelioration[$k] = htmlentities($_POST['amelioration'][$k]);
+                    }
+                }
+
+                foreach ($orientation = $_POST['orientation'] as $k => $v) {
+                    if($orientation[$k]==""){
+                        $orientation[$k] = 'N/A';
+                    }else{
+                        $orientation[$k] = htmlentities($_POST['orientation'][$k]);
+                    }
+                }
+
+                $achat = $_POST['achat'];
+                foreach ($achat as $k => $v) {
+                    //ACHAT BUREAUTIQUE
+
+                    if($achat[$k]=="1"){
+                        if(($materiel[$k] = $_POST['materiel_achat'][$k]) == ''){
+                                $materiel[$k] = 'N/A';
+                        }else{
+                            $materiel[$k] = htmlentities($_POST['materiel_achat'][$k]);
                         }
-                    }
-                    $prix_b = htmlentities($_POST['achat_b']);
-                    foreach ($prix_b as $m => $w) {
-                        if($prix_b[$m]==""){
-                            $prix_b[$m] = '0';
+
+
+                        if(($prix_b[$k] = $_POST['achat_b'][$k]) == ''){
+                            $prix_b[$k] = "0";
+                        }else{
+                            $prix_b[$k] = htmlentities($_POST['achat_b'][$k]);
                         }
+                        $id_p = $stack[$k];
+                        $id_b = $id_p;
+
+
+                        addBureautiqueAchat($id_b, $fournisseur[$k], $leaser[$k], $achat[$k], $prix_b[$k], $materiel[$k], $noir[$k], $couleur[$k], $cout_noir[$k], $cout_couleur[$k], $volume_noir[$k], $volume_couleur[$k], $supp_noir[$k], $supp_couleur[$k], $amelioration[$k], $orientation[$k]);
+
                     }
+                    else if($achat[$k]=="2"){
+                        //LOCATION BUREAUTIQUE
 
-                    addBureautiqueAchat($id_b, $fournisseur[$k], $leaser[$k], $achat[$k], $prix_b[$m], $materiel[$m], $noir[$k], $couleur[$k], $cout_noir[$k], $cout_couleur[$k], $volume_noir[$k], $volume_couleur[$k], $supp_noir[$k], $supp_couleur[$k], $amelioration[$k], $orientation[$k]);
+                        if(($date_deb[$k] = $_POST['date_deb'][$k]) == '') {
+                            $date_deb[$k] = '2001/01/01';
+                            }else{
+                            $date_deb[$k] = htmlentities($_POST['date_deb'][$k]);
+                        }
 
+                        if(($prix_b[$k] = $_POST['loyer_b'][$k]) == '') {
+                            $prix_b[$k] = '0';
+                            }else{
+                            $prix_b[$k] = htmlentities($_POST['loyer_b'][$k]);
+                        }
+                        // 1 = Mois, 2 = Trimestre
+                        if(($prelevement[$k] = $_POST['prelevement'][$k]) == '') {
+                            $prelevement[$k] = '';
+                            }else{
+                            $prelevement[$k] = htmlentities($_POST['prelevement'][$k]);
+                        }
+
+                        if(($duree_contrat[$k] = $_POST['duree'][$k]) == '') {
+                            $duree_contrat[$k] = '0';
+                            }else{
+                            $duree_contrat[$k] = htmlentities($_POST['duree'][$k]);
+                        }
+
+                        if(($materiel[$k] = $_POST['materiel_location'][$k]) == '') {
+                            $materiel[$k] = 'N/A';
+                            }else{
+                            $materiel[$k] = htmlentities($_POST['materiel_location'][$k]);
+                        }
+                        $id_p = $stack[$k];
+                        $id_b = $id_p;
+
+                        addBureautiqueLocation($id_b, $fournisseur[$k], $leaser[$k], $date_deb[$k], $achat[$k], $prix_b[$k], $prelevement[$k], $duree_contrat[$k], $materiel[$k], $noir[$k], $couleur[$k], $cout_noir[$k], $cout_couleur[$k], $volume_noir[$k], $volume_couleur[$k], $supp_noir[$k], $supp_couleur[$k], $amelioration[$k], $orientation[$k]);
+
+                    }
                 }
-                else if($achat[$k]=="2"){
-                    //LOCATION BUREAUTIQUE
-                    if(empty($_POST['date_deb'])){
 
-                    }else{
-                        $date_deb = htmlentities($_POST['date_deb']);
-                    }
-                    if(empty($_POST['loyer_b'])){
-                        $prix_b = "0";
-                    }else{
-                        $prix_b = htmlentities($_POST['loyer_b']);
-                    }
-                    $prelevement = htmlentities($_POST['prelevement']); // 1 = Mois, 2 = Trimestre
-                    if(empty($_POST['duree'])){
-                        $duree_contrat = "0";
-                    }else{
-                        $duree_contrat = htmlentities($_POST['duree']);
-                    }
-                    if(empty($_POST['materiel_location'])){
-                        $materiel = "N/A";
-                    }else{
-                        $materiel = htmlentities($_POST['materiel_location']);
-                    }
-                    addBureautiqueLocation($id_b, $fournisseur, $leaser, $date_deb, $achat, $prix_b, $prelevement, $duree_contrat, $materiel, $noir, $couleur, $cout_noir, $cout_couleur, $volume_noir, $volume_couleur, $supp_noir, $supp_couleur, $amelioration, $orientation);
 
-                }
-            }
+
+
 
         }
         if($centre_interet == '2' || $centre_interet_2 == '2' || $centre_interet_3 =='2' || $centre_interet_4 == '2'){
