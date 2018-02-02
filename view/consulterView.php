@@ -1,4 +1,4 @@
-<div class="container white_body border_consult">
+<div class="container border_consult">
 
 <?php
 
@@ -60,14 +60,15 @@
         <div class="contrat">
     <?php
     foreach($req2 as $k => $v){ ?>
+        <p class="title_bureautique">Bureautique</p>
         <div class="bureautique_container">
-            <p class="title_bureautique">Bureautique</p>
+
             <b>Fournisseur: </b><?=$v['fournisseur'];?><br><br>
             <b>Leaser: </b><?=$v['leaser'];?><br><br>
 
     <?php
         if($v['achat'] == 1){ ?>
-            <h4>Contrat d'achat:</h4>
+            <p class="bureautique_under_title">Contrat d'achat:</p>
             <b>Matériel et accessoires: </b><?=$v['materiel'];?><br><br>
             <b>Prix: </b><?=$v['prix_b'];?> €<br><br>
             <b>Volume Copies Noires: </b><?=$v['noir'];?> €<br><br>
@@ -82,7 +83,7 @@
             <b>Orientation / Proposition: </b><?=$v['orientation'];?><br><br>
     <?php    }
         else if($v['achat'] == 2){ ?>
-            <h4>Contrat de location:</h4>
+            <p class="bureautique_under_title">Contrat de location:</p>
             <b>Matériel et accessoires: </b><?=$v['materiel'];?><br><br>
             <b>Loyer: </b><?=$v['prix_b'];?> € (HT)<br><br>
             <b>Date début du contrat: </b><?=$v['date_deb'];?><br><br>
@@ -115,7 +116,8 @@
 
     foreach($req3 as $k => $v){ ?>
 
-        <h2>Informatique:</h2>
+            <p class="title_informatique">Informatique:</p>
+            <div class="informatique_container">
         <b>Nom du responsable: </b><?=$v['nom_resp'];?><br><br>
         <b>Coût du contrat: </b><?=$v['cout_contrat'];?><br><br>
         <b>Echéance du contrat: </b><?=$v['echeance'];?><br><br>
@@ -136,14 +138,15 @@
         <b>Avez-vous un dispositif de sauvegarde ? </b><?=$v['dispositif'];?><br><br>
         <b>Que se passe-t-il si votre serveur tombe en panne ? </b><?=$v['panne_serveur'];?><br><br>
         <b>Y a-t-il des documents vitaux à l'entreprise ? </b><?=$v['doc_vital'];?><br><br>
+     </div>
      <?php
     }
     
     foreach($req4 as $k => $v){ ?>
-        <div class="solution_container">
-            <p class="title_solution">Solution</p>
 
-            <h3>GED (Organisation, distribution, stockage des docks electroniques):</h3><br>
+            <p class="title_solution">Solution</p>
+        <div class="solution_container">
+            <p class="solution_under_title">GED (Organisation, distribution, stockage des docks electroniques):</p><br>
 
             <b>Comment les dossiers (clients/fournisseurs, projets...) et leurs documents (courriers, factures...) sont-ils classés et mis à disposition dans votre organisation ? </b><br><?=$v['doc_classe'];?><br><br>
             <b>Combien de temps vous faut-il pour trouver un document dans vos archives? </b><br><?=$v['doc_archive'];?><br><br>
@@ -152,7 +155,7 @@
             <b>Quels sont chez vous les procédures nécessitant des validations (autorisation de dépenses, note de frais, etc..) ?</b><br><?=$v['proc_valid'];?><br><br>
             <b>Quels sont chez vous les procédures nécessitant des validations (autorisation de dépenses, note de frais, etc..) ?</b><br><?=$v['proc_valid'];?><br><br>
 
-            <h3>Suivi des impressions (comptabilisations, quotas, refacturation):</h3><br>
+            <p class="solution_under_title">Suivi des impressions (comptabilisations, quotas, refacturation):</p><br>
 
             <b>Connaissez-vous précisément les volumes d'impression et de copie réalisés par services ?</b><br><?=$v['vol_impression'];?><br><br>
             <b>Souhaitez-vous refacturer des impressions ou des copies ?</b><br><?=$v['refacturer'];?><br><br>
@@ -160,7 +163,7 @@
             <b>Avez-vous comptabilisé les documents imprimés chez vous ?</b><br><?=$v['doc_compta'];?><br><br>
             <b>Souhaitez-vous maîtriser les volumes couleur imprimés ?</b><br><?=$v['vol_coul_imp'];?><br><br>
 
-            <h3>Modifications de PDFs et association de plusieurs types de documents:</h3><br>
+            <p class="solution_under_title">Modifications de PDFs et association de plusieurs types de documents:</p><br>
 
             <b>Avez-vous besoin de retravailler des documents papier ?</b><br><?=$v['doc_papier'];?><br><br>
             <b>Créez-vous des dossiers papier provenant de plusieurs  applications différentes ?</b><br><?=$v['doc_app'];?><br><br>
@@ -170,22 +173,23 @@
    <?php }
     
     foreach($req5 as $k => $v){ ?>
-        <h2>Téléphonie:</h2><br>
+        <p class="title_phone">Téléphonie:</p>
+        <div class="phone_container">
         <b>Fournisseur: </b><?=$v['fournisseur_t'];?><br><br>
-        <b>Leaser: </b><?=$v['leaser_t'];?><br><br>
+        <b>Leaser: </b><?=$v['leaser_t'];?><br>
         
      <?php   if($v['achat_t'] == 1){ ?>
-            <h4>Contrat d'achat:</h4>
+            <p class="phone_under_title">Contrat d'achat:</p>
             <b>Matériel et accessoires: </b><?=$v['materiel_t'];?><br><br>
             <b>Prix: </b><?=$v['prix_t'];?> €(HT)<br><br>
             <b>Numéro de la ligne: </b><?=$v['num_ligne'];?> <br><br>
             <b>Nombre de postes: </b><?=$v['nb_poste'];?> <br><br>
             <b>Nombre de RJ45: </b><?=$v['nb_rj45'];?> <br><br>
-            <h5>Facture: </h5>
+            <p class="phone_under_title">Facture: </p>
             <b>Description: </b><?=$v['description'];?> <br><br>
      <?php   }
         else if($v['achat_t'] == 2){ ?>
-            <h4>Contrat de location:</h4>
+            <p class="phone_under_title">Contrat de location:</p>
             <b>Loyer: </b><?=$v['prix_t'];?> €(HT)<br><br>
             <b>Date de début: </b><?=$v['date_deb_t'];?><br><br>
             <b>Durée du contrat: </b><?=$v['duree_contrat'];?><br><br>
@@ -200,13 +204,14 @@
             <b>Numéro de la ligne: </b><?=$v['num_ligne'];?> <br><br>
             <b>Nombre de postes: </b><?=$v['nb_poste'];?> <br><br>
             <b>Nombre de RJ45: </b><?=$v['nb_rj45'];?> <br><br>
-            <h5>Facture: </h5>
+            <p class="phone_under_title">Facture: </p>
             <b>Description: </b><?=$v['description'];?> <br><br>
-            
+            </div>
      <?php   }
     }
 
 ?>
+        </div>
         </div>
 </div>
 </div>

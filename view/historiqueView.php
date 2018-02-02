@@ -17,10 +17,10 @@
                        </select>
                        <select name="cInteret" class="select_cinteret">
                            <option value="0">Type de contrat</option>
-                           <option value="1">Bureautique</option>
-                           <option value="2">Informatique</option>
-                           <option value="3">Solution</option>
-                           <option value="4">Téléphonie</option>
+                           <option value="1"  class="cInteret1">Bureautique</option>
+                           <option value="2"  class="cInteret2">Informatique</option>
+                           <option value="3"  class="cInteret3">Solution</option>
+                           <option value="4"  class="cInteret4">Téléphonie</option>
                        </select>
 
                        <!-------------------------------------------->
