@@ -261,7 +261,7 @@
                                 <br>
                                 <br>
 
-
+                                <input type="text" name="countForAddProjet" value="" class="hidden">
                             </div>
                             <button class="btn btn-primary select_class" type="button" name="submit" id="btnAdd">
                                 <span class="glyphicon glyphicon-plus"></span> Ajouter un autre contrat bureautique
