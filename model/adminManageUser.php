@@ -71,4 +71,19 @@ function getUsers()
       $req->bindValue(":mdp", $mdp, PDO::PARAM_STR);
       $req->execute();
   }
+function updateUser2($id_u, $nom, $prenom, $email)
+{
+    global $bdd;
+
+    $req = $bdd->prepare("UPDATE user 
+                            SET nom = :nom, 
+                            prenom = :prenom, 
+                            email = :email
+                            WHERE id_u = :id_u");
+    $req->bindValue(":id_u", $id_u, PDO::PARAM_INT);
+    $req->bindValue(":nom", $nom, PDO::PARAM_STR);
+    $req->bindValue(":prenom", $prenom, PDO::PARAM_STR);
+    $req->bindValue(":email", $email, PDO::PARAM_STR);
+    $req->execute();
+}
 // =============================================================================

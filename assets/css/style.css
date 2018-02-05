@@ -1235,4 +1235,7 @@ select{
     font-size: 30px;
 }
 
+input:invalid {
+    background-color: #ffdddd;
+}
 
