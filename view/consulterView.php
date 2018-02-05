@@ -36,7 +36,7 @@
                 <b>Email: </b><?=$v['mail_c'];?><br>
                 <b>Secteur activité: </b><?=$v['secteur_activite'];?><br>
                 <b>Nombre de sites: </b><?=$v['nb_site'];?><br>
-                <b>Nombre de salariés: </b><?=$v['nb_salarie'];?></p><br>
+                <b>Nombre de salariés: </b><?=$v['nb_salarie'];?></p>
             </div>
             <div class="info_client_right col-xs-6 col-md-6">
             </div>

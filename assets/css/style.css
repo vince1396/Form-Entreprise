@@ -917,7 +917,8 @@ select{
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     margin-bottom: 20px;
-    height: 70%;
+    /*height: 70%;*/
+    height: 450px;
 }
 
 .info_client_right{
@@ -1033,6 +1034,19 @@ select{
   margin-bottom: -25px;
   border-radius: 5px;
     border-bottom: 2px solid dodgerblue;
+}
+.title_bureautique2{
+    margin: auto;
+    background: #1b519a;
+    color: white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 30px;
+    width: 40%;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-bottom: 2px solid dodgerblue;
+
 }
 
 .bureautique_under_title{
@@ -1239,3 +1253,6 @@ input:invalid {
     background-color: #ffdddd;
 }
 
+.underline{
+    text-decoration: underline;
+}

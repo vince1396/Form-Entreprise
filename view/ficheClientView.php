@@ -145,7 +145,7 @@
                         <!----------------- DEBUT BUREAUTIQUE --------------------->
                         <div class="groupe-num-1">
                             <div class="clonedInput" id="divInput1">
-                                <h3>Bureautique</h3>
+                                <h3 class="center title_bureautique2">Bureautique</h3>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="fournisseur">Fournisseur</label>
@@ -206,15 +206,15 @@
                                     <br>
                                 </div>
                                 <br>
-                                <h3>Entretient</h3>
-                                <h4>Volume copie engagée:</h4>
+                                <h3 class="width-log">Entretient</h3>
+                                <h4 class="width-log">Volume copie engagée:</h4>
                                 <div class="form-group width-log">
                                     <label for="noir">Noire:</label>
-                                    <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="couleur">Couleur:</label>
-                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <br>
                                 <br>
@@ -226,7 +226,7 @@
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
-                                    <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="supp_noir">Coûts copies noires supplémentaires:</label>
@@ -242,7 +242,7 @@
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
-                                    <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="supp_couleur">Coûts copies couleurs supplémentaires:</label>
@@ -265,9 +265,11 @@
 
                                 <input type="text" name="countForAddProjet" value="" class="hidden">
                             </div>
-                            <button class="btn btn-primary select_class" type="button" name="submit" id="btnAdd">
-                                <span class="glyphicon glyphicon-plus"></span> Ajouter un autre contrat bureautique
-                            </button>
+                            <div class="center">
+                                <button class="btn btn-primary select_class" type="button" name="submit" id="btnAdd">
+                                    <span class="glyphicon glyphicon-plus"></span> Ajouter un autre contrat bureautique
+                                </button>
+                            </div>
                         </div>
                 <!----------------- FIN BUREAUTIQUE --------------------->
 
