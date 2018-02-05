@@ -37,7 +37,7 @@
                         <br>
                         <p class="center"><b>*: Champs obligatoires</b></p>
                         <div class="form-group width-log center">
-                            <a data-toggle="tab" href="#raison-sociale"><button class="btn btn-success">Suivant</button></a>
+                            <a data-toggle="tab" href="#raison-sociale"><button class="btn btn-primary">Suivant</button></a>
                         </div>
                     </div>
                     <br>
@@ -94,7 +94,7 @@
                             <label for="nb_salarie">Nb de salarie</label>
                             <input type="number" class="form-control" name="nb_salarie"> </div>
                         <div class="form-group width-log center">
-                            <a data-toggle="tab" href="#cycle-de-décision"><button class="btn btn-success next_fiche">Suivant</button></a>
+                            <a data-toggle="tab" href="#cycle-de-décision"><button class="btn btn-primary next_fiche">Suivant</button></a>
                         </div>
                     </div>
                     
@@ -117,7 +117,7 @@
                             <label for="date_projet">* Date du projet</label>
                             <input type="date" class="form-control" name="date_projet"> </div>
                         <div class="form-group width-log center">
-                            <a data-toggle="tab" href="#centre"><button class="btn btn-success next_fiche">Suivant</button></a>
+                            <a data-toggle="tab" href="#centre"><button class="btn btn-primary next_fiche">Suivant</button></a>
                         </div>
                     </div>
                     <br>
@@ -525,7 +525,7 @@
                             </div>
                         </div>
                         <div class="form-group width-log center">
-                            <a data-toggle="tab" href="#niveau"><button class="btn btn-success next_fiche">Suivant</button></a>
+                            <a data-toggle="tab" href="#niveau"><button class="btn btn-primary next_fiche">Suivant</button></a>
                         </div>
                     </div>
 
