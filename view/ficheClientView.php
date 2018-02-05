@@ -167,7 +167,7 @@
                                 <br>
                                 <div class="groupe-num-ss1 width-log">
                                     <label for="achat_b">Prix €(HT)</label>
-                                    <input type="text" class="form-control" name="achat_b[]">
+                                    <input type="text" class="form-control" name="achat_b[]" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                     <br>
                                     <div class="form-group">
                                         <label for="materiel_achat">Matériel + accessoire:</label>
@@ -183,7 +183,7 @@
                                     <br>
                                     <div class="form-group width-log">
                                         <label for="loyer_b">Loyer €(HT)</label>
-                                        <input type="text" class="form-control" name="loyer_b[]">
+                                        <input type="text" class="form-control" name="loyer_b[]" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                     </div>
                                     <br>
                                     <div class="form-group width-log">
@@ -210,43 +210,43 @@
                                 <h4>Volume copie engagée:</h4>
                                 <div class="form-group width-log">
                                     <label for="noir">Noire:</label>
-                                    <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre">
+                                    <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="couleur">Couleur:</label>
-                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre">
+                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="cout_noir">Coût copie noire:</label>
-                                    <input type="text" class="form-control" name="cout_noir[]" placeholder="€ (HT)">
+                                    <input type="text" class="form-control" name="cout_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
-                                    <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre">
+                                    <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="supp_noir">Coûts copies noires supplémentaires:</label>
-                                    <input type="text" class="form-control" name="supp_noir[]" placeholder="€ (HT)">
+                                    <input type="text" class="form-control" name="supp_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="cout_couleur">Coût copie couleur:</label>
-                                    <input type="text" class="form-control" name="cout_couleur[]" placeholder="€ (HT)">
+                                    <input type="text" class="form-control" name="cout_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
-                                    <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre">
+                                    <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="supp_couleur">Coûts copies couleurs supplémentaires:</label>
-                                    <input type="text" class="form-control" name="supp_couleur[]" placeholder="€ (HT)">€ HT
+                                    <input type="text" class="form-control" name="supp_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
                                 <br>
