@@ -33,7 +33,7 @@
                     <td class="editableColumns"><?= $v["nom"];   ?>  </td>
                     <td class="editableColumns"><?= $v["prenom"];?>   </td>
                     <td class="editableColumns"><?= $v["email"]; ?>   </td>
-                    <td class="editableColumns">Crypté : uniquement modifiable</td>
+                    <td class="editableColumns"></td>
                     <td class="editableColumns">
                         <?php
                         if($v['lvl'] == 2){
@@ -88,7 +88,7 @@
                     <td class="editableColumns"><?= $v["nom"];   ?>  </td>
                     <td class="editableColumns"><?= $v["prenom"];?>   </td>
                     <td class="editableColumns"><?= $v["email"]; ?>   </td>
-                    <td class="editableColumns"><?= $v["mdp"]; ?> </td>
+                    <td class="editableColumns"></td>
                     <td class="editableColumns">
                         <?php
                         if($v['lvl'] == 2){
