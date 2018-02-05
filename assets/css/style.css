@@ -1080,6 +1080,18 @@ select{
     border-radius: 5px;
     border-bottom: 2px solid #b44800;
 }
+.title_solution2{
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 30px;
+    background: #cb7100;
+    color: white;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-bottom: 2px solid #b44800;
+}
 
 .solution_under_title{
   padding-top: 10px;
@@ -1127,6 +1139,19 @@ select{
   border-radius: 5px;
   border-bottom: 2px solid #05ff0c;
 }
+.title_informatique2{
+
+    background: #189a57;
+    color: white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 30px;
+    border-radius: 5px;
+    border-bottom: 2px solid #05ff0c;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+}
 
 .phone_container{
   box-shadow: 1px 1px 12px rgba(154, 25, 19, 0.75);
@@ -1152,6 +1177,19 @@ select{
   margin-bottom: -10px;
   border-radius: 5px;
   border-bottom:2px solid #ff2f00;
+}
+.title_phone2{
+
+    background: #9a1913;
+    color: white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 30px;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-bottom:2px solid #ff2f00;
 }
 
 .phone_under_title{

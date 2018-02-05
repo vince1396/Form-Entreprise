@@ -277,7 +277,7 @@
 
                         <!----------------- INFORMATIQUE --------------------->
                         <div class="groupe-num-2">
-                            <h3>Informatique</h3>
+                            <h3 class="center title_informatique2">Informatique</h3>
                             <div class="form-group width-log2">
                                 <label for="nom_resp">Nom du responsable:</label>
                                 <input type="text" class="form-control" name="nom_resp"> </div>
@@ -358,8 +358,8 @@
                         </div>
                         <!----------------- FIN INFORMATIQUE ----------------->
                         <!----------- SOLUTION ---------------->
-                        <div class="groupe-num-3 width-log2">
-                            <h3>Solution</h3>
+                        <div class="groupe-num-3">
+                            <h3 class="center title_solution2">Solution</h3>
                             <h4><b>GED (Organisation, distribution, stockage des docks electroniques:</b></h4>
                             <nav>
                                 <ul>
@@ -463,8 +463,9 @@
                         </div>
                         <!----------------- FIN SOLUTION --------------------->
                         <!----------------- TÉLÉPHONIE --------------------->
-                        <div class="groupe-num-4 width-log">
-                            <h3>Téléphonie</h3>
+                        <div class="groupe-num-4">
+                            <h3 class="center title_phone2">Téléphonie</h3>
+                            <div class="width-log">
                             <div class="form-group">
                                 <label for="fournisseur_t">Fournisseur:</label>
                                 <input type="text" class="form-control" name="fournisseur_t"> </div>
@@ -531,6 +532,7 @@
                         <div class="form-group width-log center">
                            <button class="btn btn-primary next_fiche btnPrevious" type="button">Précédent</button>
                            <button class="btn btn-success next_fiche btnNext" type="button">Suivant</button>
+                        </div>
                         </div>
                     </div>
 
