@@ -17,8 +17,8 @@
             <th class="th_search">Nom</th>
             <th class="th_search">Prénom</th>
             <th class="th_search">Email</th>
-            <th class="th_search">Rôle</th>
             <th class="th_search">Mot de passe</th>
+            <th class="th_search">Rôle</th>
             <th class="th_search">Options</th>
         </tr>
         </thead>
@@ -33,6 +33,7 @@
                     <td class="editableColumns"><?= $v["nom"];   ?>  </td>
                     <td class="editableColumns"><?= $v["prenom"];?>   </td>
                     <td class="editableColumns"><?= $v["email"]; ?>   </td>
+                    <td class="editableColumns">Crypté : uniquement modifiable</td>
                     <td class="editableColumns">
                         <?php
                         if($v['lvl'] == 2){
@@ -43,7 +44,6 @@
                         }
                         ?>
                     </td>
-                    <td class="editableColumns">Crypté : uniquement modifiable</td>
                     <td>
                         <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
                         <input type="submit" name="update" class="displayNone"> /
@@ -69,8 +69,8 @@
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Email</th>
-                <th>Rôle</th>
                 <th>Mot de passe</th>
+                <th>Rôle</th>
                 <th>Options</th>
             </tr>
         </thead>
@@ -88,6 +88,7 @@
                     <td class="editableColumns"><?= $v["nom"];   ?>  </td>
                     <td class="editableColumns"><?= $v["prenom"];?>   </td>
                     <td class="editableColumns"><?= $v["email"]; ?>   </td>
+                    <td class="editableColumns"><?= $v["mdp"]; ?> </td>
                     <td class="editableColumns">
                         <?php
                         if($v['lvl'] == 2){
@@ -98,7 +99,6 @@
                         }
                         ?>
                     </td>
-                    <td class="editableColumns">Crypté : uniquement modifiable</td>
                     <td>
                         <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
                         <input type="submit" name="update" class="displayNone"> /
