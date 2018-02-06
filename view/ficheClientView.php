@@ -66,7 +66,7 @@
                             <label for="adresse">* Adresse</label>
                             <input type="text" class="form-control" name="adresse"> </div>
                         <div class="form-group width-log">
-                            <label for="cp">* CP</label>
+                            <label for="cp">* Code Postal</label>
                             <input type="text" class="form-control" name="cp" pattern="0[1-9][0-9]{3}|[1-9][0-9]{0,4}|2A|2B" title="Code postal non conforme"> </div>
                         <br>
                         <br>
@@ -88,10 +88,10 @@
                             <label for="secteur_activite">* Secteur d'activité</label>
                             <input type="text" class="form-control" name="secteur_activite"> </div>
                         <div class="form-group width-log">
-                            <label for="nb_site">Nb de site</label>
+                            <label for="nb_site">Nombre de site</label>
                             <input type="number" class="form-control" name="nb_site"> </div>
                         <div class="form-group width-log">
-                            <label for="nb_salarie">Nb de salarie</label>
+                            <label for="nb_salarie">Nombre de salarie</label>
                             <input type="number" class="form-control" name="nb_salarie"> </div>
                         <div class="form-group width-log center">
                             <button class="btn btn-primary next_fiche btnPrevious" type="button">Précédent</button>
@@ -106,7 +106,7 @@
                     <div id="cycle-de-décision" class="tab-pane fade">
                         <h1 class="text-center">Cycle de décision</h1>
                         <div class="form-group width-log">
-                            <label for="prescripteur">* Préscripteur</label>
+                            <label for="prescripteur">* Prescripteur</label>
                             <input type="text" class="form-control" name="prescripteur"> </div>
                         <div class="form-group width-log">
                             <label for="decideur">* Décideur</label>
@@ -212,16 +212,6 @@
                                     <label for="noir">Noire:</label>
                                     <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
-                                <div class="form-group width-log">
-                                    <label for="couleur">Couleur:</label>
-                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
-                                </div>
-                                <br>
-                                <br>
-                                <div class="form-group width-log">
-                                    <label for="cout_noir">Coût copie noire:</label>
-                                    <input type="text" class="form-control" name="cout_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
-                                </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
@@ -229,14 +219,18 @@
                                     <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <div class="form-group width-log">
+                                    <label for="cout_noir">Coût copie noire:</label>
+                                    <input type="text" class="form-control" name="cout_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                </div>
+                                <br>
+                                <div class="form-group width-log">
                                     <label for="supp_noir">Coûts copies noires supplémentaires:</label>
                                     <input type="text" class="form-control" name="supp_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
-                                <br>
                                 <div class="form-group width-log">
-                                    <label for="cout_couleur">Coût copie couleur:</label>
-                                    <input type="text" class="form-control" name="cout_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <label for="couleur">Couleur:</label>
+                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <br>
                                 <br>
@@ -244,6 +238,12 @@
                                     <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
                                     <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
+                                <br>
+                                <div class="form-group width-log">
+                                    <label for="cout_couleur">Coût copie couleur:</label>
+                                    <input type="text" class="form-control" name="cout_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                </div>
+                                <br>
                                 <div class="form-group width-log">
                                     <label for="supp_couleur">Coûts copies couleurs supplémentaires:</label>
                                     <input type="text" class="form-control" name="supp_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
@@ -266,6 +266,9 @@
                                 <input type="text" name="countForAddProjet" value="" class="hidden">
                             </div>
                             <div class="center">
+                                <button class="btn btn-danger select_class hidden" type="button" name="submit" id="btnDelBureautique">
+                                    <span class="glyphicon glyphicon-minus"></span> Enlever un contrat bureautique
+                                </button>
                                 <button class="btn btn-primary select_class" type="button" name="submit" id="btnAdd">
                                     <span class="glyphicon glyphicon-plus"></span> Ajouter un autre contrat bureautique
                                 </button>
@@ -529,12 +532,12 @@
                                 <textarea class="form-control" name="description"></textarea>
                             </div>
                         </div>
-                        <div class="form-group width-log center">
-                           <button class="btn btn-primary next_fiche btnPrevious" type="button">Précédent</button>
-                           <button class="btn btn-success next_fiche btnNext" type="button">Suivant</button>
                         </div>
+                            <div class="form-group width-log center">
+                                <button class="btn btn-primary next_fiche btnPrevious" type="button">Précédent</button>
+                                <button class="btn btn-success next_fiche btnNext" type="button">Suivant</button>
+                            </div>
                         </div>
-                    </div>
 
                 <!----------------- FIN TÉLÉPHONIE --------------------->
                         <div id="niveau" class="tab-pane fade">

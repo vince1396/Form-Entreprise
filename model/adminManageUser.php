@@ -86,3 +86,4 @@ function deban($id_u)
     $message = "Les privilèges de l'utilisateur ont bien été réatribués";
     return $message;
 }
+// =============================================================================
