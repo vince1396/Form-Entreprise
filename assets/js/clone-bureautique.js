@@ -32,6 +32,7 @@ $(document).ready(function() {
         newElem.find('div[class^="groupe-num-ss"]:even').removeAttr('class style').attr('class','groupe-num-ss'+incrementGroupeNumSS+'').addClass('width-log');
         newElem.find('div[class^="groupe-num-ss"]:odd').removeAttr('class style').attr('class','groupe-num-ss'+incrementGroupeNumSS2+'');
         newElem.find('input[name^=countForAddProjet]').removeAttr('value').attr('value',num).val(num);
+        newElem.find('h3.title_bureautique2').replaceWith('<h3 class="title_bureautique2">Bureautique '+newNum+'');
         console.log(newNum);
         console.log(incrementGroupeNumSS);
         console.log(incrementGroupeNumSS2);

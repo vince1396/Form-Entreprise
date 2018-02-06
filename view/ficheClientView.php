@@ -145,7 +145,7 @@
                         <!----------------- DEBUT BUREAUTIQUE --------------------->
                         <div class="groupe-num-1">
                             <div class="clonedInput" id="divInput1">
-                                <h3>Bureautique</h3>
+                                <h3 class="center title_bureautique2">Bureautique</h3>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="fournisseur">Fournisseur</label>
@@ -206,15 +206,15 @@
                                     <br>
                                 </div>
                                 <br>
-                                <h3>Entretient</h3>
-                                <h4>Volume copie engagée:</h4>
+                                <h3 class="width-log">Entretient</h3>
+                                <h4 class="width-log">Volume copie engagée:</h4>
                                 <div class="form-group width-log">
                                     <label for="noir">Noire:</label>
-                                    <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="couleur">Couleur:</label>
-                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <br>
                                 <br>
@@ -226,7 +226,7 @@
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
-                                    <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="supp_noir">Coûts copies noires supplémentaires:</label>
@@ -242,7 +242,7 @@
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
-                                    <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="supp_couleur">Coûts copies couleurs supplémentaires:</label>
@@ -265,9 +265,11 @@
 
                                 <input type="text" name="countForAddProjet" value="" class="hidden">
                             </div>
-                            <button class="btn btn-primary select_class" type="button" name="submit" id="btnAdd">
-                                <span class="glyphicon glyphicon-plus"></span> Ajouter un autre contrat bureautique
-                            </button>
+                            <div class="center">
+                                <button class="btn btn-primary select_class" type="button" name="submit" id="btnAdd">
+                                    <span class="glyphicon glyphicon-plus"></span> Ajouter un autre contrat bureautique
+                                </button>
+                            </div>
                         </div>
                 <!----------------- FIN BUREAUTIQUE --------------------->
 
@@ -275,7 +277,7 @@
 
                         <!----------------- INFORMATIQUE --------------------->
                         <div class="groupe-num-2">
-                            <h3>Informatique</h3>
+                            <h3 class="center title_informatique2">Informatique</h3>
                             <div class="form-group width-log2">
                                 <label for="nom_resp">Nom du responsable:</label>
                                 <input type="text" class="form-control" name="nom_resp"> </div>
@@ -356,8 +358,8 @@
                         </div>
                         <!----------------- FIN INFORMATIQUE ----------------->
                         <!----------- SOLUTION ---------------->
-                        <div class="groupe-num-3 width-log2">
-                            <h3>Solution</h3>
+                        <div class="groupe-num-3">
+                            <h3 class="center title_solution2">Solution</h3>
                             <h4><b>GED (Organisation, distribution, stockage des docks electroniques:</b></h4>
                             <nav>
                                 <ul>
@@ -461,8 +463,9 @@
                         </div>
                         <!----------------- FIN SOLUTION --------------------->
                         <!----------------- TÉLÉPHONIE --------------------->
-                        <div class="groupe-num-4 width-log">
-                            <h3>Téléphonie</h3>
+                        <div class="groupe-num-4">
+                            <h3 class="center title_phone2">Téléphonie</h3>
+                            <div class="width-log">
                             <div class="form-group">
                                 <label for="fournisseur_t">Fournisseur:</label>
                                 <input type="text" class="form-control" name="fournisseur_t"> </div>
@@ -529,6 +532,7 @@
                         <div class="form-group width-log center">
                            <button class="btn btn-primary next_fiche btnPrevious" type="button">Précédent</button>
                            <button class="btn btn-success next_fiche btnNext" type="button">Suivant</button>
+                        </div>
                         </div>
                     </div>
 
