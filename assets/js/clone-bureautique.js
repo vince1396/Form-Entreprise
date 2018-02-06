@@ -66,14 +66,15 @@ $(document).ready(function() {
 
         $('#btnDelBureautique').click(function () {
             var numDel = $('.clonedInput').length;
-            console.log(numDel);
             if (numDel == '2') {
                 $('#btnDelBureautique').attr('disabled', 'disabled').css({
                     'display': 'none'
                 });
+
             }
             if(numDel > '2'){
-                $('.clonedInput_' + numDel).remove();
+                console.log(numDel);
+                $('#divInput_' + numDel).remove();
             }
         });
 
