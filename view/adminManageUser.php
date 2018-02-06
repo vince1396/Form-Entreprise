@@ -7,8 +7,8 @@
     <form method="post">
         <div class="table-responsive">
     <?php
-        if(isset($_POST['search'])){ ?>
-
+        if(isset($_POST['search']))
+        { ?>
             <p class="title_admin_manage center"><u>Résultats de la recherche</u></p>
     <table class="table table-striped table-bordered table-hover">
         <thead>
@@ -33,7 +33,7 @@
                     <td class="editableColumns"><?= $v["nom"];   ?>  </td>
                     <td class="editableColumns"><?= $v["prenom"];?>   </td>
                     <td class="editableColumns"><?= $v["email"]; ?>   </td>
-                    <td class="editableColumns">Crypté : uniquement modifiable</td>
+                    <td class="editableColumns"></td>
                     <td class="editableColumns">
                         <?php
                         if($v['lvl'] == 2){
@@ -88,7 +88,7 @@
                     <td class="editableColumns"><?= $v["nom"];   ?>  </td>
                     <td class="editableColumns"><?= $v["prenom"];?>   </td>
                     <td class="editableColumns"><?= $v["email"]; ?>   </td>
-                    <td class="editableColumns"><?= $v["mdp"]; ?> </td>
+                    <td class="editableColumns"></td>
                     <td class="editableColumns">
                         <?php
                         if($v['lvl'] == 2){
@@ -103,15 +103,11 @@
                         <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
                         <input type="submit" name="update" class="displayNone"> /
                         <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a></td>
-
                 </tr>
-
-
         <?php
             $number++;
         }?>
         </tbody>
-
     </table>
     </form>
     </div>

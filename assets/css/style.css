@@ -917,7 +917,8 @@ select{
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     margin-bottom: 20px;
-    height: 70%;
+    /*height: 70%;*/
+    height: 450px;
 }
 
 .info_client_right{
@@ -1034,6 +1035,19 @@ select{
   border-radius: 5px;
     border-bottom: 2px solid dodgerblue;
 }
+.title_bureautique2{
+    margin: auto;
+    background: #1b519a;
+    color: white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 30px;
+    width: 40%;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-bottom: 2px solid dodgerblue;
+
+}
 
 .bureautique_under_title{
   padding-bottom: 15px;
@@ -1063,6 +1077,18 @@ select{
     width: 100%;
     margin-top: 10px;
   margin-bottom: -10px;
+    border-radius: 5px;
+    border-bottom: 2px solid #b44800;
+}
+.title_solution2{
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 30px;
+    background: #cb7100;
+    color: white;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
     border-radius: 5px;
     border-bottom: 2px solid #b44800;
 }
@@ -1113,6 +1139,19 @@ select{
   border-radius: 5px;
   border-bottom: 2px solid #05ff0c;
 }
+.title_informatique2{
+
+    background: #189a57;
+    color: white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 30px;
+    border-radius: 5px;
+    border-bottom: 2px solid #05ff0c;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+}
 
 .phone_container{
   box-shadow: 1px 1px 12px rgba(154, 25, 19, 0.75);
@@ -1138,6 +1177,19 @@ select{
   margin-bottom: -10px;
   border-radius: 5px;
   border-bottom:2px solid #ff2f00;
+}
+.title_phone2{
+
+    background: #9a1913;
+    color: white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 30px;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-bottom:2px solid #ff2f00;
 }
 
 .phone_under_title{
@@ -1201,7 +1253,8 @@ select{
 }
 
 .background-admin{
-  background: url('../css/background-admin.jpg') no-repeat 60% 30% fixed;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  background: url('../css/background-admin.jpg') 0 fixed;
 }
 
 .next_fiche{
@@ -1233,4 +1286,12 @@ select{
 
 .title_admin_manage{
     font-size: 30px;
+}
+
+input:invalid {
+    background-color: #ffdddd;
+}
+
+.underline{
+    text-decoration: underline;
 }

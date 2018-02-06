@@ -66,7 +66,7 @@
                             <label for="adresse">* Adresse</label>
                             <input type="text" class="form-control" name="adresse"> </div>
                         <div class="form-group width-log">
-                            <label for="cp">* CP</label>
+                            <label for="cp">* Code Postal</label>
                             <input type="text" class="form-control" name="cp" pattern="0[1-9][0-9]{3}|[1-9][0-9]{0,4}|2A|2B" title="Code postal non conforme"> </div>
                         <br>
                         <br>
@@ -88,10 +88,10 @@
                             <label for="secteur_activite">* Secteur d'activité</label>
                             <input type="text" class="form-control" name="secteur_activite"> </div>
                         <div class="form-group width-log">
-                            <label for="nb_site">Nb de site</label>
+                            <label for="nb_site">Nombre de site</label>
                             <input type="number" class="form-control" name="nb_site"> </div>
                         <div class="form-group width-log">
-                            <label for="nb_salarie">Nb de salarie</label>
+                            <label for="nb_salarie">Nombre de salarie</label>
                             <input type="number" class="form-control" name="nb_salarie"> </div>
                         <div class="form-group width-log center">
                             <button class="btn btn-primary next_fiche btnPrevious" type="button">Précédent</button>
@@ -106,7 +106,7 @@
                     <div id="cycle-de-décision" class="tab-pane fade">
                         <h1 class="text-center">Cycle de décision</h1>
                         <div class="form-group width-log">
-                            <label for="prescripteur">* Préscripteur</label>
+                            <label for="prescripteur">* Prescripteur</label>
                             <input type="text" class="form-control" name="prescripteur"> </div>
                         <div class="form-group width-log">
                             <label for="decideur">* Décideur</label>
@@ -145,7 +145,7 @@
                         <!----------------- DEBUT BUREAUTIQUE --------------------->
                         <div class="groupe-num-1">
                             <div class="clonedInput" id="divInput1">
-                                <h3>Bureautique</h3>
+                                <h3 class="center title_bureautique2">Bureautique</h3>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="fournisseur">Fournisseur</label>
@@ -167,7 +167,7 @@
                                 <br>
                                 <div class="groupe-num-ss1 width-log">
                                     <label for="achat_b">Prix €(HT)</label>
-                                    <input type="text" class="form-control" name="achat_b[]">
+                                    <input type="text" class="form-control" name="achat_b[]" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                     <br>
                                     <div class="form-group">
                                         <label for="materiel_achat">Matériel + accessoire:</label>
@@ -183,7 +183,7 @@
                                     <br>
                                     <div class="form-group width-log">
                                         <label for="loyer_b">Loyer €(HT)</label>
-                                        <input type="text" class="form-control" name="loyer_b[]">
+                                        <input type="text" class="form-control" name="loyer_b[]" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                     </div>
                                     <br>
                                     <div class="form-group width-log">
@@ -206,47 +206,47 @@
                                     <br>
                                 </div>
                                 <br>
-                                <h3>Entretient</h3>
-                                <h4>Volume copie engagée:</h4>
+                                <h3 class="width-log">Entretient</h3>
+                                <h4 class="width-log">Volume copie engagée:</h4>
                                 <div class="form-group width-log">
                                     <label for="noir">Noire:</label>
-                                    <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre">
-                                </div>
-                                <div class="form-group width-log">
-                                    <label for="couleur">Couleur:</label>
-                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre">
-                                </div>
-                                <br>
-                                <br>
-                                <div class="form-group width-log">
-                                    <label for="cout_noir">Coût copie noire:</label>
-                                    <input type="text" class="form-control" name="cout_noir[]" placeholder="€ (HT)">
+                                    <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
-                                    <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre">
+                                    <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
+                                <div class="form-group width-log">
+                                    <label for="cout_noir">Coût copie noire:</label>
+                                    <input type="text" class="form-control" name="cout_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                </div>
+                                <br>
                                 <div class="form-group width-log">
                                     <label for="supp_noir">Coûts copies noires supplémentaires:</label>
-                                    <input type="text" class="form-control" name="supp_noir[]" placeholder="€ (HT)">
+                                    <input type="text" class="form-control" name="supp_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
-                                <br>
                                 <div class="form-group width-log">
-                                    <label for="cout_couleur">Coût copie couleur:</label>
-                                    <input type="text" class="form-control" name="cout_couleur[]" placeholder="€ (HT)">
+                                    <label for="couleur">Couleur:</label>
+                                    <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
-                                    <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre">
+                                    <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
+                                <br>
+                                <div class="form-group width-log">
+                                    <label for="cout_couleur">Coût copie couleur:</label>
+                                    <input type="text" class="form-control" name="cout_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                </div>
+                                <br>
                                 <div class="form-group width-log">
                                     <label for="supp_couleur">Coûts copies couleurs supplémentaires:</label>
-                                    <input type="text" class="form-control" name="supp_couleur[]" placeholder="€ (HT)">€ HT
+                                    <input type="text" class="form-control" name="supp_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
                                 <br>
@@ -265,9 +265,14 @@
 
                                 <input type="text" name="countForAddProjet" value="" class="hidden">
                             </div>
-                            <button class="btn btn-primary select_class" type="button" name="submit" id="btnAdd">
-                                <span class="glyphicon glyphicon-plus"></span> Ajouter un autre contrat bureautique
-                            </button>
+                            <div class="center">
+                                <button class="btn btn-danger select_class hidden" type="button" name="submit" id="btnDelBureautique">
+                                    <span class="glyphicon glyphicon-minus"></span> Enlever un contrat bureautique
+                                </button>
+                                <button class="btn btn-primary select_class" type="button" name="submit" id="btnAdd">
+                                    <span class="glyphicon glyphicon-plus"></span> Ajouter un autre contrat bureautique
+                                </button>
+                            </div>
                         </div>
                 <!----------------- FIN BUREAUTIQUE --------------------->
 
@@ -275,7 +280,7 @@
 
                         <!----------------- INFORMATIQUE --------------------->
                         <div class="groupe-num-2">
-                            <h3>Informatique</h3>
+                            <h3 class="center title_informatique2">Informatique</h3>
                             <div class="form-group width-log2">
                                 <label for="nom_resp">Nom du responsable:</label>
                                 <input type="text" class="form-control" name="nom_resp"> </div>
@@ -356,8 +361,8 @@
                         </div>
                         <!----------------- FIN INFORMATIQUE ----------------->
                         <!----------- SOLUTION ---------------->
-                        <div class="groupe-num-3 width-log2">
-                            <h3>Solution</h3>
+                        <div class="groupe-num-3">
+                            <h3 class="center title_solution2">Solution</h3>
                             <h4><b>GED (Organisation, distribution, stockage des docks electroniques:</b></h4>
                             <nav>
                                 <ul>
@@ -461,8 +466,9 @@
                         </div>
                         <!----------------- FIN SOLUTION --------------------->
                         <!----------------- TÉLÉPHONIE --------------------->
-                        <div class="groupe-num-4 width-log">
-                            <h3>Téléphonie</h3>
+                        <div class="groupe-num-4">
+                            <h3 class="center title_phone2">Téléphonie</h3>
+                            <div class="width-log">
                             <div class="form-group">
                                 <label for="fournisseur_t">Fournisseur:</label>
                                 <input type="text" class="form-control" name="fournisseur_t"> </div>
@@ -526,11 +532,12 @@
                                 <textarea class="form-control" name="description"></textarea>
                             </div>
                         </div>
-                        <div class="form-group width-log center">
-                           <button class="btn btn-primary next_fiche btnPrevious" type="button">Précédent</button>
-                           <button class="btn btn-success next_fiche btnNext" type="button">Suivant</button>
                         </div>
-                    </div>
+                            <div class="form-group width-log center">
+                                <button class="btn btn-primary next_fiche btnPrevious" type="button">Précédent</button>
+                                <button class="btn btn-success next_fiche btnNext" type="button">Suivant</button>
+                            </div>
+                        </div>
 
                 <!----------------- FIN TÉLÉPHONIE --------------------->
                         <div id="niveau" class="tab-pane fade">
