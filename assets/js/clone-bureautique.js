@@ -12,54 +12,71 @@ $(document).ready(function() {
     //         console.log(numberItems);
     //     });
 
-    $('#btnAdd').click(function () {
-        var num = $('.clonedInput').length; // how many "duplicatable" input fields we currently have
-        var newNum = new Number(num + 1); // the numeric ID of the new input field being added
-        var incrementGroupeNumSS = new Number(num + newNum);
-        var incrementGroupeNumSS2 = new Number(num + newNum +1);
-        // create the new element via clone(), and manipulate it's ID using newNum value
-        var newElem = $('#divInput' + num).clone().attr('id', 'divInput' + newNum);
+        $('#btnAdd').click(function () {
+            var num = $('.clonedInput').length; // how many "duplicatable" input fields we currently have
+            var newNum = new Number(num + 1); // the numeric ID of the new input field being added
+            var incrementGroupeNumSS = new Number(num + newNum);
+            var incrementGroupeNumSS2 = new Number(num + newNum + 1);
+            // create the new element via clone(), and manipulate it's ID using newNum value
+            var newElem = $('#divInput' + num).clone().attr('id', 'divInput' + newNum);
 
-        // clear input value for cloned items
-        newElem.find('input,textarea').val('');
-        newElem.find('div[id^="sBuyRent"]').removeAttr('id checked').attr('id','sBuyRent_'+num+'');
-        newElem.find('input[name^="achat["]').removeAttr('name checked').attr('name','achat['+num+']').prop('checked',false);
-        newElem.find('input[name^="achat["]:even').attr({value:'1', checked:'checked'}).prop('checked',true);
-        newElem.find('input[name^="achat["]:odd').attr('value','2');
-        newElem.find('input[name^="prelevement"]').removeAttr('name checked').attr('name','prelevement['+num+']').prop('checked',false);
-        newElem.find('input[name^="prelevement"]:even').attr({value:'1',checked:'checked'}).prop('checked',true);
-        newElem.find('input[name^="prelevement"]:odd').attr('value','2');
-        newElem.find('div[class^="groupe-num-ss"]:even').removeAttr('class style').attr('class','groupe-num-ss'+incrementGroupeNumSS+'').addClass('width-log');
-        newElem.find('div[class^="groupe-num-ss"]:odd').removeAttr('class style').attr('class','groupe-num-ss'+incrementGroupeNumSS2+'');
-        newElem.find('input[name^=countForAddProjet]').removeAttr('value').attr('value',num).val(num);
-        newElem.find('h3.title_bureautique2').replaceWith('<h3 class="title_bureautique2">Bureautique '+newNum+'');
-        console.log(newNum);
-        console.log(incrementGroupeNumSS);
-        console.log(incrementGroupeNumSS2);
+            // clear input value for cloned items
+            newElem.find('input,textarea').val('');
+            newElem.find('div[id^="sBuyRent"]').removeAttr('id checked').attr('id', 'sBuyRent_' + num + '');
+            newElem.find('input[name^="achat["]').removeAttr('name checked').attr('name', 'achat[' + num + ']').prop('checked', false);
+            newElem.find('input[name^="achat["]:even').attr({value: '1', checked: 'checked'}).prop('checked', true);
+            newElem.find('input[name^="achat["]:odd').attr('value', '2');
+            newElem.find('input[name^="prelevement"]').removeAttr('name checked').attr('name', 'prelevement[' + num + ']').prop('checked', false);
+            newElem.find('input[name^="prelevement"]:even').attr({
+                value: '1',
+                checked: 'checked'
+            }).prop('checked', true);
+            newElem.find('input[name^="prelevement"]:odd').attr('value', '2');
+            newElem.find('div[class^="groupe-num-ss"]:even').removeAttr('class style').attr('class', 'groupe-num-ss' + incrementGroupeNumSS + '').addClass('width-log');
+            newElem.find('div[class^="groupe-num-ss"]:odd').removeAttr('class style').attr('class', 'groupe-num-ss' + incrementGroupeNumSS2 + '');
+            newElem.find('input[name^=countForAddProjet]').removeAttr('value').attr('value', num).val(num);
+            newElem.find('h3.title_bureautique2').replaceWith('<h3 class="title_bureautique2">Bureautique ' + newNum + '');
+            console.log(newNum);
+            console.log(incrementGroupeNumSS);
+            console.log(incrementGroupeNumSS2);
 
-        
+
 //        newElem.find(':input').each(function () {
 //            $(this).attr('id', $(this).attr('id').replace(/\d+/, newNum));
 //            $(this).attr('name', $(this).attr('name').replace(/\d+/, newNum));
 //        });
 
-        // insert the new element after the last "duplicatable" input field
-        $('#divInput' + num).after(newElem);
+            // insert the new element after the last "duplicatable" input field
+            $('#divInput' + num).after(newElem);
 
-        // enable the "remove" button
-        $('#btnDel').attr('disabled', '');
+            // enable the "remove" button
+            // $('#btnDelBureautique').attr('disabled', '');
+            $('#btnDelBureautique').removeClass('hidden').removeAttr('disabled');
 
 
+            // business rule: you can only add 5 names
+            if (newNum == 5) {
+                $('#btnAdd').attr('disabled', 'disabled');
+            } else {
+                $('#btnAdd').removeAttr('disabled', 'disabled');
+            }
+            if (newNum > 1)
+                $('#btnDelBureautique').removeAttr('disabled', 'disabled');
+        });
 
-        // business rule: you can only add 5 names
-        if (newNum == 5) {
-            $('#btnAdd').attr('disabled', 'disabled');
-        } else {
-            $('#btnAdd').removeAttr('disabled', 'disabled');
-        }
-        if (newNum > 1)
-            $('#btnDel').removeAttr('disabled', 'disabled');
-    });
+        $('#btnDelBureautique').click(function () {
+            var numDel = $('.clonedInput').length;
+            console.log(numDel);
+            if (numDel == '2') {
+                $('#btnDelBureautique').attr('disabled', 'disabled').css({
+                    'display': 'none'
+                });
+            }
+            if(numDel > '2'){
+                $('.clonedInput_' + numDel).remove();
+            }
+        });
+
     $(document).change(function(){
         $("#sBuyRent").change(function () {
             console.log("hi2");
