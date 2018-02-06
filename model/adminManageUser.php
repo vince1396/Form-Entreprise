@@ -75,15 +75,5 @@ function getUsers()
       $req->execute();
   }
 // =============================================================================
-function deban($id_u)
-{
-    global $bdd;
 
-    $req = $bdd->prepare("UPDATE user SET lvl = 1 WHERE id_u = :id_u");
-    $req->bindValue(":id_u", $id_u, PDO::PARAM_INT);
-    $req->execute();
-
-    $message = "Les privilèges de l'utilisateur ont bien été réatribués";
-    return $message;
-}
 // =============================================================================
