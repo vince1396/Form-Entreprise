@@ -1201,7 +1201,8 @@ select{
 }
 
 .background-admin{
-  background: url('../css/background-admin.jpg') no-repeat 60% 30% fixed;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  background: url('../css/background-admin.jpg') 0 fixed;
 }
 
 .next_fiche{

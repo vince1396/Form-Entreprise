@@ -2,7 +2,7 @@
 <!--    <a href="adminCreateUser"><button class="btn btn-primary margin_bottom">Créer utilisateur</button></a>-->
 <!--    <a href="adminManageUser"><button class="btn btn-primary margin_bottom">Consulter utilisateur</button></a>-->
 <!--</div>-->
-<div class="background-admin">
+<body class="background-admin">
 <section id="adminview">
     <div class="container">
         <div class="row">
@@ -38,4 +38,4 @@
         </div>
     </div>
 </section>
-</div>
+</body>
