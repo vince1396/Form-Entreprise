@@ -51,7 +51,9 @@ $(document).ready(function() {
 
             // enable the "remove" button
             // $('#btnDelBureautique').attr('disabled', '');
-            $('#btnDelBureautique').removeClass('hidden').removeAttr('disabled');
+            $('#btnDelBureautique').removeClass('hidden').removeAttr('disabled').css({
+                'display' : 'inline'
+            });
 
 
             // business rule: you can only add 5 names
@@ -67,14 +69,20 @@ $(document).ready(function() {
         $('#btnDelBureautique').click(function () {
             var numDel = $('.clonedInput').length;
             if (numDel == '2') {
+                console.log('numDel = 2');
                 $('#btnDelBureautique').attr('disabled', 'disabled').css({
                     'display': 'none'
                 });
-
+                $('#divInput' + numDel).remove();
             }
             if(numDel > '2'){
-                console.log(numDel);
-                $('#divInput_' + numDel).remove();
+                console.log('numDel > 2');
+                $('#divInput' + numDel).remove();
+                $('#btnAdd').removeAttr('disabled', 'disabled');
+            }
+            if(numDel == '4'){
+                console.log('le removeattr de btnadd ')
+                $('#btnAdd').removeAttr('disabled', 'disabled');
             }
         });
 
