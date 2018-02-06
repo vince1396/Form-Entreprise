@@ -63,7 +63,7 @@
                         <?= $number; ?>
                     </td>
                     <td><span><?= $v["nom"].' '.$v["prenom"]; ?></span></td>
-                    <td><span><?= $v["prise_rdv"]; ?></span></td>
+                    <td><span><?= $v["raison"]; ?></span></td>
                     <td><span><?= $v["nom_c"]; ?></span></td>
                     <td><?= $v['date_rdv']; ?></td>
                     <td><span><a href="index.php?p=consulter&id=<?= $v["id_f"]; ?>">Voir le dossier</a></span>
