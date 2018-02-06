@@ -3,11 +3,11 @@
 
     $number = 1;
 // =============================================================================
-    if(isset($_POST['search'])) {
+    if(isset($_POST['search']))
+    {
         $rechercher = $_POST['rechercher'];
         $number = 1;
         $req = searchUser($rechercher);
-
     }
 // =============================================================================
     if(isset($_GET['supp']) && !empty($_GET['supp']))
@@ -36,5 +36,10 @@
         }
     }
 // =============================================================================
+    if(isset($_GET['deban']))
+    {
+        $id_u = $_POST('deban');
+        $message = deban($id_u);
+    }
 
   require "view/adminManageUser.php";

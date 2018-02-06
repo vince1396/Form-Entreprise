@@ -39,6 +39,9 @@ function getUsers()
     $req = $bdd->prepare("UPDATE user SET lvl = 0 WHERE id_u = :id_u");
     $req->bindValue(":id_u", $id_u, PDO::PARAM_INT);
     $req->execute();
+
+    $message = "L'utilisateur a bien été banni";
+    return $message;
   }
 // =============================================================================
   function searchUser($rechercher)
@@ -71,19 +74,15 @@ function getUsers()
       $req->bindValue(":mdp", $mdp, PDO::PARAM_STR);
       $req->execute();
   }
-function updateUser2($id_u, $nom, $prenom, $email)
+// =============================================================================
+function deban($id_u)
 {
     global $bdd;
 
-    $req = $bdd->prepare("UPDATE user 
-                            SET nom = :nom, 
-                            prenom = :prenom, 
-                            email = :email
-                            WHERE id_u = :id_u");
+    $req = $bdd->prepare("UPDATE user SET lvl = 1 WHERE id_u = :id_u");
     $req->bindValue(":id_u", $id_u, PDO::PARAM_INT);
-    $req->bindValue(":nom", $nom, PDO::PARAM_STR);
-    $req->bindValue(":prenom", $prenom, PDO::PARAM_STR);
-    $req->bindValue(":email", $email, PDO::PARAM_STR);
     $req->execute();
+
+    $message = "Les privilèges de l'utilisateur ont bien été réatribués";
+    return $message;
 }
-// =============================================================================

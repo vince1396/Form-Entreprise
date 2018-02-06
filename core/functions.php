@@ -27,13 +27,11 @@
                       $chef = 0;
                       insertUser($nom, $prenom, $email, $mdp, $role, $chef);
                       $message = "L'utilisateur a bien été ajouté";
-
                   }
                   else
                   {
                       insertUser($nom, $prenom, $email, $mdp, $role, $chef);
                       $message = "L'utilisateur a bien été ajouté";
-
                   }
 
                   return $message;
