@@ -853,14 +853,13 @@ select{
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     margin-bottom: 20px;
-    height: 50%;
-
+    /*height: 50%;*/    height: 275px;
 }
 
 .info_comm_left{
     background: url("comm.jpg") no-repeat 40% 20%;
     border-right: 2px solid rgba(0, 0, 0, 0.7);
-    height: 100%;
+    height: 250px;
     width: 40%;
 }
 
@@ -872,7 +871,7 @@ select{
     border-bottom: 1px solid silver;
     border-top: 1px solid silver;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/    height: 250px;
     background: white;
 }
 
@@ -979,7 +978,7 @@ select{
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     margin-bottom: 20px;
-    height: 50%;
+    /*height: 50%;*/    height : 270px;
 }
 
 .title_cycle{
@@ -997,7 +996,7 @@ select{
 .info_cycle_left{
     background: url("cycle.jpg") no-repeat 60% 50%;
     border-right: 2px solid rgba(0, 0, 0, 0.7);
-    height: 100%;
+    /*height: 100%;*/ height:250px;
     width: 40%;
 }
 
@@ -1294,4 +1293,9 @@ input:invalid {
 
 .underline{
     text-decoration: underline;
+}
+@media print{
+    .info_client_right, .info_comm_left, .info_cycle_left, .bg-dark, #mainNav{
+        display: none;
+    }
 }
