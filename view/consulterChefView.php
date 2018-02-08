@@ -1,7 +1,7 @@
 <div class="white_body container">
                <h2 class="center">Fiches client de <?= $req2['prenom']." ".$req2['nom'];?></h2>
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover">
+                    <table class="table table-striped table-bordered table-hover tablesorter" id="sortTable_5">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -25,7 +25,29 @@
                                     <td><span><?= $v["nom_c"]; ?></span></td>
                                     <td><span><?= $v["date_rdv"]; ?></span></td>
                                     <td><span><a href="index.php?p=detailDossier&id1=<?=$v["id_f"];?>&id2=<?=$v["id_u"];?>">Voir le dossier</a></span></td>
-                                    <td><span><?= $v["interet"]; ?></span></td>
+                                    <td>
+                                        <span class="hidden"><?= $v['interet']; ?></span>
+                                        <?php
+                                        if($v["interet"] == "1"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star red-star'></i>";
+                                            }
+                                        }
+                                        if($v["interet"] == "2"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star yellow-star'></i>";
+                                            }
+                                        }
+                                        if($v["interet"] == "3"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star green-star'></i>";
+                                            }
+                                        }
+                                        ?>
+                                    </td>
                                 </tr>
                                 <?php $number++; } ?>
                         </tbody>

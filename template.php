@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <!-- BOOTSTRAP STYLES-->
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css"/>
     <!-- FONTAWESOME STYLES-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
@@ -15,6 +16,7 @@
 	<link rel="stylesheet" href="assets/css/star-rating.css" type="text/css"/>
    	<link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 </head>
 

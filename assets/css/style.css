@@ -1399,3 +1399,12 @@ input:invalid {
         border-bottom: 2px solid #9a1913;
     }
 }
+.red-star{
+    color:red;
+}
+.yellow-star{
+    color:orange;
+}
+.green-star{
+    color:green;
+}

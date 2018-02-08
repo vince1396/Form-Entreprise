@@ -25,8 +25,9 @@
 
                        <!-------------------------------------------->
 
-                    <label for="date_min" class="label_date">Entre le:
-                    <input type="date" name="date_min"></label>
+                            <label for="date_min" class="label_date">Entre le:</label>
+                            <input type="date" name="date_min">
+
                     <label for="date_max" class="label_date">Et le:
                     <input type="date" name="date_max"></label>
                     <label for="rechercher" class="label_search">
@@ -45,7 +46,7 @@
                         <br>
                         <h3>Résultats de la recherche:</h3>
                     <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover table_historique">
+                    <table class="table table-striped table-bordered table-hover table_historique tablesorter" id="sortTable_1">
                         <thead>
                             <tr>
                                 <th class="th_search">#</th>
@@ -68,7 +69,28 @@
                                     <td><?= $v['date_rdv']; ?></td>
                                     <td><span><a href="index.php?p=consulter&id=<?= $v["id_f"]; ?>">Voir le dossier</a></span>
                                     </td>
-                                    <td><?= $v['interet']; ?></td>
+                                    <td><span class="hidden"><?= $v['interet']; ?></span>
+                                        <?php
+                                        if($v["interet"] == "1"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star red-star'></i>";
+                                            }
+                                        }
+                                        if($v["interet"] == "2"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star yellow-star'></i>";
+                                            }
+                                        }
+                                        if($v["interet"] == "3"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star green-star'></i>";
+                                            }
+                                        }
+                                        ?>
+                                    </td>
                                 </tr>
                                 <?php $number++; ?>
 
@@ -97,7 +119,7 @@
                 ?>
                 <div class="table-responsive">
                    <h3 class="center">Liste des clients</h3>
-                    <table class="table table-striped table-bordered table-hover">
+                    <table class="table table-striped table-bordered table-hover tablesorter" id="sortTable_2">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -121,7 +143,28 @@
                                     <td><span><?= $v["nom_c"]; ?></span></td>
                                     <td><?= $v['date_rdv'];?></td>
                                     <td><span><a href="index.php?p=consulter&id=<?=$v["id_f"];?>">Voir le dossier</a></span></td>
-                                    <td><?= $v['interet'];?></td>
+                                    <td><span class="hidden"><?= $v['interet']; ?></span>
+                                        <?php
+                                        if($v["interet"] == "1"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star red-star'></i>";
+                                            }
+                                        }
+                                        if($v["interet"] == "2"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star yellow-star'></i>";
+                                            }
+                                        }
+                                        if($v["interet"] == "3"){
+                                            for($i = 0; $i < $v["interet"]; $i++)
+                                            {
+                                                echo "<i class='fa fa-star green-star'></i>";
+                                            }
+                                        }
+                                        ?>
+                                    </td>
                                 </tr>
                                 <?php $number++; } ?>
                         </tbody>

@@ -19,9 +19,14 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/bootstrap-fileupload.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <!-- JS TO SORT TABLE -->
+    <script type="text/javascript" src="assets/js/jquery-latest.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.tablesorter.js"></script>
      <!-- STAR RATING -->
      <script src="assets/js/star-rating.js"></script>
       <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/select.js"></script>
     <script src="assets/js/clone-bureautique.js"></script>
+

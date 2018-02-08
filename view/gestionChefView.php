@@ -43,7 +43,7 @@
     <br>
     <h3>Résultats de la recherche:</h3>
     <div class="table-responsive">
-        <table class="table table-striped table-bordered table-hover table_historique">
+        <table class="table table-striped table-bordered table-hover table_historique tablesorter" id="sortTable_3">
             <thead>
             <tr>
                 <th class="th_search">#</th>
@@ -68,7 +68,29 @@
                     <td><?= $v['date_rdv']; ?></td>
                     <td><span><a href="index.php?p=consulter&id=<?= $v["id_f"]; ?>">Voir le dossier</a></span>
                     </td>
-                    <td><?= $v['interet']; ?></td>
+                    <td>
+                        <span class="hidden"><?= $v['interet']; ?></span>
+                        <?php
+                        if($v["interet"] == "1"){
+                            for($i = 0; $i < $v["interet"]; $i++)
+                            {
+                                echo "<i class='fa fa-star red-star'></i>";
+                            }
+                        }
+                        if($v["interet"] == "2"){
+                            for($i = 0; $i < $v["interet"]; $i++)
+                            {
+                                echo "<i class='fa fa-star yellow-star'></i>";
+                            }
+                        }
+                        if($v["interet"] == "3"){
+                            for($i = 0; $i < $v["interet"]; $i++)
+                            {
+                                echo "<i class='fa fa-star green-star'></i>";
+                            }
+                        }
+                        ?>
+                    </td>
                 </tr>
                 <?php $number++; ?>
 
@@ -93,7 +115,7 @@
                 }?>
                <h2 class="center">Liste des commerciaux</h2>
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover">
+                    <table class="table table-striped table-bordered table-hover tablesorter" id="sortTable_4">
                         <thead>
                             <tr>
                                 <th>#</th>
