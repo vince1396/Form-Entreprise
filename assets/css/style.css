@@ -744,8 +744,17 @@ select{
   border: 2px solid darkred;
   width: 300px;
   margin: auto;
-  margin-bottom: 10px;
   border-radius: 5px;
+}
+.error2{
+    background: red;
+    font-size: 14px;
+    border: 2px solid darkred;
+    width: 200px;
+    margin: auto;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
 }
 
 .label_date{
@@ -836,6 +845,12 @@ select{
   padding-top: 50px;
   background: white;
 }
+.border_consult2{
+    padding-bottom: 140px;
+    padding-top: 50px;
+    background: white;
+}
+
 
 .row1{
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
@@ -882,6 +897,7 @@ select{
 }
 
 @media screen and (max-width: 640px) {
+
     .content_comm2{
         font-size: 12px;
     }
@@ -893,6 +909,10 @@ select{
     .title_comm{
         font-size: 10px;
     }
+    .search_bar_admin{
+        width: 100%;
+    }
+
 }
 
 .title_comm{
@@ -950,6 +970,18 @@ select{
     border-bottom: 1px solid silver;
 }
 
+.admin_create{
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background: white;
+}
+
 @media screen and (max-width: 640px) {
     .content_client2{
         font-size: 11px;
@@ -962,6 +994,21 @@ select{
 
     .title_client{
         font-size: 15px;
+    }
+    .form_search{
+        margin: auto;
+        margin-top: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .title_admin_manage {
+        font-size: 20px;
+    }
+    .title_admin_create{
+        font-size: 22px;
+        text-align: center;
+        font-style: oblique;
     }
 }
 
@@ -1040,12 +1087,11 @@ select{
     color: white;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
-    font-size: 30px;
-    width: 40%;
+    font-size: 20px;
+    width: 100%;
     margin-top: 30px;
     border-radius: 5px;
     border-bottom: 2px solid dodgerblue;
-
 }
 
 .bureautique_under_title{
@@ -1082,10 +1128,10 @@ select{
 .title_solution2{
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     background: #cb7100;
     color: white;
-    width: 40%;
+    width: 100%;
     margin: auto;
     margin-top: 30px;
     border-radius: 5px;
@@ -1139,17 +1185,17 @@ select{
   border-bottom: 2px solid #05ff0c;
 }
 .title_informatique2{
-
     background: #189a57;
     color: white;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 5px;
     border-bottom: 2px solid #05ff0c;
-    width: 40%;
+    width: 100%;
     margin: auto;
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .phone_container{
@@ -1178,13 +1224,12 @@ select{
   border-bottom:2px solid #ff2f00;
 }
 .title_phone2{
-
     background: #9a1913;
     color: white;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
-    font-size: 30px;
-    width: 40%;
+    font-size: 20px;
+    width: 100%;
     margin: auto;
     margin-top: 30px;
     border-radius: 5px;
@@ -1215,28 +1260,11 @@ select{
   color: white;
 }
 
-.admin_create{
-  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
-  width: 70%;
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 100px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  background: white;
-}
-
 .form_create{
   /*border-top: 1px solid black;*/
   padding-top: 20px;
   padding-bottom: 0px;
   box-shadow: 0px -10px 12px -10px #666 ;
-}
-
-.title_admin_create{
-  text-align: center;
-  font-size: 30px;
 }
 
 .submit_create{
@@ -1248,7 +1276,7 @@ select{
 .select_admin{
   background: #1b519a;
   color: white;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .background-admin{
@@ -1263,10 +1291,97 @@ select{
 .form_search{
     margin: auto;
     margin-top: 20px;
-    width: 30%;
+    width: 100%;
     margin-bottom: 20px;
 }
+@media screen and (min-width: 992px){
+    .form_search{
+        margin: auto;
+        margin-top: 20px;
+        width: 30%;
+        margin-bottom: 20px;
+    }
+    .title_admin_manage{
+        font-size: 30px;
+    }
+    .admin_create{
+        box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+        width: 70%;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 100px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        background: white;
+    }
+    .title_admin_create{
+        text-align: center;
+        font-size: 30px;
+    }
+    .error2{
+        background: red;
+        font-size: 18px;
+        border: 2px solid darkred;
+        width: 400px;
+        margin: auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+    }
+    .title_bureautique2{
+        margin: auto;
+        background: #1b519a;
+        color: white;
+        box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        font-size: 30px;
+        width: 40%;
+        margin-top: 30px;
+        border-radius: 5px;
+        border-bottom: 2px solid dodgerblue;
+    }
+    .title_informatique2{
 
+        background: #189a57;
+        color: white;
+        box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        font-size: 30px;
+        border-radius: 5px;
+        border-bottom: 2px solid #05ff0c;
+        width: 40%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .title_phone2{
+        background: #9a1913;
+        color: white;
+        box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        font-size: 30px;
+        width: 40%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border-bottom:2px solid #ff2f00;
+    }
+    .title_solution2{
+        box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        font-size: 30px;
+        background: #cb7100;
+        color: white;
+        width: 40%;
+        margin: auto;
+        margin-top: 30px;
+        border-radius: 5px;
+        border-bottom: 2px solid #b44800;
+    }
+
+}
 .search_bar_admin{
     width: 70%;
     height: 5%;
@@ -1281,10 +1396,6 @@ select{
     border: 2px solid #1473c0;
     background: #2b95cc;
     color: white;
-}
-
-.title_admin_manage{
-    font-size: 30px;
 }
 
 input:invalid {
@@ -1398,6 +1509,11 @@ input:invalid {
         border-right: 2px solid #9a1913;
         border-bottom: 2px solid #9a1913;
     }
+}
+
+.padding_inside{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .red-star{
     color:red;

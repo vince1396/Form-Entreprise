@@ -1,21 +1,22 @@
-<div class="container white_body">
+<div class="container border_consult2">
 
  <form class="form_search" action="#" method="post">
   <input type="text" name="rechercher" placeholder="Rechercher un utilisateur" class="search_bar_admin">
   <input type="submit" name="search" class="submit_search_admin">
 </form>
     <form method="post">
-        <div class="table-responsive">
+
     <?php
         if(isset($_POST['search']))
         { ?>
-            <p class="title_admin_manage center"><u>Résultats de la recherche</u></p>
+        <p class="title_admin_manage center"><u>Résultats de la recherche</u></p>
+        <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr>
             <th class="th_search">#</th>
-            <th><a href="index.php?p=adminManageUser&filter=nom">Nom</a></th>
-            <th><a href="index.php?p=adminManageUser&filter=prenom">Prénom</a></th>
+            <th class="th_search"><a href="index.php?p=adminManageUser&filter=nom">Nom</a></th>
+            <th class="th_search"><a href="index.php?p=adminManageUser&filter=prenom">Prénom</a></th>
             <th class="th_search">Email</th>
             <th class="th_search">Mot de passe</th>
             <th class="th_search">Rôle</th>
@@ -50,23 +51,29 @@
                         <input type="submit" name="update" class="displayNone"> /
                         <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a></td>
                 </tr>
-          <?php  }
-        }
-    ?>
+
+          <?php  } ?>
         </tbody>
     </table>
     </form>
 </div>
-    <div>
+
+        <?php
+        }
+
+    ?>
+
+
         <p class="title_admin_manage center"><u>Liste des utilisateurs</u></p>
         <form action="#" method="post">
             <label for="role">Afficher :</label>
-            <select name="role">
+            <select name="role" class="select_admin">
                 <option value="2">Chefs de vente</option>
                 <option value="1">Commerciaux</option>
             </select>
             <input type="submit" value="Valider" name="triRole" />
         </form>
+<div class="table-responsive">
     <form method="post">
     <table class="table table-striped table-bordered table-hover">
         <thead>
@@ -77,6 +84,7 @@
                 <th>Email</th>
                 <th>Mot de passe</th>
                 <th>Rôle</th>
+                <th>Chef</th>
                 <th>Options</th>
             </tr>
         </thead>

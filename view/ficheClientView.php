@@ -13,7 +13,7 @@
             </div>
             <form class="form-group" method="post">
                 <div class="tab-content">
-                    <div id="commercial" class="tab-pane fade in active">
+                    <div id="commercial" class="tab-pane padding_inside fade in active">
                         <br>
                         <br>
                         <h1 class="text-center">Commercial</h1>
@@ -45,7 +45,7 @@
                     <br>
 
                     
-                    <div id="raison-sociale" class="tab-pane fade">
+                    <div id="raison-sociale" class="tab-pane fade padding_inside">
                         <h1 class="text-center">Raison Sociale</h1>
                         <div class="form-group text-center width-log">
                             <label for="prospect">Prospect</label>
@@ -103,7 +103,7 @@
                     
                     
                     
-                    <div id="cycle-de-décision" class="tab-pane fade">
+                    <div id="cycle-de-décision" class="tab-pane fade padding_inside">
                         <h1 class="text-center">Cycle de décision</h1>
                         <div class="form-group width-log">
                             <label for="prescripteur">* Prescripteur</label>
@@ -125,7 +125,7 @@
                     <br>
                     <br>
                     <br>
-                    <div id="centre" class="tab-pane fade">
+                    <div id="centre" class="tab-pane fade padding_inside">
                         <hr class="custom">
                         <h1 class="text-center">Centre d'intérêt</h1>
                         <div class="form-group width-log text-center" id="select_place">

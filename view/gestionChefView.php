@@ -1,4 +1,4 @@
-<div class="white_body container">
+<div class="border_consult2 container">
     <tbody class="col-md-12">
     <div class="search_form">
         <form action="#" method="post">
@@ -140,10 +140,9 @@
                                 <?php $number++;} ?>
                         </tbody>
                     </table>
-                    <br><br>
-                    <div>
-                        <a href="ficheClient"><button class="btn btn-primary">Créer une fiche client</button></a>
-                    </div>
+
                 </div>
-                <br><br>
+    <div>
+        <a href="ficheClient"><button class="btn btn-primary">Créer une fiche client</button></a>
+    </div>
 </div>
