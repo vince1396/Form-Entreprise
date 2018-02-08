@@ -45,8 +45,8 @@
                     } else { ?>
                         <br>
                         <h3>Résultats de la recherche:</h3>
-                    <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover table_historique tablesorter" id="sortTable_1">
+                    <div class="table-responsive table_historique">
+                    <table class="table table-striped table-bordered table-hover tablesorter" id="sortTable_1">
                         <thead>
                             <tr>
                                 <th class="th_search">#</th>
@@ -117,7 +117,7 @@
 
 
                 ?>
-                <div class="table-responsive">
+                <div class="table-responsive table_historique">
                    <h3 class="center">Liste des clients</h3>
                     <table class="table table-striped table-bordered table-hover tablesorter" id="sortTable_2">
                         <thead>

@@ -297,8 +297,10 @@ header .header-content .header-content-inner p {
 }
 #consulter{
     background-color: white;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 #connexion {
     background-color: rgba(62, 142, 201, 0.09);
@@ -314,6 +316,11 @@ header .header-content .header-content-inner p {
   margin: 50px auto 0;
 }
 @media (min-width: 992px) {
+  #consulter{
+        background-color: white;
+        width: 90%;
+        margin: auto;
+  }
   .service-box {
     margin: 20px auto 0;
   }
@@ -837,7 +844,6 @@ select{
     border-radius:5px;
     font-size: 20px;
 }
-
 .border_consult{
     border-left: 2px solid rgba(0, 0, 0, 0.48);
     border-right: 2px solid rgba(0, 0, 0, 0.48);
