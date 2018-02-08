@@ -67,7 +67,7 @@
         <p class="title_admin_manage center"><u>Liste des utilisateurs</u></p>
         <form action="#" method="post">
             <label for="role">Afficher :</label>
-            <select name="role">
+            <select name="role" class="select_admin">
                 <option value="2">Chefs de vente</option>
                 <option value="1">Commerciaux</option>
             </select>
@@ -84,6 +84,7 @@
                 <th>Email</th>
                 <th>Mot de passe</th>
                 <th>Rôle</th>
+                <th>Chef</th>
                 <th>Options</th>
             </tr>
         </thead>
