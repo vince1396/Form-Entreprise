@@ -113,7 +113,7 @@ function filter($filter)
 {
     global $bdd;
 
-    $req = $bdd->prepare("SELECT * FROM user ORDER BY ".$filter);
+    $req = $bdd->prepare("SELECT * FROM user WHERE lvl < 3 AND lvl > 0 ORDER BY ".$filter);
     $req->execute();
 
     return $req->fetchAll();
