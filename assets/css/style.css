@@ -1294,8 +1294,108 @@ input:invalid {
 .underline{
     text-decoration: underline;
 }
+
+.print_button{
+    text-align: center;
+    margin-top:10px;
+}
 @media print{
-    .info_client_right, .info_comm_left, .info_cycle_left, .bg-dark, #mainNav{
+    .info_client_right, .info_comm_left, .info_cycle_left, .bg-dark, .print_button, #mainNav{
         display: none;
+    }
+
+    .border_consult{
+        /*border-bottom: 2px solid rgba(0, 0, 0, 0.48);*/
+        /*border-top: 2px solid rgba(0, 0, 0, 0.48);*/
+        border:0px;
+    }
+    .row1{
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+    .title_comm{
+        border-top: 1px solid silver;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+        border-radius: 0px;
+    }
+    .content_comm{
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        border: 0px;
+    }
+    .content_comm2{
+        text-align: left;
+        font-size: 18px;
+    }
+    .info_comm{
+        height: 200px;
+        margin-top: -50px;
+        padding-bottom: 0px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        border-radius: 0px;
+        border: 0px;
+    }
+    .info_client{
+        height: 400px;
+        margin:auto;
+        padding-bottom: 0px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        border-radius: 0px;
+        margin-top: -25px;
+        border: 0px;
+        page-break-after: always;
+    }
+    .content_client{
+        width: 100%;
+        margin-left: 15px;
+        border:0px;
+    }
+    .title_client{
+        width: 104%;
+        border: 1px solid silver;
+        border-radius: 0px;
+    }
+    .content_client2{
+        page-break-after: always;
+    }
+    .cycle_decision{
+        margin-bottom: 10px;
+        margin-left:-15px;
+        /*height: 50%;*/    height : 180px;
+    }
+    .title_bureautique{
+        border:2px solid #1b519a;
+        border-radius: 0px;
+    }
+    .bureautique_container{
+        border-left: 2px solid #1b519a;
+        border-right: 2px solid #1b519a;
+        border-bottom: 2px solid #1b519a;
+    }
+    .title_informatique{
+        border: 2px solid #189a57;
+        border-radius: 0px;
+    }
+    .informatique_container{
+        border-left: 2px solid #189a57;
+        border-right: 2px solid #189a57;
+        border-bottom: 2px solid #189a57;
+    }
+    .title_solution{
+        border:2px solid #cb7100;
+        border-radius: 0px;
+    }
+    .solution_container{
+        border-left: 2px solid #cb7100;
+        border-right: 2px solid #cb7100;
+        border-bottom: 2px solid #cb7100;
+    }
+    .title_phone{
+        border:2px solid #9a1913;
+        border-radius: 0px;
+    }
+    .phone_container{
+        border-left: 2px solid #9a1913;
+        border-right: 2px solid #9a1913;
+        border-bottom: 2px solid #9a1913;
     }
 }

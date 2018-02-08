@@ -212,6 +212,8 @@
 
         ?>
     </div>
+    <div class="print_button">
+    <a href="javascript:window.print()"><button class="btn btn-info">Imprimer</button></a>
 </div>
 </div>
 </div>
