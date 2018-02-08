@@ -1,15 +1,16 @@
-<div class="container white_body">
+<div class="container border_consult2">
 
  <form class="form_search" action="#" method="post">
   <input type="text" name="rechercher" placeholder="Rechercher un utilisateur" class="search_bar_admin">
   <input type="submit" name="search" class="submit_search_admin">
 </form>
     <form method="post">
-        <div class="table-responsive">
+
     <?php
         if(isset($_POST['search']))
         { ?>
-            <p class="title_admin_manage center"><u>Résultats de la recherche</u></p>
+        <p class="title_admin_manage center"><u>Résultats de la recherche</u></p>
+        <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr>
@@ -51,16 +52,20 @@
 
                 </tr>
 
-          <?php  }
-        }
-
-    ?>
+          <?php  } ?>
         </tbody>
     </table>
     </form>
 </div>
-    <div>
+
+        <?php
+        }
+
+    ?>
+
+
         <p class="title_admin_manage center"><u>Liste des utilisateurs</u></p>
+<div class="table-responsive">
     <form method="post">
     <table class="table table-striped table-bordered table-hover">
         <thead>

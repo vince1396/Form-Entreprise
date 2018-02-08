@@ -35,6 +35,7 @@
          </div>
          <div class="form-group">
               <div class="ChiefChoiceDisplay">
+                  <b><u>Séléctionner un chef de vente</u>:</b>
                   <select class="form-control select_admin" name="chef" title="chef">
                       <?php
                         foreach (getChefVente() as $k => $v)
@@ -52,7 +53,7 @@
         <?php
         if(isset($message))
         {
-            echo $message;
+            echo "<div class='error2'>".$message."</div>";
         }
         ?>
     </div>
