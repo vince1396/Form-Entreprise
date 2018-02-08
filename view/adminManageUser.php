@@ -116,12 +116,13 @@
                     <td>
                         <?php
                             if($v['lvl'] == 2) {
-                                echo "/";
+                                echo "   /";
                             }
 
                             if($v['lvl'] == 1)
                             {
-
+                                $rep = getChefUser($v['id_u']);
+                                echo $rep['nom'] ." ". $rep['prenom'];
                             }
 
                         ?>
