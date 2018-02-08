@@ -14,11 +14,12 @@
         <thead>
         <tr>
             <th class="th_search">#</th>
-            <th class="th_search">Nom</th>
-            <th class="th_search">Prénom</th>
+            <th><a href="index.php?p=adminManageUser&filter=nom">Nom</a></th>
+            <th><a href="index.php?p=adminManageUser&filter=prenom">Prénom</a></th>
             <th class="th_search">Email</th>
             <th class="th_search">Mot de passe</th>
             <th class="th_search">Rôle</th>
+            <th class="th_search">Chef</th>
             <th class="th_search">Options</th>
         </tr>
         </thead>
@@ -48,12 +49,9 @@
                         <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
                         <input type="submit" name="update" class="displayNone"> /
                         <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a></td>
-
                 </tr>
-
           <?php  }
         }
-
     ?>
         </tbody>
     </table>
@@ -61,13 +59,21 @@
 </div>
     <div>
         <p class="title_admin_manage center"><u>Liste des utilisateurs</u></p>
+        <form action="#" method="post">
+            <label for="role">Afficher :</label>
+            <select name="role">
+                <option value="2">Chefs de vente</option>
+                <option value="1">Commerciaux</option>
+            </select>
+            <input type="submit" value="Valider" name="triRole" />
+        </form>
     <form method="post">
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <th>#</th>
-                <th>Nom</th>
-                <th>Prénom</th>
+                <th><a href="index.php?p=adminManageUser&filter=nom">Nom</a></th>
+                <th><a href="index.php?p=adminManageUser&filter=prenom">Prénom</a></th>
                 <th>Email</th>
                 <th>Mot de passe</th>
                 <th>Rôle</th>
@@ -78,13 +84,13 @@
         <tbody>
         <?php
         $id_editValues = 0;
-        foreach(getUsers() as $k=>$v)
+        foreach($getUsers as $k=>$v)
         {
             $id_editValues++; ?>
 
                 <tr>
                     <td class="editableColumns"><?= $v['id_u']; ?></td>
-                    <td><?= $number;     ?>   </td>
+                    <td><?= $number; ?>   </td>
                     <td class="editableColumns"><?= $v["nom"];   ?>  </td>
                     <td class="editableColumns"><?= $v["prenom"];?>   </td>
                     <td class="editableColumns"><?= $v["email"]; ?>   </td>
@@ -100,9 +106,23 @@
                         ?>
                     </td>
                     <td>
+                        <?php
+                            if($v['lvl'] == 2) {
+                                echo "/";
+                            }
+
+                            if($v['lvl'] == 1)
+                            {
+
+                            }
+
+                        ?>
+                    </td>
+                    <td>
                         <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
                         <input type="submit" name="update" class="displayNone"> /
-                        <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a></td>
+                        <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a>
+                    </td>
                 </tr>
         <?php
             $number++;
@@ -111,4 +131,10 @@
     </table>
     </form>
     </div>
+    <?php
+        if(isset($message))
+        {
+            echo $message;
+        }
+    ?>
 </div>

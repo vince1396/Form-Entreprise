@@ -2,6 +2,7 @@
   require "model/adminManageUser.php";
 
     $number = 1;
+    $getUsers = getUsers();
 // =============================================================================
     if(isset($_POST['search']))
     {
@@ -40,6 +41,16 @@
     {
         $id_u = $_POST('deban');
         $message = deban($id_u);
+    }
+// =============================================================================
+    if(isset($_GET['filter']))
+    {
+        $getUsers = filter($_GET['filter']);
+    }
+// =============================================================================
+    if(isset($_POST['triRole']))
+    {
+        $getUsers = triRole($_POST['role']);
     }
 
   require "view/adminManageUser.php";

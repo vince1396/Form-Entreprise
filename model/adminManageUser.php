@@ -6,7 +6,7 @@ function getUsers()
   {
     global $bdd;
 
-    $req = $bdd->prepare("SELECT * FROM user WHERE lvl < 3");
+    $req = $bdd->prepare("SELECT * FROM user WHERE lvl < 3 AND lvl > 0");
     $req->execute();
 
     return $req->fetchAll();
@@ -73,7 +73,11 @@ function getUsers()
       $req->bindValue(":email", $email, PDO::PARAM_STR);
       $req->bindValue(":mdp", $mdp, PDO::PARAM_STR);
       $req->execute();
+
+      $message = "Modifications effectuées";
+      return $message;
   }
+// =============================================================================
 function updateUser2($id_u, $nom, $prenom, $email)
 {
     global $bdd;
@@ -88,6 +92,9 @@ function updateUser2($id_u, $nom, $prenom, $email)
     $req->bindValue(":prenom", $prenom, PDO::PARAM_STR);
     $req->bindValue(":email", $email, PDO::PARAM_STR);
     $req->execute();
+
+    $message = "Modifications effectuées";
+    return $message;
 }
 // =============================================================================
 function deban($id_u)
@@ -102,3 +109,30 @@ function deban($id_u)
     return $message;
 }
 // =============================================================================
+function filter($filter)
+{
+    global $bdd;
+
+    $req = $bdd->prepare("SELECT * FROM user ORDER BY ".$filter);
+    $req->execute();
+
+    return $req->fetchAll();
+}
+// =============================================================================
+function triRole($lvl)
+{
+    global $bdd;
+
+    $req = $bdd->prepare("SELECT * FROM user WHERE lvl = :lvl");
+    $req->bindValue(":lvl", $lvl, PDO::PARAM_INT);
+    $req->execute();
+
+    return $req->fetchAll();
+}
+// =============================================================================
+function getChefUser()
+{
+    global $bdd;
+
+    $req = $bdd->prepare("SELECT * FROM user WHERE ");
+}
