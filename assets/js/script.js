@@ -1,7 +1,23 @@
 $(document).ready(function () {
 
-        $("#sortTable_1").tablesorter({dateFormat: 'pt'});
-        $("#sortTable_2").tablesorter({dateFormat: 'pt'});
+        $("#sortTable_1").tablesorter({
+            dateFormat: 'pt',
+            headers: {
+                4: {
+                    // disable it by setting the property sorter to false
+                    sorter: false
+                }
+            }
+        });
+        $("#sortTable_2").tablesorter({
+            dateFormat: 'pt',
+            headers: {
+                4: {
+                    // disable it by setting the property sorter to false
+                    sorter: false
+                }
+            }
+        });
         $("#sortTable_3").tablesorter({dateFormat: 'pt'});
         $("#sortTable_4").tablesorter({dateFormat: 'pt'});
         $("#sortTable_5").tablesorter({dateFormat: 'pt'});

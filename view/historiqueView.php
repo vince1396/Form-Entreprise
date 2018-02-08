@@ -25,8 +25,8 @@
 
                        <!-------------------------------------------->
 
-                            <label for="date_min" class="label_date">Entre le:</label>
-                            <input type="date" name="date_min">
+                            <label for="date_min" class="label_date">Entre le:
+                                <input type="date" name="date_min"></label>
 
                     <label for="date_max" class="label_date">Et le:
                     <input type="date" name="date_max"></label>

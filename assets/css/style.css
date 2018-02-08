@@ -1530,3 +1530,15 @@ input:invalid {
 .green-star{
     color:green;
 }
+table.tablesorter thead tr .header{
+    background-image: url('../js/themes/blue/bg.gif');
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp{
+    background-image: url('../js/themes/blue/asc.gif');
+}
+table.tablesorter thead tr .headerSortDown{
+    background-image: url('../js/themes/blue/desc.gif');
+}
