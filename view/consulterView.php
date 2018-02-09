@@ -214,6 +214,7 @@
     </div>
     <div class="print_button">
     <a href="javascript:window.print()"><button class="btn btn-info">Imprimer</button></a>
+    <a href="historique"><button class="btn btn-primary">Retour</button></a>
 </div>
 </div>
 </div>
