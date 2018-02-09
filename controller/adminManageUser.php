@@ -8,6 +8,7 @@ else {
 
     $number = 1;
     $getUsers = getUsers();
+    $getChef = getChef();
 // =============================================================================
     if (isset($_POST['search'])) {
         $rechercher = $_POST['rechercher'];
@@ -59,6 +60,8 @@ else {
             $getUsers = triRole($_POST['role']);
         }
     }
+    // =============================================================================
+
 
     require "view/adminManageUser.php";
 }

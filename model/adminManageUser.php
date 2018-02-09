@@ -153,3 +153,10 @@ function getBanned()
 
     return $req->fetchAll();
 }
+function getChef(){
+    global $bdd;
+    $req = $bdd->prepare("SELECT * FROM user WHERE lvl=2");
+    $req->execute();
+
+    return $req->fetchAll();
+}

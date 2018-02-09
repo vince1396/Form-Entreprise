@@ -124,8 +124,19 @@
                                     }
                                     if($v['lvl'] == 1)
                                     {
-                                        $rep = getChefUser($v['id_u']);
-                                        echo $rep['nom'] ." ". $rep['prenom'];
+                                        ?>
+                                        <select name="chef" id="chef">
+                                            <?php
+                                              $rep = getChefUser($v['id_u']);
+                                              $valeurChef = $rep['nom'].' '.$rep['prenom'];
+    //                                          echo $rep['nom'] ." ". $rep['prenom'];
+                                                foreach($getChef as $m=>$n) {  $valeurTousChef = $n['nom'].' '.$n['prenom']; ?>
+
+                                                    <option value="<?= $n['id_chef']; ?>" <?php if($valeurChef == $valeurTousChef){ echo 'selected';} ?>><?=  $n['nom']." ".$n['prenom'] ; ?> </option>
+                                                <?php }
+                                            ?>
+                                        </select>
+                                            <?php
                                     }
                                 ?>
                             </td>
