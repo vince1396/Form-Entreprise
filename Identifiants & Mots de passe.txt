@@ -1,0 +1,12 @@
+MDP:
+
+Jacques-Laurent HERSZKORN: JLHerszkorn
+Hervé HERSZKORN: HHerszkorn
+Benjamin GHNASSIA: BGhnassia
+Ibtissam LAGHLA: ILaghla
+Franck Da Costa: CFranck
+Steven HAZAN: SHazan
+Ismail EL HARTI: IElharti
+
+Les identifiants sont vos adresses mail, les mots de passe sont affichés respectivement après le nom de l'utilisateur.
+Tous les mots de passe et adresses mail sont modifiables par l'administrateur dans l'espace "Gestion Admin".
