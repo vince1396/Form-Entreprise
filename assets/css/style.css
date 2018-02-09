@@ -1522,13 +1522,13 @@ input:invalid {
     padding-right: 10px;
 }
 .red-star{
-    color:red;
+    color:blue;
 }
 .yellow-star{
     color:orange;
 }
 .green-star{
-    color:green;
+    color:red;
 }
 table.tablesorter thead tr .header{
     background-image: url('../js/themes/blue/bg.gif');
