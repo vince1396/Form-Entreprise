@@ -47,6 +47,32 @@ $(document).ready(function () {
         });
     $.noConflict();
 
+    //modal
+    $(".parking-scheme-reservation").click(function() {
+        $("#modal-text").html("Voulez-vous supprimer cette fiche ?");
+        $("#yes").attr("href", "index.php?p=historique&delete=" + $(this).attr("id"));
+        $("#myalertbox").modal({
+            "keyboard": true,
+            "show": true
+        });
+    });
+    $(".parking-scheme-reservation_2").click(function() {
+        $("#modal-text").html("Voulez-vous supprimer cette fiche ?");
+        $("#yes").attr("href", "index.php?p=consulterChef&delete=" + $(this).attr("id"));
+        $("#myalertbox").modal({
+            "keyboard": true,
+            "show": true
+        });
+    });
+    $(document).click(function() {
+        if (this.id != 'myalertbox') {
+            $("#myalertbox").modal({
+                "keyboard": true,
+                "show": false
+            });
+        }
+    });
+    //fin modal
 
     $('.editValues').click(function () {
         var getValue = $(this).attr('id');

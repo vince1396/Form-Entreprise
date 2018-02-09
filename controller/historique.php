@@ -70,6 +70,7 @@
     if(isset($_GET['delete'])){
         $id_delete = (int)$_GET['delete'];
         $req_delete = deleteClient($id_delete);
+        header('Location: historique');
     }
 
 

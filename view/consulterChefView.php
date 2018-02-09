@@ -24,7 +24,10 @@
                                     <td><span><?= $v["raison"]; ?></span></td>
                                     <td><span><?= $v["nom_c"]; ?></span></td>
                                     <td><span><?= $v["date_rdv"]; ?></span></td>
-                                    <td><span><a href="index.php?p=detailDossier&id1=<?=$v["id_f"];?>&id2=<?=$v["id_u"];?>">Voir le dossier</a></span></td>
+                                    <td><span><a href="index.php?p=detailDossier&id1=<?=$v["id_f"];?>&id2=<?=$v["id_u"];?>">Voir le dossier</a></span>
+                                        |
+                                        <span><a href="#" id="<?= $v['id_f']; ?>" class="parking-scheme-reservation_2">Supprimer</a></span>
+                                    </td>
                                     <td>
                                         <span class="hidden"><?= $v['interet']; ?></span>
                                         <?php
@@ -53,6 +56,16 @@
                         </tbody>
                     </table>
                 </div>
-                
+    <div id="myalertbox" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <p id="modal-text"></p>
+                    <a id="yes" class="btn btn-success" href="">Oui</a>&nbsp;<a class="btn btn-danger" data-dismiss="modal">Non</a>
+                </div>
+            </div>
+        </div>
+    </div>
                 <a href="gestionChef"><button class="btn btn-primary">Retour</button></a>
 </div>

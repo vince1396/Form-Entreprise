@@ -5,9 +5,3 @@ function displayListClient(){
     $requete->execute();
     return $requete->fetchAll();
 }
-function deleteClient($id_delete){
-    global $bdd;
-    $requete = $bdd->prepare("DELETE FROM fiche, client, projet, bureautique, informatique, solution, telephonie");
-    $requete->execute(array($id_delete));
-    return $requete->fetchAll();
-}
