@@ -18,9 +18,33 @@ $(document).ready(function () {
                 }
             }
         });
-        $("#sortTable_3").tablesorter({dateFormat: 'pt'});
-        $("#sortTable_4").tablesorter({dateFormat: 'pt'});
-        $("#sortTable_5").tablesorter({dateFormat: 'pt'});
+        $("#sortTable_3").tablesorter({
+            dateFormat: 'pt',
+            headers: {
+                5: {
+                    // disable it by setting the property sorter to false
+                    sorter: false
+                }
+            }
+        });
+        $("#sortTable_4").tablesorter({
+            dateFormat: 'pt',
+            headers: {
+                3: {
+                    // disable it by setting the property sorter to false
+                    sorter: false
+                }
+            }
+        });
+        $("#sortTable_5").tablesorter({
+            dateFormat: 'pt',
+            headers: {
+                4: {
+                    // disable it by setting the property sorter to false
+                    sorter: false
+                }
+            }
+        });
     $.noConflict();
 
 

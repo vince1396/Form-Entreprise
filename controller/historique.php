@@ -67,6 +67,13 @@
         }
     }
 
+    if(isset($_GET['delete'])){
+        $id_delete = (int)$_GET['delete'];
+        $req_delete = deleteClient($id_delete);
+    }
+
+
+
     require "view/historiqueView.php";
 
 ?>
