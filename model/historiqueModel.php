@@ -7,7 +7,7 @@ function displayListClient(){
 }
 function deleteClient($id_delete){
     global $bdd;
-    $requete = $bdd->prepare("DELETE FROM fiche f, client c, projet p, bureautique b, informatique i, solution s, telephonie t");
+    $requete = $bdd->prepare("DELETE FROM fiche, client, projet, bureautique, informatique, solution, telephonie");
     $requete->execute(array($id_delete));
     return $requete->fetchAll();
 }
