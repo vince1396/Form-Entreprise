@@ -1,9 +1,9 @@
 <div class="container border_consult2">
-
- <form class="form_search" action="#" method="post">
-  <input type="text" name="rechercher" placeholder="Rechercher un utilisateur" class="search_bar_admin">
-  <input type="submit" name="search" class="submit_search_admin">
-</form>
+     <form class="form_search" action="#" method="post">
+      <input type="text" name="rechercher" placeholder="Rechercher un utilisateur" class="search_bar_admin">
+      <input type="submit" name="search" class="submit_search_admin">
+    </form>
+    <!-- =============================================================================================================================== -->
     <form method="post">
         <?php
             if(isset($_POST['search']))
@@ -36,7 +36,7 @@
                                         $id_editValues++; ?>
                                         <tr>
                                             <td class="editableColumns"><?= $v['id_u']; ?></td>
-                                            <td><?= $number; ?>   </td>
+                                            <td><?= $number; ?></td>
                                             <td class="editableColumns"><?= $v["nom"]; ?>  </td>
                                             <td class="editableColumns"><?= $v["prenom"]; ?>   </td>
                                             <td class="editableColumns"><?= $v["email"]; ?>   </td>
@@ -64,8 +64,8 @@
                 }
             }
             ?>
-
     </form>
+    <!-- =============================================================================================================================== -->
     <p class="title_admin_manage center"><u>Liste des utilisateurs</u></p>
     <form action="#" method="post">
         <label for="role">Afficher :</label>
@@ -73,6 +73,7 @@
             <option value="all">Tous</option>
             <option value="2">Chefs de vente</option>
             <option value="1">Commerciaux</option>
+            <option value="0">Bannis</option>
         </select>
         <input type="submit" value="Valider" name="triRole" />
     </form>
@@ -131,12 +132,21 @@
                             <td>
                                 <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
                                 <input type="submit" name="update" class="displayNone"> /
-                                <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a>
+                                <?php
+                                    if ($v['ban'] == 1)
+                                    { ?>
+                                        <a href="index.php?p=adminManageUser&deban=<?= $v['id_u'] ?>">Débannir</a> <?php
+                                    }
+                                    else
+                                    { ?>
+                                        <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a> <?php
+                                    }
+                                ?>
                             </td>
                         </tr>
                         <?php
                             $number++;
-                        } ?>
+                    } ?>
                 </tbody>
             </table>
         </form>

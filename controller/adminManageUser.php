@@ -40,8 +40,9 @@
 // =============================================================================
     if(isset($_GET['deban']))
     {
-        $id_u = $_POST('deban');
-        $message = deban($id_u);
+        $id_u = $_GET['deban'];
+        deban($id_u);
+        header("Location:index.php?p=adminManageUser");
     }
 // =============================================================================
     if(isset($_GET['filter']))
@@ -54,6 +55,10 @@
         if($_POST['role'] == "all")
         {
             $getUsers = getUsers();
+        }
+        else if($_POST['role'] == 0)
+        {
+            $getUsers = getBanned();
         }
         else
         {
