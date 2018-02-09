@@ -45,6 +45,32 @@ $(document).ready(function () {
                 }
             }
         });
+    $("#sortTable_6").tablesorter({
+        dateFormat: 'pt',
+        headers: {
+            4: {
+                // disable it by setting the property sorter to false
+                sorter: false
+            },
+            7: {
+                // disable it by setting the property sorter to false
+                sorter: false
+            }
+        }
+    });
+    $("#sortTable_7").tablesorter({
+        dateFormat: 'pt',
+        headers: {
+            4: {
+                // disable it by setting the property sorter to false
+                sorter: false
+            },
+            7: {
+                // disable it by setting the property sorter to false
+                sorter: false
+            }
+        }
+    });
     $.noConflict();
 
     //modal
@@ -111,6 +137,7 @@ $(document).ready(function () {
         $('input').siblings('.editValues').css({
             'display' : 'none'
         });
+        $(this).parents('tr').find('#chef').removeAttr('disabled');
     });
 
     $("#btnClone").click(function () {

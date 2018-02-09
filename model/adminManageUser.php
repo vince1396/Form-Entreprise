@@ -58,7 +58,7 @@ function ban($id_u)
     return $req->fetchAll();
   }
 // =============================================================================
-  function updateUser($id_u, $nom, $prenom, $email, $mdp)
+  function updateUser($id_u, $nom, $prenom, $email, $mdp, $id_chef)
   {
       global $bdd;
 
@@ -66,32 +66,36 @@ function ban($id_u)
                             SET nom = :nom, 
                             prenom = :prenom, 
                             email = :email, 
-                            mdp = :mdp 
+                            mdp = :mdp,
+                            id_chef = :id_chef
                             WHERE id_u = :id_u");
       $req->bindValue(":id_u", $id_u, PDO::PARAM_INT);
       $req->bindValue(":nom", $nom, PDO::PARAM_STR);
       $req->bindValue(":prenom", $prenom, PDO::PARAM_STR);
       $req->bindValue(":email", $email, PDO::PARAM_STR);
       $req->bindValue(":mdp", $mdp, PDO::PARAM_STR);
+      $req->bindValue(":id_chef", $id_chef, PDO::PARAM_INT);
       $req->execute();
 
       $message = "Modifications effectuées";
       return $message;
   }
 // =============================================================================
-function updateUser2($id_u, $nom, $prenom, $email)
+function updateUser2($id_u, $nom, $prenom, $email, $id_chef)
 {
     global $bdd;
 
     $req = $bdd->prepare("UPDATE user 
                             SET nom = :nom, 
                             prenom = :prenom, 
-                            email = :email
+                            email = :email,
+                            id_chef = :id_chef
                             WHERE id_u = :id_u");
     $req->bindValue(":id_u", $id_u, PDO::PARAM_INT);
     $req->bindValue(":nom", $nom, PDO::PARAM_STR);
     $req->bindValue(":prenom", $prenom, PDO::PARAM_STR);
     $req->bindValue(":email", $email, PDO::PARAM_STR);
+    $req->bindValue(":id_chef", $id_chef, PDO::PARAM_INT);
     $req->execute();
 
     $message = "Modifications effectuées";

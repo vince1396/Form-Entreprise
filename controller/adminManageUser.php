@@ -30,14 +30,16 @@ else {
             $prenom = $_POST['prenom'];
             $email = $_POST['email'];
             $mdp = sha1($_POST['mdp']);
+            $id_chef = $_POST['chef'];
 
-            updateUser($id_u, $nom, $prenom, $email, $mdp);
+            updateUser($id_u, $nom, $prenom, $email, $mdp, $id_chef);
         } else {
             $id_u = $_POST['id_u'];
             $nom = $_POST['nom'];
             $prenom = $_POST['prenom'];
             $email = $_POST['email'];
-            updateUser2($id_u, $nom, $prenom, $email);
+            $id_chef = $_POST['chef'];
+            updateUser2($id_u, $nom, $prenom, $email, $id_chef);
         }
     }
 // =============================================================================

@@ -15,12 +15,12 @@
                 else { ?>
                     <p class="title_admin_manage center"><u>Résultats de la recherche</u></p>
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover">
+                        <table class="table table-striped table-bordered table-hover tablesorter" id="sortTable_6">
                             <thead>
                             <tr>
                                 <th class="th_search">#</th>
-                                <th class="th_search"><a href="index.php?p=adminManageUser&filter=nom">Nom</a></th>
-                                <th class="th_search"><a href="index.php?p=adminManageUser&filter=prenom">Prénom</a></th>
+                                <th class="th_search">Nom</th>
+                                <th class="th_search">Prénom</th>
                                 <th class="th_search">Email</th>
                                 <th class="th_search">Mot de passe</th>
                                 <th class="th_search">Rôle</th>
@@ -79,12 +79,12 @@
     </form>
     <div class="table-responsive">
         <form method="post">
-            <table class="table table-striped table-bordered table-hover">
+            <table class="table table-striped table-bordered table-hover tablesorter" id="sortTable_7">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th><a href="index.php?p=adminManageUser&filter=nom">Nom</a></th>
-                        <th><a href="index.php?p=adminManageUser&filter=prenom">Prénom</a></th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
                         <th>Email</th>
                         <th>Mot de passe</th>
                         <th>Rôle</th>
@@ -125,16 +125,17 @@
                                     if($v['lvl'] == 1)
                                     {
                                         ?>
-                                        <select name="chef" id="chef">
+                                        <select name="chef" id="chef" disabled>
                                             <?php
                                               $rep = getChefUser($v['id_u']);
                                               $valeurChef = $rep['nom'].' '.$rep['prenom'];
     //                                          echo $rep['nom'] ." ". $rep['prenom'];
-                                                foreach($getChef as $m=>$n) {  $valeurTousChef = $n['nom'].' '.$n['prenom']; ?>
-
-                                                    <option value="<?= $n['id_chef']; ?>" <?php if($valeurChef == $valeurTousChef){ echo 'selected';} ?>><?=  $n['nom']." ".$n['prenom'] ; ?> </option>
+                                                foreach($getChef as $m=>$n) {
+                                                    $valeurTousChef = $n['nom'].' '.$n['prenom'];
+                                                    ?>
+                                                    <option value="<?= $n['id_u']; ?>" <?php if($valeurChef == $valeurTousChef){ echo 'selected';} ?>><?=  $n['nom']." ".$n['prenom'] ; ?> </option>
                                                 <?php }
-                                            ?>
+                                                ?>
                                         </select>
                                             <?php
                                     }
