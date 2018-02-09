@@ -15,6 +15,7 @@
     {
         $id_u = (int)$_GET['supp'];
         ban($id_u);
+        header("Location:index.php?p=adminManageUser");
     }
 // =============================================================================
     if(isset($_POST['update']))
@@ -50,7 +51,14 @@
 // =============================================================================
     if(isset($_POST['triRole']))
     {
-        $getUsers = triRole($_POST['role']);
+        if($_POST['role'] == "all")
+        {
+            $getUsers = getUsers();
+        }
+        else
+        {
+            $getUsers = triRole($_POST['role']);
+        }
     }
 
   require "view/adminManageUser.php";

@@ -134,7 +134,7 @@ function getChefUser($id_u)
 {
     global $bdd;
 
-    $req = $bdd->prepare("SELECT * FROM user a, user b 
+    $req = $bdd->prepare("SELECT a.id_u, a.nom, a.prenom FROM user a, user b 
                                    WHERE a.id_u = b.id_chef 
                                    AND b.id_u = :id_u");
     $req->bindValue(":id_u", $id_u, PDO::PARAM_INT);

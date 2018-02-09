@@ -68,6 +68,7 @@
         <form action="#" method="post">
             <label for="role">Afficher :</label>
             <select name="role" class="select_admin">
+                <option value="all">Tous</option>
                 <option value="2">Chefs de vente</option>
                 <option value="1">Commerciaux</option>
             </select>
@@ -116,7 +117,7 @@
                     <td>
                         <?php
                             if($v['lvl'] == 2) {
-                                echo "   /";
+                                echo "/";
                             }
 
                             if($v['lvl'] == 1)
