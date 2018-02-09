@@ -220,12 +220,12 @@
                                 </div>
                                 <div class="form-group width-log">
                                     <label for="cout_noir">Coût copie noire:</label>
-                                    <input type="text" class="form-control" name="cout_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="cout_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,4})?|[1-9][0-9]*([,.][0-9]{1,4})?">
                                 </div>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="supp_noir">Coût copies noires supplémentaires:</label>
-                                    <input type="text" class="form-control" name="supp_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="supp_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,4})?|[1-9][0-9]*([,.][0-9]{1,4})?">
                                 </div>
                                 <br>
                                 <div class="form-group width-log">
@@ -241,12 +241,12 @@
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="cout_couleur">Coût copie couleur:</label>
-                                    <input type="text" class="form-control" name="cout_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="cout_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,4})?|[1-9][0-9]*([,.][0-9]{1,4})?">
                                 </div>
                                 <br>
                                 <div class="form-group width-log">
                                     <label for="supp_couleur">Coût copies couleurs supplémentaires:</label>
-                                    <input type="text" class="form-control" name="supp_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
+                                    <input type="text" class="form-control" name="supp_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,4})?|[1-9][0-9]*([,.][0-9]{1,4})?">
                                 </div>
                                 <br>
                                 <br>

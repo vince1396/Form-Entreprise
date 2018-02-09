@@ -1,7 +1,11 @@
 <?php
 
     require "model/historiqueModel.php";
-    $r = displayListClient();
+    if($_SESSION['lvl'] == 3){
+        $r = displayClientAdmin();
+    }else
+        $r = displayListClient();
+
     $message = '';
 
      $sql = "SELECT DISTINCT c.nom_c, c.id_f, c.raison, DATE_FORMAT(f.date_rdv, '%d/%m/%Y') as date_rdv, c.interet FROM user u, fiche f, client c, projet p WHERE u.id_u =".$_SESSION['id']." AND f.id_u = u.id_u AND f.id_f = c.id_f ";
