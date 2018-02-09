@@ -12,6 +12,7 @@
       return $req;
       
   }
+
 function rememberMe($id_u)
     {
         global $bdd;
@@ -21,4 +22,4 @@ function rememberMe($id_u)
         
         return $requete->fetch();
     }
-?>
+

@@ -10,31 +10,21 @@ define('ROOT', dirname(WEBROOT));
 define('DS', DIRECTORY_SEPARATOR);
 define('CORE',ROOT.DS.'core');
 
-if (isset($_SESSION['lvl']))
+if (isset($_SESSION['ban']) AND $_SESSION['ban'] == 1)
 {
-    if($_SESSION['lvl'] == 0)
-    {
-        $page = "ban";
-    }
+    $page = "ban";
 }
-
-    if(!isset($_GET['p']) || $_GET['p'] == "")
-    {
+else {
+    if (!isset($_GET['p']) || $_GET['p'] == "") {
         $page = $_GET["p"] = 'login';
-    }
-    else
-    {
-        if(!file_exists("controller/".$_GET['p'].".php"))
-        {
+    } else {
+        if (!file_exists("controller/" . $_GET['p'] . ".php")) {
             $page = $_GET['p'] = '404';
-        }
-        else
-        {
+        } else {
             $page = $_GET['p'];
         }
     }
-
-
+}
 
 ob_start();//permet de ne plus renvoyer de contenu au navigateur
     require "controller/".$page.".php";

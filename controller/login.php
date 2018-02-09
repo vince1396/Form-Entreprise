@@ -20,6 +20,7 @@
             $_SESSION['id'] = $reponse['id_u'];
             $_SESSION['email'] = $reponse['email'];
             $_SESSION['lvl'] = $reponse['lvl'];
+            $_SESSION['ban'] = $reponse['ban'];
             if(isset($_POST['remember']))
             {
 //                $key = $reponse['id_u']."-----".sha1($reponse['email'].$reponse['mdp'].$_SERVER['REMOTE_ADDR']);
