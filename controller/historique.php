@@ -68,9 +68,13 @@
     }
 
     if(isset($_GET['delete'])){
-        $id_delete = (int)$_GET['delete'];
-        $req_delete = deleteClient($id_delete);
-        header('Location: historique');
+        if($_SESSION['lvl'] == '3'){
+            $id_delete = (int)$_GET['delete'];
+            $req_delete = deleteClient($id_delete);
+            header('Location: historique');
+        }else{
+            header('Location: index');
+        }
     }
 
 

@@ -56,14 +56,6 @@ $(document).ready(function () {
             "show": true
         });
     });
-    $(".parking-scheme-reservation_2").click(function() {
-        $("#modal-text").html("Voulez-vous supprimer cette fiche ?");
-        $("#yes").attr("href", "index.php?p=consulterChef&delete=" + $(this).attr("id"));
-        $("#myalertbox").modal({
-            "keyboard": true,
-            "show": true
-        });
-    });
     $(document).click(function() {
         if (this.id != 'myalertbox') {
             $("#myalertbox").modal({
@@ -85,6 +77,7 @@ $(document).ready(function () {
         var input2 = $('<input class="editableColumnsStyle" type="text" name="nom"/>');
         var input3 = $('<input class="editableColumnsStyle" type="text" name="prenom"/>');
         var input4 = $('<input class="editableColumnsStyle" type="email" name="email"/>');
+        var input5 = $('<input class="editableColumnsStyle" type="password" name="mdp"/>');
         var input5 = $('<input class="editableColumnsStyle" type="password" name="mdp"/>');
         $(this).parents('tr').find('td.editableColumns:first-child').each(function() {
             var html = $(this).html();
