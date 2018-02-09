@@ -177,6 +177,9 @@
                     </table>
                 </div>
             </div>
+        <div class="print_button">
+            <a href="accueil"><button class="btn btn-primary">Retour</button></a>
+        </div>
         </div>
     </div>
 </section>

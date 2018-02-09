@@ -6,33 +6,7 @@
     {
     //Commercial
 
-//        $countForAddProjet = htmlentities($_POST['countForAddProjet']);
-//        $countForAddProjet++;
-//    var_dump($countForAddProjet);
-//        die();
 
-//        var_dump('fournisseur : ',$fournisseur);
-//        var_dump('leaser : ',$_POST['leaser']);
-//        var_dump('achat',$_POST['achat']);
-//        var_dump('achat_b',$_POST['achat_b']);
-//        var_dump('materiel_achat',$_POST['materiel_achat']);
-//        var_dump('date_deb',$_POST['date_deb']);
-//        var_dump('loyer_b',$_POST['loyer_b']);
-//        var_dump('prelevement',$_POST['prelevement']);
-//        var_dump('duree',$_POST['duree']);
-//        var_dump('materiel_location',$_POST['materiel_location']);
-//        var_dump('noir',$_POST['noir']);
-//        var_dump('couleur',$_POST['couleur']);
-//        var_dump('cout_noir',$_POST['cout_noir']);
-//        var_dump('vol_noit',$_POST['vol_noir']);
-//        var_dump('supp_noir',$_POST['supp_noir']);
-//        var_dump('cout_couleur',$_POST['cout_couleur']);
-//        var_dump('vol_couleur',$_POST['vol_couleur']);
-//        var_dump('supp_couleur',$_POST['supp_couleur']);
-//        var_dump('amelioration',$_POST['amelioration']);
-//        var_dump('orientation',$_POST['orientation']);
-//
-//        die();
             $nom = htmlentities($_POST['nom']);
             $prenom = htmlentities($_POST['prenom']);
         if(empty($_POST['date_contact'])){
@@ -616,7 +590,6 @@
                 
                 
                 addTelephonieAchat($id_t, $fournisseur_t, $leaser_t, $achat_t, $prix_t, $materiel_t, $num_ligne, $nb_poste, $nb_rj45);
-                
                 $description = htmlentities($_POST['description']);
                 addFacture($description, $id_t);
   
@@ -649,8 +622,7 @@
                     $materiel_t = htmlentities($_POST['materiel_t_location']);
                 }
                 addTelephonieLocation($id_t, $fournisseur_t, $leaser_t, $achat_t, $date_deb_t, $prix_t, $prelevement_t, $duree_contrat_t, $materiel_t, $num_ligne, $nb_poste, $nb_rj45);
-                
-                
+
                 //Facture
                 if(empty($_POST['description'])){
                     $description = "N/A";

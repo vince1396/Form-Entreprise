@@ -175,6 +175,7 @@
         foreach($req5 as $k => $v){ ?>
             <p class="title_phone">Téléphonie:</p>
             <div class="phone_container">
+            <br>
             <b>Fournisseur: </b><?=$v['fournisseur_t'];?><br><br>
             <b>Leaser: </b><?=$v['leaser_t'];?><br>
 
@@ -192,13 +193,13 @@
                 <p class="phone_under_title">Contrat de location:</p>
                 <b>Loyer: </b><?=$v['prix_t'];?> €(HT)<br><br>
                 <b>Date de début: </b><?=$v['date_deb_t'];?><br><br>
-                <b>Durée du contrat: </b><?=$v['duree_contrat'];?><br><br>
+                <b>Durée du contrat: </b><?=$v['duree_contrat_t'];?><br><br>
                 <?php
                 if($v['prelevement_t'] == 1){ ?>
-                    <b>Prélèvement: </b>Mensuel
+                    <b>Prélèvement: </b>Mensuel <br><br>
                 <?php        }
                 else if($v['prelevement_t'] == 2){ ?>
-                    <b>Prélèvement: </b>Trimestriel
+                    <b>Prélèvement: </b>Trimestriel <br><br>
                 <?php        } ?>
                 <b>Matériel et accessoires: </b><?=$v['materiel_t'];?><br><br>
                 <b>Numéro de la ligne: </b><?=$v['num_ligne'];?> <br><br>
@@ -214,7 +215,6 @@
     </div>
     <div class="print_button">
     <a href="javascript:window.print()"><button class="btn btn-info">Imprimer</button></a>
-    <a href="historique"><button class="btn btn-primary">Retour</button></a>
 </div>
 </div>
 </div>

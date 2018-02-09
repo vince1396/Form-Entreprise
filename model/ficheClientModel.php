@@ -192,7 +192,7 @@
         $req->bindValue(":date_deb_t", $date_deb_t, PDO::PARAM_STR);
         $req->bindValue(":achat_t", $achat_t, PDO::PARAM_INT);
         $req->bindValue(":prix_t", $prix_t, PDO::PARAM_STR);
-        $req->bindValue(":prelevement_t", $prelevement_t, PDO::PARAM_STR);
+        $req->bindValue(":prelevement_t", $prelevement_t, PDO::PARAM_INT);
         $req->bindValue(":duree_contrat_t", $duree_contrat_t, PDO::PARAM_STR);
         $req->bindValue(":materiel_t", $materiel_t, PDO::PARAM_STR);
         $req->bindValue(":num_ligne", $num_ligne, PDO::PARAM_STR);
