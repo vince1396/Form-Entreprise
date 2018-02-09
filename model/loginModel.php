@@ -22,4 +22,3 @@ function rememberMe($id_u)
         
         return $requete->fetch();
     }
-
