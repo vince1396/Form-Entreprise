@@ -1,6 +1,6 @@
 <html lang="fr">
 <head>
-	<title>Formulaire Allburotic</title>
+	<title>Gestion Client</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +15,7 @@
     <!-- STAR RATING STYLES-->
 	<link rel="stylesheet" href="assets/css/star-rating.css" type="text/css"/>
    	<link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+    <link rel="icon" type="image/png" href="assets/css/ravelry-logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
