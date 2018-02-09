@@ -74,6 +74,10 @@ $(document).ready(function () {
     });
     //fin modal
 
+    //
+
+    //
+
     $('.editValues').click(function () {
         var getValue = $(this).attr('id');
         console.log(getValue);

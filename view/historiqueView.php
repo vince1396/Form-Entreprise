@@ -69,7 +69,7 @@
                                     <td><?= $v['date_rdv']; ?></td>
                                     <td><span><a href="index.php?p=consulter&id=<?= $v["id_f"]; ?>">Voir le dossier</a></span>
                                         |
-                                        <span  class="parking-scheme-reservation"><a href="index.php?p=historique&delete=<?= $v["id_f"]; ?>">Supprimer</a></span>
+                                        <span><a href="#" id="<?= $v['id_f']; ?>" class="parking-scheme-reservation">Supprimer</a></span>
                                     </td>
                                     <td><span class="hidden"><?= $v['interet']; ?></span>
                                         <?php
