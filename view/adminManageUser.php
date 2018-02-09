@@ -20,8 +20,7 @@
                             <tr>
                                 <th class="th_search">#</th>
                                 <th class="th_search"><a href="index.php?p=adminManageUser&filter=nom">Nom</a></th>
-                                <th class="th_search"><a href="index.php?p=adminManageUser&filter=prenom">Prénom</a>
-                                </th>
+                                <th class="th_search"><a href="index.php?p=adminManageUser&filter=prenom">Prénom</a></th>
                                 <th class="th_search">Email</th>
                                 <th class="th_search">Mot de passe</th>
                                 <th class="th_search">Rôle</th>
@@ -30,33 +29,34 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <?php
-                            $id_editValues = 0;
-                            foreach ($req as $k => $v) {
-                                $id_editValues++; ?>
-                                <tr>
-                                    <td class="editableColumns"><?= $v['id_u']; ?></td>
-                                    <td><?= $number; ?>   </td>
-                                    <td class="editableColumns"><?= $v["nom"]; ?>  </td>
-                                    <td class="editableColumns"><?= $v["prenom"]; ?>   </td>
-                                    <td class="editableColumns"><?= $v["email"]; ?>   </td>
-                                    <td class="editableColumns"></td>
-                                    <td class="editableColumns">
-                                        <?php
-                                        if ($v['lvl'] == 2) {
-                                            echo "Chef de vente";
-                                        }
-                                        if ($v['lvl'] == 1) {
-                                            echo "Commercial";
-                                        } ?>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
-                                        <input type="submit" name="update" class="displayNone"> /
-                                        <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
+                                <?php
+                                    $id_editValues = 0;
+                                    foreach ($req as $k => $v)
+                                    {
+                                        $id_editValues++; ?>
+                                        <tr>
+                                            <td class="editableColumns"><?= $v['id_u']; ?></td>
+                                            <td><?= $number; ?>   </td>
+                                            <td class="editableColumns"><?= $v["nom"]; ?>  </td>
+                                            <td class="editableColumns"><?= $v["prenom"]; ?>   </td>
+                                            <td class="editableColumns"><?= $v["email"]; ?>   </td>
+                                            <td class="editableColumns"></td>
+                                            <td class="editableColumns">
+                                                <?php
+                                                if ($v['lvl'] == 2) {
+                                                    echo "Chef de vente";
+                                                }
+                                                if ($v['lvl'] == 1) {
+                                                    echo "Commercial";
+                                                } ?>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="editValues" id="<?= $id_editValues ?>">Modifier</a>
+                                                <input type="submit" name="update" class="displayNone"> /
+                                                <a href="index.php?p=adminManageUser&supp=<?= $v['id_u'] ?>">Bannir</a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
                             </tbody>
                         </table>
                     </div>
