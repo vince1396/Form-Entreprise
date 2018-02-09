@@ -88,10 +88,10 @@
                             <label for="secteur_activite">* Secteur d'activité</label>
                             <input type="text" class="form-control" name="secteur_activite"> </div>
                         <div class="form-group width-log">
-                            <label for="nb_site">Nombre de site</label>
+                            <label for="nb_site">Nombre de sites</label>
                             <input type="number" class="form-control" name="nb_site"> </div>
                         <div class="form-group width-log">
-                            <label for="nb_salarie">Nombre de salarie</label>
+                            <label for="nb_salarie">Nombre de salariés</label>
                             <input type="number" class="form-control" name="nb_salarie"> </div>
                         <div class="form-group width-log center">
                             <button class="btn btn-primary next_fiche btnRetour" type="button">Précédent</button>
@@ -170,7 +170,7 @@
                                     <input type="text" class="form-control" name="achat_b[]" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                     <br>
                                     <div class="form-group">
-                                        <label for="materiel_achat">Matériel + accessoire:</label>
+                                        <label for="materiel_achat">Matériel + accessoires:</label>
                                         <textarea class="form-control" name="materiel_achat[]"></textarea>
                                     </div>
                                     <br>
@@ -187,10 +187,10 @@
                                     </div>
                                     <br>
                                     <div class="form-group width-log">
-                                        <label for="prelevement">Prélèvement: </label>
-                                        <label for="mois">Mois</label>
+                                        <label for="prelevement">Prélèvement: </label><br>
+                                        <label for="mois">Mensuel</label>
                                         <input type="radio" class="form-control" name="prelevement[0]" value="1" checked="checked">
-                                        <label for="trimestre">Trimestrielle</label>
+                                        <label for="trimestre">Trimestriel</label>
                                         <input type="radio" class="form-control" name="prelevement[0]" value="2">
                                     </div>
                                     <br>
@@ -200,22 +200,22 @@
                                     </div>
                                     <br>
                                     <div class="form-group width-log">
-                                        <label for="materiel_location">Matériel + accessoire:</label>
+                                        <label for="materiel_location">Matériel + accessoires:</label>
                                         <textarea class="form-control" name="materiel_location[]"></textarea>
                                     </div>
                                     <br>
                                 </div>
                                 <br>
-                                <h3 class="width-log">Entretient</h3>
-                                <h4 class="width-log">Volume copie engagée:</h4>
+                                <h3 class="width-log">Entretien</h3>
+                                <h4 class="width-log">Volume de copies engagées:</h4>
                                 <div class="form-group width-log">
-                                    <label for="noir">Noire:</label>
+                                    <label for="noir">Noires:</label>
                                     <input type="text" class="form-control" name="noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
-                                    <label for="vol_noir">Volume moyen copie noire (par trimestre):</label>
+                                    <label for="vol_noir">Volume moyen copies noires (par trimestre):</label>
                                     <input type="text" class="form-control" name="vol_noir[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <div class="form-group width-log">
@@ -224,18 +224,18 @@
                                 </div>
                                 <br>
                                 <div class="form-group width-log">
-                                    <label for="supp_noir">Coûts copies noires supplémentaires:</label>
+                                    <label for="supp_noir">Coût copies noires supplémentaires:</label>
                                     <input type="text" class="form-control" name="supp_noir[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
                                 <div class="form-group width-log">
-                                    <label for="couleur">Couleur:</label>
+                                    <label for="couleur">Couleurs:</label>
                                     <input type="text" class="form-control" name="couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <br>
                                 <br>
                                 <div class="form-group width-log">
-                                    <label for="vol_couleur">Volume moyen copie couleur (par trimestre):</label>
+                                    <label for="vol_couleur">Volume moyen copies couleurs (par trimestre):</label>
                                     <input type="text" class="form-control" name="vol_couleur[]" placeholder="Par Trimestre" pattern="0[1-9]?|[1-9][0-9]*">
                                 </div>
                                 <br>
@@ -245,7 +245,7 @@
                                 </div>
                                 <br>
                                 <div class="form-group width-log">
-                                    <label for="supp_couleur">Coûts copies couleurs supplémentaires:</label>
+                                    <label for="supp_couleur">Coût copies couleurs supplémentaires:</label>
                                     <input type="text" class="form-control" name="supp_couleur[]" placeholder="€ (HT)" pattern="[0-9]([,.][0-9]{1,2})?|[1-9][0-9]*([,.][0-9]{1,2})?">
                                 </div>
                                 <br>
@@ -285,7 +285,7 @@
                                 <label for="nom_resp">Nom du responsable:</label>
                                 <input type="text" class="form-control" name="nom_resp"> </div>
                             <div class="form-group width-log2">
-                                <label for="cout_contrat">Cout contrat:</label>
+                                <label for="cout_contrat">Coût du contrat:</label>
                                 <input type="text" class="form-control" name="cout_contrat" placeholder="€"> </div>
                             <div class="form-group width-log2">
                                 <label for="echeance">Échéance:</label>
@@ -323,15 +323,15 @@
                                 <textarea class="form-control" name="sauvegarde" cols="150" rows="5"> </textarea>
                             </div>
                             <div class="form-group width-log2">
-                                <label for="logiciel_actuel">Logiciel actuel:</label>
+                                <label for="logiciel_actuel">Logiciels actuels:</label>
                                 <textarea class="form-control" name="logiciel_actuel" cols="150" rows="5"> </textarea>
                             </div>
                             <div class="form-group width-log2">
-                                <label for="logiciel_propose">Logiciel proposé:</label>
+                                <label for="logiciel_propose">Logiciels proposés:</label>
                                 <textarea class="form-control" name="logiciel_propose" cols="150" rows="5"> </textarea>
                             </div>
                             <div class="form-group width-log2">
-                                <label for="note_i">Note:</label>
+                                <label for="note_i">Notes:</label>
                                 <textarea class="form-control" name="note_i" cols="150" rows="5"> </textarea>
                             </div>
                             <div class="form-group width-log2">
@@ -363,7 +363,7 @@
                         <!----------- SOLUTION ---------------->
                         <div class="groupe-num-3">
                             <h3 class="center title_solution2">Solution</h3>
-                            <h4><b>GED (Organisation, distribution, stockage des docks electroniques:</b></h4>
+                            <h4><b>GED (Organisation, distribution, stockage des docks électroniques:</b></h4>
                             <nav>
                                 <ul>
                                     <li>
@@ -490,7 +490,7 @@
                                     <input type="text" class="form-control" name="prixachat_t">
                                     <br> </div>
                                 <div class="form-group">
-                                    <label for="materiel_t">Matériel/Accessoire:</label>
+                                    <label for="materiel_t">Matériel/Accessoires:</label>
                                     <textarea name="materiel_t_achat" cols="150" rows="5" class="form-control"></textarea>
                                 </div>
                             </div>
