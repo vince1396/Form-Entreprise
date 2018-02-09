@@ -34,7 +34,7 @@ CREATE TABLE `bureautique` (
   `achat` tinyint(1) DEFAULT NULL,
   `prix_b` float DEFAULT NULL,
   `prelevement` tinyint(1) DEFAULT NULL,
-  `duree_contrat` int(11) DEFAULT NULL,
+  `duree_contrat` text,
   `materiel` text,
   `noir` int(11) DEFAULT NULL,
   `couleur` int(11) DEFAULT NULL,
