@@ -27,7 +27,7 @@ else {
 }
 
 ob_start();//permet de ne plus renvoyer de contenu au navigateur
-    require "controller/www.allburotic.portfolio-vcotini.com/".$page.".php";
+    require "controller/".$page.".php";
     $content = ob_get_contents();//permet de recuperer le contenu executé depuis ob_start
 ob_end_clean();
 
